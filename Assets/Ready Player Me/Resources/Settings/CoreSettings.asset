@@ -15,5 +15,5 @@ MonoBehaviour:
   Subdomain: socialaitraining.readyplayer.me
   AppId: 689f0737cd2e649a331c667c
   EnableLogging: 0
-  EnableAnalytics: 1
+  EnableAnalytics: 0
   BodyType: 1
