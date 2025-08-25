@@ -1,20 +1,52 @@
 using ReadyPlayerMe.Core;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Talk : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text2Speech speech; // assign in Inspector
+    private AudioSource audioSource;
+    private VoiceHandler voiceHandler;
+
+    void Awake()
     {
-        StartCoroutine(WaitAndPlaySound());
+        audioSource = GetComponent<AudioSource>();
+        voiceHandler = GetComponent<VoiceHandler>();
     }
 
-    private IEnumerator WaitAndPlaySound()
+    void Start()
     {
-        yield return new WaitForSeconds(1);
-        GetComponent<AudioSource>().loop = true;
-        GetComponent<VoiceHandler>().PlayCurrentAudioClip();
+        // Example: speak automatically after startup
+        //StartCoroutine(PlayVoice("Hello Unity, I am speaking using OpenAI TTS!"));
+    }
+
+    public void Text2Speech(string text)
+    {
+        StartCoroutine(PlayVoice(text));
+    }
+
+    /// <summary>
+    /// Coroutine that requests speech from OpenAI and plays it.
+    /// </summary>
+    private IEnumerator PlayVoice(string text)
+    {
+        yield return StartCoroutine(speech.SpeakToClip(text, clip =>
+        {
+            if (clip != null)
+            {
+                audioSource.loop = false;
+                audioSource.clip = clip;
+
+                // If you're using ReadyPlayerMe voice animation
+                if (voiceHandler != null)
+                {
+                    voiceHandler.PlayCurrentAudioClip();
+                }
+                else
+                {
+                    audioSource.Play();
+                }
+            }
+        }));
     }
 }

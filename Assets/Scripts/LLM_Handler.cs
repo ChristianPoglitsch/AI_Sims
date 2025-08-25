@@ -1,9 +1,10 @@
 using LLMUnity;
 using UnityEngine;
 
-public class MyScript : MonoBehaviour
+public class LLM_Handler : MonoBehaviour
 {
     public LLMCharacter llmCharacter;
+    public Talk talk;
 
     private string replyMessage;
 
@@ -23,6 +24,7 @@ public class MyScript : MonoBehaviour
     {
         // do something when the reply from the model is complete
         Debug.Log(replyMessage);
+        talk.Text2Speech(replyMessage);
     }
 
     void Game()
