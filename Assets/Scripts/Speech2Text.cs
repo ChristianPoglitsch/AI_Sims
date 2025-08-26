@@ -4,13 +4,15 @@ using System.Collections;
 using System.IO;
 using System.Net;
 
-public class MicToText : MonoBehaviour
+public class Speech2Text : MonoBehaviour
 {
     [Header("OpenAI API Key")]
     [SerializeField] private string apiKey = "YOUR_API_KEY";
 
     [Header("STT Settings")]
     [SerializeField] private string sttModel = "gpt-4o-mini-transcribe";
+
+    public LLM_Handler llm_handler;
 
     private string micDevice;
 
@@ -66,6 +68,7 @@ public class MicToText : MonoBehaviour
             else
             {
                 Debug.Log("Whisper Response: " + www.downloadHandler.text);
+                llm_handler.ProcessMessage(www.downloadHandler.text);
             }
         }
     }

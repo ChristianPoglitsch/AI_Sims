@@ -10,7 +10,7 @@ public class LLM_Handler : MonoBehaviour
 
     public void Start()
     {
-        Game();
+        //ProcessExample();
     }
 
     void HandleReply(string reply)
@@ -27,10 +27,14 @@ public class LLM_Handler : MonoBehaviour
         talk.Text2Speech(replyMessage);
     }
 
-    void Game()
+    public void ProcessExample()
     {
-        // your game function
         string message = "Hello bot!";
+        ProcessMessage(message);
+    }
+
+    public void ProcessMessage(string message)
+    {        
         _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted);
     }
 }
