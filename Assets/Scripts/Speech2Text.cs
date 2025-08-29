@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
-using System.IO;
-using System.Net;
 
 public class Speech2Text : MonoBehaviour
 {
@@ -15,10 +13,11 @@ public class Speech2Text : MonoBehaviour
     public LLM_Handler llm_handler;
 
     private string micDevice;
+    private AudioClip recording;
+    private bool isRecording = false;
 
     void Start()
     {
-        // Pick first microphone available
         if (Microphone.devices.Length > 0)
         {
             micDevice = Microphone.devices[0];
@@ -30,28 +29,31 @@ public class Speech2Text : MonoBehaviour
         }
     }
 
-    // Call this from a button or another script
-    public void StartRecording(int recordSeconds = 5)
+    /// Combined function: toggle recording on/off
+    public void ToggleRecording()
     {
-        if (micDevice == null) return;
-        StartCoroutine(RecordAndSend(recordSeconds));
+        if (!isRecording)
+        {
+            // --- START recording ---
+            Debug.Log("Recording started...");
+            isRecording = true;
+            recording = Microphone.Start(micDevice, false, 60, 16000); // buffer max 60s
+        }
+        else
+        {
+            // --- STOP recording ---
+            Debug.Log("Recording stopped, sending to Whisper...");
+            Microphone.End(micDevice);
+            isRecording = false;
+
+            // Convert AudioClip → WAV
+            byte[] wavData = WavUtility.FromAudioClip(recording);
+            StartCoroutine(SendToWhisper(wavData));
+        }
     }
 
-    private IEnumerator RecordAndSend(int duration)
+    private IEnumerator SendToWhisper(byte[] wavData)
     {
-        // Record microphone audio
-        AudioClip recording = Microphone.Start(micDevice, false, duration, 16000);
-        Debug.Log("Recording...");
-
-        yield return new WaitForSeconds(duration);
-
-        Microphone.End(micDevice);
-        Debug.Log("Recording stopped, sending to Whisper...");
-
-        // Convert AudioClip → WAV bytes
-        byte[] wavData = WavUtility.FromAudioClip(recording);
-
-        // Create multipart form for Whisper API
         WWWForm form = new WWWForm();
         form.AddField("model", sttModel);
         form.AddBinaryData("file", wavData, "recording.wav", "audio/wav");
@@ -68,7 +70,7 @@ public class Speech2Text : MonoBehaviour
             else
             {
                 Debug.Log("Whisper Response: " + www.downloadHandler.text);
-                llm_handler.ProcessMessage(www.downloadHandler.text);
+                llm_handler?.ProcessMessage(www.downloadHandler.text);
             }
         }
     }
