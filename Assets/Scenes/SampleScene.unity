@@ -11155,6 +11155,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1042309975}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1048704340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048704341}
+  m_Layer: 0
+  m_Name: =========================
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1048704341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048704340}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.670296, y: -12.044248, z: -0.64113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1053616739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12493,6 +12524,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1217579266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1226441964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1226441965}
+  m_Layer: 0
+  m_Name: =========================
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1226441965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226441964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.670296, y: -12.044248, z: -0.64113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1226954013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16758,7 +16820,8 @@ MonoBehaviour:
   prompt: "You play the role of a real person. \nThe name of the person is Clara.
     She is female and likes to meet new people. She is in the city Graz.\nBe creative
     about the background of Clara. Keep your answers short. Maximum of one to two
-    sentences. Do not repeat yourself."
+    sentences. Do not repeat yourself. Alwyas talk in first person view. Always stay
+    in your role."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -18479,6 +18542,37 @@ Transform:
   - {fileID: 131194896}
   - {fileID: 1610341357}
   m_Father: {fileID: 1588718385}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1916902849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1916902850}
+  m_Layer: 0
+  m_Name: =========================
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1916902850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916902849}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.670296, y: -12.044248, z: -0.64113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1920175642
 PrefabInstance:
@@ -21347,12 +21441,15 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 2167685096624747089}
+  - {fileID: 1588718385}
+  - {fileID: 1048704341}
+  - {fileID: 2083289347}
+  - {fileID: 1559316547}
+  - {fileID: 1916902850}
   - {fileID: 1288168122}
   - {fileID: 1665082473}
   - {fileID: 1687984569}
-  - {fileID: 1588718385}
-  - {fileID: 2083289347}
-  - {fileID: 1559316547}
+  - {fileID: 1226441965}
+  - {fileID: 2167685096624747089}
   - {fileID: 4420722478013222505}
   - {fileID: 2077744992821152888}
