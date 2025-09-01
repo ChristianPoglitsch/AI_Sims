@@ -1,6 +1,4 @@
-
-
-Avatars:
+Avatars/Characters:
 
 
 
@@ -10,7 +8,8 @@ https://readyplayer.me/blog/integrating-ready-player-me-characters-into-diverse-
 
 
 
-Large Language Models:
+Large Language Model:
+
 
 
 https://assetstore.unity.com/packages/tools/ai-ml-integration/llm-for-unity-273604?srsltid=AfmBOopH3Gkncs15g3e40JZsF0y9NhJmRhpcTHE1hzX1tq9txoNTsdQQ
@@ -19,7 +18,13 @@ https://assetstore.unity.com/packages/tools/ai-ml-integration/llm-for-unity-2736
 
 
 
-First scene: Test1
+TTS/SST: You need an OpenAI Key.
+
+
+
+
+
+Test scene: Scenes/SampleScene
 
 
 
