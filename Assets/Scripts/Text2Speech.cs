@@ -3,21 +3,51 @@ using UnityEngine.Networking;
 using System;
 using System.Collections;
 using System.Text;
+using System.IO;
 
 public class Text2Speech : MonoBehaviour
 {
     [Header("OpenAI Settings")]
-    [SerializeField] private string apiKey = "YOUR_API_KEY";   // set in Inspector
+    [SerializeField] private string apiKeyFileName = "openai_api_key.txt"; // file name for local key
     [SerializeField] private string voice = "alloy";           // OpenAI TTS voices
     [SerializeField] private string model = "gpt-4o-mini-tts"; // fast + cheap
 
     private AudioSource audioSource;
+    private string apiKey;
 
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        LoadApiKey();
+    }
+
+    private void LoadApiKey()
+    {
+        try
+        {
+            // You can place your key in StreamingAssets/openai_api_key.txt
+            string path = Path.Combine(Application.streamingAssetsPath, apiKeyFileName);
+
+            if (File.Exists(path))
+            {
+                apiKey = File.ReadAllText(path).Trim();
+                Debug.Log("✅ OpenAI API key loaded from file.");
+            }
+            else
+            {
+                Debug.LogError("❌ API key file not found at: " + path);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("❌ Failed to load API key: " + e.Message);
+        }
     }
 
     /// <summary>

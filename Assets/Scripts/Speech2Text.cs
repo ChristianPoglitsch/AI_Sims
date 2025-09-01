@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using System;
+using System.IO;
 
 public class Speech2Text : MonoBehaviour
 {
     [Header("OpenAI API Key")]
-    [SerializeField] private string apiKey = "YOUR_API_KEY";
+    [SerializeField] private string apiKeyFileName = "openai_api_key.txt"; // file name for local key
 
     [Header("STT Settings")]
     [SerializeField] private string sttModel = "gpt-4o-mini-transcribe";
@@ -15,6 +17,7 @@ public class Speech2Text : MonoBehaviour
     private string micDevice;
     private AudioClip recording;
     private bool isRecording = false;
+    private string apiKey;
 
     void Start()
     {
@@ -26,6 +29,31 @@ public class Speech2Text : MonoBehaviour
         else
         {
             Debug.LogError("No microphone found!");
+        }
+
+        LoadApiKey();
+    }
+
+    private void LoadApiKey()
+    {
+        try
+        {
+            // You can place your key in StreamingAssets/openai_api_key.txt
+            string path = Path.Combine(Application.streamingAssetsPath, apiKeyFileName);
+
+            if (File.Exists(path))
+            {
+                apiKey = File.ReadAllText(path).Trim();
+                Debug.Log("✅ OpenAI API key loaded from file.");
+            }
+            else
+            {
+                Debug.LogError("❌ API key file not found at: " + path);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("❌ Failed to load API key: " + e.Message);
         }
     }
 
