@@ -24,11 +24,22 @@ public class PlayerInputHandler : MonoBehaviour
     // Camera height offset (like head height)
     public float cameraHeight = 1.0f;
 
+    public Speech2Text speech2Text;
+
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         controller = GetComponent<CharacterController>();
         camTransform = Camera.main.transform;
+    }
+
+    public void OnFire()
+    {
+        Debug.Log("Fire pressed → toggling recording...");
+        if (speech2Text != null)
+        {
+            speech2Text.ToggleRecording();
+        }
     }
 
     void Update()
@@ -60,12 +71,10 @@ public class PlayerInputHandler : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         // --- ROTATION ---
-        // Rotate player (yaw = horizontal)
         transform.Rotate(Vector3.up, lookInput.x * lookSpeed * Time.deltaTime);
 
-        // Rotate camera (pitch = vertical)
         pitch -= lookInput.y * lookSpeed * Time.deltaTime;
-        pitch = Mathf.Clamp(pitch, -80f, 80f); // prevent flipping
+        pitch = Mathf.Clamp(pitch, -80f, 80f);
         camTransform.rotation = Quaternion.Euler(pitch, transform.eulerAngles.y, 0f);
 
         // --- CAMERA FOLLOW ---
