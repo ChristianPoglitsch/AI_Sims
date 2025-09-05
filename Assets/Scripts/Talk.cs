@@ -5,20 +5,8 @@ using UnityEngine;
 public class Talk : MonoBehaviour
 {
     public Text2Speech speech; // assign in Inspector
-    private AudioSource audioSource;
-    private VoiceHandler voiceHandler;
-
-    void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-        voiceHandler = GetComponent<VoiceHandler>();
-    }
-
-    void Start()
-    {
-        // Example: speak automatically after startup
-        //StartCoroutine(PlayVoice("Hello Unity, I am speaking using OpenAI TTS!"));
-    }
+    public AudioSource audioSource;
+    public VoiceHandler voiceHandler;
 
     public void Text2Speech(string text)
     {

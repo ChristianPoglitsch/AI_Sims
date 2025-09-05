@@ -7,12 +7,15 @@ public class StringEvent : UnityEvent<string> { }
 
 public class LLM_Handler : MonoBehaviour
 {
-    public LLMCharacter llmCharacter;
-
-    // Now UnityEvent can take a string parameter
-    public StringEvent sendMessageTo;
-
+    private LLMCharacter llmCharacter;
+    private Talk talk;
     private string replyMessage;
+
+    private void Start()
+    {
+        llmCharacter = GetComponent<LLMCharacter>();
+        talk = llmCharacter.GetComponent<Talk>();
+    }
 
     void HandleReply(string reply)
     {
@@ -22,8 +25,7 @@ public class LLM_Handler : MonoBehaviour
     void ReplyCompleted()
     {
         Debug.Log(replyMessage);
-        // Invoke UnityEvent with replyMessage as parameter
-        sendMessageTo.Invoke(replyMessage);
+        talk.Text2Speech(replyMessage);
     }
 
     public void ProcessExample()

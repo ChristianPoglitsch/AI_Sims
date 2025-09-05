@@ -24,7 +24,7 @@ public class PlayerInputHandler : MonoBehaviour
     // Camera height offset (like head height)
     public float cameraHeight = 1.0f;
 
-    public Speech2Text speech2Text;
+    public ConversationManager conversationManager;
 
     void Awake()
     {
@@ -36,9 +36,9 @@ public class PlayerInputHandler : MonoBehaviour
     public void OnFire()
     {
         Debug.Log("Fire pressed → toggling recording...");
-        if (speech2Text != null)
+        if (conversationManager != null)
         {
-            speech2Text.ToggleRecording();
+            conversationManager.Talk();
         }
     }
 
