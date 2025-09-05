@@ -22,6 +22,7 @@ public class Talk : MonoBehaviour
         {
             if (clip != null)
             {
+                audioSource.mute = false;
                 audioSource.loop = false;
                 audioSource.clip = clip;
 
