@@ -34,6 +34,7 @@ public class LLM_Handler : MonoBehaviour
 
     public void ProcessMessage(string message)
     {
+        Debug.Log(message);
         _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted);
     }
 }
