@@ -1,30 +1,29 @@
 using LLMUnity;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]  // makes it show up in Inspector
+public class StringEvent : UnityEvent<string> { }
 
 public class LLM_Handler : MonoBehaviour
 {
     public LLMCharacter llmCharacter;
-    public Talk talk;
+
+    // Now UnityEvent can take a string parameter
+    public StringEvent sendMessageTo;
 
     private string replyMessage;
 
-    public void Start()
-    {
-        //ProcessExample();
-    }
-
     void HandleReply(string reply)
     {
-        // do something with the reply from the model
-        //Debug.Log(reply);
         replyMessage = reply;
     }
 
     void ReplyCompleted()
     {
-        // do something when the reply from the model is complete
         Debug.Log(replyMessage);
-        talk.Text2Speech(replyMessage);
+        // Invoke UnityEvent with replyMessage as parameter
+        sendMessageTo.Invoke(replyMessage);
     }
 
     public void ProcessExample()
@@ -34,7 +33,7 @@ public class LLM_Handler : MonoBehaviour
     }
 
     public void ProcessMessage(string message)
-    {        
+    {
         _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted);
     }
 }

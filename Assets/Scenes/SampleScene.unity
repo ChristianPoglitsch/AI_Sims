@@ -12260,7 +12260,7 @@ PrefabInstance:
     - target: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
@@ -16616,7 +16616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1582312809
 Transform:
   m_ObjectHideFlags: 0
@@ -17707,7 +17707,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmCharacter: {fileID: 1665082472}
-  talk: {fileID: 6411084578540732896}
+  sendMessageTo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6411084578540732896}
+        m_TargetAssemblyTypeName: Talk, Assembly-CSharp
+        m_MethodName: Text2Speech
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1665082472
 MonoBehaviour:
   m_ObjectHideFlags: 0

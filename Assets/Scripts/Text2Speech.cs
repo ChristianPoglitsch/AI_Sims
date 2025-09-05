@@ -72,7 +72,6 @@ public class Text2Speech : MonoBehaviour
             if (www.result != UnityWebRequest.Result.Success)
             {
                 Debug.LogError("TTS Error: " + www.error);
-                onReady?.Invoke(null);
             }
             else
             {
