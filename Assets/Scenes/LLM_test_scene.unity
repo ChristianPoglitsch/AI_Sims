@@ -789,10 +789,20 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: assistant
-  prompt: "You are a helpful assistant.\r\nBased on the following information, determine
-    if the user has the caf\xE9 cup.\r\n\r\nReply with exactly one digit: 1 for Yes
-    or 0 for No.\r\nDo not add any explanation.\r\nIf you are unsure, respond with
-    0."
+  prompt: 'You are a helpful assistant.
+
+    Based on the following information,
+    determine if the user has found the fox.
+
+    
+
+    Reply with exactly one
+    digit: 1 for Yes or 0 for No.
+
+    Do not add any explanation.
+
+    If you
+    are unsure, respond with 0.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -839,6 +849,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  processMessage: 1
 --- !u!1 &1009091506
 GameObject:
   m_ObjectHideFlags: 0
