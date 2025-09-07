@@ -1,15 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ConversationManager : MonoBehaviour
 {
-    public LLM_Handler llmPersona;
+    private NPCToStoryBridge currentNPC;
     public Speech2Text speech2Text;
+
+    public void SetCurrentNPC(NPCToStoryBridge npcBridge)
+    {
+        currentNPC = npcBridge;
+    }
 
     public void Talk()
     {
-        speech2Text.Set_LLM_Handler(llmPersona);
-        speech2Text.ToggleRecording();
+        if (currentNPC != null && currentNPC.llmHandler != null)
+        {
+            speech2Text.Set_LLM_Handler(currentNPC.llmHandler);
+            //speech2Text.ToggleRecording();
+        }
+        else
+        {
+            Debug.LogWarning("No NPC or LLM_Handler selected!");
+        }
     }
 }
