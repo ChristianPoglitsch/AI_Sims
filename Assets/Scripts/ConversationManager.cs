@@ -5,9 +5,9 @@ public class ConversationManager : MonoBehaviour
     private NPCToStoryBridge currentNPC;
     public Speech2Text speech2Text;
 
-    public void SetCurrentNPC(NPCToStoryBridge npcBridge)
+    public void SetCurrentNPC(NPCToStoryBridge npc)
     {
-        currentNPC = npcBridge;
+        currentNPC = npc;
     }
 
     public void Talk()

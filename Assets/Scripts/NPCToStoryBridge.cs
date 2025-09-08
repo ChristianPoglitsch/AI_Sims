@@ -10,4 +10,9 @@ public class NPCToStoryBridge : MonoBehaviour
     {
         return llmHandler;
     }
+
+    public void SetHandler(LLM_Handler handler)
+    {
+        llmHandler = handler;
+    }
 }
