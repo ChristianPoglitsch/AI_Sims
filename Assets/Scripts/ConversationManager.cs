@@ -1,4 +1,4 @@
-using LLMUnity;
+﻿using LLMUnity;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 
@@ -32,10 +32,6 @@ public class ConversationManager : MonoBehaviour
                 speech2Text.ToggleRecording();
             }
         }
-        else
-        {
-            Debug.LogWarning("No NPC or LLM_Handler selected!");
-        }
     }
 
     public void ProcessMessage(string message)
@@ -58,4 +54,44 @@ public class ConversationManager : MonoBehaviour
             messageDecorator.ProcessMessage(replyMessage);
         }
     }
+
+    public void OrientateNpcToCameraAndStartTalk()
+    {
+        if (Camera.main == null) return;
+
+        Transform camTransform = Camera.main.transform;
+
+        // Visualize the ray
+        Debug.DrawRay(camTransform.position, camTransform.forward * 50f, Color.red, 2f);
+
+        Ray ray = new Ray(camTransform.position, camTransform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 5f))
+        {
+            NPCToStoryBridge npcBridge = hit.collider.GetComponent<NPCToStoryBridge>();
+            if (npcBridge != null)
+            {
+                Debug.Log("Hit NPC: " + hit.collider.name);
+
+                // Make NPC look at player horizontally
+                Vector3 lookTarget = camTransform.position;
+                lookTarget.y = hit.collider.transform.position.y;
+                hit.collider.transform.LookAt(lookTarget);
+
+                Debug.Log("Fire pressed → checking for NPC...");
+                SetCurrentNPC(npcBridge);
+                TalkUser();
+            }
+            else
+            {
+                Debug.Log("Hit object does not have NPCToStoryBridge component.");
+            }
+        }
+        else
+        {
+            Debug.Log("Raycast did not hit any NPC.");
+        }
+    }
+
 }

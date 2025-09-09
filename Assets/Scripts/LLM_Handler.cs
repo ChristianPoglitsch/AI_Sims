@@ -9,7 +9,9 @@ public class LLM_Handler : MonoBehaviour
     public ConversationManager conversationManager;
 
     private LLMCharacter llmCharacter;
-    private string replyMessage;    
+    private string replyMessage;
+
+    private bool isTalking = false;
 
     private void Start()
     {
@@ -25,10 +27,17 @@ public class LLM_Handler : MonoBehaviour
     {
         Debug.Log(replyMessage);
         conversationManager.TalkNpc(replyMessage, voiceHandler);
+
+        isTalking = false;
     }
 
     public void ProcessMessage(string message)
     {
+        if (isTalking)
+            return;
+
+        isTalking = true;
+
         Debug.Log(message);
         _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted);
     }

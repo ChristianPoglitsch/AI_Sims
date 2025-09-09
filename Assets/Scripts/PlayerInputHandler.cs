@@ -20,7 +20,6 @@ public class PlayerInputHandler : MonoBehaviour
     private Vector3 velocity;
 
     // Reference to the main camera
-    private Transform camTransform;
     private float pitch = 0f;
 
     // Camera height offset (like head height)
@@ -38,7 +37,6 @@ public class PlayerInputHandler : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
         controller = GetComponent<CharacterController>();
-        camTransform = Camera.main.transform;
     }
 
     void Start()
@@ -49,38 +47,14 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnFire()
     {
-        // Raycast from center of screen
-        Ray ray = new Ray(camTransform.position, camTransform.forward);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            NPCToStoryBridge npcBridge = hit.collider.GetComponent<NPCToStoryBridge>();
-            if (npcBridge != null)
-            {
-                Debug.Log("Hit NPC: " + hit.collider.name);
-
-                // Make NPC look at the player (horizontal only)
-                Vector3 lookTarget = transform.position;
-                lookTarget.y = hit.collider.transform.position.y;
-                hit.collider.transform.LookAt(lookTarget);
-
-                // Pass bridge to conversation manager
-                if (conversationManager != null)
-                {
-                    Debug.Log("Fire pressed → checking for NPC...");
-                    conversationManager.SetCurrentNPC(npcBridge);
-                    conversationManager.TalkUser();
-                }
-            }
-        }
+        conversationManager.OrientateNpcToCameraAndStartTalk();
     }
 
     void Update()
     {
-        if (camTransform == null) return;
-
         if (inputField != null && inputFieldUsed) return;
+
+        Transform camTransform = Camera.main.transform;
 
         // --- INPUT ---
         moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
