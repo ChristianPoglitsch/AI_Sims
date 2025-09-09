@@ -6,17 +6,16 @@ public class Talk : MonoBehaviour
 {
     public Text2Speech speech; // assign in Inspector
     public AudioSource audioSource;
-    public VoiceHandler voiceHandler;
 
-    public void Text2Speech(string text)
+    public void Text2Speech(string text, VoiceHandler voiceHandler)
     {
-        StartCoroutine(PlayVoice(text));
+        StartCoroutine(PlayVoice(text, voiceHandler));
     }
 
     /// <summary>
     /// Coroutine that requests speech from OpenAI and plays it.
     /// </summary>
-    private IEnumerator PlayVoice(string text)
+    private IEnumerator PlayVoice(string text, VoiceHandler voiceHandler)
     {
         yield return StartCoroutine(speech.SpeakToClip(text, clip =>
         {

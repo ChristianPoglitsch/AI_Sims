@@ -724,22 +724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  llmCharacter: {fileID: 998713584}
-  sendMessageTo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 998713586}
-        m_TargetAssemblyTypeName: MessageDecorator, Assembly-CSharp
-        m_MethodName: ProcessMessage
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
 --- !u!114 &998713584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,15 +778,15 @@ MonoBehaviour:
     Based on the following information,
     determine if the user has found the fox.
 
-    
 
-    Reply with exactly one
-    digit: 1 for Yes or 0 for No.
+
+    Reply with exactly one digit:
+    1 for Yes or 0 for No.
 
     Do not add any explanation.
 
-    If you
-    are unsure, respond with 0.'
+    If you are unsure,
+    respond with 0.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -834,22 +818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1579ce97dde42e4488abe002c041a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sendMessageTo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1197213033}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  processMessage: 1
+  text: {fileID: 1197213033}
+  processMessage: 0
 --- !u!1 &1009091506
 GameObject:
   m_ObjectHideFlags: 0

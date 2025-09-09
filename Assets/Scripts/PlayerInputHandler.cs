@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(CharacterController))]
@@ -26,6 +28,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     public ConversationManager conversationManager;
 
+    public TMP_InputField inputField;
+    private bool inputFieldUsed = false;
+
     // --- NEW: toggle look ---
     private bool allowLook = false;
 
@@ -36,10 +41,14 @@ public class PlayerInputHandler : MonoBehaviour
         camTransform = Camera.main.transform;
     }
 
+    void Start()
+    {
+        inputField.onSelect.AddListener(OnSelected);
+        inputField.onDeselect.AddListener(OnDeselected);
+    }
+
     public void OnFire()
     {
-        Debug.Log("Fire pressed → checking for NPC...");
-
         // Raycast from center of screen
         Ray ray = new Ray(camTransform.position, camTransform.forward);
         RaycastHit hit;
@@ -59,8 +68,9 @@ public class PlayerInputHandler : MonoBehaviour
                 // Pass bridge to conversation manager
                 if (conversationManager != null)
                 {
+                    Debug.Log("Fire pressed → checking for NPC...");
                     conversationManager.SetCurrentNPC(npcBridge);
-                    conversationManager.Talk();
+                    conversationManager.TalkUser();
                 }
             }
         }
@@ -69,6 +79,8 @@ public class PlayerInputHandler : MonoBehaviour
     void Update()
     {
         if (camTransform == null) return;
+
+        if (inputField != null && inputFieldUsed) return;
 
         // --- INPUT ---
         moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
@@ -113,5 +125,17 @@ public class PlayerInputHandler : MonoBehaviour
 
         // --- CAMERA FOLLOW ---
         camTransform.position = transform.position + new Vector3(0, cameraHeight, 0);
+    }
+
+    void OnSelected(string text)
+    {
+        Debug.Log("Input field selected → user may start typing.");
+        inputFieldUsed = true;
+    }
+
+    void OnDeselected(string text)
+    {
+        Debug.Log("Input field deselected → user stopped typing.");
+        inputFieldUsed = false;
     }
 }

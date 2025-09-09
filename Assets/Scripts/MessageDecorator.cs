@@ -1,22 +1,20 @@
 using System;
-using System.Linq;
 using System.Text.RegularExpressions;
+using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class MessageDecorator : MonoBehaviour
 {
-    public StringEvent sendMessageTo;
-    public bool processMessage = true;
+    public TMP_Text text;
+    public bool processMessage = false;
 
     public void ProcessMessage(string message)
     {
-        Debug.Log(message);
         if (processMessage)
         {
             message = Regex.Match(message, @"^\d").Value; // match first digit
             Console.WriteLine(message);  // Output: 0
         }
-        sendMessageTo.Invoke(message);
+        text.text = message;
     }
 }
