@@ -44,6 +44,11 @@ public class ConversationManager : MonoBehaviour
 
     public void TalkNpc(string replyMessage, VoiceHandler voiceHandler)
     {
+        if (messageDecorator != null)
+        {
+            replyMessage = messageDecorator.FilterMessage(replyMessage);
+        }
+
         if (VoiceEnable && talk != null && voiceHandler != null)
         {
             talk.Text2Speech(replyMessage, voiceHandler);
