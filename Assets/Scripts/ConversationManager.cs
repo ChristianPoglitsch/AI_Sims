@@ -8,11 +8,14 @@ public class ConversationManager : MonoBehaviour
     public bool UserVoiceEnable = false;
     public bool NpcVoiceEnable = false;
 
-    private NPCToStoryBridge currentNPC;
+    private LLM_Handler currentNPC;
     private Talk talk;
     private MessageDecorator messageDecorator = null;
 
     private bool talking = false;
+    private string currentMessage;
+
+    public int maxNpcConversations = 1;
 
     public void Start()
     {
@@ -33,22 +36,44 @@ public class ConversationManager : MonoBehaviour
 
         Debug.Log("NPC finished speaking!");
         // You can trigger next actions here, e.g. enable user input
+
+        NpcConnection otherNpc = currentNPC.GetNpcConnection();
+        if (maxNpcConversations > 0 && otherNpc != null)
+        {
+            maxNpcConversations--;
+
+            Debug.Log("Num conversation partner #" + otherNpc.GetNumNpcs());
+            SetCurrentNPC(otherNpc.RandomHandler);
+            if (currentNPC)
+            {
+                currentNPC.ProcessMessage(currentMessage);
+            }
+        }
+        else
+        {
+            Debug.Log("NPC 1:1 conversation.");
+        }
+    }
+
+    public void SetCurrentNPC(LLM_Handler npc)
+    {
+        currentNPC = npc;
     }
 
     public void SetCurrentNPC(NPCToStoryBridge npc)
     {
-        currentNPC = npc;
+        currentNPC = npc.llmHandler;
     }
 
     public void TalkUser()
     {
         if (talking) return;
 
-        if (UserVoiceEnable && currentNPC != null && currentNPC.llmHandler != null)
+        if (UserVoiceEnable && currentNPC != null && currentNPC != null)
         {
             talking = true;
 
-            speech2Text.Set_LLM_Handler(currentNPC.llmHandler);
+            speech2Text.Set_LLM_Handler(currentNPC);
             speech2Text.ToggleRecording();
         }
     }
@@ -58,9 +83,9 @@ public class ConversationManager : MonoBehaviour
         if (talking) return;
         talking = true;
 
-        if (currentNPC && currentNPC.GetHandler() != null)
+        if (currentNPC != null)
         {
-            currentNPC.GetHandler().ProcessMessage(message);
+            currentNPC.ProcessMessage(message);
         }
     }
 
@@ -71,14 +96,21 @@ public class ConversationManager : MonoBehaviour
             replyMessage = messageDecorator.FilterMessage(replyMessage);
         }
 
+        currentMessage = replyMessage;
+
         if (NpcVoiceEnable && talk != null && voiceHandler != null)
         {
-            talk.Text2Speech(replyMessage, voiceHandler);
+            talk.Text2Speech(replyMessage, voiceHandler, currentNPC.GetVoiceName());
         }
 
         if (messageDecorator != null)
         {
             messageDecorator.ProcessMessage(replyMessage);
+        }
+
+        if(!NpcVoiceEnable)
+        {
+            OnNpcSpeechFinished();
         }
     }
 

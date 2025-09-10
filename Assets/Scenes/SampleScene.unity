@@ -780,6 +780,128 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 41366776}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &49478991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 49478992}
+  - component: {fileID: 49478994}
+  - component: {fileID: 49478993}
+  - component: {fileID: 49478995}
+  m_Layer: 0
+  m_Name: LLM_Fred
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &49478992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49478991}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.1433182, y: 0.62071204, z: 4.653075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1076993700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &49478993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49478991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceHandler: {fileID: 8157138488695906846}
+  conversationManager: {fileID: 404891180}
+  voice: onyx
+--- !u!114 &49478994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49478991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6c87a428fd5d0be9bbc686bdc8c3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedOptions: 0
+  remote: 0
+  _llm: {fileID: 1288168121}
+  APIKey: 
+  host: localhost
+  port: 13333
+  numRetries: 10
+  save: 
+  saveCache: 0
+  debugPrompt: 0
+  numPredict: -1
+  slot: -1
+  grammar: 
+  grammarJSON: 
+  cachePrompt: 1
+  seed: 0
+  temperature: 0.2
+  topK: 40
+  topP: 0.9
+  minP: 0.05
+  repeatPenalty: 1.1
+  presencePenalty: 0
+  frequencyPenalty: 0
+  typicalP: 1
+  repeatLastN: 64
+  penalizeNl: 1
+  penaltyPrompt: 
+  mirostat: 0
+  mirostatTau: 5
+  mirostatEta: 0.1
+  nProbs: 0
+  ignoreEos: 0
+  nKeep: -1
+  stop: []
+  stream: 1
+  playerName: user
+  AIName: assistant
+  prompt: "You are Fred, a male living in Sim Village. You like conversations about
+    the City. If asked talk about the lost fox. \r\nYou do not know the exact location
+    of the lost fox. Try to talk around it and only hint that it might be in the
+    west part of the city.\r\n\r\nStay in character. Keep your answers very short
+    with one sentence maximum."
+  setNKeepToPrompt: 1
+  chat: []
+  grammarString: 
+  grammarJSONString: 
+--- !u!114 &49478995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49478991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072ca9f0013e7d84db25f5e59400d290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llmHandlers:
+  - {fileID: 1801637155}
+  maxNpcConversations: 1
 --- !u!1001 &49899256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13023,6 +13145,7 @@ Transform:
   m_Children:
   - {fileID: 1665082473}
   - {fileID: 1801637157}
+  - {fileID: 49478992}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1085565541
@@ -15186,7 +15309,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   contextSize: 8192
   batchSize: 512
-  model: mistral-7b-instruct-v0.3-q4_k_m.gguf
+  model: Mistral-7B-Instruct-v0.3-Q4_K_M.gguf
   chatTemplate: mistral chat
   lora: 
   loraWeights: 
@@ -19470,6 +19593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceHandler: {fileID: 6411084578540732890}
   conversationManager: {fileID: 404891180}
+  voice: alloy
 --- !u!114 &1665082472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19519,14 +19643,21 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: assistant
-  prompt: "You are Clara, a woman living in Sim Village. You love gardening, baking,
+  prompt: 'You are Clara, a woman living in Sim Village. You love gardening, baking,
     and chatting with visitors about the City. You grew up exploring the nearby forests
     and harbor, which gave you a deep knowledge of local wildlife. You enjoy telling
-    small stories about local life and sharing interesting facts about the Village.\r\nYou
+    small stories about local life and sharing interesting facts about the Village.
+
+    You
     know that the lost fox is on the pirate ship. Try to talk around it and only
-    hint where the fox might be. This pirate ship is located west of the lighthouse.\r\n\rW\r\nStay
-    in character. Keep answers short with one sentence. Never use brackets.\n\nAnswer
-    in the language of the user."
+    hint where the fox might be. This pirate ship is located west of the lighthouse.
+
+
+    Stay
+    in character. Answer in the language of the user.
+
+    Keep your answers very
+    short with one sentence maximum.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -19703,7 +19834,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apiKeyFileName: openai_api_key.txt
-  voice: alloy
   model: gpt-4o-mini-tts
 --- !u!4 &1687984569
 Transform:
@@ -20525,6 +20655,7 @@ GameObject:
   - component: {fileID: 1801637157}
   - component: {fileID: 1801637156}
   - component: {fileID: 1801637155}
+  - component: {fileID: 1801637158}
   m_Layer: 0
   m_Name: LLM_Christina
   m_TagString: Untagged
@@ -20546,6 +20677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceHandler: {fileID: 8785158693978114125}
   conversationManager: {fileID: 404891180}
+  voice: nova
 --- !u!114 &1801637156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20599,8 +20731,8 @@ MonoBehaviour:
     about the City. If asked talk about the lost fox. \r\nYou do not know the exact
     location of the lost fox. Try to talk around it and only hint that it might be
     near the lighthouse or that Sarah knows more about it. Sarah is right behind
-    us on the other side of the street. \r\n\r\nStay in character. Keep answers short,
-    with a maximum of one sentence. Never use brackets. "
+    us on the other side of the street. \r\n\r\nStay in character. Keep your answers
+    very short with one sentence maximum."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -20620,6 +20752,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1076993700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801637158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801637154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072ca9f0013e7d84db25f5e59400d290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llmHandlers:
+  - {fileID: 49478993}
+  maxNpcConversations: 1
 --- !u!4 &1809105921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a,
@@ -24427,7 +24574,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8e69184ecad010749b48c62f237935c4, type: 2}
+      objectReference: {fileID: 9100000, guid: de05638f2d7831a4fbbe001320b68c5a, type: 2}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -24446,7 +24593,7 @@ PrefabInstance:
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.461748
+      value: -10.462515
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
@@ -24456,12 +24603,12 @@ PrefabInstance:
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.91332
+      value: 37.91141
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99540854
+      value: 0.9591622
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
@@ -24471,7 +24618,7 @@ PrefabInstance:
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.095717825
+      value: 0.28285682
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
@@ -24486,7 +24633,7 @@ PrefabInstance:
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -10.985
+      value: 32.862
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
@@ -25049,7 +25196,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8e69184ecad010749b48c62f237935c4, type: 2}
+      objectReference: {fileID: 9100000, guid: de05638f2d7831a4fbbe001320b68c5a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25420,7 +25567,7 @@ PrefabInstance:
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.685747
+      value: -10.684645
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
@@ -25430,12 +25577,12 @@ PrefabInstance:
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 39.046318
+      value: 39.04453
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.010063198
+      value: 0.5187977
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
@@ -25445,7 +25592,7 @@ PrefabInstance:
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9999494
+      value: 0.8548971
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
@@ -25460,7 +25607,7 @@ PrefabInstance:
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 181.153
+      value: 117.497
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
@@ -26204,7 +26351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1e4627ada789441939a261e5f4aded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  llmHandler: {fileID: 0}
+  llmHandler: {fileID: 49478993}
 --- !u!1001 &8220291300038494951
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using ReadyPlayerMe.Core;
 using System;
 using System.Collections;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class Talk : MonoBehaviour
@@ -14,17 +15,17 @@ public class Talk : MonoBehaviour
     /// <summary>
     /// Start text-to-speech and optionally notify when done
     /// </summary>
-    public void Text2Speech(string text, VoiceHandler voiceHandler)
+    public void Text2Speech(string text, VoiceHandler voiceHandler, string voice)
     {
-        StartCoroutine(PlayVoice(text, voiceHandler));
+        StartCoroutine(PlayVoice(text, voiceHandler, voice));
     }
 
-    private IEnumerator PlayVoice(string text, VoiceHandler voiceHandler)
+    private IEnumerator PlayVoice(string text, VoiceHandler voiceHandler, string voice)
     {
         AudioClip generatedClip = null;
 
         // Request speech clip
-        yield return StartCoroutine(speech.SpeakToClip(text, clip =>
+        yield return StartCoroutine(speech.SpeakToClip(text, voice, clip =>
         {
             generatedClip = clip;
         }));
