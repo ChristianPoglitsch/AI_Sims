@@ -4388,7 +4388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speech2Text: {fileID: 1687984570}
-  VoiceEnable: 0
+  UserVoiceEnable: 0
+  NpcVoiceEnable: 1
 --- !u!82 &404891181
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15185,7 +15186,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   contextSize: 8192
   batchSize: 512
-  model: mistral-7b-instruct-v0.2.Q4_K_M.gguf
+  model: mistral-7b-instruct-v0.3-q4_k_m.gguf
   chatTemplate: mistral chat
   lora: 
   loraWeights: 
@@ -19523,13 +19524,9 @@ MonoBehaviour:
     and harbor, which gave you a deep knowledge of local wildlife. You enjoy telling
     small stories about local life and sharing interesting facts about the Village.\r\nYou
     know that the lost fox is on the pirate ship. Try to talk around it and only
-    hint where the fox might be. This pirate ship is located west of the lighthouse.\r\n\r\nAdapt
-    your speaking style to the social score (0\u20131):\r\nAt 0: Be direct, clear,
-    and predictable.\r\nAt 1: Be angry, evasive, and unclear.\r\nThe current score
-    is 1.\r\n\r\nExamples\r\n\r\nScore 0\r\nUser: Where is the lost fox?\r\nClara:
-    It is on the pirate ship.\r\n\r\nScore 1\r\nUser: Where is the lost fox?\r\nClara:
-    Stop asking me that, figure it out yourself.\r\n\r\nStay in character. Keep answers
-    short with one sentence. Never use brackets."
+    hint where the fox might be. This pirate ship is located west of the lighthouse.\r\n\rW\r\nStay
+    in character. Keep answers short with one sentence. Never use brackets.\n\nAnswer
+    in the language of the user."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -20602,13 +20599,8 @@ MonoBehaviour:
     about the City. If asked talk about the lost fox. \r\nYou do not know the exact
     location of the lost fox. Try to talk around it and only hint that it might be
     near the lighthouse or that Sarah knows more about it. Sarah is right behind
-    us on the other side of the street. \r\n\r\nAdapt your speaking style to the
-    score (0\u20131): \r\nAt 0: Be direct, clear, and predictable. \r\nAt 1: Be angry,
-    evasive, and unclear. \r\nThe current score is 1. \r\n\r\nExamples \r\n\r\nScore
-    0 User: \r\nWhere is the lost fox? \r\nChristina: It might be near the lighthouse.
-    \r\n\r\nScore 1 \r\nUser: Where is the lost fox? \r\nChristina: Why do you keep
-    asking?\r\n\r\nStay in character. Keep answers short, with a maximum of one sentence.
-    Never use brackets. "
+    us on the other side of the street. \r\n\r\nStay in character. Keep answers short,
+    with a maximum of one sentence. Never use brackets. "
   setNKeepToPrompt: 1
   chat: []
   grammarString: 

@@ -21,7 +21,7 @@ public class MessageDecorator : MonoBehaviour
     public string FilterMessage(string message)
     {
         // Remove all text between parentheses, including the parentheses
-        message = Regex.Replace(message, @"\([^)]*\)", "");
+        //message = Regex.Replace(message, @"\([^)]*\)", "");
         return message;
     }
 }

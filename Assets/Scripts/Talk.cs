@@ -1,4 +1,5 @@
 using ReadyPlayerMe.Core;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -7,34 +8,47 @@ public class Talk : MonoBehaviour
     public Text2Speech speech; // assign in Inspector
     public AudioSource audioSource;
 
+    // Event to notify when speech finished
+    public event Action OnSpeechFinished;
+
+    /// <summary>
+    /// Start text-to-speech and optionally notify when done
+    /// </summary>
     public void Text2Speech(string text, VoiceHandler voiceHandler)
     {
         StartCoroutine(PlayVoice(text, voiceHandler));
     }
 
-    /// <summary>
-    /// Coroutine that requests speech from OpenAI and plays it.
-    /// </summary>
     private IEnumerator PlayVoice(string text, VoiceHandler voiceHandler)
     {
+        AudioClip generatedClip = null;
+
+        // Request speech clip
         yield return StartCoroutine(speech.SpeakToClip(text, clip =>
         {
-            if (clip != null)
-            {
-                audioSource.mute = false;
-                audioSource.loop = false;
-                audioSource.clip = clip;
-
-                // If you're using ReadyPlayerMe voice animation
-                if (voiceHandler != null)
-                {
-                    voiceHandler.PlayCurrentAudioClip();
-                }
-                else
-                {
-                    audioSource.Play();
-                }
-            }
+            generatedClip = clip;
         }));
+
+        if (generatedClip != null)
+        {
+            audioSource.mute = false;
+            audioSource.loop = false;
+            audioSource.clip = generatedClip;
+
+            if (voiceHandler != null)
+            {
+                voiceHandler.PlayCurrentAudioClip();
+            }
+            else
+            {
+                audioSource.Play();
+            }
+
+            // Wait until playback finishes
+            yield return new WaitForSeconds(generatedClip.length);
+
+            // Fire the event
+            OnSpeechFinished?.Invoke();
+        }
     }
 }

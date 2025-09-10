@@ -11,8 +11,6 @@ public class LLM_Handler : MonoBehaviour
     private LLMCharacter llmCharacter;
     private string replyMessage;
 
-    private bool isTalking = false;
-
     private void Start()
     {
         llmCharacter = GetComponent<LLMCharacter>();
@@ -27,17 +25,10 @@ public class LLM_Handler : MonoBehaviour
     {
         Debug.Log(replyMessage);
         conversationManager.TalkNpc(replyMessage, voiceHandler);
-
-        isTalking = false;
     }
 
     public void ProcessMessage(string message)
     {
-        if (isTalking)
-            return;
-
-        isTalking = true;
-
         Debug.Log(message);
         _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted);
     }

@@ -5,16 +5,34 @@ using UnityEngine;
 public class ConversationManager : MonoBehaviour
 {
     public Speech2Text speech2Text;
-    public bool VoiceEnable = false;
+    public bool UserVoiceEnable = false;
+    public bool NpcVoiceEnable = false;
 
     private NPCToStoryBridge currentNPC;
     private Talk talk;
     private MessageDecorator messageDecorator = null;
 
+    private bool talking = false;
+
     public void Start()
     {
         talk = GetComponent<Talk>();
         messageDecorator = GetComponent<MessageDecorator>();
+
+        // Subscribe to speech finished event
+        if (talk != null)
+        {
+            talk.OnSpeechFinished += OnNpcSpeechFinished;
+        }
+    }
+
+    // This function will be called when the NPC finishes talking
+    private void OnNpcSpeechFinished()
+    {
+        talking = false;
+
+        Debug.Log("NPC finished speaking!");
+        // You can trigger next actions here, e.g. enable user input
     }
 
     public void SetCurrentNPC(NPCToStoryBridge npc)
@@ -24,18 +42,22 @@ public class ConversationManager : MonoBehaviour
 
     public void TalkUser()
     {
-        if (VoiceEnable && currentNPC != null && currentNPC.llmHandler != null)
+        if (talking) return;
+
+        if (UserVoiceEnable && currentNPC != null && currentNPC.llmHandler != null)
         {
+            talking = true;
+
             speech2Text.Set_LLM_Handler(currentNPC.llmHandler);
-            if (VoiceEnable)
-            {
-                speech2Text.ToggleRecording();
-            }
+            speech2Text.ToggleRecording();
         }
     }
 
     public void ProcessMessage(string message)
     {
+        if (talking) return;
+        talking = true;
+
         if (currentNPC && currentNPC.GetHandler() != null)
         {
             currentNPC.GetHandler().ProcessMessage(message);
@@ -49,7 +71,7 @@ public class ConversationManager : MonoBehaviour
             replyMessage = messageDecorator.FilterMessage(replyMessage);
         }
 
-        if (VoiceEnable && talk != null && voiceHandler != null)
+        if (NpcVoiceEnable && talk != null && voiceHandler != null)
         {
             talk.Text2Speech(replyMessage, voiceHandler);
         }
