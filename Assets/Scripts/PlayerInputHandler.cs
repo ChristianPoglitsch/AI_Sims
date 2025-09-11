@@ -47,6 +47,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnFire()
     {
+        if (inputField != null && inputFieldUsed) return;
+
         conversationManager.OrientateNpcToCameraAndStartTalk();
     }
 
