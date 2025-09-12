@@ -171,14 +171,11 @@ public class ConversationManager : MonoBehaviour
     {
         if (Camera.main == null) return;
 
-        Transform camTransform = Camera.main.transform;        
+        // Use mouse position instead of always forward
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * 50f, Color.green, 2f);
 
-        // Visualize the ray
-        Debug.DrawRay(camTransform.position, camTransform.forward * 50f, Color.red, 2f);
-
-        Ray ray = new Ray(camTransform.position, camTransform.forward);
         RaycastHit hit;
-
         if (Physics.Raycast(ray, out hit, 6f))
         {
             NPCToStoryBridge npcBridge = hit.collider.GetComponent<NPCToStoryBridge>();
@@ -188,11 +185,11 @@ public class ConversationManager : MonoBehaviour
                 gameStatusInformation.text = userCanTalk;
 
                 // Make NPC look at player horizontally
-                Vector3 lookTarget = camTransform.position;
+                Vector3 lookTarget = Camera.main.transform.position;
                 lookTarget.y = hit.collider.transform.position.y;
                 hit.collider.transform.LookAt(lookTarget);
 
-                Debug.Log("Fire pressed → checking for NPC...");
+                Debug.Log("Mouse click → checking for NPC...");
                 SetCurrentNPC(npcBridge);
                 TalkUser();
             }
@@ -206,5 +203,6 @@ public class ConversationManager : MonoBehaviour
             Debug.Log("Raycast did not hit any NPC.");
         }
     }
+
 
 }
