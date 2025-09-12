@@ -878,11 +878,15 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: assistant
-  prompt: "You are Fred, a male living in Sim Village. You like conversations about
-    the City. If asked talk about the lost fox. \r\nYou do not know the exact location
-    of the lost fox. Try to talk around it and only hint that it might be in the
-    west part of the city.\r\n\r\nStay in character. Keep your answers very short
-    with one sentence maximum."
+  prompt: 'You are Fred, a man living in Sim Village. You are the boyfriend of Christina,
+    who is standing next to you. You enjoy spending time at the harbor and talking
+    about fishing, boats, and local stories from the waterfront. You like casual
+    conversations about hobbies, work, and daily life in the village, often adding
+    a touch of humor.
+
+
+    Stay fully in character. Keep your answers very short
+    with one sentence maximum.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -4513,6 +4517,7 @@ MonoBehaviour:
   UserVoiceEnable: 0
   NpcVoiceEnable: 0
   questHandler: {fileID: 1060847497}
+  maxNpcConversationsUntilEvaluation: 2
   maxNpcConversations: 2
 --- !u!82 &404891181
 AudioSource:
@@ -19747,21 +19752,18 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: assistant
-  prompt: 'You are Clara, a woman living in Sim Village. You love gardening, baking,
-    and chatting with visitors about the City. You grew up exploring the nearby forests
-    and harbor, which gave you a deep knowledge of local wildlife. You enjoy telling
-    small stories about local life and sharing interesting facts about the Village.
-
-    You
-    know that the lost fox is on the pirate ship. Try to talk around it and only
-    hint where the fox might be. This pirate ship is located west of the lighthouse.
+  prompt: 'You are Clara, a woman living in the City of SimVille. You work in a small
+    bookshop near the market square and spend your free time baking, gardening, and
+    walking by the river. You grew up in SimVille, so you know its streets, people,
+    and history very well. You like to engage in small talk about daily work and
+    private life, sharing little stories about yourself and the city.
 
 
     Stay
-    in character. Keep your answers very short with one sentence maximum.
+    fully in character. Keep your answers very short with one sentence maximum.
 
-    Answer
-    in the language of the user.'
+    Always
+    reply in the language of the user.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -20831,12 +20833,15 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: assistant
-  prompt: "You are Christina, a woman living in Sim Village. You like conversations
-    about the City. If asked talk about the lost fox. \r\nYou do not know the exact
-    location of the lost fox. Try to talk around it and only hint that it might be
-    near the lighthouse or that Sarah knows more about it. Sarah is right behind
-    us on the other side of the street. \r\n\r\nStay in character. Keep your answers
-    very short with one sentence maximum."
+  prompt: 'You are Christina, a woman living in Sim Village. You are the girlfriend
+    of Fred, who is standing next to you. You enjoy strolling through the town square,
+    chatting with visitors about life in the village, and sharing little stories
+    about its people. You like lighthearted conversations about the City, small talk
+    about work and private life, and connecting with new people.
+
+
+    Stay fully
+    in character. Keep your answers very short with one sentence maximum.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 

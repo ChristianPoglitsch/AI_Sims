@@ -12,7 +12,7 @@ public class ConversationManager : MonoBehaviour
     public bool NpcVoiceEnable = false;
     public LLM_Handler questHandler;
 
-    private LLM_Handler currentNPC;
+    public LLM_Handler currentNPC;
     private LLM_Handler npcTarget;
     private Talk talk;
     private MessageDecorator messageDecorator = null;
@@ -41,20 +41,23 @@ public class ConversationManager : MonoBehaviour
 
         npcConversations = maxNpcConversations;
         npcConversationsUntilEvaluation = maxNpcConversationsUntilEvaluation;
+
+        messageDecorator.SetLlmHandler(questHandler);
     }
 
     // This function will be called when the NPC finishes talking
     private void OnNpcSpeechFinished()
     {
-        npcConversations--;        
+        npcConversations = Mathf.Max(-1, npcConversations - 1);
+        npcConversationsUntilEvaluation = Mathf.Max(-1, npcConversationsUntilEvaluation - 1);
+
         talking = false;
         gameStatusInformation.text = userCanTalk;
-
-        Debug.Log("NPC finished speaking. #num conversations left is " + npcConversations);
+        
         // You can trigger next actions here, e.g. enable user input
 
         NpcConnection otherNpc = currentNPC.GetNpcConnection();
-        if (npcConversations > 0 && otherNpc != null)
+        if (npcConversations > 0 && otherNpc != null && otherNpc.RandomHandler != null)
         {
             Debug.Log("Num conversation partner #" + otherNpc.GetNumNpcs());
             currentNPC = otherNpc.RandomHandler;
@@ -70,17 +73,20 @@ public class ConversationManager : MonoBehaviour
 
         if(npcConversationsUntilEvaluation == 0)
         {
-            messageDecorator.SetLlmHandler(questHandler);
             messageDecorator.EvaluateConversation();
         }
 
         // Now it is the user's turn
-        if(npcConversations < 0)
-        {
-            npcConversationsUntilEvaluation--;
+        if(npcConversations == 0)
+        {            
             npcConversations = maxNpcConversations;
-            currentNPC = npcTarget;
+            if (npcTarget != null)
+            {
+                currentNPC = npcTarget;
+            }
         }
+
+        Debug.Log("NPC finished speaking. #num conversations left is " + npcConversations + " ; #num conversations until evaluation " + npcConversationsUntilEvaluation);
     }
 
     public void SetCurrentNPC(NPCToStoryBridge npc)
@@ -88,20 +94,19 @@ public class ConversationManager : MonoBehaviour
         currentNPC = npc.llmHandler;
         npcTarget = currentNPC;
         npcConversationsUntilEvaluation = maxNpcConversationsUntilEvaluation;
+        npcConversations = maxNpcConversations;
 
         if (currentNPC && currentNPC.GetNpcConnection() != null)
         {
-            maxNpcConversations = currentNPC.GetNpcConnection().GetNumNpcs();
+            maxNpcConversations = currentNPC.GetNpcConnection().GetNumNpcs() + 1;
             npcConversations = maxNpcConversations;
-
-            npcConversations = currentNPC.GetNpcConnection().GetNumNpcs();
             Debug.Log("Number of NPC conversations set to " + npcConversations);
         }
     }
 
     public void TalkUser()
     {
-        if (talking) return;        
+        if (talking) return;
 
         if (UserVoiceEnable && currentNPC != null && currentNPC != null)
         {
@@ -116,22 +121,27 @@ public class ConversationManager : MonoBehaviour
         if (talking) return;
         talking = true;
 
-        gameStatusInformation.text = npcTalking;
+        if(gameStatusInformation)
+            gameStatusInformation.text = npcTalking;
+
         if (currentNPC != null)
         {
             currentNPC.ProcessMessage(message);
         }
     }
 
-    public void TalkNpc(string replyMessage, VoiceHandler voiceHandler)
+    public void TalkNpc(string replyMessage, VoiceHandler voiceHandler, bool addToHist)
     {
-        StartCoroutine(TalkNpcCoroutine(replyMessage, voiceHandler));
+        StartCoroutine(TalkNpcCoroutine(replyMessage, voiceHandler, addToHist));
     }
 
-    private IEnumerator TalkNpcCoroutine(string replyMessage, VoiceHandler voiceHandler)
+    private IEnumerator TalkNpcCoroutine(string replyMessage, VoiceHandler voiceHandler, bool addToHist)
     {
-        messageDecorator.AddMessage(currentNPC.GetUserMessage());
-        //messageDecorator.AddMessage(replyMessage);
+        if (addToHist)
+        {
+            messageDecorator.AddMessage(currentNPC.GetUserMessage(), MessageTypes.user);
+            messageDecorator.AddMessage(replyMessage, MessageTypes.assistant);
+        }
 
         currentMessage = replyMessage;
 
@@ -169,7 +179,7 @@ public class ConversationManager : MonoBehaviour
         Ray ray = new Ray(camTransform.position, camTransform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 5f))
+        if (Physics.Raycast(ray, out hit, 6f))
         {
             NPCToStoryBridge npcBridge = hit.collider.GetComponent<NPCToStoryBridge>();
             if (npcBridge != null)

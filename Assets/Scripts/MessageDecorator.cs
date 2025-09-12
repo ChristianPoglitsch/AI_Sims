@@ -4,13 +4,18 @@ using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 
+public enum MessageTypes
+{
+    system = 0,
+    assistant = 1,
+    user = 2
+}
+
 public class MessageDecorator : MonoBehaviour
 {
     public TMP_Text text;
-    public bool processMessage = false;
-    
+    public bool processMessage = false;    
     private LLM_Handler llmHandler;
-    private List<string> messages = new List<string>();
 
     public void ProcessMessage(string message)
     {
@@ -21,7 +26,7 @@ public class MessageDecorator : MonoBehaviour
         }
         text.text = message;
     }
-    
+
     //public string FilterMessage(string message)
     //{
     //    // Remove all text between parentheses, including the parentheses
@@ -29,14 +34,19 @@ public class MessageDecorator : MonoBehaviour
     //    return message;
     //}
 
-    public void AddMessage(string m)
+    public void AddMessage(string message, MessageTypes type)
     {
-        messages.Add(m);
-    }
+        if (llmHandler == null || llmHandler.GetLlm() == null)
+        {
+            Debug.Log("LLM Handler for evaluating quests is not assigned.");
+            return;
+        }
 
-    public List<string> GetMessages() 
-    { 
-        return messages;
+        // Convert enum to string role
+        string role = type.ToString(); // "system", "assistant", "user"
+
+        // Call LLM with role and message
+        llmHandler.GetLlm().AddMessage(role, message);
     }
 
     public void SetLlmHandler(LLM_Handler handler)
@@ -46,12 +56,17 @@ public class MessageDecorator : MonoBehaviour
 
     public void EvaluateConversation()
     {
-        llmHandler.GetLlm().ClearChat();
+        if (llmHandler == null || llmHandler.GetLlm() == null)
+        {
+            Debug.Log("LLM Handler for evaluating quests is not assigned.");
+            return;
+        }
 
-        string combined = string.Join("\n\n", messages);
-        combined += "\nBased on the chat history, was the user friendly?";
+        string message = "\nProvide a concise one-sentence answer. Based on the chat history, determine the amount of included small talk.";
 
         // Now pass it to your function
-        llmHandler.ProcessMessage(combined, false);
+        llmHandler.ProcessMessage(message, false);
+
+        llmHandler.GetLlm().ClearChat();
     }
 }

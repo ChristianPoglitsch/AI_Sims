@@ -14,6 +14,8 @@ public class LLM_Handler : MonoBehaviour
     private string replyMessage;
     private string userMessage;
 
+    bool addToHistory = false;
+
     private void Start()
     {
         llmCharacter = GetComponent<LLMCharacter>();
@@ -48,13 +50,14 @@ public class LLM_Handler : MonoBehaviour
     void ReplyCompleted()
     {
         Debug.Log(replyMessage);
-        conversationManager.TalkNpc(replyMessage, voiceHandler);
+        conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory);
     }
 
-    public void ProcessMessage(string message, bool addToHistory = true)
+    public void ProcessMessage(string message, bool addToHist = true)
     {
         Debug.Log(message);
         userMessage = message;
+        addToHistory = addToHist;
         _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted, addToHistory);
     }
 }
