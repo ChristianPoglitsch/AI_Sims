@@ -14,7 +14,8 @@ public enum MessageTypes
 public class MessageDecorator : MonoBehaviour
 {
     public TMP_Text text;
-    public bool processMessage = false;    
+
+    private bool processMessage = false;
     private LLM_Handler llmHandler;
 
     public void ProcessMessage(string message)

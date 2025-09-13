@@ -25,8 +25,8 @@ public class ConversationManager : MonoBehaviour
     public int maxNpcConversations = 1;
     private int npcConversations = 0;
 
-    private string userCanTalk = "User can talk.";
-    private string npcTalking = "NPC is thinking.";
+    private readonly string userCanTalk = "User can talk.";
+    private readonly string npcTalking = "NPC is thinking.";
 
     public void Start()
     {
@@ -52,7 +52,6 @@ public class ConversationManager : MonoBehaviour
         npcConversationsUntilEvaluation = Mathf.Max(-1, npcConversationsUntilEvaluation - 1);
 
         talking = false;
-        gameStatusInformation.text = userCanTalk;
         
         // You can trigger next actions here, e.g. enable user input
 
@@ -71,7 +70,7 @@ public class ConversationManager : MonoBehaviour
             Debug.Log("NPC 1:1 conversation.");
         }
 
-        if(npcConversationsUntilEvaluation == 0)
+        if(npcConversationsUntilEvaluation == 0 && currentNPC.EvaluateConversation())
         {
             messageDecorator.EvaluateConversation();
         }
@@ -86,6 +85,7 @@ public class ConversationManager : MonoBehaviour
             }
         }
 
+        gameStatusInformation.text = userCanTalk;
         Debug.Log("NPC finished speaking. #num conversations left is " + npcConversations + " ; #num conversations until evaluation " + npcConversationsUntilEvaluation);
     }
 

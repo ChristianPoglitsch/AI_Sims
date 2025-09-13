@@ -8,6 +8,7 @@ public class LLM_Handler : MonoBehaviour
     public VoiceHandler voiceHandler;
     public ConversationManager conversationManager;
     public string voice = "alloy";
+    public bool enableEvaluation = false;
 
     private NpcConnection connection;
     private LLMCharacter llmCharacter;
@@ -20,6 +21,11 @@ public class LLM_Handler : MonoBehaviour
     {
         llmCharacter = GetComponent<LLMCharacter>();
         connection = GetComponent<NpcConnection>();
+    }
+
+    public bool EvaluateConversation()
+    {
+        return enableEvaluation;
     }
 
     public string GetVoiceName()
