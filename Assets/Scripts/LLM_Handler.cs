@@ -1,34 +1,69 @@
 using LLMUnity;
+using ReadyPlayerMe.Core;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class MyScript : MonoBehaviour
+public class LLM_Handler : MonoBehaviour
 {
-    public LLMCharacter llmCharacter;
+    public VoiceHandler voiceHandler;
+    public ConversationManager conversationManager;
+    public string voice = "alloy";
+    public bool enableEvaluation = false;
 
+    private NpcConnection connection;
+    private LLMCharacter llmCharacter;
     private string replyMessage;
+    private string userMessage;
 
-    public void Start()
+    bool addToHistory = false;
+
+    private void Start()
     {
-        Game();
+        llmCharacter = GetComponent<LLMCharacter>();
+        connection = GetComponent<NpcConnection>();
+    }
+
+    public bool EvaluateConversation()
+    {
+        return enableEvaluation;
+    }
+
+    public string GetVoiceName()
+    {
+        return voice;
+    }
+
+    public string GetUserMessage()
+    {
+        return userMessage;
+    }
+
+    public NpcConnection GetNpcConnection()
+    {
+        return connection;
+    }
+
+    public LLMCharacter GetLlm() 
+    { 
+        return llmCharacter;
     }
 
     void HandleReply(string reply)
     {
-        // do something with the reply from the model
-        //Debug.Log(reply);
         replyMessage = reply;
     }
 
     void ReplyCompleted()
     {
-        // do something when the reply from the model is complete
         Debug.Log(replyMessage);
+        conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory);
     }
 
-    void Game()
+    public void ProcessMessage(string message, bool addToHist = true)
     {
-        // your game function
-        string message = "Hello bot!";
-        _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted);
+        Debug.Log(message);
+        userMessage = message;
+        addToHistory = addToHist;
+        _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted, addToHistory);
     }
 }
