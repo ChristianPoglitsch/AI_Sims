@@ -9,7 +9,6 @@ public class Text2Speech : MonoBehaviour
 {
     [Header("OpenAI Settings")]
     [SerializeField] private string apiKeyFileName = "openai_api_key.txt"; // file name for local key
-    [SerializeField] private string voice = "alloy";           // OpenAI TTS voices
     [SerializeField] private string model = "gpt-4o-mini-tts"; // fast + cheap
 
     private AudioSource audioSource;
@@ -54,10 +53,10 @@ public class Text2Speech : MonoBehaviour
     /// Coroutine: Request speech from OpenAI and return AudioClip.
     /// Usage: yield return StartCoroutine(SpeakToClip("Hello", clip => { ... }));
     /// </summary>
-    public IEnumerator SpeakToClip(string text, Action<AudioClip> onReady)
+    public IEnumerator SpeakToClip(string text, string voice, Action<AudioClip> onReady)
     {
         string url = "https://api.openai.com/v1/audio/speech";
-        string jsonBody = "{\"model\":\"gpt-4o-mini-tts\",\"voice\":\"alloy\",\"input\":\"" + text + "\",\"response_format\":\"wav\"}";
+        string jsonBody = $"{{\"model\":\"gpt-4o-mini-tts\",\"voice\":\"{voice}\",\"input\":\"{text}\",\"response_format\":\"wav\"}}";
 
         using (UnityWebRequest www = new UnityWebRequest(url, "POST"))
         {
@@ -72,7 +71,6 @@ public class Text2Speech : MonoBehaviour
             if (www.result != UnityWebRequest.Result.Success)
             {
                 Debug.LogError("TTS Error: " + www.error);
-                onReady?.Invoke(null);
             }
             else
             {

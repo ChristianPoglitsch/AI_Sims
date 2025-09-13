@@ -12,7 +12,7 @@ public class Speech2Text : MonoBehaviour
     [Header("STT Settings")]
     [SerializeField] private string sttModel = "gpt-4o-mini-transcribe";
 
-    public LLM_Handler llm_handler;
+    private LLM_Handler llm_handler;
 
     private string micDevice;
     private AudioClip recording;
@@ -32,6 +32,11 @@ public class Speech2Text : MonoBehaviour
         }
 
         LoadApiKey();
+    }
+
+    public void Set_LLM_Handler(LLM_Handler handler)
+    {
+        llm_handler = handler;
     }
 
     private void LoadApiKey()

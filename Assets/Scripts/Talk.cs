@@ -1,52 +1,55 @@
 using ReadyPlayerMe.Core;
+using System;
 using System.Collections;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class Talk : MonoBehaviour
 {
     public Text2Speech speech; // assign in Inspector
-    private AudioSource audioSource;
-    private VoiceHandler voiceHandler;
+    public AudioSource audioSource;
 
-    void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-        voiceHandler = GetComponent<VoiceHandler>();
-    }
-
-    void Start()
-    {
-        // Example: speak automatically after startup
-        //StartCoroutine(PlayVoice("Hello Unity, I am speaking using OpenAI TTS!"));
-    }
-
-    public void Text2Speech(string text)
-    {
-        StartCoroutine(PlayVoice(text));
-    }
+    // Event to notify when speech finished
+    public event Action OnSpeechFinished;
 
     /// <summary>
-    /// Coroutine that requests speech from OpenAI and plays it.
+    /// Start text-to-speech and optionally notify when done
     /// </summary>
-    private IEnumerator PlayVoice(string text)
+    public void Text2Speech(string text, VoiceHandler voiceHandler, string voice)
     {
-        yield return StartCoroutine(speech.SpeakToClip(text, clip =>
-        {
-            if (clip != null)
-            {
-                audioSource.loop = false;
-                audioSource.clip = clip;
+        StartCoroutine(PlayVoice(text, voiceHandler, voice));
+    }
 
-                // If you're using ReadyPlayerMe voice animation
-                if (voiceHandler != null)
-                {
-                    voiceHandler.PlayCurrentAudioClip();
-                }
-                else
-                {
-                    audioSource.Play();
-                }
-            }
+    private IEnumerator PlayVoice(string text, VoiceHandler voiceHandler, string voice)
+    {
+        AudioClip generatedClip = null;
+
+        // Request speech clip
+        yield return StartCoroutine(speech.SpeakToClip(text, voice, clip =>
+        {
+            generatedClip = clip;
         }));
+
+        if (generatedClip != null)
+        {
+            audioSource.mute = false;
+            audioSource.loop = false;
+            audioSource.clip = generatedClip;
+
+            if (voiceHandler != null)
+            {
+                voiceHandler.PlayCurrentAudioClip();
+            }
+            else
+            {
+                audioSource.Play();
+            }
+
+            // Wait until playback finishes
+            yield return new WaitForSeconds(generatedClip.length);
+
+            // Fire the event
+            OnSpeechFinished?.Invoke();
+        }
     }
 }
