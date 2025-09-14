@@ -830,6 +830,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 0
+  EvaluationString: 
 --- !u!114 &49478994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2326,6 +2327,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 1
+  EvaluationString: 
 --- !u!4 &208977291
 Transform:
   m_ObjectHideFlags: 0
@@ -5052,6 +5054,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 1
+  EvaluationString: 
 --- !u!114 &410469774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11919,6 +11922,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 1
+  EvaluationString: 
 --- !u!114 &915401018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13408,6 +13412,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: 
   enableEvaluation: 0
+  EvaluationString: 
 --- !u!114 &1060847498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14821,6 +14826,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 0
+  EvaluationString: 
 --- !u!114 &1216563962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16316,6 +16322,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 1
+  EvaluationString: 
 --- !u!114 &1344964913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18219,6 +18226,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 1
+  EvaluationString: 
 --- !u!114 &1507529898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18390,6 +18398,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 1
+  EvaluationString: 
 --- !u!114 &1519450298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20567,7 +20576,10 @@ MonoBehaviour:
   voiceHandler: {fileID: 6411084578540732890}
   conversationManager: {fileID: 404891180}
   voice: alloy
-  enableEvaluation: 0
+  enableEvaluation: 1
+  EvaluationString: 'Based on the chat, did the user use the word Hello? Respond
+    with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond
+    with 0.'
 --- !u!114 &1665082472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21647,6 +21659,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: nova
   enableEvaluation: 0
+  EvaluationString: 
 --- !u!114 &1801637156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22066,6 +22079,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 0
+  EvaluationString: 
 --- !u!114 &1868765900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22182,6 +22196,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 0
+  EvaluationString: 
 --- !u!114 &1874312092
 MonoBehaviour:
   m_ObjectHideFlags: 0

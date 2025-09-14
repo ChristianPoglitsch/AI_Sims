@@ -102,6 +102,8 @@ public class ConversationManager : MonoBehaviour
             npcConversations = maxNpcConversations;
             Debug.Log("Number of NPC conversations set to " + npcConversations);
         }
+
+        messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
     }
 
     public void TalkUser()
@@ -140,7 +142,7 @@ public class ConversationManager : MonoBehaviour
         if (addToHist)
         {
             messageDecorator.AddMessage(currentNPC.GetUserMessage(), MessageTypes.user);
-            messageDecorator.AddMessage(replyMessage, MessageTypes.assistant);
+            //messageDecorator.AddMessage(replyMessage, MessageTypes.assistant);
         }
 
         currentMessage = replyMessage;

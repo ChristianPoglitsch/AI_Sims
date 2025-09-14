@@ -17,6 +17,9 @@ public class MessageDecorator : MonoBehaviour
 
     private bool processMessage = false;
     private LLM_Handler llmHandler;
+    public bool ProcessedEvaluation { get; private set; } = false;
+
+    public string EvaluationString { get; private set; } = string.Empty;
 
     public void ProcessMessage(string message)
     {
@@ -27,13 +30,6 @@ public class MessageDecorator : MonoBehaviour
         }
         text.text = message;
     }
-
-    //public string FilterMessage(string message)
-    //{
-    //    // Remove all text between parentheses, including the parentheses
-    //    //message = Regex.Replace(message, @"\([^)]*\)", "");
-    //    return message;
-    //}
 
     public void AddMessage(string message, MessageTypes type)
     {
@@ -55,19 +51,30 @@ public class MessageDecorator : MonoBehaviour
         this.llmHandler = handler;
     }
 
+    public void SetEvaluationInstruction(string instruction)
+    {
+        EvaluationString = instruction;
+    }
+
+    public void Clear()
+    {
+        if(ProcessedEvaluation)
+            llmHandler.GetLlm().ClearChat();
+    }
+
     public void EvaluateConversation()
     {
-        if (llmHandler == null || llmHandler.GetLlm() == null)
+        if (llmHandler == null || llmHandler.GetLlm() == null || EvaluationString == string.Empty)
         {
             Debug.Log("LLM Handler for evaluating quests is not assigned.");
             return;
         }
 
-        string message = "\nProvide a concise one-sentence answer. Based on the chat history, determine the amount of included small talk.";
+        //string message = llmHandler.GetLlm().prompt;
+        //string message = "\nBased on the chat, did the user use the word Hello? Respond with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond with 0.";
 
         // Now pass it to your function
-        llmHandler.ProcessMessage(message, false);
-
-        llmHandler.GetLlm().ClearChat();
+        llmHandler.ProcessMessage(EvaluationString, false);
+        ProcessedEvaluation = true;
     }
 }

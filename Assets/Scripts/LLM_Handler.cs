@@ -17,6 +17,8 @@ public class LLM_Handler : MonoBehaviour
 
     bool addToHistory = false;
 
+    public string EvaluationString = string.Empty;
+
     private void Start()
     {
         llmCharacter = GetComponent<LLMCharacter>();
