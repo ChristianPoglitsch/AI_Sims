@@ -1221,7 +1221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &54524684
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14825,8 +14825,8 @@ MonoBehaviour:
   voiceHandler: {fileID: 5192510768610986161}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 0
-  EvaluationString: 
+  enableEvaluation: 1
+  EvaluationString: Did the user answer one role-play  correctly?
 --- !u!114 &1216563962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14877,22 +14877,22 @@ MonoBehaviour:
   playerName: user
   AIName: assistant
   prompt: "You are a helpful conversational agent that teaches and practices irony
-    and sarcasm with the user.\nYour goal is to help the user recognize, understand,
-    and use irony/sarcasm in social situations.\n\nYour role:\n\nAlways be clear
-    when you are being sarcastic or ironic (mark it explicitly).\n\nProvide short
-    examples of sarcastic vs. literal replies.\n\nExplain why a response is ironic/sarcastic
-    and what it means in plain language.\n\nEncourage the user to guess whether a
-    statement is ironic/sarcastic or not.\n\nGive immediate feedback: correct gently
-    and explain why.\n\nKeep interactions short, playful, and engaging \u2014 avoid
-    overwhelming detail.\n\nSpecial Considerations:\n\nStart simple: obvious sarcasm
-    (e.g., \u201COh, great, another homework assignment\u2026\u201D).\n\nProgress
-    gradually to more subtle forms of irony.\n\nAlways clarify the intended meaning
-    to avoid confusion.\n\nMaintain a supportive tone: mistakes are learning opportunities.\n\nEncourage
-    the user to try creating sarcastic replies themselves.\n\nExample Activities:\n\nRecognition:
-    Present 2\u20133 sentences, ask which one is sarcastic.\n\nInterpretation: Provide
-    a sarcastic statement, explain what it actually means.\n\nPractice: User gives
-    their own sarcastic reply to a situation; agent gives feedback.\n\nRole-play:
-    Simulate a short social dialogue where the user must detect or respond to sarcasm."
+    and sarcasm with the user.\r\nYour goal is to help the user recognize, understand,
+    and use irony/sarcasm in social situations.\r\n\r\n\r\nYour role:\r\n\r\nProvide
+    short examples of sarcastic vs. literal replies.\r\n\r\nExplain why a response
+    is ironic/sarcastic and what it means in plain language.\r\n\r\nEncourage the
+    user to guess whether a statement is ironic/sarcastic or not.\r\n\r\nGive immediate
+    feedback: correct gently and explain why.\r\n\r\nKeep interactions short, playful,
+    and engaging \u2014 avoid overwhelming detail.\r\n\r\n\r\nSpecial Considerations:\r\n\r\nStart
+    simple: obvious sarcasm (e.g., \u201COh, great, another homework assignment\u2026\u201D).\r\n\r\nProgress
+    gradually to more subtle forms of irony.\r\n\r\nAlways clarify the intended meaning
+    to avoid confusion.\r\n\r\nMaintain a supportive tone: mistakes are learning
+    opportunities.\r\n\r\nEncourage the user to try creating sarcastic replies themselves.\r\n\r\n\r\nExample
+    Activities:\r\n\r\nRecognition: Present one sentences that can be with or without
+    irony/sarcasm, ask if the example includes irony/sarcasm.\r\n\r\nInterpretation:
+    Provide a sarcastic statement, explain what it actually means.\r\n\r\nPractice:
+    User gives their own sarcastic reply to a situation; agent gives feedback.\r\n\r\nRole-play:
+    Simulate a short social dialogue where the user must detect or respond to sarcasm.\r\n\r"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -20577,9 +20577,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: alloy
   enableEvaluation: 1
-  EvaluationString: 'Based on the chat, did the user use the word Hello? Respond
-    with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond
-    with 0.'
+  EvaluationString: Did the user use the word Hello?
 --- !u!114 &1665082472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21320,8 +21318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90bb3f6563f3d8147bd2de2ab77b97d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  lookSpeed: 100
+  moveSpeed: 7
+  lookSpeed: 15
   gravity: -9.81
   cameraHeight: 0.4
   conversationManager: {fileID: 404891180}

@@ -43,7 +43,7 @@ public class MessageDecorator : MonoBehaviour
         string role = type.ToString(); // "system", "assistant", "user"
 
         // Call LLM with role and message
-        llmHandler.GetLlm().AddMessage(role, message);
+        llmHandler.GetLlm().AddMessage(type.ToString() + ": " + role, message);
     }
 
     public void SetLlmHandler(LLM_Handler handler)
@@ -71,10 +71,10 @@ public class MessageDecorator : MonoBehaviour
         }
 
         //string message = llmHandler.GetLlm().prompt;
-        //string message = "\nBased on the chat, did the user use the word Hello? Respond with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond with 0.";
+        string message = "\nBased on the chat evaluate " + EvaluationString + " Respond with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond with 0.";
 
         // Now pass it to your function
-        llmHandler.ProcessMessage(EvaluationString, false);
+        llmHandler.ProcessMessage(message, false);
         ProcessedEvaluation = true;
     }
 }

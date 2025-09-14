@@ -120,6 +120,7 @@ public class ConversationManager : MonoBehaviour
 
     public void ProcessMessage(string message)
     {
+        if (gameStatusInformation.text == string.Empty) return;
         if (talking) return;
         talking = true;
 
@@ -142,7 +143,7 @@ public class ConversationManager : MonoBehaviour
         if (addToHist)
         {
             messageDecorator.AddMessage(currentNPC.GetUserMessage(), MessageTypes.user);
-            //messageDecorator.AddMessage(replyMessage, MessageTypes.assistant);
+            messageDecorator.AddMessage(replyMessage, MessageTypes.assistant);
         }
 
         currentMessage = replyMessage;
@@ -205,6 +206,4 @@ public class ConversationManager : MonoBehaviour
             Debug.Log("Raycast did not hit any NPC.");
         }
     }
-
-
 }
