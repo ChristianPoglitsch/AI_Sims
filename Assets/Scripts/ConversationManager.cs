@@ -206,4 +206,35 @@ public class ConversationManager : MonoBehaviour
             Debug.Log("Raycast did not hit any NPC.");
         }
     }
+
+    public void OrientateNpcToCameraAndStartTalkNoRayCast(GameObject selectedObject)
+    {
+        if (selectedObject == null)
+        {
+            Debug.LogWarning("No GameObject provided to OrientateNpcToCameraAndStartTalkNoRayCast.");
+            return;
+        }
+
+        // Get the NPCToStoryBridge component from the object
+        NPCToStoryBridge npcBridge = selectedObject.GetComponent<NPCToStoryBridge>();
+        if (npcBridge == null)
+        {
+            Debug.LogWarning("The selected GameObject does not have an NPCToStoryBridge component.");
+            return;
+        }
+
+        Debug.Log("Selected NPC: " + npcBridge.name);
+        gameStatusInformation.text = userCanTalk;
+
+        // Make NPC look at the player horizontally
+        if (Camera.main != null)
+        {
+            Vector3 lookTarget = Camera.main.transform.position;
+            lookTarget.y = npcBridge.transform.position.y;
+            npcBridge.transform.LookAt(lookTarget);
+        }
+
+        SetCurrentNPC(npcBridge);
+        TalkUser();
+    }
 }

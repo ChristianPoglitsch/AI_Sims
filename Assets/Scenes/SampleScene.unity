@@ -14076,7 +14076,7 @@ PrefabInstance:
     - target: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
@@ -19480,7 +19480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1582312809
 Transform:
   m_ObjectHideFlags: 0
@@ -21455,7 +21455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  lookSpeed: 15
+  lookSpeed: 25
   gravity: -9.81
   cameraHeight: 0.4
   conversationManager: {fileID: 404891180}
@@ -26691,7 +26691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1e4627ada789441939a261e5f4aded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  llmHandler: {fileID: 0}
+  llmHandler: {fileID: 915401017}
 --- !u!114 &4747284933390574069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26767,11 +26767,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4747284933390574054}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -26972,11 +26972,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4283520511740580323}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27295,11 +27295,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5192510768610986159}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27724,11 +27724,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2914838781365279051}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27935,11 +27935,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6411084578540732889}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28070,7 +28070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1e4627ada789441939a261e5f4aded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  llmHandler: {fileID: 0}
+  llmHandler: {fileID: 410469773}
 --- !u!114 &6592867103970768861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28146,11 +28146,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6592867103970768846}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28357,11 +28357,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6714183069018432275}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28684,11 +28684,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1093217919611579143}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29001,11 +29001,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8382256473739888511}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29130,7 +29130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1e4627ada789441939a261e5f4aded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  llmHandler: {fileID: 0}
+  llmHandler: {fileID: 1507529897}
 --- !u!114 &8459365248621531369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29206,11 +29206,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 828004844684319226}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29411,11 +29411,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 572870374407586134}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29616,11 +29616,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404891180}
         m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
-        m_MethodName: OrientateNpcToCameraAndStartTalk
-        m_Mode: 1
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 119133014681378}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

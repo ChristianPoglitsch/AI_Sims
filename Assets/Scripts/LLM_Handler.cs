@@ -1,7 +1,6 @@
 using LLMUnity;
 using ReadyPlayerMe.Core;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class LLM_Handler : MonoBehaviour
 {
