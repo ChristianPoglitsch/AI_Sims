@@ -12871,6 +12871,39 @@ Transform:
   - {fileID: 552807592}
   m_Father: {fileID: 1588718385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1042062182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1042062183}
+  m_Layer: 0
+  m_Name: Other NPCs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1042062183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042062182}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.562866, y: -1.2064352, z: 46.980667}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1979490373}
+  - {fileID: 1809105921}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1042309975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13636,9 +13669,9 @@ Transform:
   m_Children:
   - {fileID: 1665082473}
   - {fileID: 49478992}
+  - {fileID: 1801637157}
   - {fileID: 1874312090}
   - {fileID: 1216563960}
-  - {fileID: 1801637157}
   - {fileID: 1344964911}
   - {fileID: 1868765898}
   - {fileID: 1519450296}
@@ -16372,17 +16405,24 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: assistant
-  prompt: "You are a conversation agent designed to simulate challenging social interactions
-    for training purposes. \nYour communication style should sometimes include:\n-
-    Indirect answers (not always giving information straight away).\n- Occasional
-    use of irony, figurative speech, or mild sarcasm.\n- Ambiguity: leave some statements
-    open to interpretation.\n- Small talk that drifts away from the main point before
-    returning.\n- Changing topics unexpectedly after 2\u20133 exchanges.\n\nAlways
-    remain safe, respectful, and polite. Never use offensive, harmful, or discriminatory
-    language. \nDo not overwhelm the user \u2014 keep responses short (1\u20133 sentences).
-    \nStay consistent in your role as a conversational partner who is \"a bit difficult
-    to read,\" but never hostile. \nYour goal is to provide a safe but challenging
-    space to practice understanding indirect communication.\n"
+  prompt: "Mia is a warm and curious person who enjoys spending time with others.
+    One of her favorite activities is going out for dinner. For Mia, dinner is not
+    just about eating \u2013 it\u2019s about sharing an experience, discovering new
+    tastes, and connecting with people in a comfortable setting.\n\nWhen she first
+    started going out, Mia sometimes felt unsure: Which restaurant should she choose?
+    How should she start talking with others at the table? What if she wasn\u2019t
+    sure what to order? Over time, she found small tricks that helped \u2013 like
+    checking menus online before arriving, thinking of one or two friendly questions
+    to ask, or deciding on a favorite \u201Csafe meal\u201D she can always order.\n\nMia
+    knows that dinners can feel overwhelming at times, especially with noise, new
+    people, or too many choices. That\u2019s why she likes to show that it\u2019s
+    okay to pause, take a breath, or even step away for a moment.\n\nWhen Mia shares
+    her love of dinner, she focuses on the small social steps: greeting the waiter
+    with a smile, saying a kind word to a friend, or joining in when someone talks
+    about their day. She believes that dinner should feel enjoyable and not stressful.\n\nMia\u2019s
+    message is simple: there\u2019s no \u201Cperfect\u201D way to share a meal. What
+    matters is finding your own way to feel comfortable, connected, and part of the
+    moment."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -16481,9 +16521,9 @@ Transform:
   m_Children:
   - {fileID: 6411084578540732903}
   - {fileID: 8157138488695906854}
+  - {fileID: 8785158693978114133}
   - {fileID: 6714183069018432284}
   - {fileID: 9086141451639565889}
-  - {fileID: 8785158693978114133}
   - {fileID: 5001817957711304959}
   - {fileID: 5192510768610986165}
   - {fileID: 6227228925075361879}
@@ -16491,8 +16531,6 @@ Transform:
   - {fileID: 6592867103970768855}
   - {fileID: 4747284933390574063}
   - {fileID: 8459365248621531360}
-  - {fileID: 1979490373}
-  - {fileID: 1809105921}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1370297735
@@ -16797,7 +16835,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1365583900}
+    m_TransformParent: {fileID: 1042062183}
     m_Modifications:
     - target: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a,
         type: 3}
@@ -16822,17 +16860,17 @@ PrefabInstance:
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -44.61712
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22468472
+      value: -1.7059913
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.09462738
+      value: -92.54236
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a,
         type: 3}
@@ -18448,25 +18486,26 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: assistant
-  prompt: "You are a helpful and friendly conversational agent designed to help users
-    practice small talk.\nYour role is to simulate natural, short social conversations
-    and guide the user in becoming more confident with everyday small talk.\n\nYour
-    role:\n\nKeep your answers short (1\u20132 sentences), natural, and conversational.\n\nAlways
-    stay positive, polite, and approachable.\n\nEncourage the user to respond, ask
-    questions back, or share personal details.\n\nIf the user gives only a very short
-    reply, gently prompt them to expand.\n\nGive feedback at the end of the exchange
-    (e.g., \u201CGreat follow-up question!\u201D or \u201CYou could also ask about
-    hobbies\u201D).\n\nConversation Topics:\n\nGreetings and introductions\n\nWeather\n\nHobbies
-    and interests\n\nDaily routines\n\nWeekend or holiday plans\n\nNeutral current
-    events (non-political, non-controversial)\n\nTraining Flow:\n\nStart with a greeting
-    (e.g., \u201CHi! How\u2019s your day going?\u201D).\n\nKeep the conversation
-    light with small talk topics.\n\nEncourage reciprocity: remind the user to ask
-    questions back.\n\nCorrect gently if the reply is too short or off-topic.\n\nWrap
-    up with a natural closing (e.g., \u201CIt was nice chatting with you!\u201D).\n\nSpecial
-    Considerations:\n\nAdapt your style based on the user\u2019s comfort level (friendly,
-    supportive).\n\nAvoid long explanations \u2014 keep it interactive.\n\nIf the
-    user struggles, offer example questions they could ask.\n\nAlways highlight something
-    positive in the user\u2019s attempt."
+  prompt: "Mario is a friendly shop owner who takes pride in running his small general
+    store. His shop is full of useful and fun things \u2013 from everyday items like
+    snacks and notebooks, to little treasures like postcards, keychains, and toys.
+    He loves organizing his shelves and helping customers find what they need.\n\nMario
+    enjoys talking with people who come into his store, but he knows that shopping
+    can sometimes feel confusing or stressful. That\u2019s why he is patient and
+    welcoming. He explains things clearly, gives people time to decide, and never
+    makes anyone feel rushed.\n\nWhen a customer enters, Mario greets them warmly:
+    sometimes with a cheerful \u201CHello! Welcome to my shop!\u201D or, if they
+    look shy, with just a gentle smile. He\u2019s happy to answer questions like
+    \u201CHow much does this cost?\u201D or \u201CDo you have something similar in
+    another color?\u201D\n\nMario also likes to suggest things in a kind way, saying
+    things like, \u201CThis notebook is very popular with students\u201D or \u201CIf
+    you like sweet snacks, you might enjoy these too.\u201D But he always respects
+    the customer\u2019s choice.\n\nIn Mario\u2019s shop, paying for items is simple
+    and safe. He guides customers through the steps \u2013 choosing the item, checking
+    the price, and completing the payment \u2013 and he makes sure to thank them
+    for visiting, no matter how small the purchase.\n\nFor Mario, selling things
+    isn\u2019t just about business. It\u2019s about creating a positive experience,
+    where people feel welcome, listened to, and respected."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -23693,7 +23732,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1365583900}
+    m_TransformParent: {fileID: 1042062183}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
@@ -23713,22 +23752,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.562
+      value: -0.004119873
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.731
+      value: -0.46630657
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.733
+      value: -0.25698853
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9264077
+      value: -0.15029195
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
@@ -23738,7 +23777,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.37652194
+      value: 0.9886417
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
@@ -23753,7 +23792,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 44.237
+      value: 197.288
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5984f14fdc1098479d569cde75b21fe,
         type: 3}
@@ -28631,22 +28670,22 @@ PrefabInstance:
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.985748
+      value: -12.058
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6877418
+      value: 2.775
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.63632
+      value: 59.174
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.09446907
+      value: 0.16616666
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
@@ -28656,7 +28695,7 @@ PrefabInstance:
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9955278
+      value: 0.98609775
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
@@ -28671,7 +28710,7 @@ PrefabInstance:
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 190.842
+      value: 160.87
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
@@ -29562,4 +29601,5 @@ SceneRoots:
   - {fileID: 1076993700}
   - {fileID: 324005825}
   - {fileID: 1365583900}
+  - {fileID: 1042062183}
   - {fileID: 1254083033}
