@@ -20,7 +20,8 @@ public class EnemyMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
 
-        animator.SetBool("IsRunning", true);
+        animator.SetBool("isWalking", true);
+        animator.SetBool("isStanding", false);
     }
 
     // Update is called once per frame
@@ -41,12 +42,12 @@ public class EnemyMovement : MonoBehaviour
             if (RunAwayTimer > RunAwayInterval)
             {
                 RunAwayTimer = 0;
-                StartChasingPlayer();
+                StartChasingTarget();
             }
         }
     }
 
-    public void StartChasingPlayer()
+    public void StartChasingTarget()
     {
         isFollowingPlayer = true;
         navMeshAgent.speed = 3.5f;
@@ -69,16 +70,8 @@ public class EnemyMovement : MonoBehaviour
         {
             //chooseTarget();
             navMeshAgent.speed = 0;
-            animator.SetTrigger("FallDown");
+            animator.SetBool("isStanding", true);
+            animator.SetBool("isWalking", false);
         }
     }
-
-    public void Die()
-    {
-        navMeshAgent.speed = 0;
-        GetComponent<Rigidbody>().velocity = Vector3.zero;
-        animator.SetTrigger("FallDown");
-        Destroy(this.gameObject, 5f);
-    }
-
 }
