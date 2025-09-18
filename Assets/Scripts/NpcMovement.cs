@@ -22,6 +22,8 @@ public class EnemyMovement : MonoBehaviour
 
         animator.SetBool("isWalking", true);
         animator.SetBool("isStanding", false);
+
+        chooseTarget();
     }
 
     // Update is called once per frame
@@ -49,7 +51,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void StartChasingTarget()
     {
-        isFollowingPlayer = true;
+        //isFollowingPlayer = true;
         navMeshAgent.speed = 3.5f;
     }
 
@@ -60,18 +62,25 @@ public class EnemyMovement : MonoBehaviour
         if (NewTarget == currentTarget)
         {
             chooseTarget();
+            StartChasingTarget();
         }
-        else { currentTarget = NewTarget; }
+        else 
+        { 
+            currentTarget = NewTarget;
+        }
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("NPCTarget") && isFollowingPlayer == true)
-        {
-            //chooseTarget();
+        {            
             navMeshAgent.speed = 0;
             animator.SetBool("isStanding", true);
-            animator.SetBool("isWalking", false);
+            animator.SetBool("isWalking", false);            
+        }
+        else
+        {
+            chooseTarget();
         }
     }
 }

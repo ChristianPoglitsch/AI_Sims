@@ -11,6 +11,7 @@ public class ConversationManager : MonoBehaviour
     public bool UserVoiceEnable = false;
     public bool NpcVoiceEnable = false;
     public LLM_Handler questHandler;
+    public float chanceNpcTalking = 0.3f;
 
     public LLM_Handler currentNPC;
     private LLM_Handler npcTarget;
@@ -49,16 +50,16 @@ public class ConversationManager : MonoBehaviour
     private void OnNpcSpeechFinished()
     {
         npcConversations = Mathf.Max(-1, npcConversations - 1);
-        npcConversationsUntilEvaluation = Mathf.Max(-1, npcConversationsUntilEvaluation - 1);
-
-        talking = false;
-        
-        // You can trigger next actions here, e.g. enable user input
+        npcConversationsUntilEvaluation = Mathf.Max(-1, npcConversationsUntilEvaluation - 1);        
 
         NpcConnection otherNpc = currentNPC.GetNpcConnection();
-        if (npcConversations > 0 && otherNpc != null && otherNpc.RandomHandler != null)
+        float chance = Random.value; // float between 0.0 and 1.0
+
+        if (otherNpc != null && otherNpc.RandomHandler != null && chance < chanceNpcTalking)
         {
-            Debug.Log("Num conversation partner #" + otherNpc.GetNumNpcs());
+            gameStatusInformation.text = string.Empty;
+
+            Debug.Log("Num conversation partner #" + otherNpc.GetNumNpcs() + " | chance = " + chance);
             currentNPC = otherNpc.RandomHandler;
             if (currentNPC)
             {
@@ -67,10 +68,10 @@ public class ConversationManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("NPC 1:1 conversation.");
+            Debug.Log("NPC 1:1 conversation. | chance = " + chance);
         }
 
-        if(npcConversationsUntilEvaluation == 0 && currentNPC.EvaluateConversation())
+        if (npcConversationsUntilEvaluation == 0 && currentNPC.EvaluateConversation())
         {
             messageDecorator.EvaluateConversation();
         }
@@ -86,6 +87,7 @@ public class ConversationManager : MonoBehaviour
         }
 
         gameStatusInformation.text = userCanTalk;
+        talking = false;
         Debug.Log("NPC finished speaking. #num conversations left is " + npcConversations + " ; #num conversations until evaluation " + npcConversationsUntilEvaluation);
     }
 
@@ -133,12 +135,12 @@ public class ConversationManager : MonoBehaviour
         }
     }
 
-    public void TalkNpc(string replyMessage, VoiceHandler voiceHandler, bool addToHist)
+    public void TalkNpc(string replyMessage, VoiceHandler voiceHandler, bool addToHist, string aiName)
     {
-        StartCoroutine(TalkNpcCoroutine(replyMessage, voiceHandler, addToHist));
+        StartCoroutine(TalkNpcCoroutine(replyMessage, voiceHandler, addToHist, aiName));
     }
 
-    private IEnumerator TalkNpcCoroutine(string replyMessage, VoiceHandler voiceHandler, bool addToHist)
+    private IEnumerator TalkNpcCoroutine(string replyMessage, VoiceHandler voiceHandler, bool addToHist, string aiName)
     {
         if (addToHist)
         {
@@ -154,12 +156,12 @@ public class ConversationManager : MonoBehaviour
         }
         else
         {
+            gameStatusInformation.text = string.Empty;
+
             if (messageDecorator != null)
             {
-                messageDecorator.ProcessMessage(replyMessage);
-            }
-
-            gameStatusInformation.text = string.Empty;
+                messageDecorator.ProcessMessage(replyMessage, aiName);
+            }            
 
             // 🕒 Estimate reading time: characters * factor
             float readingSpeed = 0.05f; // seconds per character (~200 wpm)
