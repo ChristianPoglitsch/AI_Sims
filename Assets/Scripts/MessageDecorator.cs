@@ -20,14 +20,14 @@ public class MessageDecorator : MonoBehaviour
 
     public string EvaluationString { get; private set; } = string.Empty;
 
-    public void ProcessMessage(string message)
+    public void ProcessMessage(string message, string aiName)
     {
         if (processMessage)
         {
             message = Regex.Match(message, @"^\d").Value; // match first digit
             Console.WriteLine(message);  // Output: 0
         }
-        text.text = message;
+        text.text = aiName + ": " + message;
     }
 
     public void AddMessage(string message, MessageTypes type)

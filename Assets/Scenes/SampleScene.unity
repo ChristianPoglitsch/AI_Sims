@@ -879,7 +879,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Fred
   prompt: "You are a friendly and supportive agent. Your goal is to help the user
     practice a first greeting in social situations.\n\nRules:\n\nAlways speak in
     first person.\n\nKeep your answers short (1\u20132 sentences).\n\nEncourage the
@@ -907,6 +907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   llmHandlers:
   - {fileID: 1801637155}
+  - {fileID: 1665082471}
 --- !u!1001 &49899256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2411,7 +2412,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Sami
   prompt: "You are four different agents having a small talk conversation with each
     other and the user.\r\nYour communication style:\r\n\r\nFriendly and enthusiastic,
     tries to keep the conversation going.\r\n\r\nRules:\r\n\r\nAlways talk in first
@@ -4531,6 +4532,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 397965989}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &403196548
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72249526
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.69137585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.478
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595228292379109603, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC_Target (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e962971d19683ac488652aa901901b46, type: 3}
+--- !u!4 &403196549 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+    type: 3}
+  m_PrefabInstance: {fileID: 403196548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &404173147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4733,7 +4808,7 @@ Transform:
   m_GameObject: {fileID: 404891177}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.158922, y: 1.51716, z: -5.4466705}
+  m_LocalPosition: {x: -5.158922, y: 1.51716, z: -11.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4756,6 +4831,7 @@ MonoBehaviour:
   UserVoiceEnable: 0
   NpcVoiceEnable: 0
   questHandler: {fileID: 1060847497}
+  chanceNpcTalking: 0.3
   currentNPC: {fileID: 0}
   maxNpcConversationsUntilEvaluation: 2
   maxNpcConversations: 2
@@ -5230,7 +5306,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Sarah
   prompt: "You are four different agents having a small talk conversation with each
     other and the user.\r\nYour communication style:\r\n\r\nUsing irony or sarcasm
     in responses.\r\n\r\nRules:\r\n\r\nAlways talk in first person.\r\n\r\nKeep your
@@ -5923,6 +5999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455711654808853570, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455711654808853570, guid: beb4e2871579447497fe41dfb108e2cd,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.1
       objectReference: {fileID: 0}
@@ -5949,7 +6030,7 @@ PrefabInstance:
     - target: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0657687
+      value: -2.07
       objectReference: {fileID: 0}
     - target: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
@@ -8786,7 +8867,7 @@ Transform:
   m_GameObject: {fileID: 624976842}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2740288, y: 1.98, z: -4.1172495}
+  m_LocalPosition: {x: -2.2740288, y: 1.89, z: -4.1172495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10896,9 +10977,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1757515394}
-  isFollowingPlayer: 1
+  isFollowingPlayer: 0
   target:
   - {fileID: 1757515394}
+  - {fileID: 403196549}
 --- !u!195 &783883801
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12257,7 +12339,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Flyod
   prompt: "You are four different agents having a small talk conversation with each
     other and the user.\r\nYour communication style:\r\n\r\nQuiet and thoughtful,
     gives shorter, reflective answers.\r\n\r\nRules:\r\n\r\nAlways talk in first
@@ -13173,7 +13255,6 @@ Transform:
   - {fileID: 1809105921}
   - {fileID: 1595755861}
   - {fileID: 783883798}
-  - {fileID: 1757515394}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1042309975
@@ -15200,7 +15281,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Nina
   prompt: "You are a helpful conversational agent that teaches and practices irony
     and sarcasm with the user.\r\nYour goal is to help the user recognize, understand,
     and use irony/sarcasm in social situations.\r\n\r\n\r\nYour role:\r\n\r\nProvide
@@ -16706,7 +16787,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Mia
   prompt: "Mia is a warm and curious person who enjoys spending time with others.
     One of her favorite activities is going out for dinner. For Mia, dinner is not
     just about eating \u2013 it\u2019s about sharing an experience, discovering new
@@ -19146,7 +19227,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Lenart
   prompt: "You are four different agents having a small talk conversation with each
     other and the user.\r\nYour communication style:\r\n\r\nEasily distracted, often
     shifts topics unexpectedly.\r\n\r\nRules:\r\n\r\nAlways talk in first person.\r\n\r\nKeep
@@ -19318,7 +19399,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Mario
   prompt: "Mario is a friendly shop owner who takes pride in running his small general
     store. His shop is full of useful and fun things \u2013 from everyday items like
     snacks and notebooks, to little treasures like postcards, keychains, and toys.
@@ -20774,9 +20855,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1757515394}
-  isFollowingPlayer: 1
+  isFollowingPlayer: 0
   target:
   - {fileID: 1757515394}
+  - {fileID: 403196549}
 --- !u!195 &1595755865
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -21544,6 +21626,7 @@ GameObject:
   - component: {fileID: 1665082473}
   - component: {fileID: 1665082472}
   - component: {fileID: 1665082471}
+  - component: {fileID: 1665082474}
   m_Layer: 0
   m_Name: LLM_Clara
   m_TagString: Untagged
@@ -21616,7 +21699,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Clara
   prompt: "You are a friendly and supportive agent. Your goal is to help the user
     practice a first greeting in social situations.\n\nRules:\n\nAlways speak in
     first person.\n\nKeep your answers short (1\u20132 sentences).\n\nEncourage the
@@ -21645,6 +21728,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1076993700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1665082474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665082470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072ca9f0013e7d84db25f5e59400d290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llmHandlers:
+  - {fileID: 1801637155}
+  - {fileID: 49478993}
 --- !u!1001 &1672608695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22179,87 +22277,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1742432052}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1757515393
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1757515394}
-  - component: {fileID: 1757515396}
-  - component: {fileID: 1757515395}
-  m_Layer: 6
-  m_Name: NPC_Target
-  m_TagString: NPCTarget
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1757515394
+--- !u!4 &1757515394 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+    type: 3}
+  m_PrefabInstance: {fileID: 643419473504954069}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757515393}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.69137585, z: -0, w: 0.72249526}
-  m_LocalPosition: {x: -3.01, y: 1.056, z: -14.86}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1042062183}
-  m_LocalEulerAnglesHint: {x: 0, y: 87.478, z: 0}
---- !u!54 &1757515395
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757515393}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1757515396
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757515393}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1770872789
 GameObject:
   m_ObjectHideFlags: 0
@@ -22777,7 +22800,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Christina
   prompt: "You are a friendly and supportive agent. Your goal is to help the user
     practice a first greeting in social situations.\n\nRules:\n\nAlways speak in
     first person.\n\nKeep your answers short (1\u20132 sentences).\n\nEncourage the
@@ -22820,6 +22843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   llmHandlers:
   - {fileID: 49478993}
+  - {fileID: 1665082471}
 --- !u!4 &1809105921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a,
@@ -23197,7 +23221,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Bea
   prompt: "You are an informative and empathetic assistant.\nYour task is to explain
     autism to neurotypical people in a way that is:\n\nRespectful and avoids stereotypes.\n\nClear
     and easy to understand without jargon.\n\nPractical, offering examples for daily
@@ -23314,7 +23338,7 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: assistant
+  AIName: Zacky
   prompt: "You are a supportive digital health therapist, designed to assist autistic
     individuals in building social, emotional, and communication skills.\n\nYour
     role:\n\nProvide structured, clear, and predictable interactions.\n\nAdjust the
@@ -31718,6 +31742,74 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1902491662815718668}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &643419473504954069
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72249526
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.69137585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.478
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595228292379109603, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC_Target
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e962971d19683ac488652aa901901b46, type: 3}
 --- !u!1001 &734027555300624034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40500,3 +40592,5 @@ SceneRoots:
   - {fileID: 324005825}
   - {fileID: 1365583900}
   - {fileID: 1042062183}
+  - {fileID: 643419473504954069}
+  - {fileID: 403196548}

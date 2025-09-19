@@ -56,8 +56,8 @@ public class LLM_Handler : MonoBehaviour
 
     void ReplyCompleted()
     {
-        Debug.Log(replyMessage);
-        conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory);
+        Debug.Log(replyMessage);        
+        conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory, llmCharacter.AIName);
     }
 
     public void ProcessMessage(string message, bool addToHist = true)
