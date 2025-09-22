@@ -1,31 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NpcConnection : MonoBehaviour
+namespace AiSims
 {
-    [Header("Link NPC to one or more LLM Handlers")]
-    public List<LLM_Handler> llmHandlers = new List<LLM_Handler>();
-
-    /// <summary>
-    /// Returns a random LLM_Handler from the list, or null if empty.
-    /// </summary>
-    public LLM_Handler RandomHandler
+    public class NpcConnection : MonoBehaviour
     {
-        get
+        [Header("Link NPC to one or more LLM Handlers")]
+        public List<LLM_Handler> llmHandlers = new List<LLM_Handler>();
+
+        /// <summary>
+        /// Returns a random LLM_Handler from the list, or null if empty.
+        /// </summary>
+        public LLM_Handler RandomHandler
         {
-            if (llmHandlers == null || llmHandlers.Count == 0)
+            get
             {
-                Debug.LogWarning("NpcConnection: No LLM_Handler assigned!");
-                return null;
+                if (llmHandlers == null || llmHandlers.Count == 0)
+                {
+                    Debug.LogWarning("NpcConnection: No LLM_Handler assigned!");
+                    return null;
+                }
+
+                int index = Random.Range(0, llmHandlers.Count);
+                return llmHandlers[index];
             }
-
-            int index = Random.Range(0, llmHandlers.Count);
-            return llmHandlers[index];
         }
-    }
 
-    public int GetNumNpcs()
-    {
-        return llmHandlers.Count;
+        public int GetNumNpcs()
+        {
+            return llmHandlers.Count;
+        }
     }
 }

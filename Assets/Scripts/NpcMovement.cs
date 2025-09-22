@@ -2,85 +2,94 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMovement : MonoBehaviour
+namespace AiSims
 {
-    private Transform currentTarget;
-    public Transform player;
-    private NavMeshAgent navMeshAgent;
-    public bool isFollowingPlayer = true;
-    public List<Transform> target = new List<Transform>();
-    private float RunAwayTimer = 0f;
-    private float RunAwayInterval = 20f;
-
-    private Animator animator;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void Start()
+    public class EnemyMovement : MonoBehaviour
     {
-        animator = GetComponentInChildren<Animator>();
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        private Transform currentTarget;
+        public Transform player;
+        private NavMeshAgent navMeshAgent;
+        public bool isFollowingPlayer = true;
+        public List<Transform> targets = new List<Transform>();
+        private float RunAwayTimer = 0f;
+        private float RunAwayInterval = 20f;
+        private float navSpeed = 0f;
 
-        animator.SetBool("isWalking", true);
-        animator.SetBool("isStanding", false);
+        public string endAnimation;
+        public string target;
 
-        chooseTarget();
-    }
+        private Animator animator;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (player != null && isFollowingPlayer == true)
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        public void Start()
         {
-            navMeshAgent.SetDestination(player.position);
-        }
-        else
-        {
-            navMeshAgent.SetDestination(currentTarget.position);
+            animator = GetComponentInChildren<Animator>();
+            navMeshAgent = GetComponent<NavMeshAgent>(); // Use Stop() and Resume()
+
+            navSpeed = navMeshAgent.speed;
+
+            animator.SetBool("isWalking", true);
+            animator.SetBool(endAnimation, false);
+
+            chooseTarget();
         }
 
-        if (isFollowingPlayer == false)
+        // Update is called once per frame
+        void Update()
         {
-            RunAwayTimer = RunAwayTimer + Time.deltaTime;
-            if (RunAwayTimer > RunAwayInterval)
+            if (player != null && isFollowingPlayer == true)
             {
-                RunAwayTimer = 0;
-                StartChasingTarget();
+                navMeshAgent.SetDestination(player.position);
+            }
+            else
+            {
+                navMeshAgent.SetDestination(currentTarget.position);
+            }
+
+            if (isFollowingPlayer == false)
+            {
+                RunAwayTimer = RunAwayTimer + Time.deltaTime;
+                if (RunAwayTimer > RunAwayInterval)
+                {
+                    RunAwayTimer = 0;
+                    StartChasingTarget();
+                }
             }
         }
-    }
 
-    public void StartChasingTarget()
-    {
-        //isFollowingPlayer = true;
-        navMeshAgent.speed = 3.5f;
-    }
-
-    public void chooseTarget()
-    {
-        int newTargetIndex = Random.Range(0, target.Count);
-        Transform NewTarget = target[newTargetIndex];
-        if (NewTarget == currentTarget)
+        public void StartChasingTarget()
         {
-            chooseTarget();
-            StartChasingTarget();
+            //isFollowingPlayer = true;
+            navMeshAgent.speed = navSpeed;
         }
-        else 
-        { 
-            currentTarget = NewTarget;
-        }
-    }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("NPCTarget") && isFollowingPlayer == true)
-        {            
-            navMeshAgent.speed = 0;
-            animator.SetBool("isStanding", true);
-            animator.SetBool("isWalking", false);            
-        }
-        else
+        public void chooseTarget()
         {
-            chooseTarget();
+            int newTargetIndex = Random.Range(0, targets.Count);
+            Transform NewTarget = targets[newTargetIndex];
+            if (NewTarget == currentTarget)
+            {
+                chooseTarget();
+                StartChasingTarget();
+            }
+            else
+            {
+                currentTarget = NewTarget;
+            }
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag(target) && isFollowingPlayer == true)
+            {
+                navMeshAgent.speed = 0;
+                animator.SetBool(endAnimation, true);
+                animator.SetBool("isWalking", false);
+            }
+            else
+            {
+                chooseTarget();
+            }
         }
     }
 }

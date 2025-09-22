@@ -2,69 +2,72 @@ using LLMUnity;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 
-public class LLM_Handler : MonoBehaviour
+namespace AiSims
 {
-    public VoiceHandler voiceHandler;
-    public ConversationManager conversationManager;
-    public string voice = "alloy";
-    public bool enableEvaluation = false;
-
-    private NpcConnection connection;
-    private LLMCharacter llmCharacter;
-    private string replyMessage;
-    private string userMessage;
-
-    bool addToHistory = false;
-
-    [TextArea(5, 10), Chat] public string EvaluationString = string.Empty;
-
-    private void Start()
+    public class LLM_Handler : MonoBehaviour
     {
-        llmCharacter = GetComponent<LLMCharacter>();
-        connection = GetComponent<NpcConnection>();
-    }
+        public VoiceHandler voiceHandler;
+        public ConversationManager conversationManager;
+        public string voice = "alloy";
+        public bool enableEvaluation = false;
 
-    public bool EvaluateConversation()
-    {
-        return enableEvaluation;
-    }
+        private NpcConnection connection;
+        private LLMCharacter llmCharacter;
+        private string replyMessage;
+        private string userMessage;
 
-    public string GetVoiceName()
-    {
-        return voice;
-    }
+        bool addToHistory = false;
 
-    public string GetUserMessage()
-    {
-        return userMessage;
-    }
+        [TextArea(5, 10), Chat] public string EvaluationString = string.Empty;
 
-    public NpcConnection GetNpcConnection()
-    {
-        return connection;
-    }
+        private void Start()
+        {
+            llmCharacter = GetComponent<LLMCharacter>();
+            connection = GetComponent<NpcConnection>();
+        }
 
-    public LLMCharacter GetLlm() 
-    { 
-        return llmCharacter;
-    }
+        public bool EvaluateConversation()
+        {
+            return enableEvaluation;
+        }
 
-    void HandleReply(string reply)
-    {
-        replyMessage = reply;
-    }
+        public string GetVoiceName()
+        {
+            return voice;
+        }
 
-    void ReplyCompleted()
-    {
-        Debug.Log(replyMessage);        
-        conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory, llmCharacter.AIName);
-    }
+        public string GetUserMessage()
+        {
+            return userMessage;
+        }
 
-    public void ProcessMessage(string message, bool addToHist = true)
-    {
-        Debug.Log(message);
-        userMessage = message;
-        addToHistory = addToHist;
-        _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted, addToHistory);
+        public NpcConnection GetNpcConnection()
+        {
+            return connection;
+        }
+
+        public LLMCharacter GetLlm()
+        {
+            return llmCharacter;
+        }
+
+        void HandleReply(string reply)
+        {
+            replyMessage = reply;
+        }
+
+        void ReplyCompleted()
+        {
+            Debug.Log(replyMessage);
+            conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory, llmCharacter.AIName);
+        }
+
+        public void ProcessMessage(string message, bool addToHist = true)
+        {
+            Debug.Log(message);
+            userMessage = message;
+            addToHistory = addToHist;
+            _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted, addToHistory);
+        }
     }
 }

@@ -1,55 +1,57 @@
 using ReadyPlayerMe.Core;
 using System;
 using System.Collections;
-using System.Net.NetworkInformation;
 using UnityEngine;
 
-public class Talk : MonoBehaviour
+namespace AiSims
 {
-    public Text2Speech speech; // assign in Inspector
-    public AudioSource audioSource;
-
-    // Event to notify when speech finished
-    public event Action OnSpeechFinished;
-
-    /// <summary>
-    /// Start text-to-speech and optionally notify when done
-    /// </summary>
-    public void Text2Speech(string text, VoiceHandler voiceHandler, string voice)
+    public class Talk : MonoBehaviour
     {
-        StartCoroutine(PlayVoice(text, voiceHandler, voice));
-    }
+        public Text2Speech speech; // assign in Inspector
+        public AudioSource audioSource;
 
-    private IEnumerator PlayVoice(string text, VoiceHandler voiceHandler, string voice)
-    {
-        AudioClip generatedClip = null;
+        // Event to notify when speech finished
+        public event Action OnSpeechFinished;
 
-        // Request speech clip
-        yield return StartCoroutine(speech.SpeakToClip(text, voice, clip =>
+        /// <summary>
+        /// Start text-to-speech and optionally notify when done
+        /// </summary>
+        public void Text2Speech(string text, VoiceHandler voiceHandler, string voice)
         {
-            generatedClip = clip;
-        }));
+            StartCoroutine(PlayVoice(text, voiceHandler, voice));
+        }
 
-        if (generatedClip != null)
+        private IEnumerator PlayVoice(string text, VoiceHandler voiceHandler, string voice)
         {
-            audioSource.mute = false;
-            audioSource.loop = false;
-            audioSource.clip = generatedClip;
+            AudioClip generatedClip = null;
 
-            if (voiceHandler != null)
+            // Request speech clip
+            yield return StartCoroutine(speech.SpeakToClip(text, voice, clip =>
             {
-                voiceHandler.PlayCurrentAudioClip();
-            }
-            else
+                generatedClip = clip;
+            }));
+
+            if (generatedClip != null)
             {
-                audioSource.Play();
+                audioSource.mute = false;
+                audioSource.loop = false;
+                audioSource.clip = generatedClip;
+
+                if (voiceHandler != null)
+                {
+                    voiceHandler.PlayCurrentAudioClip();
+                }
+                else
+                {
+                    audioSource.Play();
+                }
+
+                // Wait until playback finishes
+                yield return new WaitForSeconds(generatedClip.length);
+
+                // Fire the event
+                OnSpeechFinished?.Invoke();
             }
-
-            // Wait until playback finishes
-            yield return new WaitForSeconds(generatedClip.length);
-
-            // Fire the event
-            OnSpeechFinished?.Invoke();
         }
     }
 }
