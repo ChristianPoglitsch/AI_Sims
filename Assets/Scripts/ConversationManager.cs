@@ -2,6 +2,7 @@
 using ReadyPlayerMe.Core;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace AiSims
 {
@@ -16,7 +17,6 @@ namespace AiSims
         public float chanceNpcTalking = 0.3f;
 
         public LLM_Handler currentNPC;
-        private LLM_Handler npcTarget;
         private Talk talk;
         private MessageDecorator messageDecorator = null;
 
@@ -25,8 +25,6 @@ namespace AiSims
 
         public int maxNpcConversationsUntilEvaluation = 2;
         private int npcConversationsUntilEvaluation;
-        public int maxNpcConversations = 1;
-        private int npcConversations = 0;
 
         private readonly string userCanTalk = "User can talk.";
         private readonly string npcTalking = "NPC is thinking.";
@@ -42,7 +40,6 @@ namespace AiSims
                 talk.OnSpeechFinished += OnNpcSpeechFinished;
             }
 
-            npcConversations = maxNpcConversations;
             npcConversationsUntilEvaluation = maxNpcConversationsUntilEvaluation;
 
             messageDecorator.SetLlmHandler(questHandler);
@@ -51,7 +48,6 @@ namespace AiSims
         // This function will be called when the NPC finishes talking
         private void OnNpcSpeechFinished()
         {
-            npcConversations = Mathf.Max(-1, npcConversations - 1);
             npcConversationsUntilEvaluation = Mathf.Max(-1, npcConversationsUntilEvaluation - 1);
 
             NpcConnection otherNpc = currentNPC.GetNpcConnection();
@@ -62,11 +58,8 @@ namespace AiSims
                 gameStatusInformation.text = string.Empty;
 
                 Debug.Log("Num conversation partner #" + otherNpc.GetNumNpcs() + " | chance = " + chance);
-                currentNPC = otherNpc.RandomHandler;
-                if (currentNPC)
-                {
-                    currentNPC.ProcessMessage(currentMessage);
-                }
+                otherNpc.RandomHandler.ProcessMessage(currentMessage);
+                return;
             }
             else
             {
@@ -78,35 +71,16 @@ namespace AiSims
                 messageDecorator.EvaluateConversation();
             }
 
-            // Now it is the user's turn
-            if (npcConversations == 0)
-            {
-                npcConversations = maxNpcConversations;
-                if (npcTarget != null)
-                {
-                    currentNPC = npcTarget;
-                }
-            }
 
             gameStatusInformation.text = userCanTalk;
             talking = false;
-            Debug.Log("NPC finished speaking. #num conversations left is " + npcConversations + " ; #num conversations until evaluation " + npcConversationsUntilEvaluation);
+            Debug.Log("NPC finished speaking. #num conversations until evaluation " + npcConversationsUntilEvaluation);
         }
 
         public void SetCurrentNPC(NPCToStoryBridge npc)
         {
             currentNPC = npc.llmHandler;
-            npcTarget = currentNPC;
             npcConversationsUntilEvaluation = maxNpcConversationsUntilEvaluation;
-            npcConversations = maxNpcConversations;
-
-            if (currentNPC && currentNPC.GetNpcConnection() != null)
-            {
-                maxNpcConversations = currentNPC.GetNpcConnection().GetNumNpcs() + 1;
-                npcConversations = maxNpcConversations;
-                Debug.Log("Number of NPC conversations set to " + npcConversations);
-            }
-
             messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
         }
 
@@ -126,6 +100,8 @@ namespace AiSims
         {
             if (gameStatusInformation.text == string.Empty) return;
             if (talking) return;
+            if (message == string.Empty) return;
+
             talking = true;
 
             if (gameStatusInformation)
@@ -148,6 +124,17 @@ namespace AiSims
             {
                 messageDecorator.AddMessage(currentNPC.GetUserMessage(), MessageTypes.user);
                 messageDecorator.AddMessage(replyMessage, MessageTypes.assistant);
+
+                NpcConnection otherNpc = currentNPC.GetNpcConnection();
+                if (otherNpc != null)
+                {
+                    var allHandler = otherNpc.GetAllHandler();
+                    foreach(var handler in allHandler)
+                    {
+                        handler.AddMessage(MessageTypes.user.ToString() + ' ' + currentNPC.GetUserMessage(), MessageTypes.user.ToString());
+                        handler.AddMessage(aiName + ' ' + replyMessage, aiName);
+                    }
+                }
             }
 
             currentMessage = replyMessage;
@@ -178,6 +165,12 @@ namespace AiSims
         {
             if (Camera.main == null) return;
 
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            {
+                Debug.Log("Pointer over UI - not raycasting NPCs.");
+                return;
+            }
+
             // Use mouse position instead of always forward
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Debug.DrawRay(ray.origin, ray.direction * 50f, Color.green, 2f);
@@ -200,7 +193,7 @@ namespace AiSims
                 }
                 else
                 {
-                    Debug.Log("Hit object does not have NPCToStoryBridge component.");
+                    //Debug.Log("Hit object does not have NPCToStoryBridge component.");
                 }
             }
             else

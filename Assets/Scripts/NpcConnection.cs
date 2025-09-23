@@ -30,5 +30,10 @@ namespace AiSims
         {
             return llmHandlers.Count;
         }
+
+        public List<LLM_Handler> GetAllHandler() 
+        {
+            return llmHandlers;
+        }
     }
 }

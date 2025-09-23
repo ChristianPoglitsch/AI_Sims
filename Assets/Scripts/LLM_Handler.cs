@@ -1,5 +1,6 @@
 using LLMUnity;
 using ReadyPlayerMe.Core;
+using System.Xml.Linq;
 using UnityEngine;
 
 namespace AiSims
@@ -58,7 +59,7 @@ namespace AiSims
 
         void ReplyCompleted()
         {
-            Debug.Log(replyMessage);
+            Debug.Log(llmCharacter.AIName + ": " + replyMessage);
             conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory, llmCharacter.AIName);
         }
 
@@ -68,6 +69,11 @@ namespace AiSims
             userMessage = message;
             addToHistory = addToHist;
             _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted, addToHistory);
+        }
+
+        public void AddMessage(string message, string userName)
+        {
+            llmCharacter.AddMessage(userName, message);
         }
     }
 }

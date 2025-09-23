@@ -67,7 +67,7 @@ namespace AiSims
             if (Mouse.current.rightButton.wasPressedThisFrame)
             {
                 allowLook = !allowLook;
-                Debug.Log("Camera look toggled: " + allowLook);
+                //Debug.Log("Camera look toggled: " + allowLook);
             }
 
             // --- MOVEMENT ---

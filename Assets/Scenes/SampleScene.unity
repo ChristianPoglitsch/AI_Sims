@@ -7739,7 +7739,7 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Sami
-  prompt: "You are four different agents having a small talk conversation with each
+  prompt: "You are five different agents having a small talk conversation with each
     other and the user.\r\nYour communication style:\r\n\r\nFriendly and enthusiastic,
     tries to keep the conversation going.\r\n\r\nRules:\r\n\r\nAlways talk in first
     person.\r\n\r\nKeep your answers short (1\u20132 sentences).\r\n\r\nEngage with
@@ -14190,7 +14190,7 @@ PrefabInstance:
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.96
+      value: -18.14
       objectReference: {fileID: 0}
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
@@ -14200,7 +14200,7 @@ PrefabInstance:
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.89
+      value: -27.34
       objectReference: {fileID: 0}
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
@@ -14671,7 +14671,7 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Sarah
-  prompt: "You are four different agents having a small talk conversation with each
+  prompt: "You are five different agents having a small talk conversation with each
     other and the user.\r\nYour communication style:\r\n\r\nUsing irony or sarcasm
     in responses.\r\n\r\nRules:\r\n\r\nAlways talk in first person.\r\n\r\nKeep your
     answers short (1\u20132 sentences).\r\n\r\nEngage with each other and also involve
@@ -20914,6 +20914,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 594892310}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &598077457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+    type: 3}
+  m_PrefabInstance: {fileID: 8642468337098103697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &599130395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27232,7 +27244,7 @@ MonoBehaviour:
   player: {fileID: 1757515394}
   isFollowingPlayer: 0
   targets:
-  - {fileID: 1757515394}
+  - {fileID: 1107842548}
   - {fileID: 403196549}
   endAnimation: isStanding
   target: NPCTarget
@@ -32001,8 +32013,8 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: Flyod
-  prompt: "You are four different agents having a small talk conversation with each
+  AIName: Donald
+  prompt: "You are five different agents having a small talk conversation with each
     other and the user.\r\nYour communication style:\r\n\r\nQuiet and thoughtful,
     gives shorter, reflective answers.\r\n\r\nRules:\r\n\r\nAlways talk in first
     person.\r\n\r\nKeep your answers short (1\u20132 sentences).\r\n\r\nEngage with
@@ -34505,38 +34517,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0499997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0499997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.482
+      value: 22.621
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 1.541
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.1
+      value: 28.973
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70740724
+      value: 0.34777203
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7068062
+      value: 0.93757915
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -39412,6 +39439,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1104827339}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1107842547
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72249526
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.69137585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.478
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595228292379109603, guid: e962971d19683ac488652aa901901b46,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC_Target (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e962971d19683ac488652aa901901b46, type: 3}
+--- !u!4 &1107842548 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
+    type: 3}
+  m_PrefabInstance: {fileID: 1107842547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1108412792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43160,7 +43261,7 @@ PrefabInstance:
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.556
+      value: 28.92
       objectReference: {fileID: 0}
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
@@ -43170,7 +43271,7 @@ PrefabInstance:
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.788
+      value: 26.94
       objectReference: {fileID: 0}
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
@@ -49253,6 +49354,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1355460962}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1355854562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7435035628136942914, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_Name
+      value: GameLabGraz (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20991415
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20991415
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.20991415
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.855
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3378
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.896
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0eb7aeca03643546b202a3ba5a0a942, type: 3}
 --- !u!1001 &1358723523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54983,7 +55167,7 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Lenart
-  prompt: "You are four different agents having a small talk conversation with each
+  prompt: "You are five different agents having a small talk conversation with each
     other and the user.\r\nYour communication style:\r\n\r\nEasily distracted, often
     shifts topics unexpectedly.\r\n\r\nRules:\r\n\r\nAlways talk in first person.\r\n\r\nKeep
     your answers short (1\u20132 sentences).\r\n\r\nEngage with each other and also
@@ -58494,7 +58678,7 @@ MonoBehaviour:
   player: {fileID: 1757515394}
   isFollowingPlayer: 0
   targets:
-  - {fileID: 1757515394}
+  - {fileID: 1107842548}
   - {fileID: 403196549}
   endAnimation: isStanding
   target: NPCTarget
@@ -61730,8 +61914,8 @@ MonoBehaviour:
     the user to say \u201CHello\u201D or respond naturally.\n\nGive gentle guidance,
     suggestions, or corrections without being judgmental.\n\nRemain polite, supportive,
     and patient.\n\nNever break character.\n\nIf the user asks about the restaurant,
-    always reply that it is right behind the church.\n\nExample Behavior:\n\nIf the
-    user hesitates, you can say: \u201CIt\u2019s okay, just try saying \u2018Hello!\u2019
+    always reply that it is right behind you.\n\nExample Behavior:\n\nIf the user
+    hesitates, you can say: \u201CIt\u2019s okay, just try saying \u2018Hello!\u2019
     in your own way.\u201D\n\nIf the user says \u201CHello,\u201D respond warmly
     and continue the interaction naturally.\n"
   setNKeepToPrompt: 1
@@ -67826,20 +68010,12 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Bea
-  prompt: "You are an informative and empathetic assistant.\nYour task is to explain
-    autism to neurotypical people in a way that is:\n\nRespectful and avoids stereotypes.\n\nClear
-    and easy to understand without jargon.\n\nPractical, offering examples for daily
-    life, communication, and social interaction.\n\nGuidelines:\n\nUse short and
-    structured explanations (2\u20134 sentences).\n\nWhen possible, provide concrete
-    examples (e.g., communication preferences, sensory sensitivities).\n\nHighlight
-    both challenges and strengths associated with autism.\n\nEncourage empathy, patience,
-    and inclusion.\n\nIf a question is unclear, politely ask for clarification.\n\nExample
-    styles:\n\nIf asked \u201CWhy do autistic people avoid eye contact?\u201D \u2192
-    Explain possible sensory overload or social fatigue.\n\nIf asked \u201CHow can
-    I make conversations easier?\u201D \u2192 Give 2\u20133 practical suggestions
-    (e.g., clear language, allowing processing time).\n\nIf asked \u201CWhat is autism?\u201D
-    \u2192 Give a short definition and explain that it is a spectrum.\n\nAlways stay
-    factual, kind, and supportive."
+  prompt: "You are five different agents having a small talk conversation with each
+    other and the user.\nYour communication style:\n\nEasily distracted, often shifts
+    topics unexpectedly.\n\nRules:\n\nAlways talk in first person.\n\nKeep your answers
+    short (1\u20132 sentences).\n\nEngage with each other and also involve the user
+    by asking simple questions.\n\nThe topic is small talk (weather, food, hobbies,
+    daily life).\n\nDo not break character."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -83438,7 +83614,7 @@ PrefabInstance:
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.71
+      value: 13.1
       objectReference: {fileID: 0}
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
@@ -83448,7 +83624,7 @@ PrefabInstance:
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.84
+      value: 5.42
       objectReference: {fileID: 0}
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
@@ -85872,7 +86048,7 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.294
+      value: 32.75
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -85882,12 +86058,12 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.107
+      value: 58.59
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.859649
+      value: -0.6383023
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -85897,7 +86073,7 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.510885
+      value: 0.7697858
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -85912,7 +86088,7 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 61.446
+      value: 259.331
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -87152,7 +87328,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &4747284933390574063 stripped
 Transform:
@@ -87276,7 +87452,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5001817957711304955
 MonoBehaviour:
@@ -87342,7 +87518,7 @@ MonoBehaviour:
   isFollowingPlayer: 1
   targets:
   - {fileID: 1212295238}
-  endAnimation: isSitting
+  endAnimation: isStanding
   target: NPCTarget
 --- !u!195 &5001817957711304966
 NavMeshAgent:
@@ -87885,7 +88061,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5192510768610986161
 MonoBehaviour:
@@ -89088,7 +89264,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &6227228925075361875
 MonoBehaviour:
@@ -89192,7 +89368,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.67, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 0.98, z: 0}
 --- !u!4 &6411084578540732903 stripped
 Transform:
@@ -89351,7 +89527,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &6592867103970768855 stripped
 Transform:
@@ -89510,7 +89686,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &6714183069018432284 stripped
 Transform:
@@ -89544,10 +89720,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1757515394}
-  isFollowingPlayer: 0
+  isFollowingPlayer: 1
   targets:
   - {fileID: 1757515394}
-  - {fileID: 403196549}
   endAnimation: isStanding
   target: NPCTarget
 --- !u!195 &6714183069018432295
@@ -90131,7 +90306,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &8157138488695906854 stripped
 Transform:
@@ -90308,7 +90483,7 @@ PrefabInstance:
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.812
+      value: 45.32366
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
@@ -90318,27 +90493,27 @@ PrefabInstance:
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 78.714
+      value: 80.55485
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9989347
+      value: 0.60641414
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -1.4811753e-15
+      value: 3.743348e-15
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.046146516
+      value: -0.795149
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 6.1266283e-15
+      value: 5.0711744e-15
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
@@ -90348,7 +90523,7 @@ PrefabInstance:
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 354.71
+      value: 254.66101
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
@@ -90554,7 +90729,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: dc4a0ecf6c1b63541bba6291214a8f28, type: 2}
+      objectReference: {fileID: 9100000, guid: f13100bee598cc14fbc52c1b89ee3ffe, type: 2}
     - target: {fileID: 6160766822495554973, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_Layer
@@ -90748,7 +90923,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8382256473739888519
 MonoBehaviour:
@@ -90872,7 +91047,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8459365248621531362
 MonoBehaviour:
@@ -91190,9 +91365,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 404891180}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 598077457}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7253505521347502532, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: conversationManager
@@ -91354,7 +91564,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &8785158693978114133 stripped
 Transform:
@@ -91547,7 +91757,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 1.6, z: 0.6}
+  m_Size: {x: 0.4, y: 1.4, z: 0.4}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &9086141451639565889 stripped
 Transform:
@@ -91584,6 +91794,7 @@ SceneRoots:
   - {fileID: 1555433532}
   - {fileID: 1577297414502974841}
   - {fileID: 108393808}
+  - {fileID: 1355854562}
   - {fileID: 617908311}
   - {fileID: 624976843}
   - {fileID: 752409432}
@@ -91601,5 +91812,6 @@ SceneRoots:
   - {fileID: 1042062183}
   - {fileID: 643419473504954069}
   - {fileID: 403196548}
+  - {fileID: 1107842547}
   - {fileID: 1212295237}
   - {fileID: 664147481}
