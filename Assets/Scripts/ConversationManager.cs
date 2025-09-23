@@ -195,8 +195,6 @@ namespace AiSims
                     Vector3 lookTarget = Camera.main.transform.position;
                     lookTarget.y = hit.collider.transform.position.y;
                     hit.collider.transform.LookAt(lookTarget);
-
-                    Debug.Log("Mouse click → checking for NPC...");
                     SetCurrentNPC(npcBridge);
                     TalkUser();
                 }

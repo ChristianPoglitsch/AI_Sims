@@ -1,7 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 namespace AiSims
 {
@@ -107,13 +106,13 @@ namespace AiSims
 
         void OnSelected(string text)
         {
-            Debug.Log("Input field selected → user may start typing.");
+            //Debug.Log("Input field selected → user may start typing.");
             inputFieldUsed = true;
         }
 
         void OnDeselected(string text)
         {
-            Debug.Log("Input field deselected → user stopped typing.");
+            //Debug.Log("Input field deselected → user stopped typing.");
             inputFieldUsed = false;
         }
     }
