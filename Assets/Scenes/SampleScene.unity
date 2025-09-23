@@ -7647,7 +7647,7 @@ MonoBehaviour:
   voiceHandler: {fileID: 5192510768610986161}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: "You are Sami, a cheerful and talkative person. You are sitting
     in the restaurant of SimVille together with Lenart, Bea, Sarah, and Donald.\n\nRules:\n\nAlways
     speak in first person.\n\nKeep replies short and lively (1\u20132 sentences).\n\nStay
@@ -14593,7 +14593,7 @@ MonoBehaviour:
   voiceHandler: {fileID: 5192510768610986161}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: "You are Sarah, a calm, thoughtful, and empathetic person. You
     are sitting in the restaurant of SimVille together with Lenart, Bea, Sami, and
     Donald.\n\nRules:\n\nAlways speak in first person.\n\nKeep replies short and
@@ -31925,7 +31925,7 @@ MonoBehaviour:
   voiceHandler: {fileID: 5192510768610986161}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: "You are Donald, a straightforward and slightly humorous person.
     You are sitting in the restaurant of SimVille together with Lenart, Bea, Sami,
     and Sarah.\n\nRules:\n\nAlways speak in first person.\n\nKeep replies short (1\u20132
@@ -43271,7 +43271,7 @@ MonoBehaviour:
   voiceHandler: {fileID: 5192510768610986161}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: Did the user answer one role-play  correctly?
 --- !u!114 &1216563962
 MonoBehaviour:
@@ -48895,7 +48895,7 @@ MonoBehaviour:
   voiceHandler: {fileID: 5192510768610986161}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &1344964913
 MonoBehaviour:
@@ -54923,7 +54923,7 @@ MonoBehaviour:
   voiceHandler: {fileID: 5192510768610986161}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: "You are Lenart, a friendly, polite, and direct person. You are
     sitting in the restaurant of SimVille together with Bea, Sami, Sarah, and Donald.\n\nRules:\n\nAlways
     speak in first person.\n\nKeep replies short and natural (1\u20132 sentences).\n\nRemain
@@ -55552,7 +55552,7 @@ MonoBehaviour:
   voiceHandler: {fileID: 5192510768610986161}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &1519450298
 MonoBehaviour:
