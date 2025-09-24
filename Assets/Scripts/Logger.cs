@@ -1,26 +1,32 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 
 namespace AiSims
 {
     public enum LoggingInfo
     {
         // Dialogue/Interrupt
-        DialogueStart,
-        DialogueEnd
+        DialogueUser,
+        DialoagNpc,
+        Scene
     }
 
     // public static class DebugLogger
     public static class Logger
     {
+        static string filePath = Application.persistentDataPath;
         static string uniqueId = Guid.NewGuid().ToString();
+
+        static string fullPath = filePath; //  Path.Combine(filePath, uniqueId);
 
         private static readonly Dictionary<LoggingInfo, string> logMessages = new Dictionary<LoggingInfo, string>
         {
             // Dialogue/Interrupt
-            {LoggingInfo.DialogueStart, "DialogueStart" },
-            {LoggingInfo.DialogueEnd, "DialogueEnd" }
+            {LoggingInfo.DialogueUser, "DialogueUser" },
+            {LoggingInfo.DialoagNpc, "DialoagNpc" },
+            {LoggingInfo.Scene, "Scene" }
         };
 
         public static string CreateLogEntry(LoggingInfo info, string message)
@@ -38,24 +44,20 @@ namespace AiSims
         {
             if (includeInFile)
             {
-                string fileName;
-
+                Debug.Log("Filepath: " + fullPath);
+                // Check if directory already esists, if not create it
+                if (!Directory.Exists(fullPath))
                 {
-                  // Check if directory already esists, if not create it
-                  if (!Directory.Exists(uniqueId))
-                  {
-                    Directory.CreateDirectory(uniqueId);
-                  }
+                    Directory.CreateDirectory(fullPath);
+                }
 
-                  fileName = Path.Combine(uniqueId, $"GameLabLog_{uniqueId}.txt");
+                string fileName = Path.Combine(fullPath, $"GameLabLog_{uniqueId}.txt");
 
-                  var entry = CreateLogEntry(info, message);
-                  TextWriter tw = new StreamWriter(fileName, true);
-                  tw.WriteLine(entry);
-                  tw.Close();
-                } 
+                var entry = CreateLogEntry(info, message);
+                TextWriter tw = new StreamWriter(fileName, true);
+                tw.WriteLine(entry);
+                tw.Close();
             }
         }
     }
 }
-
