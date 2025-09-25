@@ -95,7 +95,7 @@ namespace AiSims
 
             gameStatusInformation.text = "User is talking ... ";
 
-            if (UserVoiceEnable && currentNPC != null && currentNPC != null)
+            if (UserVoiceEnable && currentNPC != null)
             {
                 talking = true;
                 speech2Text.Set_LLM_Handler(currentNPC);
@@ -110,7 +110,7 @@ namespace AiSims
             if (gameStatusInformation.text == string.Empty) return;
             if (!talking) return;            
 
-            if (UserVoiceEnable && currentNPC != null && currentNPC != null)
+            if (UserVoiceEnable && currentNPC != null)
             {
                 speech2Text.ToggleRecording();
             }
