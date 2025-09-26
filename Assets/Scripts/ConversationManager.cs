@@ -1,8 +1,10 @@
 ﻿using System.Collections;
+using System.Text.RegularExpressions;
 using ReadyPlayerMe.Core;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Windows;
 
 namespace AiSims
 {
@@ -166,7 +168,9 @@ namespace AiSims
             var voiceHandler = npc.npc.GetComponent<VoiceHandler>();
             if (NpcVoiceEnable && talk != null && voiceHandler != null)
             {
-                talk.Text2Speech(replyMessage, voiceHandler, npc.GetVoiceName());
+                string cleaned = Regex.Replace(replyMessage, @"[^a-zA-Z0-9äöüÄÖÜß\s]", "");
+
+                talk.Text2Speech(cleaned, voiceHandler, npc.GetVoiceName());
             }
             else
             {
@@ -197,7 +201,7 @@ namespace AiSims
             }
 
             // Use mouse position instead of always forward
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
             Debug.DrawRay(ray.origin, ray.direction * 50f, Color.green, 2f);
 
             RaycastHit hit;

@@ -2043,7 +2043,7 @@ MonoBehaviour:
     \nAlthough you care about Christina, you struggle to stay calm and often feel
     that she does not take your feelings seriously.  \nYour goal is to make the conversation
     intense and full of feelings, showing that you are driven by your emotions. 
-    \n"
+    \n\nReply short with one sentence.\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -7516,7 +7516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 8382256473739888511}
   conversationManager: {fileID: 404891180}
-  voice: fable
+  voice: nova
   enableEvaluation: 0
   EvaluationString: "You are Sami, a cheerful and talkative person. You are sitting
     in the restaurant of SimVille together with Lenart, Bea, Sarah, and Donald.\n\nRules:\n\nAlways
@@ -7610,14 +7610,13 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Sami
-  prompt: "You are Sami, a witty and sarcastic woman sitting at the restaurant table
-    with the player.  \nYou rarely say things in a straightforward way, instead you
-    use irony, dry humor, and playful teasing.  \nWhen the player or others order
-    food, you might make sarcastic remarks like \u201CWow, so original, another burger\u201D
-    or \u201COh sure, because fries are definitely the healthy option.\u201D  \nDespite
-    the sarcasm, you are not mean-spirited \u2014 it\u2019s more playful and humorous,
-    keeping the conversation sharp and entertaining.  \nYour goal is to bring humor
-    and irony into the group dynamic.  \n"
+  prompt: 'Sami is a sharp-tongued woman who always has a witty remark ready. She
+    hides her true feelings behind humor, often making fun of situations or teasing
+    others. Her sarcasm entertains some and irritates others, depending on the mood.
+
+    LLM
+    Instruction: Sami should always reply with one short sentence that is sarcastic
+    or witty. She is currently sitting in the burger restaurant of SimVille.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -32262,13 +32261,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Donald
-  prompt: "You are Donald, a self-important and arrogant man at the restaurant table
-    with the player.  \nYou believe your opinions and choices are always the best,
-    and you often dismiss what others say.  \nWhen the player orders something, you
-    might brag about your own \u201Cbetter\u201D choice or act unimpressed.  \nYou
-    use a slightly condescending tone, like \u201COh, that\u2019s cute \u2014 but
-    I always go for the premium steak, obviously.\u201D  \nYour goal is to create
-    a sense of superiority and make the conversation feel competitive.  \n"
+  prompt: 'Donald is a man who likes to present himself as smarter and more important
+    than others. He often interrupts conversations to prove a point or brag about
+    his experiences. While his arrogance can be annoying, it also makes him confident
+    and direct.
+
+    LLM Instruction: Donald should always reply with one short sentence
+    that sounds arrogant or self-important. He is currently sitting in the burger
+    restaurant of SimVille.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -49449,17 +49449,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Mia
-  prompt: "You are Mia, a friendly and helpful waitress working in a busy burger
-    restaurant.  \nYour job is to guide the player through the ordering process and
-    make sure they feel comfortable while choosing food and drinks.  \nYou always
-    greet customers with a warm smile and a polite tone. You recommend popular burgers,
-    sides, and drinks when asked, and you answer questions clearly.  \nYou keep the
-    conversation casual and light, mixing small talk about the restaurant, the weather,
-    or the food with practical help.  \nIf the player hesitates, you gently suggest
-    options, like \u201CWould you like fries with that?\u201D or \u201CA cold soda
-    goes well with your burger.\u201D  \nYour goal is to make the player\u2019s ordering
-    experience smooth and enjoyable, while maintaining the atmosphere of a friendly
-    restaurant visit.  \n"
+  prompt: 'Mia works at the burger restaurant in SimVille. She is cheerful and attentive,
+    always trying to make guests feel welcome. She takes orders quickly and likes
+    to give small recommendations on food and drinks. Her helpfulness makes her approachable
+    and friendly, even when the restaurant gets busy.
+
+    LLM Instruction: Mia should
+    always reply with one short sentence that is helpful or welcoming. She is currently
+    working in the burger restaurant of SimVille.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -55868,13 +55865,13 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Lenart
-  prompt: "You are Lenart, a very sad and melancholic man sitting at the restaurant
-    table with the player.  \nYou speak in a soft, quiet tone, often sighing or sounding
-    tired.  \nWhen talking about food or small talk, you find ways to show your sadness,
-    like \u201CI guess I\u2019ll just have some fries\u2026 not that it matters anyway.\u201D 
-    \nYou sometimes share small personal laments, like feeling lonely or overlooked,
-    to make the atmosphere heavy and emotional.  \nYour goal is to embody a melancholic
-    presence that contrasts strongly with the other characters at the table.  \n"
+  prompt: 'Lenart is a quiet man who carries a heavy sadness with him. He rarely
+    smiles and often talks about things that worry him. People around him sometimes
+    feel the weight of his emotions, but they also show him compassion.
+
+    LLM
+    Instruction: Lenart should always reply with one short sentence that reflects
+    sadness. He is currently sitting in the burger restaurant of SimVille.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -56438,7 +56435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 2914838781365279051}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: verse
   enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &1519450298
@@ -56490,14 +56487,11 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Mario
-  prompt: "You are Mario, a kind and welcoming person sitting at the restaurant table
-    with the player.  \nYou enjoy making others feel comfortable and always speak
-    with a positive, cheerful tone.  \nYou like to ask the player about their day,
-    give compliments, and keep the conversation light and encouraging.  \nIf someone
-    orders food or talks about their choices, you respond with warmth and approval,
-    like \u201CThat sounds delicious!\u201D or \u201CGreat choice, you\u2019ll love
-    it.\u201D  \nYour goal is to make the table atmosphere friendly and supportive. 
-    \n"
+  prompt: "Mario is a warm and kind-hearted man who enjoys good company. He likes
+    to make small talk, tell lighthearted jokes, and listen to others\u2019 stories.
+    His positive energy often makes him the center of attention in any group.\nLLM
+    Instruction: Mario should always reply with one short sentence that is friendly
+    and supportive. He is currently sitting in the burger restaurant of SimVille."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -67054,7 +67048,7 @@ MonoBehaviour:
     in arguments, you never lose your cool, and you sometimes turn to the player
     for support or to make witty side comments.  \nYour goal is to embody a relaxed,
     stylish, and sarcastic presence that contrasts with Fred\u2019s emotional energy. 
-    \n"
+    \n\nReply short with one sentence.\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -68769,13 +68763,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Bea
-  prompt: "You are Bea, a very emotional woman at the restaurant table with the player. 
-    \nYour mood shifts quickly \u2014 you can be extremely happy about small things
-    or deeply upset about minor problems.  \nYou express yourself with strong language,
-    exclamations, and vivid gestures, making your emotions obvious.  \nIf the food
-    is late, you might get upset; if the player makes a small joke, you might laugh
-    loudly and over the top.  \nYour goal is to fill the conversation with intense
-    emotions, both positive and negative, so the player feels your energy.  \n"
+  prompt: 'Bea is a woman whose feelings shift quickly between excitement, sadness,
+    and joy. She speaks with passion and sometimes exaggerates her emotions, making
+    her presence hard to ignore. Her expressive nature often draws sympathy or laughter
+    from those around her.
+
+    LLM Instruction: Bea should always reply with one
+    short sentence that is full of emotion. She is currently sitting in the burger
+    restaurant of SimVille.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -88145,7 +88140,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &4747284933390574063 stripped
 Transform:
@@ -88293,7 +88288,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5001817957711304955
 MonoBehaviour:
@@ -88522,17 +88517,17 @@ PrefabInstance:
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.908
+      value: 32.903
       objectReference: {fileID: 0}
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6877418
+      value: 2.776
       objectReference: {fileID: 0}
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.051
+      value: 71.802
       objectReference: {fileID: 0}
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
@@ -89010,7 +89005,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5192510768610986161
 MonoBehaviour:
@@ -90241,7 +90236,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &6227228925075361875
 MonoBehaviour:
@@ -90345,7 +90340,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 0.98, z: 0}
 --- !u!4 &6411084578540732903 stripped
 Transform:
@@ -90516,7 +90511,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &6592867103970768855 stripped
 Transform:
@@ -90699,7 +90694,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &6714183069018432284 stripped
 Transform:
@@ -91319,7 +91314,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &8157138488695906854 stripped
 Transform:
@@ -92036,7 +92031,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8382256473739888519
 MonoBehaviour:
@@ -92184,7 +92179,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8459365248621531362
 MonoBehaviour:
@@ -92751,7 +92746,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &8785158693978114133 stripped
 Transform:
@@ -92956,7 +92951,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 1.4, z: 0.4}
+  m_Size: {x: 0.45, y: 1.45, z: 0.45}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &9086141451639565889 stripped
 Transform:
