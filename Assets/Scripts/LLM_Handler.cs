@@ -7,7 +7,7 @@ namespace AiSims
 {
     public class LLM_Handler : MonoBehaviour
     {
-        public VoiceHandler voiceHandler;
+        public GameObject npc;
         public ConversationManager conversationManager;
         public string voice = "alloy";
         public bool enableEvaluation = false;
@@ -60,7 +60,7 @@ namespace AiSims
         void ReplyCompleted()
         {
             Debug.Log(llmCharacter.AIName + ": " + replyMessage);
-            conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory, llmCharacter.AIName);
+            conversationManager.TalkNpc(replyMessage, this, addToHistory, llmCharacter.AIName);
         }
 
         public void ProcessMessage(string message, bool addToHist = true)

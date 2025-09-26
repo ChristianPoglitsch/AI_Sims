@@ -2,6 +2,7 @@ using ReadyPlayerMe.Core;
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace AiSims
 {
@@ -18,6 +19,7 @@ namespace AiSims
         /// </summary>
         public void Text2Speech(string text, VoiceHandler voiceHandler, string voice)
         {
+            audioSource = voiceHandler.AudioSource;
             StartCoroutine(PlayVoice(text, voiceHandler, voice));
         }
 

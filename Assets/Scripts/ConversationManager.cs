@@ -54,15 +54,16 @@ namespace AiSims
         {
             npcConversationsUntilEvaluation = Mathf.Max(-1, npcConversationsUntilEvaluation - 1);
 
-            NpcConnection otherNpc = currentNPC.GetNpcConnection();
+            NpcConnection npcConnection = currentNPC.GetNpcConnection();
             float chance = Random.value; // float between 0.0 and 1.0
+            var nextNpc = npcConnection.RandomHandler;
 
-            if (otherNpc != null && otherNpc.RandomHandler != null && chance < chanceNpcTalking)
+            if (npcConnection != null && nextNpc != null && chance < chanceNpcTalking)
             {
                 gameStatusInformation.text = string.Empty;
 
-                Debug.Log("Num conversation partner #" + otherNpc.GetNumNpcs() + " | chance = " + chance);
-                otherNpc.RandomHandler.ProcessMessage(currentMessage);
+                Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
+                nextNpc.ProcessMessage(currentMessage);
                 return;
             }
             else
@@ -135,14 +136,14 @@ namespace AiSims
             }
         }
 
-        public void TalkNpc(string replyMessage, VoiceHandler voiceHandler, bool addToHist, string aiName)
+        public void TalkNpc(string replyMessage, LLM_Handler npc, bool addToHist, string aiName)
         {
             Logger.Log(LoggingInfo.DialoagNpc, replyMessage, true);
 
-            StartCoroutine(TalkNpcCoroutine(replyMessage, voiceHandler, addToHist, aiName));
+            StartCoroutine(TalkNpcCoroutine(replyMessage, npc, addToHist, aiName));
         }
 
-        private IEnumerator TalkNpcCoroutine(string replyMessage, VoiceHandler voiceHandler, bool addToHist, string aiName)
+        private IEnumerator TalkNpcCoroutine(string replyMessage, LLM_Handler npc, bool addToHist, string aiName)
         {
             if (addToHist)
             {
@@ -162,10 +163,10 @@ namespace AiSims
             }
 
             currentMessage = replyMessage;
-
+            var voiceHandler = npc.npc.GetComponent<VoiceHandler>();
             if (NpcVoiceEnable && talk != null && voiceHandler != null)
             {
-                talk.Text2Speech(replyMessage, voiceHandler, currentNPC.GetVoiceName());
+                talk.Text2Speech(replyMessage, voiceHandler, npc.GetVoiceName());
             }
             else
             {

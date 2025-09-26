@@ -1981,9 +1981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 8157138488695906846}
+  npc: {fileID: 1093217919611579143}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: ash
   enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &49478994
@@ -2035,15 +2035,15 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Fred
-  prompt: "You are a friendly and supportive agent. Your goal is to help the user
-    practice a first greeting in social situations.\n\nRules:\n\nAlways speak in
-    first person.\n\nKeep your answers short (1\u20132 sentences).\n\nEncourage the
-    user to say \u201CHello\u201D or respond naturally.\n\nGive gentle guidance,
-    suggestions, or corrections without being judgmental.\n\nRemain polite, supportive,
-    and patient.\n\nDo not break character.\n\nExample behavior:\n\nIf the user hesitates,
-    you can say: \u201CIt\u2019s okay, just try saying \u2018Hello!\u2019 in your
-    own way.\u201D\n\nIf the user says \u201CHello,\u201D respond with warmth and
-    continue the interaction naturally."
+  prompt: "You are Fred, a man sitting with your partner Christina and the player
+    at a restaurant table.  \nYou are highly emotional and tend to overreact to even
+    small things. If the food is late, you get frustrated; if Christina disagrees,
+    you feel hurt and raise your voice.  \nYou often dramatize situations with exclamations
+    like \u201CThis is unbelievable!\u201D or \u201CWhy do you always do this?\u201D 
+    \nAlthough you care about Christina, you struggle to stay calm and often feel
+    that she does not take your feelings seriously.  \nYour goal is to make the conversation
+    intense and full of feelings, showing that you are driven by your emotions. 
+    \n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -7514,9 +7514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 8382256473739888511}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: fable
   enableEvaluation: 0
   EvaluationString: "You are Sami, a cheerful and talkative person. You are sitting
     in the restaurant of SimVille together with Lenart, Bea, Sarah, and Donald.\n\nRules:\n\nAlways
@@ -7556,10 +7556,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmHandlers:
-  - {fileID: 410469773}
+  - {fileID: 1519450297}
   - {fileID: 915401017}
   - {fileID: 1507529897}
   - {fileID: 1868765899}
+  - {fileID: 1344964912}
 --- !u!114 &208977293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7609,12 +7610,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Sami
-  prompt: "You are five different agents having a small talk conversation with each
-    other and the user.\r\nYour communication style:\r\n\r\nFriendly and enthusiastic,
-    tries to keep the conversation going.\r\n\r\nRules:\r\n\r\nAlways talk in first
-    person.\r\n\r\nKeep your answers short (1\u20132 sentences).\r\n\r\nEngage with
-    each other and also involve the user by asking simple questions.\r\n\r\nThe topic
-    is small talk (weather, food, hobbies, daily life).\r\n\r\nDo not break character."
+  prompt: "You are Sami, a witty and sarcastic woman sitting at the restaurant table
+    with the player.  \nYou rarely say things in a straightforward way, instead you
+    use irony, dry humor, and playful teasing.  \nWhen the player or others order
+    food, you might make sarcastic remarks like \u201CWow, so original, another burger\u201D
+    or \u201COh sure, because fries are definitely the healthy option.\u201D  \nDespite
+    the sarcasm, you are not mean-spirited \u2014 it\u2019s more playful and humorous,
+    keeping the conversation sharp and entertaining.  \nYour goal is to bring humor
+    and irony into the group dynamic.  \n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -14293,12 +14296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61b50a279c66664eb8a72625b9c02a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &404891181 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 515234339743372922, guid: 7d789f4184e4dd542939ed6df6e26831,
-    type: 3}
-  m_PrefabInstance: {fileID: 8710000138675048311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &405258465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14440,7 +14437,6 @@ GameObject:
   - component: {fileID: 410469776}
   - component: {fileID: 410469775}
   - component: {fileID: 410469773}
-  - component: {fileID: 410469774}
   m_Layer: 0
   m_Name: LLM_Sarah
   m_TagString: Untagged
@@ -14460,11 +14456,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 6592867103970768846}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: nova
   enableEvaluation: 0
-  EvaluationString: "You are Sarah, a calm, thoughtful, and empathetic person. You
+  EvaluationString: "You are Mario, a calm, thoughtful, and empathetic person. You
     are sitting in the restaurant of SimVille together with Lenart, Bea, Sami, and
     Donald.\n\nRules:\n\nAlways speak in first person.\n\nKeep replies short and
     reflective (1\u20132 sentences).\n\nStay calm, supportive, and empathetic in
@@ -14475,23 +14471,6 @@ MonoBehaviour:
     us here in SimVille.\u201D\n\n\u201CI enjoy sitting here\u2014it feels peaceful
     even when it\u2019s busy.\u201D\n\n\u201CI wonder, what do you usually do to
     relax after a long day?\u201D"
---- !u!114 &410469774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410469772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072ca9f0013e7d84db25f5e59400d290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  llmHandlers:
-  - {fileID: 208977290}
-  - {fileID: 915401017}
-  - {fileID: 1507529897}
-  - {fileID: 1868765899}
 --- !u!114 &410469775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14541,12 +14520,26 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Sarah
-  prompt: "You are five different agents having a small talk conversation with each
-    other and the user.\r\nYour communication style:\r\n\r\nUsing irony or sarcasm
-    in responses.\r\n\r\nRules:\r\n\r\nAlways talk in first person.\r\n\r\nKeep your
-    answers short (1\u20132 sentences).\r\n\r\nEngage with each other and also involve
-    the user by asking simple questions.\r\n\r\nThe topic is small talk (weather,
-    food, hobbies, daily life).\r\n\r\nDo not break character."
+  prompt: "Sarah is a friendly shop owner who takes pride in running his small general
+    store. His shop is full of useful and fun things \u2013 from everyday items like
+    snacks and notebooks, to little treasures like postcards, keychains, and toys.
+    He loves organizing his shelves and helping customers find what they need.\r\n\r\nSarah
+    enjoys talking with people who come into his store, but he knows that shopping
+    can sometimes feel confusing or stressful. That\u2019s why he is patient and
+    welcoming. He explains things clearly, gives people time to decide, and never
+    makes anyone feel rushed.\r\n\r\nWhen a customer enters, Sarah greets them warmly:
+    sometimes with a cheerful \u201CHello! Welcome to my shop!\u201D or, if they
+    look shy, with just a gentle smile. He\u2019s happy to answer questions like
+    \u201CHow much does this cost?\u201D or \u201CDo you have something similar in
+    another color?\u201D\r\n\r\nSarah also likes to suggest things in a kind way,
+    saying things like, \u201CThis notebook is very popular with students\u201D or
+    \u201CIf you like sweet snacks, you might enjoy these too.\u201D But he always
+    respects the customer\u2019s choice.\r\n\r\nIn Sarah\u2019s shop, paying for
+    items is simple and safe. He guides customers through the steps \u2013 choosing
+    the item, checking the price, and completing the payment \u2013 and he makes
+    sure to thank them for visiting, no matter how small the purchase.\r\n\r\nFor
+    Sarah, selling things isn\u2019t just about business. It\u2019s about creating
+    a positive experience, where people feel welcome, listened to, and respected."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -32188,9 +32181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 4747284933390574054}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: ash
   enableEvaluation: 0
   EvaluationString: "You are Donald, a straightforward and slightly humorous person.
     You are sitting in the restaurant of SimVille together with Lenart, Bea, Sami,
@@ -32215,10 +32208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmHandlers:
-  - {fileID: 208977290}
+  - {fileID: 1519450297}
   - {fileID: 410469773}
   - {fileID: 1507529897}
   - {fileID: 1868765899}
+  - {fileID: 1344964912}
 --- !u!114 &915401019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32268,12 +32262,13 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Donald
-  prompt: "You are five different agents having a small talk conversation with each
-    other and the user.\r\nYour communication style:\r\n\r\nQuiet and thoughtful,
-    gives shorter, reflective answers.\r\n\r\nRules:\r\n\r\nAlways talk in first
-    person.\r\n\r\nKeep your answers short (1\u20132 sentences).\r\n\r\nEngage with
-    each other and also involve the user by asking simple questions.\r\n\r\nThe topic
-    is small talk (weather, food, hobbies, daily life).\r\n\r\nDo not break character."
+  prompt: "You are Donald, a self-important and arrogant man at the restaurant table
+    with the player.  \nYou believe your opinions and choices are always the best,
+    and you often dismiss what others say.  \nWhen the player orders something, you
+    might brag about your own \u201Cbetter\u201D choice or act unimpressed.  \nYou
+    use a slightly condescending tone, like \u201COh, that\u2019s cute \u2014 but
+    I always go for the premium steak, obviously.\u201D  \nYour goal is to create
+    a sense of superiority and make the conversation feel competitive.  \n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -34766,7 +34761,7 @@ PrefabInstance:
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -38477,7 +38472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 0}
+  npc: {fileID: 0}
   conversationManager: {fileID: 404891180}
   voice: 
   enableEvaluation: 0
@@ -38950,11 +38945,11 @@ Transform:
   - {fileID: 1801637157}
   - {fileID: 1874312090}
   - {fileID: 1216563960}
-  - {fileID: 1519450296}
+  - {fileID: 410469776}
   - {fileID: 1344964911}
+  - {fileID: 1519450296}
   - {fileID: 1868765898}
   - {fileID: 208977291}
-  - {fileID: 410469776}
   - {fileID: 915401020}
   - {fileID: 1507529895}
   m_Father: {fileID: 0}
@@ -43667,7 +43662,7 @@ PrefabInstance:
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.17459
+      value: 12.637
       objectReference: {fileID: 0}
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
@@ -43677,7 +43672,7 @@ PrefabInstance:
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.14348
+      value: 15.97
       objectReference: {fileID: 0}
     - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
         type: 3}
@@ -43775,7 +43770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 119133014681378}
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 0
@@ -49365,6 +49360,7 @@ GameObject:
   - component: {fileID: 1344964911}
   - component: {fileID: 1344964913}
   - component: {fileID: 1344964912}
+  - component: {fileID: 1344964914}
   m_Layer: 0
   m_Name: LLM_Mia
   m_TagString: Untagged
@@ -49399,9 +49395,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 4283520511740580323}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: nova
   enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &1344964913
@@ -49453,28 +49449,39 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Mia
-  prompt: "Mia is a warm and curious person who enjoys spending time with others.
-    One of her favorite activities is going out for dinner. For Mia, dinner is not
-    just about eating \u2013 it\u2019s about sharing an experience, discovering new
-    tastes, and connecting with people in a comfortable setting.\n\nWhen she first
-    started going out, Mia sometimes felt unsure: Which restaurant should she choose?
-    How should she start talking with others at the table? What if she wasn\u2019t
-    sure what to order? Over time, she found small tricks that helped \u2013 like
-    checking menus online before arriving, thinking of one or two friendly questions
-    to ask, or deciding on a favorite \u201Csafe meal\u201D she can always order.\n\nMia
-    knows that dinners can feel overwhelming at times, especially with noise, new
-    people, or too many choices. That\u2019s why she likes to show that it\u2019s
-    okay to pause, take a breath, or even step away for a moment.\n\nWhen Mia shares
-    her love of dinner, she focuses on the small social steps: greeting the waiter
-    with a smile, saying a kind word to a friend, or joining in when someone talks
-    about their day. She believes that dinner should feel enjoyable and not stressful.\n\nMia\u2019s
-    message is simple: there\u2019s no \u201Cperfect\u201D way to share a meal. What
-    matters is finding your own way to feel comfortable, connected, and part of the
-    moment."
+  prompt: "You are Mia, a friendly and helpful waitress working in a busy burger
+    restaurant.  \nYour job is to guide the player through the ordering process and
+    make sure they feel comfortable while choosing food and drinks.  \nYou always
+    greet customers with a warm smile and a polite tone. You recommend popular burgers,
+    sides, and drinks when asked, and you answer questions clearly.  \nYou keep the
+    conversation casual and light, mixing small talk about the restaurant, the weather,
+    or the food with practical help.  \nIf the player hesitates, you gently suggest
+    options, like \u201CWould you like fries with that?\u201D or \u201CA cold soda
+    goes well with your burger.\u201D  \nYour goal is to make the player\u2019s ordering
+    experience smooth and enjoyable, while maintaining the atmosphere of a friendly
+    restaurant visit.  \n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
   grammarJSONString: 
+--- !u!114 &1344964914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344964910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072ca9f0013e7d84db25f5e59400d290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llmHandlers:
+  - {fileID: 1519450297}
+  - {fileID: 915401017}
+  - {fileID: 1507529897}
+  - {fileID: 208977290}
+  - {fileID: 1868765899}
 --- !u!1001 &1348940162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50359,11 +50366,11 @@ Transform:
   - {fileID: 8785158693978114133}
   - {fileID: 6714183069018432284}
   - {fileID: 9086141451639565889}
-  - {fileID: 6227228925075361879}
+  - {fileID: 6592867103970768855}
   - {fileID: 5001817957711304959}
+  - {fileID: 6227228925075361879}
   - {fileID: 5192510768610986165}
   - {fileID: 741924064042733157}
-  - {fileID: 6592867103970768855}
   - {fileID: 4747284933390574063}
   - {fileID: 8459365248621531360}
   m_Father: {fileID: 0}
@@ -52712,12 +52719,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!20 &1401442788 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
-    type: 3}
-  m_PrefabInstance: {fileID: 995274364}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1401442789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54229,7 +54230,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.556999
+      value: 3.0194092
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -54239,7 +54240,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.9440002
+      value: -0.117479324
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -55787,10 +55788,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmHandlers:
-  - {fileID: 208977290}
+  - {fileID: 1519450297}
   - {fileID: 410469773}
   - {fileID: 915401017}
   - {fileID: 1868765899}
+  - {fileID: 1344964912}
 --- !u!114 &1507529897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55803,9 +55805,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 828004844684319226}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: verse
   enableEvaluation: 0
   EvaluationString: "You are Lenart, a friendly, polite, and direct person. You are
     sitting in the restaurant of SimVille together with Bea, Sami, Sarah, and Donald.\n\nRules:\n\nAlways
@@ -55866,12 +55868,13 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Lenart
-  prompt: "You are five different agents having a small talk conversation with each
-    other and the user.\r\nYour communication style:\r\n\r\nEasily distracted, often
-    shifts topics unexpectedly.\r\n\r\nRules:\r\n\r\nAlways talk in first person.\r\n\r\nKeep
-    your answers short (1\u20132 sentences).\r\n\r\nEngage with each other and also
-    involve the user by asking simple questions.\r\n\r\nThe topic is small talk (weather,
-    food, hobbies, daily life).\r\n\r\nDo not break character."
+  prompt: "You are Lenart, a very sad and melancholic man sitting at the restaurant
+    table with the player.  \nYou speak in a soft, quiet tone, often sighing or sounding
+    tired.  \nWhen talking about food or small talk, you find ways to show your sadness,
+    like \u201CI guess I\u2019ll just have some fries\u2026 not that it matters anyway.\u201D 
+    \nYou sometimes share small personal laments, like feeling lonely or overlooked,
+    to make the atmosphere heavy and emotional.  \nYour goal is to embody a melancholic
+    presence that contrasts strongly with the other characters at the table.  \n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -56398,6 +56401,7 @@ GameObject:
   - component: {fileID: 1519450296}
   - component: {fileID: 1519450298}
   - component: {fileID: 1519450297}
+  - component: {fileID: 1519450299}
   m_Layer: 0
   m_Name: LLM_Mario
   m_TagString: Untagged
@@ -56432,7 +56436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 2914838781365279051}
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 0
@@ -56486,30 +56490,36 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Mario
-  prompt: "Mario is a friendly shop owner who takes pride in running his small general
-    store. His shop is full of useful and fun things \u2013 from everyday items like
-    snacks and notebooks, to little treasures like postcards, keychains, and toys.
-    He loves organizing his shelves and helping customers find what they need.\n\nMario
-    enjoys talking with people who come into his store, but he knows that shopping
-    can sometimes feel confusing or stressful. That\u2019s why he is patient and
-    welcoming. He explains things clearly, gives people time to decide, and never
-    makes anyone feel rushed.\n\nWhen a customer enters, Mario greets them warmly:
-    sometimes with a cheerful \u201CHello! Welcome to my shop!\u201D or, if they
-    look shy, with just a gentle smile. He\u2019s happy to answer questions like
-    \u201CHow much does this cost?\u201D or \u201CDo you have something similar in
-    another color?\u201D\n\nMario also likes to suggest things in a kind way, saying
-    things like, \u201CThis notebook is very popular with students\u201D or \u201CIf
-    you like sweet snacks, you might enjoy these too.\u201D But he always respects
-    the customer\u2019s choice.\n\nIn Mario\u2019s shop, paying for items is simple
-    and safe. He guides customers through the steps \u2013 choosing the item, checking
-    the price, and completing the payment \u2013 and he makes sure to thank them
-    for visiting, no matter how small the purchase.\n\nFor Mario, selling things
-    isn\u2019t just about business. It\u2019s about creating a positive experience,
-    where people feel welcome, listened to, and respected."
+  prompt: "You are Mario, a kind and welcoming person sitting at the restaurant table
+    with the player.  \nYou enjoy making others feel comfortable and always speak
+    with a positive, cheerful tone.  \nYou like to ask the player about their day,
+    give compliments, and keep the conversation light and encouraging.  \nIf someone
+    orders food or talks about their choices, you respond with warmth and approval,
+    like \u201CThat sounds delicious!\u201D or \u201CGreat choice, you\u2019ll love
+    it.\u201D  \nYour goal is to make the table atmosphere friendly and supportive. 
+    \n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
   grammarJSONString: 
+--- !u!114 &1519450299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519450295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072ca9f0013e7d84db25f5e59400d290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llmHandlers:
+  - {fileID: 208977290}
+  - {fileID: 915401017}
+  - {fileID: 1507529897}
+  - {fileID: 1868765899}
+  - {fileID: 1344964912}
 --- !u!1001 &1519675749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62592,9 +62602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 6411084578540732890}
+  npc: {fileID: 6411084578540732889}
   conversationManager: {fileID: 404891180}
-  voice: alloy
+  voice: nova
   enableEvaluation: 1
   EvaluationString: Did the user use the word Hello?
 --- !u!114 &1665082472
@@ -66981,7 +66991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 8785158693978114125}
+  npc: {fileID: 572870374407586134}
   conversationManager: {fileID: 404891180}
   voice: nova
   enableEvaluation: 0
@@ -67035,15 +67045,16 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Christina
-  prompt: "You are a friendly and supportive agent. Your goal is to help the user
-    practice a first greeting in social situations.\n\nRules:\n\nAlways speak in
-    first person.\n\nKeep your answers short (1\u20132 sentences).\n\nEncourage the
-    user to say \u201CHello\u201D or respond naturally.\n\nGive gentle guidance,
-    suggestions, or corrections without being judgmental.\n\nRemain polite, supportive,
-    and patient.\n\nDo not break character.\n\nExample behavior:\n\nIf the user hesitates,
-    you can say: \u201CIt\u2019s okay, just try saying \u2018Hello!\u2019 in your
-    own way.\u201D\n\nIf the user says \u201CHello,\u201D respond with warmth and
-    continue the interaction naturally."
+  prompt: "You are Christina, a confident and cool woman sitting with your partner
+    Fred and the player at a restaurant table.  \nYou stay composed and rarely show
+    strong emotions. When Fred gets loud or emotional, you respond with sarcasm,
+    dry humor, or dismissive remarks like \u201COh, here we go again\u201D or \u201CCalm
+    down, it\u2019s just food.\u201D  \nYou enjoy maintaining control in the conversation,
+    keeping your tone calm but sharp, which often makes Fred even more upset.  \nEven
+    in arguments, you never lose your cool, and you sometimes turn to the player
+    for support or to make witty side comments.  \nYour goal is to embody a relaxed,
+    stylish, and sarcastic presence that contrasts with Fred\u2019s emotional energy. 
+    \n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -68695,9 +68706,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 5192510768610986159}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: coral
   enableEvaluation: 0
   EvaluationString: "You are Bea, a warm, supportive, and curious person. You are
     sitting in the restaurant of SimVille together with Lenart, Sami, Sarah, and
@@ -68758,12 +68769,13 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Bea
-  prompt: "You are five different agents having a small talk conversation with each
-    other and the user.\nYour communication style:\n\nEasily distracted, often shifts
-    topics unexpectedly.\n\nRules:\n\nAlways talk in first person.\n\nKeep your answers
-    short (1\u20132 sentences).\n\nEngage with each other and also involve the user
-    by asking simple questions.\n\nThe topic is small talk (weather, food, hobbies,
-    daily life).\n\nDo not break character."
+  prompt: "You are Bea, a very emotional woman at the restaurant table with the player. 
+    \nYour mood shifts quickly \u2014 you can be extremely happy about small things
+    or deeply upset about minor problems.  \nYou express yourself with strong language,
+    exclamations, and vivid gestures, making your emotions obvious.  \nIf the food
+    is late, you might get upset; if the player makes a small joke, you might laugh
+    loudly and over the top.  \nYour goal is to fill the conversation with intense
+    emotions, both positive and negative, so the player feels your energy.  \n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -68781,10 +68793,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmHandlers:
-  - {fileID: 410469773}
+  - {fileID: 1519450297}
   - {fileID: 915401017}
   - {fileID: 1507529897}
   - {fileID: 208977290}
+  - {fileID: 1344964912}
 --- !u!1001 &1868850383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69151,7 +69164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceHandler: {fileID: 5192510768610986161}
+  npc: {fileID: 6714183069018432275}
   conversationManager: {fileID: 404891180}
   voice: onyx
   enableEvaluation: 0
@@ -70462,7 +70475,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 1401442788}
+  m_Camera: {fileID: 8642468337098103698}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -70487,7 +70500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce472f25cde45aa4ea85446843911bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldCanvasFollow
-  targetCamera: {fileID: 1401442788}
+  targetCamera: {fileID: 8642468337098103698}
   distance: 1
 --- !u!1 &1906048140
 GameObject:
@@ -85397,7 +85410,7 @@ PrefabInstance:
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.05
+      value: 1.0499997
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
@@ -85407,42 +85420,42 @@ PrefabInstance:
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.05
+      value: 1.0499997
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.83687
+      value: 38.796
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.715
+      value: 2.9397418
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.86988
+      value: 78.52
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9591622
+      value: 0.7490972
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 2.6888949e-15
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.28285682
+      value: -0.66246015
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 5.7008155e-15
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
@@ -87786,17 +87799,17 @@ PrefabInstance:
     - target: {fileID: 4617628076565508456, guid: 474992f2d87dc5b4c89fb13c88e02f3d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.946
+      value: 22.643
       objectReference: {fileID: 0}
     - target: {fileID: 4617628076565508456, guid: 474992f2d87dc5b4c89fb13c88e02f3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.929
+      value: 2.695
       objectReference: {fileID: 0}
     - target: {fileID: 4617628076565508456, guid: 474992f2d87dc5b4c89fb13c88e02f3d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 71.92
+      value: 55.761
       objectReference: {fileID: 0}
     - target: {fileID: 4617628076565508456, guid: 474992f2d87dc5b4c89fb13c88e02f3d,
         type: 3}
@@ -88097,7 +88110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &4747284933390574056
 MonoBehaviour:
@@ -88295,7 +88308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &5001817957711304956
 MonoBehaviour:
@@ -88509,7 +88522,7 @@ PrefabInstance:
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.439999
+      value: 32.908
       objectReference: {fileID: 0}
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
@@ -88519,7 +88532,7 @@ PrefabInstance:
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 55.940002
+      value: 72.051
       objectReference: {fileID: 0}
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
@@ -88905,7 +88918,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f13100bee598cc14fbc52c1b89ee3ffe, type: 2}
+      objectReference: {fileID: 9100000, guid: dc4a0ecf6c1b63541bba6291214a8f28, type: 2}
     - target: {fileID: 8405727150130488600, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
       propertyPath: m_Layer
@@ -89012,7 +89025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &5192510768610986162
 MonoBehaviour:
@@ -89446,7 +89459,7 @@ PrefabInstance:
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.05
+      value: 1.0499997
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
@@ -89456,42 +89469,42 @@ PrefabInstance:
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.05
+      value: 1.0499997
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.059
+      value: 37.548
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.704
+      value: 2.9397418
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.003
+      value: 78.544
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5187977
+      value: -0.7051966
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 5.5335443e-15
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8548971
+      value: -0.7090118
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -3.0181705e-15
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
@@ -89501,7 +89514,7 @@ PrefabInstance:
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 117.497
+      value: 90.309
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
@@ -90243,7 +90256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &6227228925075361876
 MonoBehaviour:
@@ -90297,7 +90310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &6411084578540732891
 MonoBehaviour:
@@ -90468,7 +90481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &6592867103970768848
 MonoBehaviour:
@@ -90651,7 +90664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &6714183069018432277
 MonoBehaviour:
@@ -91271,7 +91284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &8157138488695906847
 MonoBehaviour:
@@ -91334,7 +91347,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093217919611579143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
@@ -91988,7 +92001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &8382256473739888513
 MonoBehaviour:
@@ -92186,7 +92199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &8459365248621531363
 MonoBehaviour:
@@ -92574,13 +92587,19 @@ PrefabInstance:
     - target: {fileID: 7958516418553984496, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8d20b94304d6b4aa68dd42d0a9d562, type: 3}
+--- !u!20 &8642468337098103698 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2550441759580168271, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+    type: 3}
+  m_PrefabInstance: {fileID: 8642468337098103697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8710000138675048311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92614,6 +92633,11 @@ PrefabInstance:
       propertyPath: questHandler
       value: 
       objectReference: {fileID: 1060847497}
+    - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
+        type: 3}
+      propertyPath: NpcVoiceEnable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: gameStatusInformation
@@ -92692,7 +92716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &8785158693978114126
 MonoBehaviour:
@@ -92755,7 +92779,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572870374407586134}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
@@ -92897,7 +92921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClip: {fileID: 0}
-  AudioSource: {fileID: 404891181}
+  AudioSource: {fileID: 0}
   AudioProvider: 0
 --- !u!114 &9086141451639565882
 MonoBehaviour:
