@@ -177,8 +177,13 @@ namespace AiSims
             var voiceHandler = npc.npc.GetComponent<VoiceHandler>();
             if (NpcVoiceEnable && talk != null && voiceHandler != null)
             {
-                string cleaned = Regex.Replace(replyMessage, @"[^a-zA-Z0-9äöüÄÖÜß\s]", "");
+                // First, remove anything inside parentheses (and the parentheses themselves)
+                string noBrackets = Regex.Replace(replyMessage, @"\([^)]*\)", "");
 
+                // Then run your existing cleanup
+                string cleaned = Regex.Replace(noBrackets, @"[^a-zA-Z0-9äöüÄÖÜß\s]", "");
+
+                // Finally call Text2Speech
                 talk.Text2Speech(cleaned, voiceHandler, npc.GetVoiceName());
             }
             else

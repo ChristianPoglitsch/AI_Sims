@@ -9,7 +9,7 @@ namespace AiSims
         private Transform currentTarget;
         public Transform player;
         public bool automaticStart = true;
-        private NavMeshAgent navMeshAgent;
+        private NavMeshAgent navMeshAgent = null;
         public bool isFollowingPlayer = true;
         public List<Transform> targets = new List<Transform>();
         private float RunAwayTimer = 0f;
@@ -20,14 +20,14 @@ namespace AiSims
         private string walkingAnimation = "isWalking";
         public string target;
 
-        private Animator animator;
+        private Animator animator = null;
         private bool running = false;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         public void Start()
         {
-            animator = GetComponentInChildren<Animator>();
-            navMeshAgent = GetComponent<NavMeshAgent>(); // Use Stop() and Resume()
+            if (animator == null) animator = GetComponentInChildren<Animator>();
+            if (navMeshAgent == null) navMeshAgent = GetComponent<NavMeshAgent>(); // Use Stop() and Resume()
 
             if (automaticStart)
             {
@@ -38,6 +38,9 @@ namespace AiSims
 
         public void StartMovement()
         {
+            if(animator == null) animator = GetComponentInChildren<Animator>();
+            if(navMeshAgent == null) navMeshAgent = GetComponent<NavMeshAgent>(); // Use Stop() and Resume()
+
             running = true;
 
             navSpeed = navMeshAgent.speed;
