@@ -92613,6 +92613,21 @@ PrefabInstance:
       propertyPath: speech
       value: 
       objectReference: {fileID: 1687984568}
+    - target: {fileID: 3474175858661703085, guid: 7d789f4184e4dd542939ed6df6e26831,
+        type: 3}
+      propertyPath: difficultyConfigs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474175858661703085, guid: 7d789f4184e4dd542939ed6df6e26831,
+        type: 3}
+      propertyPath: characterHandlerList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474175858661703085, guid: 7d789f4184e4dd542939ed6df6e26831,
+        type: 3}
+      propertyPath: difficultyConfigs.Array.data[0].characterHandlerList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4030390568125291807, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: text
