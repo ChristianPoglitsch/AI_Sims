@@ -27,6 +27,7 @@ namespace AiSims
 
         public int maxNpcConversationsUntilEvaluation = 2;
         private int npcConversationsUntilEvaluation;
+        private LLM_Handler lastNpc;
 
         private readonly string userCanTalk = "User can talk.";
         private readonly string npcTalking = "NPC is thinking.";
@@ -58,10 +59,11 @@ namespace AiSims
 
             NpcConnection npcConnection = currentNPC.GetNpcConnection();
             float chance = Random.value; // float between 0.0 and 1.0
-            var nextNpc = npcConnection.RandomHandler;
+            LLM_Handler nextNpc = npcConnection.RandomHandler;
 
-            if (npcConnection != null && nextNpc != null && chance < chanceNpcTalking)
+            if (nextNpc != lastNpc && npcConnection != null && nextNpc != null && chance < chanceNpcTalking)
             {
+                lastNpc = nextNpc;
                 gameStatusInformation.text = string.Empty;
 
                 Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
@@ -72,12 +74,12 @@ namespace AiSims
             {
                 Debug.Log("NPC 1:1 conversation. | chance = " + chance);
             }
+            lastNpc = null;
 
             if (npcConversationsUntilEvaluation == 0 && currentNPC.EvaluateConversation())
             {
                 messageDecorator.EvaluateConversation();
             }
-
 
             gameStatusInformation.text = userCanTalk;
             talking = false;
@@ -94,6 +96,13 @@ namespace AiSims
         public void TalkUser()
         {
             if (gameStatusInformation.text == string.Empty) return;
+            if(speech2Text.Recording())
+            {
+                speech2Text.ToggleRecording();
+                gameStatusInformation.text = string.Empty;
+                return;
+            }
+
             if (talking) return;
 
             gameStatusInformation.text = "User is talking ... ";

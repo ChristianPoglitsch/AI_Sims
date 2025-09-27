@@ -87,6 +87,11 @@ namespace AiSims
             }
         }
 
+        public bool Recording()
+        {
+            return isRecording;
+        }
+
         private IEnumerator SendToWhisper(byte[] wavData)
         {
             WWWForm form = new WWWForm();

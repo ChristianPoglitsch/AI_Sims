@@ -1,28 +1,38 @@
 using AiSims;
-using LLMUnity;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [System.Serializable]
-public class CharacterHandlerPair
+public class NavMeshEntry
 {
-    public LLMCharacter character;
-    public LLM_Handler handler;
-}
-
-[System.Serializable]
-public class DifficultyConfig
-{
-    public string difficultyName; // e.g. "Easy", "Medium", "Hard"
-    public List<CharacterHandlerPair> characterHandlerList;
+    public GameObject npc; // The GameObject to control
 }
 
 public class Complexity : MonoBehaviour
 {
-    public float Visualization = 0.0f;
-    public float StoryTelling = 0.0f;
+    public List<NavMeshEntry> entries = new List<NavMeshEntry>();
 
-    // Multiple configs, one per difficulty
-    public List<DifficultyConfig> difficultyConfigs;
+    void Start()
+    {
+        foreach (var entry in entries)
+        {
+            if (entry.npc != null)
+            {
+                NpcMovement movement = entry.npc.GetComponent<NpcMovement>();
+                if (movement != null)
+                {
+                    movement.StartMovement();
+                }
+                else
+                {
+                    Debug.LogWarning($"NpcMovement component not found on {entry.npc.name}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("NavMeshEntry has a null npc reference.");
+            }
+        }
+    }
 }

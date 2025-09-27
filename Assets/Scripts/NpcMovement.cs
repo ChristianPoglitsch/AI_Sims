@@ -4,10 +4,11 @@ using UnityEngine.AI;
 
 namespace AiSims
 {
-    public class EnemyMovement : MonoBehaviour
+    public class NpcMovement : MonoBehaviour
     {
         private Transform currentTarget;
         public Transform player;
+        public bool automaticStart = true;
         private NavMeshAgent navMeshAgent;
         public bool isFollowingPlayer = true;
         public List<Transform> targets = new List<Transform>();
@@ -16,9 +17,11 @@ namespace AiSims
         private float navSpeed = 0f;
 
         public string endAnimation;
+        private string walkingAnimation = "isWalking";
         public string target;
 
         private Animator animator;
+        private bool running = false;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         public void Start()
@@ -26,9 +29,20 @@ namespace AiSims
             animator = GetComponentInChildren<Animator>();
             navMeshAgent = GetComponent<NavMeshAgent>(); // Use Stop() and Resume()
 
+            if (automaticStart)
+            {
+                running = true;
+                StartMovement();
+            }
+        }
+
+        public void StartMovement()
+        {
+            running = true;
+
             navSpeed = navMeshAgent.speed;
 
-            animator.SetBool("isWalking", true);
+            animator.SetBool(walkingAnimation, true);
             animator.SetBool(endAnimation, false);
 
             chooseTarget();
@@ -37,6 +51,8 @@ namespace AiSims
         // Update is called once per frame
         void Update()
         {
+            if (!running) return;
+
             if (player != null && isFollowingPlayer == true)
             {
                 navMeshAgent.SetDestination(player.position);
@@ -84,7 +100,7 @@ namespace AiSims
             {
                 navMeshAgent.speed = 0;
                 animator.SetBool(endAnimation, true);
-                animator.SetBool("isWalking", false);
+                animator.SetBool(walkingAnimation, false);
             }
             else
             {
