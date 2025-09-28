@@ -1,5 +1,6 @@
 using LLMUnity;
 using ReadyPlayerMe.Core;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using UnityEngine;
 
@@ -59,6 +60,12 @@ namespace AiSims
 
         void ReplyCompleted()
         {
+            // First, remove anything inside parentheses (and the parentheses themselves)
+            string noBrackets = Regex.Replace(replyMessage, @"\([^)]*\)", "");
+
+            // allow letters, numbers, umlauts, whitespace, and ?
+            replyMessage = Regex.Replace(noBrackets, @"[^a-zA-Z0-9‰ˆ¸ƒ÷‹ﬂ\s\?]", "");
+
             Debug.Log(llmCharacter.AIName + ": " + replyMessage);
             conversationManager.TalkNpc(replyMessage, this, addToHistory, llmCharacter.AIName);
         }

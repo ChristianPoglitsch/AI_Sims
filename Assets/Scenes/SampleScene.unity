@@ -49393,8 +49393,8 @@ MonoBehaviour:
   npc: {fileID: 4283520511740580323}
   conversationManager: {fileID: 404891180}
   voice: nova
-  enableEvaluation: 0
-  EvaluationString: 
+  enableEvaluation: 1
+  EvaluationString: Did the user order food and drink?
 --- !u!114 &1344964913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92665,7 +92665,7 @@ PrefabInstance:
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: NpcVoiceEnable
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
@@ -92677,6 +92677,11 @@ PrefabInstance:
       propertyPath: gameStatusInformation
       value: 
       objectReference: {fileID: 753823215}
+    - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
+        type: 3}
+      propertyPath: maxNpcConversationsUntilEvaluation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5450627206972327268, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: m_LocalPosition.x

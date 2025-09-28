@@ -27,6 +27,7 @@ namespace AiSims
 
         public int maxNpcConversationsUntilEvaluation = 2;
         private int npcConversationsUntilEvaluation;
+        private bool isEvaluating = false;
         private LLM_Handler lastNpc;
 
         private readonly string userCanTalk = "User can talk.";
@@ -68,7 +69,7 @@ namespace AiSims
 
                 Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                 nextNpc.ProcessMessage(currentMessage);
-                return;
+                //return;
             }
             else
             {
@@ -78,7 +79,13 @@ namespace AiSims
 
             if (npcConversationsUntilEvaluation == 0 && currentNPC.EvaluateConversation())
             {
+                isEvaluating = true;
                 messageDecorator.EvaluateConversation();
+            }
+
+            if(npcConversationsUntilEvaluation <= 0)
+            {
+                npcConversationsUntilEvaluation = maxNpcConversationsUntilEvaluation;
             }
 
             gameStatusInformation.text = userCanTalk;
@@ -89,7 +96,6 @@ namespace AiSims
         public void SetCurrentNPC(NPCToStoryBridge npc)
         {
             currentNPC = npc.llmHandler;
-            npcConversationsUntilEvaluation = maxNpcConversationsUntilEvaluation;
             messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
         }
 
@@ -154,7 +160,7 @@ namespace AiSims
             StartCoroutine(TalkNpcCoroutine(replyMessage, npc, addToHist, aiName));
         }
 
-        private IEnumerator TalkNpcCoroutine(string replyMessage, LLM_Handler npc, bool addToHist, string aiName)
+        private IEnumerator TalkNpcCoroutine(string replyMessage, LLM_Handler npcHandler, bool addToHist, string aiName)
         {
             if (addToHist)
             {
@@ -174,19 +180,15 @@ namespace AiSims
             }
 
             currentMessage = replyMessage;
-            var voiceHandler = npc.npc.GetComponent<VoiceHandler>();
-            if (NpcVoiceEnable && talk != null && voiceHandler != null)
-            {
-                // First, remove anything inside parentheses (and the parentheses themselves)
-                string noBrackets = Regex.Replace(replyMessage, @"\([^)]*\)", "");
 
-                // Then run your existing cleanup
-                string cleaned = Regex.Replace(noBrackets, @"[^a-zA-Z0-9äöüÄÖÜß\s]", "");
+            if (NpcVoiceEnable && talk != null && npcHandler.npc != null)
+            {
+                var voiceHandler = npcHandler.npc.GetComponent<VoiceHandler>();
 
                 // Finally call Text2Speech
-                talk.Text2Speech(cleaned, voiceHandler, npc.GetVoiceName());
+                talk.Text2Speech(currentMessage, voiceHandler, npcHandler.GetVoiceName());
             }
-            else
+            else if(!isEvaluating)
             {
                 gameStatusInformation.text = string.Empty;
 
@@ -201,6 +203,10 @@ namespace AiSims
                 yield return new WaitForSeconds(waitTime);
 
                 OnNpcSpeechFinished();
+            }
+            else if(isEvaluating)
+            {
+                isEvaluating = false;
             }
         }
 
