@@ -15,9 +15,9 @@ namespace AiSims
     public class MessageDecorator : MonoBehaviour
     {
         public TMP_Text text;
-
         private bool processMessage = false;
         private LLM_Handler llmHandler;
+
         public bool ProcessedEvaluation { get; private set; } = false;
 
         public string EvaluationString { get; private set; } = string.Empty;
@@ -32,24 +32,14 @@ namespace AiSims
             text.text = aiName + ": " + message;
         }
 
-        public void AddMessage(string message, MessageTypes type)
-        {
-            if (llmHandler == null || llmHandler.GetLlm() == null)
-            {
-                Debug.Log("LLM Handler for evaluating quests is not assigned.");
-                return;
-            }
-
-            // Convert enum to string role
-            string role = type.ToString(); // "system", "assistant", "user"
-
-            // Call LLM with role and message
-            llmHandler.GetLlm().AddMessage(type.ToString() + ": " + role, message);
-        }
-
         public void SetLlmHandler(LLM_Handler handler)
         {
             this.llmHandler = handler;
+        }
+
+        public LLM_Handler GetLlmHandler()
+        {
+            return llmHandler;
         }
 
         public void SetEvaluationInstruction(string instruction)

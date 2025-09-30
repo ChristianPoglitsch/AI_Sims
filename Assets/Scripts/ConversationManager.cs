@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Data;
 using System.Text.RegularExpressions;
 using ReadyPlayerMe.Core;
 using TMPro;
@@ -16,17 +17,17 @@ namespace AiSims
         public bool UserVoiceEnable = false;
         public bool NpcVoiceEnable = false;
         public LLM_Handler questHandler;
+        public LLM_Handler companionNPC;
         public float chanceNpcTalking = 0.3f;
 
-        public LLM_Handler currentNPC;
+        private LLM_Handler currentNPC;       
+
         private Talk talk;
         private MessageDecorator messageDecorator = null;
 
         private bool talking = false;
         private string currentMessage;
 
-        public int maxNpcConversationsUntilEvaluation = 2;
-        private int npcConversationsUntilEvaluation;
         private bool isEvaluating = false;
         private LLM_Handler lastNpc;
 
@@ -46,30 +47,28 @@ namespace AiSims
                 talk.OnSpeechFinished += OnNpcSpeechFinished;
             }
 
-            npcConversationsUntilEvaluation = maxNpcConversationsUntilEvaluation;
-
             messageDecorator.SetLlmHandler(questHandler);
-
             Logger.Log(LoggingInfo.Scene, "Start Test scene", true);
         }
 
         // This function will be called when the NPC finishes talking
         private void OnNpcSpeechFinished()
         {
-            npcConversationsUntilEvaluation = Mathf.Max(-1, npcConversationsUntilEvaluation - 1);
-
             NpcConnection npcConnection = currentNPC.GetNpcConnection();
             float chance = Random.value; // float between 0.0 and 1.0
-            LLM_Handler nextNpc = npcConnection.RandomHandler;
 
-            if (nextNpc != lastNpc && npcConnection != null && nextNpc != null && chance < chanceNpcTalking)
+            if (npcConnection != null) 
             {
-                lastNpc = nextNpc;
-                gameStatusInformation.text = string.Empty;
+                LLM_Handler nextNpc = npcConnection.RandomHandler;
+                if (nextNpc != lastNpc && nextNpc != null && chance < chanceNpcTalking)
+                {
+                    lastNpc = nextNpc;
+                    gameStatusInformation.text = string.Empty;
 
-                Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
-                nextNpc.ProcessMessage(currentMessage);
-                //return;
+                    Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
+                    nextNpc.ProcessMessage(currentMessage);
+                    //return;
+                }
             }
             else
             {
@@ -77,20 +76,14 @@ namespace AiSims
             }
             lastNpc = null;
 
-            if (npcConversationsUntilEvaluation == 0 && currentNPC.EvaluateConversation())
+            if (currentNPC.EvaluateConversation())
             {
                 isEvaluating = true;
                 messageDecorator.EvaluateConversation();
             }
 
-            if(npcConversationsUntilEvaluation <= 0)
-            {
-                npcConversationsUntilEvaluation = maxNpcConversationsUntilEvaluation;
-            }
-
             gameStatusInformation.text = userCanTalk;
             talking = false;
-            Debug.Log("NPC finished speaking. #num conversations until evaluation " + npcConversationsUntilEvaluation);
         }
 
         public void SetCurrentNPC(NPCToStoryBridge npc)
@@ -153,29 +146,50 @@ namespace AiSims
             }
         }
 
-        public void TalkNpc(string replyMessage, LLM_Handler npc, bool addToHist, string aiName)
+        public void TalkNpc(string replyMessage, LLM_Handler npc, string aiName)
         {
             Logger.Log(LoggingInfo.DialoagNpc, replyMessage, true);
 
-            StartCoroutine(TalkNpcCoroutine(replyMessage, npc, addToHist, aiName));
+            StartCoroutine(TalkNpcCoroutine(replyMessage, npc,  aiName));
         }
 
-        private IEnumerator TalkNpcCoroutine(string replyMessage, LLM_Handler npcHandler, bool addToHist, string aiName)
+        public void AddMessage(LLM_Handler handler, string message, MessageTypes type)
         {
-            if (addToHist)
+            if (handler == null || handler.GetLlm() == null)
             {
-                messageDecorator.AddMessage(currentNPC.GetUserMessage(), MessageTypes.user);
-                messageDecorator.AddMessage(replyMessage, MessageTypes.assistant);
+                Debug.Log("LLM Handler for evaluating quests is not assigned.");
+                return;
+            }
 
-                NpcConnection otherNpc = currentNPC.GetNpcConnection();
-                if (otherNpc != null)
+            // Convert enum to string role
+            string role = type.ToString(); // "system", "assistant", "user"
+
+            // Call LLM with role and message
+            handler.GetLlm().AddMessage(role, role + ": " + message);
+        }
+
+        private IEnumerator TalkNpcCoroutine(string replyMessage, LLM_Handler npcHandler, string aiName)
+        {
+            if (currentNPC.EvaluateConversation())
+            {
+                AddMessage(messageDecorator.GetLlmHandler(), currentNPC.GetUserMessage(), MessageTypes.user);
+                AddMessage(messageDecorator.GetLlmHandler(), replyMessage, MessageTypes.assistant);
+            }
+
+            if (companionNPC && currentNPC != companionNPC)
+            {
+                AddMessage(companionNPC, currentNPC.GetUserMessage(), MessageTypes.user);
+                AddMessage(companionNPC, replyMessage, MessageTypes.assistant);
+            }
+
+            NpcConnection otherNpc = currentNPC.GetNpcConnection();
+            if (otherNpc != null)
+            {
+                var allHandler = otherNpc.GetAllHandler();
+                foreach (var handler in allHandler)
                 {
-                    var allHandler = otherNpc.GetAllHandler();
-                    foreach(var handler in allHandler)
-                    {
-                        handler.AddMessage(MessageTypes.user.ToString() + ' ' + currentNPC.GetUserMessage(), MessageTypes.user.ToString());
-                        handler.AddMessage(aiName + ' ' + replyMessage, MessageTypes.user.ToString());
-                    }
+                    handler.AddMessage(MessageTypes.user.ToString() + ' ' + currentNPC.GetUserMessage(), MessageTypes.user.ToString());
+                    handler.AddMessage(aiName + ' ' + replyMessage, MessageTypes.user.ToString());
                 }
             }
 
@@ -212,11 +226,13 @@ namespace AiSims
 
         public void OrientateNpcToCameraAndStartTalk()
         {
+            if (talking) return;
+
             if (Camera.main == null) return;
 
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
             {
-                Debug.Log("Pointer over UI - not raycasting NPCs.");
+                //Debug.Log("Pointer over UI - not raycasting NPCs.");
                 return;
             }
 
@@ -230,7 +246,7 @@ namespace AiSims
                 NPCToStoryBridge npcBridge = hit.collider.GetComponent<NPCToStoryBridge>();
                 if (npcBridge != null)
                 {
-                    //Debug.Log("Hit NPC: " + hit.collider.name);
+                    Debug.Log("Hit NPC: " + hit.collider.name);
                     gameStatusInformation.text = userCanTalk;
 
                     // Make NPC look at player horizontally
@@ -240,19 +256,21 @@ namespace AiSims
                     SetCurrentNPC(npcBridge);
                     TalkUser();
                 }
-                else
-                {
-                    //Debug.Log("Hit object does not have NPCToStoryBridge component.");
-                }
+                //else
+                //{
+                //    Debug.Log("Hit object does not have NPCToStoryBridge component.");
+                //}
             }
-            else
-            {
-                Debug.Log("Raycast did not hit any NPC.");
-            }
+            //else
+            //{
+            //    Debug.Log("Raycast did not hit any NPC.");
+            //}
         }
 
         public void OrientateNpcToCameraAndStartTalkNoRayCast(GameObject selectedObject)
         {
+            if (talking) return;
+
             if (selectedObject == null)
             {
                 Debug.LogWarning("No GameObject provided to OrientateNpcToCameraAndStartTalkNoRayCast.");

@@ -1,3 +1,4 @@
+using GLTFast.Schema;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -22,6 +23,8 @@ namespace AiSims
 
         private Animator animator = null;
         private bool running = false;
+
+        private string startAnimationName;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         public void Start()
@@ -48,7 +51,19 @@ namespace AiSims
             animator.SetBool(walkingAnimation, true);
             animator.SetBool(endAnimation, false);
 
+            if(startAnimationName != string.Empty)
+            {
+                animator.SetBool(startAnimationName, false);                
+            }
+
             chooseTarget();
+        }
+
+        public void SetAnimation(string animationName)
+        {
+            if (animator == null) animator = GetComponentInChildren<Animator>();
+            animator.SetBool(animationName, true);
+            startAnimationName = animationName;
         }
 
         // Update is called once per frame

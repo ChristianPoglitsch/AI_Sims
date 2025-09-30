@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5450627206972327268}
-  - component: {fileID: 3474175858661703085}
   - component: {fileID: 4155472122666467541}
   - component: {fileID: 1488588314988214535}
   - component: {fileID: 4030390568125291807}
@@ -35,20 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3474175858661703085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445918798907344845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e0f89476826f87448fe92f5f9419a8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Visualization: 0
-  StoryTelling: 0
 --- !u!114 &4155472122666467541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,8 +51,8 @@ MonoBehaviour:
   UserVoiceEnable: 0
   NpcVoiceEnable: 0
   questHandler: {fileID: 0}
+  companionNPC: {fileID: 0}
   chanceNpcTalking: 0.35
-  currentNPC: {fileID: 0}
   maxNpcConversationsUntilEvaluation: 2
 --- !u!114 &1488588314988214535
 MonoBehaviour:
