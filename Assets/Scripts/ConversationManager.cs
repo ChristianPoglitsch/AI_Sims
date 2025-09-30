@@ -56,6 +56,7 @@ namespace AiSims
         {
             NpcConnection npcConnection = currentNPC.GetNpcConnection();
             float chance = Random.value; // float between 0.0 and 1.0
+            bool npcTalking = false;
 
             if (npcConnection != null) 
             {
@@ -67,6 +68,7 @@ namespace AiSims
 
                     Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                     nextNpc.ProcessMessage(currentMessage);
+                    npcTalking = true;
                     //return;
                 }
             }
@@ -76,14 +78,17 @@ namespace AiSims
             }
             lastNpc = null;
 
-            if (currentNPC.EvaluateConversation())
+            if (!npcTalking)
             {
-                isEvaluating = true;
-                messageDecorator.EvaluateConversation();
-            }
+                if (currentNPC.EvaluateConversation())
+                {
+                    isEvaluating = true;
+                    messageDecorator.EvaluateConversation();
+                }
 
-            gameStatusInformation.text = userCanTalk;
-            talking = false;
+                gameStatusInformation.text = userCanTalk;
+                talking = false;
+            }
         }
 
         public void SetCurrentNPC(NPCToStoryBridge npc)
