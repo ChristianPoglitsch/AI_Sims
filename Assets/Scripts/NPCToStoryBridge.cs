@@ -1,18 +1,21 @@
 using UnityEngine;
 
-public class NPCToStoryBridge : MonoBehaviour
+namespace AiSims
 {
-    [Header("Link NPC to its LLM Handler")]
-    public LLM_Handler llmHandler;
-
-    // Optional: quick getter
-    public LLM_Handler GetHandler()
+    public class NPCToStoryBridge : MonoBehaviour
     {
-        return llmHandler;
-    }
+        [Header("Link NPC to its LLM Handler")]
+        public LLM_Handler llmHandler;
 
-    public void SetHandler(LLM_Handler handler)
-    {
-        llmHandler = handler;
+        // Optional: quick getter
+        public LLM_Handler GetHandler()
+        {
+            return llmHandler;
+        }
+
+        public void SetHandler(LLM_Handler handler)
+        {
+            llmHandler = handler;
+        }
     }
 }

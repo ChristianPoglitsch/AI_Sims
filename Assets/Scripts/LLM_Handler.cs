@@ -1,69 +1,88 @@
 using LLMUnity;
 using ReadyPlayerMe.Core;
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class LLM_Handler : MonoBehaviour
+namespace AiSims
 {
-    public VoiceHandler voiceHandler;
-    public ConversationManager conversationManager;
-    public string voice = "alloy";
-    public bool enableEvaluation = false;
-
-    private NpcConnection connection;
-    private LLMCharacter llmCharacter;
-    private string replyMessage;
-    private string userMessage;
-
-    bool addToHistory = false;
-
-    private void Start()
+    public class LLM_Handler : MonoBehaviour
     {
-        llmCharacter = GetComponent<LLMCharacter>();
-        connection = GetComponent<NpcConnection>();
-    }
+        public GameObject npc;
+        public ConversationManager conversationManager;
+        public string voice = "alloy";
+        public bool enableEvaluation = false;
 
-    public bool EvaluateConversation()
-    {
-        return enableEvaluation;
-    }
+        private NpcConnection connection;
+        private LLMCharacter llmCharacter;
+        private string replyMessage;
+        private string userMessage;
 
-    public string GetVoiceName()
-    {
-        return voice;
-    }
+        bool addToHistory = false;
 
-    public string GetUserMessage()
-    {
-        return userMessage;
-    }
+        [TextArea(5, 10), Chat] public string EvaluationString = string.Empty;
 
-    public NpcConnection GetNpcConnection()
-    {
-        return connection;
-    }
+        private void Start()
+        {
+            llmCharacter = GetComponent<LLMCharacter>();
+            connection = GetComponent<NpcConnection>();
+        }
 
-    public LLMCharacter GetLlm() 
-    { 
-        return llmCharacter;
-    }
+        public bool EvaluateConversation()
+        {
+            return enableEvaluation;
+        }
 
-    void HandleReply(string reply)
-    {
-        replyMessage = reply;
-    }
+        public string GetVoiceName()
+        {
+            return voice;
+        }
 
-    void ReplyCompleted()
-    {
-        Debug.Log(replyMessage);
-        conversationManager.TalkNpc(replyMessage, voiceHandler, addToHistory);
-    }
+        public string GetUserMessage()
+        {
+            return userMessage;
+        }
 
-    public void ProcessMessage(string message, bool addToHist = true)
-    {
-        Debug.Log(message);
-        userMessage = message;
-        addToHistory = addToHist;
-        _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted, addToHistory);
+        public NpcConnection GetNpcConnection()
+        {
+            return connection;
+        }
+
+        public LLMCharacter GetLlm()
+        {
+            return llmCharacter;
+        }
+
+        void HandleReply(string reply)
+        {
+            replyMessage = reply;
+        }
+
+        void ReplyCompleted()
+        {
+            Debug.Log(llmCharacter.AIName + ": " + replyMessage);
+
+            // First, remove anything inside parentheses (and the parentheses themselves)
+            string noBrackets = Regex.Replace(replyMessage, @"\([^)]*\)", "");
+
+            // allow letters, numbers, umlauts, whitespace, ?, ., !, and -
+            replyMessage = Regex.Replace(noBrackets, @"[^a-zA-Z0-9‰ˆ¸ƒ÷‹ﬂ\s\?\.\!\-]", "");
+
+            Debug.Log(llmCharacter.AIName + ": " + replyMessage);
+            conversationManager.TalkNpc(replyMessage, this, llmCharacter.AIName);
+        }
+
+        public void ProcessMessage(string message, bool addToHist = true)
+        {
+            Debug.Log(message);
+            userMessage = message;
+            addToHistory = addToHist;
+            _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted, addToHistory);
+        }
+
+        public void AddMessage(string message, string userName)
+        {
+            llmCharacter.AddMessage(userName, message);
+        }
     }
 }

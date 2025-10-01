@@ -1,73 +1,72 @@
 using System;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 
-public enum MessageTypes
+namespace AiSims
 {
-    system = 0,
-    assistant = 1,
-    user = 2
-}
-
-public class MessageDecorator : MonoBehaviour
-{
-    public TMP_Text text;
-
-    private bool processMessage = false;
-    private LLM_Handler llmHandler;
-
-    public void ProcessMessage(string message)
+    public enum MessageTypes
     {
-        if (processMessage)
-        {
-            message = Regex.Match(message, @"^\d").Value; // match first digit
-            Console.WriteLine(message);  // Output: 0
-        }
-        text.text = message;
+        system = 0,
+        assistant = 1,
+        user = 2
     }
 
-    //public string FilterMessage(string message)
-    //{
-    //    // Remove all text between parentheses, including the parentheses
-    //    //message = Regex.Replace(message, @"\([^)]*\)", "");
-    //    return message;
-    //}
-
-    public void AddMessage(string message, MessageTypes type)
+    public class MessageDecorator : MonoBehaviour
     {
-        if (llmHandler == null || llmHandler.GetLlm() == null)
+        public TMP_Text text;
+        private bool processMessage = false;
+        private LLM_Handler llmHandler;
+
+        public bool ProcessedEvaluation { get; private set; } = false;
+
+        public string EvaluationString { get; private set; } = string.Empty;
+
+        public void ProcessMessage(string message, string aiName)
         {
-            Debug.Log("LLM Handler for evaluating quests is not assigned.");
-            return;
+            if (processMessage)
+            {
+                message = Regex.Match(message, @"^\d").Value; // match first digit
+                Console.WriteLine(message);  // Output: 0
+            }
+            text.text = aiName + ": " + message;
         }
 
-        // Convert enum to string role
-        string role = type.ToString(); // "system", "assistant", "user"
-
-        // Call LLM with role and message
-        llmHandler.GetLlm().AddMessage(role, message);
-    }
-
-    public void SetLlmHandler(LLM_Handler handler)
-    {
-        this.llmHandler = handler;
-    }
-
-    public void EvaluateConversation()
-    {
-        if (llmHandler == null || llmHandler.GetLlm() == null)
+        public void SetLlmHandler(LLM_Handler handler)
         {
-            Debug.Log("LLM Handler for evaluating quests is not assigned.");
-            return;
+            this.llmHandler = handler;
         }
 
-        string message = "\nProvide a concise one-sentence answer. Based on the chat history, determine the amount of included small talk.";
+        public LLM_Handler GetLlmHandler()
+        {
+            return llmHandler;
+        }
 
-        // Now pass it to your function
-        llmHandler.ProcessMessage(message, false);
+        public void SetEvaluationInstruction(string instruction)
+        {
+            EvaluationString = instruction;
+        }
 
-        llmHandler.GetLlm().ClearChat();
+        public void Clear()
+        {
+            if (ProcessedEvaluation)
+                llmHandler.GetLlm().ClearChat();
+        }
+
+        public void EvaluateConversation()
+        {
+            if (llmHandler == null || llmHandler.GetLlm() == null || EvaluationString == string.Empty)
+            {
+                Debug.Log("LLM Handler for evaluating quests is not assigned.");
+                return;
+            }
+
+            //string message = llmHandler.GetLlm().prompt;
+            string message = "\nBased on the chat evaluate " + EvaluationString + " Respond with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond with 0.";
+
+            // Now pass it to your function
+            llmHandler.ProcessMessage(message, false);
+            ProcessedEvaluation = true;
+        }
     }
 }
