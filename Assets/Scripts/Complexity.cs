@@ -1,41 +1,89 @@
 using AiSims;
+using LLMUnity;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class NavMeshEntry
+// Difficulty levels for LLM Characters
+public enum DifficultyLevel
 {
+    Easy,
+    Challenging
+}
+
+[System.Serializable]
+public class NpcEntry
+{
+    [Header("NPC Reference")]
     public GameObject npc; // The GameObject to control
-    public float delaySeconds = 2f; // delay before this NPC starts moving
+    public float delaySeconds = 2f; // Delay before this NPC starts moving
     public string startAnimation;
+    public bool isActive = false; // Enable/disable this entry
+}
+
+[System.Serializable]
+public class LlmEntry
+{
+    [Header("LLM Character Reference")]
+    public LLMCharacter llmCharacter; // Reference to an LLMCharacter
+    [TextArea(5, 10), Chat] public string promptText; // The text prompt to send
+    public float delaySeconds = 0f; // Delay before this prompt is triggered
+    public bool isActive = false; // Enable/disable this entry
+    public DifficultyLevel difficulty = DifficultyLevel.Easy; // Default difficulty
 }
 
 public class Complexity : MonoBehaviour
 {
-    public List<NavMeshEntry> entries = new List<NavMeshEntry>();
+    [Header("NPC Entries")]
+    public List<NpcEntry> npcEntries = new List<NpcEntry>();
+
+    [Header("LLM Character Entries")]
+    public List<LlmEntry> llmEntries = new List<LlmEntry>();
+
+    [Header("Global Difficulty Settings")]
+    public bool useGlobalDifficulty = false; // Toggle to override all entries
+    public DifficultyLevel globalDifficulty = DifficultyLevel.Easy; // Global difficulty level
 
     void Start()
     {
-        foreach (var entry in entries)
+        // Handle NPCs
+        foreach (var entry in npcEntries)
         {
             if (entry.npc != null)
             {
                 NpcMovement movement = entry.npc.GetComponent<NpcMovement>();
-                if (movement != null && entry.startAnimation != string.Empty)
+                if (movement != null && !string.IsNullOrEmpty(entry.startAnimation))
                 {
                     movement.SetAnimation(entry.startAnimation);
                 }
 
-                StartCoroutine(StartMovementAfterDelay(entry));
+                if (entry.isActive)
+                {
+                    StartCoroutine(StartNpcMovementAfterDelay(entry));
+                }
             }
             else
             {
-                Debug.LogWarning("NavMeshEntry has a null npc reference.");
+                Debug.LogWarning("NpcEntry has a null npc reference.");
+            }
+        }
+
+        // Handle LLM Characters
+        foreach (var entry in llmEntries)
+        {
+            if (!entry.isActive) continue; // Skip inactive entries
+
+            if (entry.llmCharacter != null)
+            {
+                StartCoroutine(SendPromptAfterDelay(entry));
+            }
+            else
+            {
+                Debug.LogWarning("LlmEntry has a null LLMCharacter reference.");
             }
         }
     }
 
-    private System.Collections.IEnumerator StartMovementAfterDelay(NavMeshEntry entry)
+    private System.Collections.IEnumerator StartNpcMovementAfterDelay(NpcEntry entry)
     {
         yield return new WaitForSeconds(entry.delaySeconds);
 
@@ -47,6 +95,36 @@ public class Complexity : MonoBehaviour
         else
         {
             Debug.LogWarning($"NpcMovement component not found on {entry.npc.name}");
+        }
+    }
+
+    private System.Collections.IEnumerator SendPromptAfterDelay(LlmEntry entry)
+    {
+        yield return new WaitForSeconds(entry.delaySeconds);
+
+        if (!string.IsNullOrEmpty(entry.promptText))
+        {
+            string modifiedPrompt = entry.promptText;
+
+            //// Pick difficulty: global override or entry-specific
+            //DifficultyLevel effectiveDifficulty = useGlobalDifficulty ? globalDifficulty : entry.difficulty;
+            //
+            //switch (effectiveDifficulty)
+            //{
+            //    case DifficultyLevel.Easy:
+            //        modifiedPrompt = "[EASY MODE] " + modifiedPrompt + " (Be friendly and helpful)";
+            //        break;
+            //
+            //    case DifficultyLevel.Challenging:
+            //        modifiedPrompt = "[CHALLENGING MODE] " + modifiedPrompt + " (Respond with more complex, tricky, or less helpful behavior)";
+            //        break;
+            //}
+
+            entry.llmCharacter.SetPrompt(modifiedPrompt);
+        }
+        else
+        {
+            Debug.LogWarning($"No prompt text specified for {entry.llmCharacter.name}");
         }
     }
 }
