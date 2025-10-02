@@ -62,8 +62,7 @@ namespace AiSims
             {
                 LLM_Handler nextNpc = npcConnection.RandomHandler;
                 if (nextNpc != lastNpc && nextNpc != null && chance < chanceNpcTalking)
-                {
-                    lastNpc = nextNpc;
+                {                    
                     gameStatusInformation.text = string.Empty;
 
                     Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
@@ -71,6 +70,7 @@ namespace AiSims
                     npcTalking = true;
                     //return;
                 }
+                lastNpc = nextNpc;
             }
             else
             {

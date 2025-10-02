@@ -6,6 +6,12 @@ using System.IO;
 
 namespace AiSims
 {
+    [System.Serializable]
+    public class TextResponse
+    {
+        public string text;
+    }
+
     public class Speech2Text : MonoBehaviour
     {
         public enum STTMode
@@ -131,6 +137,15 @@ namespace AiSims
             }
         }
 
+        public static string ExtractText(string jsonString)
+        {
+            // Parse the JSON into the TextResponse class
+            TextResponse response = JsonUtility.FromJson<TextResponse>(jsonString);
+
+            // Return the value of "text"
+            return response.text.Trim();
+        }
+
         // --- Local Whisper Client ---
         private IEnumerator SendToLocalServer(byte[] wavData)
         {
@@ -150,8 +165,14 @@ namespace AiSims
                 }
                 else
                 {
-                    Debug.Log("Whisper Response (Local Client): " + www.downloadHandler.text);
-                    llm_handler?.ProcessMessage(www.downloadHandler.text);
+                    // Filter output from whisper a little bit
+                    TextResponse response = JsonUtility.FromJson<TextResponse>(www.downloadHandler.text);
+                    string[] parts = response.text.Split(' ');
+                    if (parts.Length > 1)
+                        response.text = string.Join(" ", parts, 0, parts.Length - 1);
+
+                    Debug.Log("Whisper Response (Local Client): " + response.text);
+                    llm_handler?.ProcessMessage(response.text);
                 }
             }
         }
