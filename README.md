@@ -18,13 +18,17 @@ https://assetstore.unity.com/packages/tools/ai-ml-integration/llm-for-unity-2736
 
 
 
+
+
 TTS/SST: You need an OpenAI Key.
 
+or a local version using whisper for TTS (use https://github.com/ChristianPoglitsch/AIAgents/blob/main/TTS\_STT/tts\_server.py) as local server.
 
 
 
 
-Test scene: Scenes/SampleScene
 
 
+
+Game scene: Scenes/SampleScene
 
