@@ -22,7 +22,7 @@ https://assetstore.unity.com/packages/tools/ai-ml-integration/llm-for-unity-2736
 
 TTS/SST: You need an OpenAI Key.
 
-or a local version using whisper for TTS (use https://github.com/ChristianPoglitsch/AIAgents/blob/main/TTS\_STT/tts\_server.py) as local server.
+or a local version using whisper for TTS (https://github.com/ChristianPoglitsch/AIAgents/blob/cfd16ed696fd72aff2224d5575ed2713b09fe7db/TTS\_STT/tts\_server.py) as local server.
 
 
 
