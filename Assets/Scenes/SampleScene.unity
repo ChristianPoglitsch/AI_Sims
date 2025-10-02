@@ -7441,8 +7441,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30dd23d529bb12e4b8bc250e1360176b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sttMode: 1
   apiKeyFileName: openai_api_key.txt
   sttModel: gpt-4o-mini-transcribe
+  localServerUrl: http://127.0.0.1:8000/transcribe
 --- !u!1001 &1737229502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22820,7 +22822,7 @@ PrefabInstance:
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: UserVoiceEnable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}

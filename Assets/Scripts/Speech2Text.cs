@@ -8,14 +8,23 @@ namespace AiSims
 {
     public class Speech2Text : MonoBehaviour
     {
-        [Header("OpenAI API Key")]
-        [SerializeField] private string apiKeyFileName = "openai_api_key.txt"; // file name for local key
+        public enum STTMode
+        {
+            OpenAI_API,
+            Local_Client
+        }
 
-        [Header("STT Settings")]
+        [Header("Speech-to-Text Mode")]
+        [SerializeField] private STTMode sttMode = STTMode.OpenAI_API;
+
+        [Header("OpenAI API Settings")]
+        [SerializeField] private string apiKeyFileName = "openai_api_key.txt";
         [SerializeField] private string sttModel = "gpt-4o-mini-transcribe";
 
-        private LLM_Handler llm_handler;
+        [Header("Local Whisper Server Settings")]
+        [SerializeField] private string localServerUrl = "http://127.0.0.1:8000/transcribe"; // FastAPI endpoint
 
+        private LLM_Handler llm_handler;
         private string micDevice;
         private AudioClip recording;
         private bool isRecording = false;
@@ -33,7 +42,10 @@ namespace AiSims
                 Debug.LogError("No microphone found!");
             }
 
-            LoadApiKey();
+            if (sttMode == STTMode.OpenAI_API)
+            {
+                LoadApiKey();
+            }
         }
 
         public void Set_LLM_Handler(LLM_Handler handler)
@@ -45,9 +57,7 @@ namespace AiSims
         {
             try
             {
-                // You can place your key in StreamingAssets/openai_api_key.txt
                 string path = Path.Combine(Application.streamingAssetsPath, apiKeyFileName);
-
                 if (File.Exists(path))
                 {
                     apiKey = File.ReadAllText(path).Trim();
@@ -64,26 +74,31 @@ namespace AiSims
             }
         }
 
-        /// Combined function: toggle recording on/off
+        /// Toggle recording on/off
         public void ToggleRecording()
         {
             if (!isRecording)
             {
-                // --- START recording ---
                 Debug.Log("Recording started...");
                 isRecording = true;
-                recording = Microphone.Start(micDevice, false, 60, 16000); // buffer max 60s
+                recording = Microphone.Start(micDevice, false, 60, 16000);
             }
             else
             {
-                // --- STOP recording ---
                 Debug.Log("Recording stopped, sending to Whisper...");
                 Microphone.End(micDevice);
                 isRecording = false;
 
-                // Convert AudioClip → WAV
                 byte[] wavData = WavUtility.FromAudioClip(recording);
-                StartCoroutine(SendToWhisper(wavData));
+
+                if (sttMode == STTMode.OpenAI_API)
+                {
+                    StartCoroutine(SendToOpenAI(wavData));
+                }
+                else if (sttMode == STTMode.Local_Client)
+                {
+                    StartCoroutine(SendToLocalServer(wavData));
+                }
             }
         }
 
@@ -92,7 +107,8 @@ namespace AiSims
             return isRecording;
         }
 
-        private IEnumerator SendToWhisper(byte[] wavData)
+        // --- OpenAI Whisper API ---
+        private IEnumerator SendToOpenAI(byte[] wavData)
         {
             WWWForm form = new WWWForm();
             form.AddField("model", sttModel);
@@ -105,11 +121,36 @@ namespace AiSims
 
                 if (www.result != UnityWebRequest.Result.Success)
                 {
-                    Debug.LogError("Whisper STT Error: " + www.error);
+                    Debug.LogError("Whisper STT Error (OpenAI): " + www.error);
                 }
                 else
                 {
-                    Debug.Log("Whisper Response: " + www.downloadHandler.text);
+                    Debug.Log("Whisper Response (OpenAI): " + www.downloadHandler.text);
+                    llm_handler?.ProcessMessage(www.downloadHandler.text);
+                }
+            }
+        }
+
+        // --- Local Whisper Client ---
+        private IEnumerator SendToLocalServer(byte[] wavData)
+        {
+            WWWForm form = new WWWForm();
+            form.AddBinaryData("file", wavData, "recording.wav", "audio/wav");
+
+            //File.WriteAllBytes(Application.persistentDataPath + "/debug.wav", wavData);
+            //Debug.Log("Saved test WAV at: " + Application.persistentDataPath + "/debug.wav");
+
+            using (UnityWebRequest www = UnityWebRequest.Post(localServerUrl, form))
+            {
+                yield return www.SendWebRequest();
+
+                if (www.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError("Whisper STT Error (Local Client): " + www.error);
+                }
+                else
+                {
+                    Debug.Log("Whisper Response (Local Client): " + www.downloadHandler.text);
                     llm_handler?.ProcessMessage(www.downloadHandler.text);
                 }
             }

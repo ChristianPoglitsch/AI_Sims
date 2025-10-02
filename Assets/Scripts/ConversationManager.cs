@@ -231,7 +231,12 @@ namespace AiSims
 
         public void OrientateNpcToCameraAndStartTalk()
         {
-            if (talking) return;
+            // Check if stop recording is required
+            if (talking)
+            {
+                TalkUser();
+                return;
+            }
 
             if (Camera.main == null) return;
 
@@ -274,7 +279,12 @@ namespace AiSims
 
         public void OrientateNpcToCameraAndStartTalkNoRayCast(GameObject selectedObject)
         {
-            if (talking) return;
+            // Check if stop recording is required
+            if (talking)
+            {
+                TalkUser();
+                return;
+            }
 
             if (selectedObject == null)
             {
