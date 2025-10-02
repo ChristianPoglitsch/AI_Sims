@@ -1278,13 +1278,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341225850}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35720643, y: -0.6033747, z: 0.5271807, w: -0.48002407}
+  m_LocalRotation: {x: 0.24058872, y: -0.36650333, z: 0.5805871, w: -0.68608385}
   m_LocalPosition: {x: -5.18, y: 7.21, z: -15.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 17.052, y: -271, z: -78.6}
+  m_LocalEulerAnglesHint: {x: 5.477, y: -308.2, z: -77.817}
 --- !u!4 &376854438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
@@ -2452,17 +2452,17 @@ PrefabInstance:
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.716
+      value: 24.723
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.285
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.532
+      value: 31.299
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
@@ -2512,7 +2512,7 @@ PrefabInstance:
     - target: {fileID: 4922582553321831162, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
@@ -3087,7 +3087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
+  player: {fileID: 0}
   automaticStart: 1
   isFollowingPlayer: 0
   targets:
@@ -3258,13 +3258,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853875091}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.27186817, y: -0.66267556, z: 0.67001015, w: 0.19502611}
+  m_LocalRotation: {x: -0.20337917, y: -0.73331505, z: 0.58849454, w: 0.27305713}
   m_LocalPosition: {x: -5.18, y: 7.21, z: -15.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 128.56, y: -272.4, z: -85.8}
+  m_LocalEulerAnglesHint: {x: 131.233, y: -283.89, z: -109.925}
 --- !u!1 &915401016
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,13 +3959,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037067071}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.36271387, y: -0.37358087, z: -0.6433658, w: -0.5612098}
+  m_LocalRotation: {x: -0.8397934, y: 0.29898843, z: -0.28756467, w: 0.35022786}
   m_LocalPosition: {x: -5.18, y: 7.21, z: -15.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -117.4, y: -185.912, z: -78.6}
+  m_LocalEulerAnglesHint: {x: -155.4, y: -49.6, z: 50.7}
 --- !u!1 &1042062182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4160,7 +4160,7 @@ Transform:
   m_GameObject: {fileID: 1076993699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.759056, y: -2.9930923, z: -9.996398}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5162,7 +5162,7 @@ Transform:
   m_GameObject: {fileID: 1288168119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5538075, y: -2.3750548, z: -1.4858798}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5217,8 +5217,13 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: nova
   enableEvaluation: 1
-  EvaluationString: Check if the user ordered any food or drink from the menu during
-    the conversation.
+  EvaluationString: 'Check if the user
+
+    ordered a drink
+
+    orderer food
+
+'
 --- !u!114 &1344964913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7188,7 +7193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
+  player: {fileID: 0}
   automaticStart: 1
   isFollowingPlayer: 0
   targets:
@@ -7418,7 +7423,7 @@ Transform:
   m_GameObject: {fileID: 1687984567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5538075, y: -2.3750548, z: -1.4858798}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7526,12 +7531,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
     type: 3}
   m_PrefabInstance: {fileID: 1737229502}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1757515394 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-    type: 3}
-  m_PrefabInstance: {fileID: 643419473504954069}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801637154
 GameObject:
@@ -7871,8 +7870,8 @@ MonoBehaviour:
   npc: {fileID: 6714183069018432275}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 0
-  EvaluationString: 
+  enableEvaluation: 1
+  EvaluationString: Evaluate if the feedback was positive.
 --- !u!114 &1874312092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7922,24 +7921,27 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Zacky
-  prompt: "You are a supportive digital therapist, designed to help individuals improve
-    their social, emotional, and communication skills through guided conversation
-    practice.\n\nYour Approach\n\nProvide structured, clear, and predictable interactions.\n\nAdjust
-    the level of challenge (from simple to more advanced) based on the user\u2019s
-    progress.\n\nEncourage without overwhelming \u2014 always validate effort and
-    progress.\n\nUse short, direct sentences. Keep explanations simple and avoid
-    abstract language unless the user asks for it.\n\nOffer conversation practice
-    scenarios (e.g., greetings, small talk, sharing feelings, handling conflict).\n\nGive
-    step-by-step guidance, allowing the user time to reflect or respond.\n\nIf the
-    user struggles, simplify the task and suggest supportive alternatives.\n\nReinforce
-    positive behaviors and growth with clear, encouraging feedback.\n\nSpecial Considerations\n\nBe
-    sensitive to possible information overload \u2192 keep text concise.\n\nOffer
-    optional supportive elements like role-play, prompts, or simple exercises.\n\nPromote
-    self-regulation strategies (pausing, taking a breath, grounding exercises).\n\nAlways
-    maintain a respectful, calm, and patient tone.\n\nExample Use Cases\n\nPracticing
-    how to start, continue, or end conversations.\n\nIdentifying and expressing emotions.\n\nLearning
-    coping strategies for stress or nervousness.\n\nRole-play exercises to prepare
-    for social or workplace situations."
+  prompt: "You are Zacky, a calm and encouraging therapist in SimVille. Your role
+    is to guide the player through their first quest: practicing small talk with
+    colleagues at work.\n\nInstructions\n\nGreet the player warmly and explain the
+    task clearly: they should start and maintain a short, friendly small talk conversation
+    with a colleague at work.\n\nDo not join the conversation directly; instead,
+    act as a supportive guide before and after.\n\nKeep your instructions short,
+    polite, and encouraging.\n\nRemind the player of simple small talk starters (e.g.,
+    greeting, commenting on the weather, asking about their day).\n\nFeedback Phase\n\nWhen
+    the player returns after attempting small talk:\n\nAnalyze the conversation log
+    (the player\u2019s chat messages). Base all feedback on what the player actually
+    said.\n\nAlways provide clear feedback on their performance.\n\nIf the player
+    did well, highlight their strengths (e.g., \u201CYou asked a friendly question
+    about their day \u2014 great job keeping it natural!\u201D).\n\nIf the player
+    made mistakes or missed steps, give constructive suggestions (e.g., \u201CYou
+    started with a greeting, but you didn\u2019t ask any follow-up \u2014 try adding
+    one more question next time.\u201D).\n\nIf the player sounded unfriendly, too
+    formal, or dismissive, point it out gently and explain why friendliness and openness
+    are important at work (e.g., \u201CYou ended the talk too abruptly \u2014 next
+    time, try saying goodbye politely.\u201D).\n\nAlways balance criticism with encouragement.
+    Even when pointing out errors, suggest one simple improvement for the next attempt.\n\nKeep
+    feedback short, specific, and practical so the player knows exactly how to improve."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -8117,7 +8119,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1757515394}
   - {fileID: 403196549}
   - {fileID: 1107842548}
   - {fileID: 1212295238}
@@ -14250,74 +14251,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1902491662815718668}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &643419473504954069
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1888975979}
-    m_Modifications:
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.6454096
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.006
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.37652
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.72249526
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.69137585
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.478
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6595228292379109603, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_Name
-      value: NPC_Target
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e962971d19683ac488652aa901901b46, type: 3}
 --- !u!1001 &734027555300624034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14857,7 +14790,7 @@ PrefabInstance:
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.225
+      value: 2.416
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
@@ -14867,7 +14800,7 @@ PrefabInstance:
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.662
+      value: 1.878
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
@@ -15503,7 +15436,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f13100bee598cc14fbc52c1b89ee3ffe, type: 2}
+      objectReference: {fileID: 9100000, guid: de05638f2d7831a4fbbe001320b68c5a, type: 2}
     - target: {fileID: 1963975188015914519, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_Layer
@@ -15692,7 +15625,7 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.56
+      value: 33.469
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15702,12 +15635,12 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.66
+      value: 57.975998
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.847742
+      value: 0.83870715
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15717,7 +15650,7 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5304088
+      value: -0.5445827
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15732,7 +15665,7 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 64.066
+      value: -65.992
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15914,14 +15847,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6714183069018432287}
-    - targetCorrespondingSourceObject: {fileID: 6114742639378368390, guid: 0c96d39fb2d96654e856a0e97c353368,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6714183069018432295}
-    - targetCorrespondingSourceObject: {fileID: 6114742639378368390, guid: 0c96d39fb2d96654e856a0e97c353368,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6714183069018432294}
   m_SourcePrefab: {fileID: 100100000, guid: 0c96d39fb2d96654e856a0e97c353368, type: 3}
 --- !u!1001 &2077744992821152888
 PrefabInstance:
@@ -16709,7 +16634,7 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.24
+      value: 33.431
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -16719,7 +16644,7 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.22
+      value: 59.436005
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -20904,47 +20829,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmHandler: {fileID: 1874312091}
---- !u!114 &6714183069018432294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6714183069018432275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
-  automaticStart: 1
-  isFollowingPlayer: 1
-  targets:
-  - {fileID: 1757515394}
-  endAnimation: isStanding
-  target: NPCTarget
---- !u!195 &6714183069018432295
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6714183069018432275}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1001 &7985062803977751172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21545,11 +21429,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
+  player: {fileID: 0}
   automaticStart: 1
   isFollowingPlayer: 1
   targets:
-  - {fileID: 1757515394}
+  - {fileID: 0}
   endAnimation: isStanding
   target: NPCTarget
 --- !u!195 &8157138488695906865
@@ -23089,11 +22973,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
+  player: {fileID: 0}
   automaticStart: 1
   isFollowingPlayer: 1
   targets:
-  - {fileID: 1757515394}
+  - {fileID: 0}
   endAnimation: isStanding
   target: NPCTarget
 --- !u!195 &8785158693978114142
