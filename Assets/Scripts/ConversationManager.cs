@@ -29,7 +29,7 @@ namespace AiSims
         private string currentMessage;
 
         private bool isEvaluating = false;
-        private LLM_Handler lastNpc;
+        private LLM_Handler lastNpc = null;
 
         private readonly string userCanTalk = "User can talk.";
         private readonly string npcTalking = "NPC is thinking.";
@@ -58,25 +58,24 @@ namespace AiSims
             float chance = Random.value; // float between 0.0 and 1.0
             bool npcTalking = false;
 
-            if (npcConnection != null) 
+            if (npcConnection != null)
             {
                 LLM_Handler nextNpc = npcConnection.RandomHandler;
                 if (nextNpc != lastNpc && nextNpc != null && chance < chanceNpcTalking)
-                {                    
+                {
                     gameStatusInformation.text = string.Empty;
 
                     Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                     nextNpc.ProcessMessage(currentMessage);
                     npcTalking = true;
+                    lastNpc = nextNpc;
                     //return;
                 }
-                lastNpc = nextNpc;
             }
             else
             {
                 Debug.Log("NPC 1:1 conversation. | chance = " + chance);
             }
-            lastNpc = null;
 
             if (!npcTalking)
             {
