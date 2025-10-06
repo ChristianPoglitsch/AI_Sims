@@ -266,15 +266,7 @@ namespace AiSims
                     SetCurrentNPC(npcBridge);
                     TalkUser();
                 }
-                //else
-                //{
-                //    Debug.Log("Hit object does not have NPCToStoryBridge component.");
-                //}
             }
-            //else
-            //{
-            //    Debug.Log("Raycast did not hit any NPC.");
-            //}
         }
 
         public void OrientateNpcToCameraAndStartTalkNoRayCast(GameObject selectedObject)

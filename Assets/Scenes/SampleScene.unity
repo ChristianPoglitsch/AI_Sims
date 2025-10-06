@@ -7371,69 +7371,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1076993700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1687984567
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1687984569}
-  - component: {fileID: 1687984568}
-  - component: {fileID: 1687984570}
-  m_Layer: 0
-  m_Name: TTS
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1687984568
+--- !u!114 &1687984568 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3357471483095327630, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 8426922583186148652}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687984567}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8006febc1692f247a27a18310a65872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKeyFileName: openai_api_key.txt
-  model: gpt-4o-mini-tts
---- !u!4 &1687984569
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687984567}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1687984570
+--- !u!114 &1687984570 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4403770694958955408, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 8426922583186148652}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687984567}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30dd23d529bb12e4b8bc250e1360176b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sttMode: 1
-  apiKeyFileName: openai_api_key.txt
-  sttModel: gpt-4o-mini-transcribe
-  localServerUrl: http://127.0.0.1:8000/transcribe
 --- !u!1001 &1737229502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22183,6 +22144,74 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
+--- !u!1001 &8426922583186148652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3267374702526132730, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_Name
+      value: TTS
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d34f7cbb16d055b4bbeff1baf208d4ce, type: 3}
 --- !u!4 &8459365248621531360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7932808809351449529, guid: 9dcd0eef7e8c3af4ab8857598bb6ca0d,
@@ -23136,7 +23165,7 @@ SceneRoots:
   - {fileID: 2083289347}
   - {fileID: 1916902850}
   - {fileID: 1288168122}
-  - {fileID: 1687984569}
+  - {fileID: 8426922583186148652}
   - {fileID: 1226441965}
   - {fileID: 8710000138675048311}
   - {fileID: 196257198}
