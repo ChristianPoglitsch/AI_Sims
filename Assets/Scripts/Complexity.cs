@@ -25,7 +25,10 @@ public class LlmEntry
 {
     [Header("LLM Character Reference")]
     public LLMCharacter llmCharacter; // Reference to an LLMCharacter
-    [TextArea(5, 10), Chat] public string promptText; // The text prompt to send
+
+    [TextArea(5, 10), Chat] public string promptText; // Easy prompt
+    [TextArea(5, 10), Chat] public string promptTextChallenging; // Challenging prompt
+
     public float delaySeconds = 0f; // Delay before this prompt is triggered
     public bool isActive = false; // Enable/disable this entry
     public DifficultyLevel difficulty = DifficultyLevel.Easy; // Default difficulty
@@ -102,29 +105,27 @@ public class Complexity : MonoBehaviour
     {
         yield return new WaitForSeconds(entry.delaySeconds);
 
-        if (!string.IsNullOrEmpty(entry.promptText))
+        // Determine which difficulty setting to use
+        DifficultyLevel effectiveDifficulty = useGlobalDifficulty ? globalDifficulty : entry.difficulty;
+
+        string finalPrompt = string.Empty;
+
+        if (effectiveDifficulty == DifficultyLevel.Easy)
         {
-            string modifiedPrompt = entry.promptText;
+            finalPrompt = entry.promptText;
+        }
+        else if (effectiveDifficulty == DifficultyLevel.Challenging)
+        {
+            finalPrompt = entry.promptTextChallenging;
+        }
 
-            //// Pick difficulty: global override or entry-specific
-            //DifficultyLevel effectiveDifficulty = useGlobalDifficulty ? globalDifficulty : entry.difficulty;
-            //
-            //switch (effectiveDifficulty)
-            //{
-            //    case DifficultyLevel.Easy:
-            //        modifiedPrompt = "[EASY MODE] " + modifiedPrompt + " (Be friendly and helpful)";
-            //        break;
-            //
-            //    case DifficultyLevel.Challenging:
-            //        modifiedPrompt = "[CHALLENGING MODE] " + modifiedPrompt + " (Respond with more complex, tricky, or less helpful behavior)";
-            //        break;
-            //}
-
-            entry.llmCharacter.SetPrompt(modifiedPrompt);
+        if (!string.IsNullOrEmpty(finalPrompt))
+        {
+            entry.llmCharacter.SetPrompt(finalPrompt);
         }
         else
         {
-            Debug.LogWarning($"No prompt text specified for {entry.llmCharacter.name}");
+            Debug.LogWarning($"No prompt text specified for {entry.llmCharacter.name} (Difficulty: {effectiveDifficulty})");
         }
     }
 }

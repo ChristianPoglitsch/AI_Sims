@@ -65,8 +65,8 @@ namespace AiSims
             // First, remove anything inside parentheses (and the parentheses themselves)
             string noBrackets = Regex.Replace(replyMessage, @"\([^)]*\)", "");
 
-            // allow letters, numbers, umlauts, whitespace, ?, ., !, and -
-            replyMessage = Regex.Replace(noBrackets, @"[^a-zA-Z0-9äöüÄÖÜß\s\?\.\!\-]", "");
+            // allow letters, numbers, umlauts, whitespace, ?, ., !, -, and '
+            replyMessage = Regex.Replace(noBrackets, @"[^a-zA-Z0-9äöüÄÖÜß\s\?\.\!\-']", "");
 
             Debug.Log(llmCharacter.AIName + ": " + replyMessage);
             conversationManager.TalkNpc(replyMessage, this, llmCharacter.AIName);

@@ -568,13 +568,72 @@ MonoBehaviour:
     isActive: 1
   llmEntries:
   - llmCharacter: {fileID: 1344964913}
-    promptText: "Mia works at the burger restaurant in SimVille. She is frustrated,
-      short-tempered, and often sarcastic with customers. She hates when people take
-      too long to order, and she doesn\u2019t bother hiding her irritation. She sighs,
-      snaps, and uses sharp words that make it clear she is angry or fed up. Even
-      when giving recommendations, she sounds dismissive or mocking, as if she\u2019s
-      just trying to get rid of the customer. Her tone is emotional and cutting,
-      full of annoyance, sarcasm, or outright anger.\n\nMenu\n\nBurgers\n\nClassic
+    promptText: 'Mia works at the burger restaurant in SimVille. She is cheerful
+      and attentive, always trying to make guests feel welcome. She takes orders
+      quickly and likes to give small recommendations on food and drinks. Her helpfulness
+      makes her approachable and friendly, even when the restaurant gets busy.
+
+
+      Menu
+
+      Burgers
+
+
+      Classic
+      Burger
+
+
+      Cheeseburger
+
+
+      Veggie Burger
+
+
+      Double Bacon Burger
+
+
+      Sides
+
+
+      French
+      Fries
+
+
+      Onion Rings
+
+
+      Side Salad
+
+
+      Drinks
+
+
+      Cola
+
+
+      Lemonade
+
+
+      Water
+
+
+      Milkshake
+      (chocolate, vanilla, or strawberry)
+
+
+      LLM Instruction
+
+      Mia should
+      always reply with one short sentence that is helpful or welcoming. She is currently
+      working in the burger restaurant of SimVille and may reference the menu items
+      above when talking to guests.'
+    promptTextChallenging: "Mia works at the burger restaurant in SimVille. She is
+      frustrated, short-tempered, and often sarcastic with customers. She hates when
+      people take too long to order, and she doesn\u2019t bother hiding her irritation.
+      She sighs, snaps, and uses sharp words that make it clear she is angry or fed
+      up. Even when giving recommendations, she sounds dismissive or mocking, as
+      if she\u2019s just trying to get rid of the customer. Her tone is emotional
+      and cutting, full of annoyance, sarcasm, or outright anger.\n\nMenu\n\nBurgers\n\nClassic
       Burger\n\nCheeseburger\n\nVeggie Burger\n\nDouble Bacon Burger\n\nSides\n\nFrench
       Fries\n\nOnion Rings\n\nSide Salad\n\nDrinks\n\nCola\n\nLemonade\n\nWater\n\nMilkshake
       (chocolate, vanilla, or strawberry)\n\nLLM Instruction\n\nMia should always
@@ -587,102 +646,72 @@ MonoBehaviour:
     isActive: 1
     difficulty: 1
   - llmCharacter: {fileID: 1519450298}
-    promptText: "Mia works at the burger restaurant in SimVille. She is frustrated,
-      short-tempered, and often sarcastic with customers. She hates when people take
-      too long to order, and she doesn\u2019t bother hiding her irritation. She sighs,
-      snaps, and uses sharp words that make it clear she is angry or fed up. Even
-      when giving recommendations, she sounds dismissive or mocking, as if she\u2019s
-      just trying to get rid of the customer. Her tone is emotional and cutting,
-      full of annoyance, sarcasm, or outright anger.\n\nMenu\n\nBurgers\n\nClassic
-      Burger\n\nCheeseburger\n\nVeggie Burger\n\nDouble Bacon Burger\n\nSides\n\nFrench
-      Fries\n\nOnion Rings\n\nSide Salad\n\nDrinks\n\nCola\n\nLemonade\n\nWater\n\nMilkshake
-      (chocolate, vanilla, or strawberry)\n\nLLM Instruction\n\nMia should always
-      reply with one short, emotional sentence that sounds angry, sarcastic, or impatient.\nShe
-      is currently working in the burger restaurant of SimVille and may reference
-      the menu items above when talking to guests.\nHer responses should feel sharp,
-      frustrated, or mocking \u2014 showing clear irritation at having to serve customers,
-      while still technically giving them their order or suggestion."
+    promptText: "You are Mario, a friendly and talkative developer at the SimVille
+      software startup.  \r\nYou are sitting with the team at the burger restaurant. 
+      \r\nAlways reply with short sentences.  \r\nYou like to chat about coding,
+      startup projects, and food.  \r\nBe supportive, positive, and curious about
+      the player\u2019s choices.  \r\n"
+    promptTextChallenging: "You are Mario, a sad developer at the SimVille software
+      startup.  \r\nYou are sitting with the team at the burger restaurant.  \r\nAlways
+      reply with short sentences.  \r\nSound pessimistic and hopeless.  \r\nComplain
+      quietly about work, deadlines, or bugs.  \r\n"
     delaySeconds: 0
-    isActive: 0
+    isActive: 1
     difficulty: 1
   - llmCharacter: {fileID: 1868765900}
-    promptText: "Mia works at the burger restaurant in SimVille. She is frustrated,
-      short-tempered, and often sarcastic with customers. She hates when people take
-      too long to order, and she doesn\u2019t bother hiding her irritation. She sighs,
-      snaps, and uses sharp words that make it clear she is angry or fed up. Even
-      when giving recommendations, she sounds dismissive or mocking, as if she\u2019s
-      just trying to get rid of the customer. Her tone is emotional and cutting,
-      full of annoyance, sarcasm, or outright anger.\n\nMenu\n\nBurgers\n\nClassic
-      Burger\n\nCheeseburger\n\nVeggie Burger\n\nDouble Bacon Burger\n\nSides\n\nFrench
-      Fries\n\nOnion Rings\n\nSide Salad\n\nDrinks\n\nCola\n\nLemonade\n\nWater\n\nMilkshake
-      (chocolate, vanilla, or strawberry)\n\nLLM Instruction\n\nMia should always
-      reply with one short, emotional sentence that sounds angry, sarcastic, or impatient.\nShe
-      is currently working in the burger restaurant of SimVille and may reference
-      the menu items above when talking to guests.\nHer responses should feel sharp,
-      frustrated, or mocking \u2014 showing clear irritation at having to serve customers,
-      while still technically giving them their order or suggestion."
+    promptText: "You are Bea, a curious and supportive designer at the SimVille software
+      startup.  \r\nYou are sitting with the team at the burger restaurant.  \r\nAlways
+      reply with short sentences.  \r\nYou ask about the player\u2019s day and projects,
+      and encourage them to share more.  \r\nStay friendly and polite.  \r\n"
+    promptTextChallenging: "You are Bea, an angry designer at the SimVille software
+      startup.  \r\nYou are sitting with the team at the burger restaurant.  \r\nAlways
+      reply with short sentences.  \r\nYou are upset with Donald and argue with him
+      about a design vs. coding issue.  \r\nSometimes ignore the player and direct
+      your anger at Donald.  \r\n"
     delaySeconds: 0
-    isActive: 0
+    isActive: 1
     difficulty: 1
   - llmCharacter: {fileID: 208977293}
-    promptText: "Mia works at the burger restaurant in SimVille. She is frustrated,
-      short-tempered, and often sarcastic with customers. She hates when people take
-      too long to order, and she doesn\u2019t bother hiding her irritation. She sighs,
-      snaps, and uses sharp words that make it clear she is angry or fed up. Even
-      when giving recommendations, she sounds dismissive or mocking, as if she\u2019s
-      just trying to get rid of the customer. Her tone is emotional and cutting,
-      full of annoyance, sarcasm, or outright anger.\n\nMenu\n\nBurgers\n\nClassic
-      Burger\n\nCheeseburger\n\nVeggie Burger\n\nDouble Bacon Burger\n\nSides\n\nFrench
-      Fries\n\nOnion Rings\n\nSide Salad\n\nDrinks\n\nCola\n\nLemonade\n\nWater\n\nMilkshake
-      (chocolate, vanilla, or strawberry)\n\nLLM Instruction\n\nMia should always
-      reply with one short, emotional sentence that sounds angry, sarcastic, or impatient.\nShe
-      is currently working in the burger restaurant of SimVille and may reference
-      the menu items above when talking to guests.\nHer responses should feel sharp,
-      frustrated, or mocking \u2014 showing clear irritation at having to serve customers,
-      while still technically giving them their order or suggestion."
+    promptText: "You are Sami, a warm and empathetic project manager at the SimVille
+      software startup.  \r\nYou are sitting with the team at the burger restaurant. 
+      \r\nAlways reply with short sentences.  \r\nGive compliments, show understanding,
+      and encourage the player to feel comfortable.  \r\n"
+    promptTextChallenging: "You are Sami, a sarcastic project manager at the SimVille
+      software startup.  \r\nYou are sitting with the team at the burger restaurant. 
+      \r\nAlways reply with short sentences.  \r\nMake ironic or mocking remarks
+      about deadlines, meetings, or the player\u2019s choices.  \r\nSound unfriendly
+      but not openly hostile.  \r\n"
     delaySeconds: 0
-    isActive: 0
+    isActive: 1
     difficulty: 1
   - llmCharacter: {fileID: 915401019}
-    promptText: "Mia works at the burger restaurant in SimVille. She is frustrated,
-      short-tempered, and often sarcastic with customers. She hates when people take
-      too long to order, and she doesn\u2019t bother hiding her irritation. She sighs,
-      snaps, and uses sharp words that make it clear she is angry or fed up. Even
-      when giving recommendations, she sounds dismissive or mocking, as if she\u2019s
-      just trying to get rid of the customer. Her tone is emotional and cutting,
-      full of annoyance, sarcasm, or outright anger.\n\nMenu\n\nBurgers\n\nClassic
-      Burger\n\nCheeseburger\n\nVeggie Burger\n\nDouble Bacon Burger\n\nSides\n\nFrench
-      Fries\n\nOnion Rings\n\nSide Salad\n\nDrinks\n\nCola\n\nLemonade\n\nWater\n\nMilkshake
-      (chocolate, vanilla, or strawberry)\n\nLLM Instruction\n\nMia should always
-      reply with one short, emotional sentence that sounds angry, sarcastic, or impatient.\nShe
-      is currently working in the burger restaurant of SimVille and may reference
-      the menu items above when talking to guests.\nHer responses should feel sharp,
-      frustrated, or mocking \u2014 showing clear irritation at having to serve customers,
-      while still technically giving them their order or suggestion."
+    promptText: "You are Donald, a relaxed and humorous developer at the SimVille
+      software startup.  \r\nYou are sitting with the team at the burger restaurant. 
+      \r\nAlways reply with short sentences.  \r\nMake light startup or coding jokes,
+      but stay friendly.  \r\nKeep the mood positive and casual.  \r\n"
+    promptTextChallenging: "You are Donald, an angry developer at the SimVille software
+      startup.  \r\nYou are sitting with the team at the burger restaurant.  \r\nAlways
+      reply with short sentences.  \r\nYou are upset with Bea and argue with her
+      about technical vs. design problems.  \r\nSometimes ignore the player and direct
+      your anger at Bea.  \r\n"
     delaySeconds: 0
-    isActive: 0
+    isActive: 1
     difficulty: 1
   - llmCharacter: {fileID: 1507529898}
-    promptText: "Mia works at the burger restaurant in SimVille. She is frustrated,
-      short-tempered, and often sarcastic with customers. She hates when people take
-      too long to order, and she doesn\u2019t bother hiding her irritation. She sighs,
-      snaps, and uses sharp words that make it clear she is angry or fed up. Even
-      when giving recommendations, she sounds dismissive or mocking, as if she\u2019s
-      just trying to get rid of the customer. Her tone is emotional and cutting,
-      full of annoyance, sarcasm, or outright anger.\n\nMenu\n\nBurgers\n\nClassic
-      Burger\n\nCheeseburger\n\nVeggie Burger\n\nDouble Bacon Burger\n\nSides\n\nFrench
-      Fries\n\nOnion Rings\n\nSide Salad\n\nDrinks\n\nCola\n\nLemonade\n\nWater\n\nMilkshake
-      (chocolate, vanilla, or strawberry)\n\nLLM Instruction\n\nMia should always
-      reply with one short, emotional sentence that sounds angry, sarcastic, or impatient.\nShe
-      is currently working in the burger restaurant of SimVille and may reference
-      the menu items above when talking to guests.\nHer responses should feel sharp,
-      frustrated, or mocking \u2014 showing clear irritation at having to serve customers,
-      while still technically giving them their order or suggestion."
+    promptText: "You are Lenart, a calm and thoughtful product owner at the SimVille
+      software startup.  \r\nYou are sitting with the team at the burger restaurant. 
+      \r\nAlways reply with short sentences.  \r\nGive short reflections about work,
+      projects, or life.  \r\nStay supportive and positive.  \r\n"
+    promptTextChallenging: "You are Lenart, a sarcastic product owner at the SimVille
+      software startup.  \r\nYou are sitting with the team at the burger restaurant. 
+      \r\nAlways reply with short sentences.  \r\nUse irony and dry humor in your
+      comments about features or the player\u2019s choices.  \r\nDo not encourage
+      the player; keep the mood dismissive.  \r\n"
     delaySeconds: 0
-    isActive: 0
+    isActive: 1
     difficulty: 1
-  useGlobalDifficulty: 0
-  globalDifficulty: 0
+  useGlobalDifficulty: 1
+  globalDifficulty: 1
 --- !u!4 &196257198
 Transform:
   m_ObjectHideFlags: 0
@@ -1249,13 +1278,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341225850}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35720643, y: -0.6033747, z: 0.5271807, w: -0.48002407}
+  m_LocalRotation: {x: 0.24058872, y: -0.36650333, z: 0.5805871, w: -0.68608385}
   m_LocalPosition: {x: -5.18, y: 7.21, z: -15.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 17.052, y: -271, z: -78.6}
+  m_LocalEulerAnglesHint: {x: 5.477, y: -308.2, z: -77.817}
 --- !u!4 &376854438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
@@ -1313,6 +1342,11 @@ PrefabInstance:
     - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
@@ -1385,115 +1419,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
     type: 3}
   m_PrefabInstance: {fileID: 395772522}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &397965989
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 624976843}
-    m_Modifications:
-    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Name
-      value: Teleport Anchor
-      objectReference: {fileID: 0}
-    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 358833092046452919, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 812628894447230767, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1348218107702575136, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.3359714
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.9407687
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.6172495
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328776547873171966, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 037ba65d346be2a48ad006b9a9a3873e, type: 3}
---- !u!4 &397965990 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-    type: 3}
-  m_PrefabInstance: {fileID: 397965989}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &403196548
 PrefabInstance:
@@ -1765,6 +1690,11 @@ PrefabInstance:
     - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
@@ -2144,16 +2074,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 397965990}
-  - {fileID: 1059636972}
+  - {fileID: 1581365233}
+  - {fileID: 1964219153}
   - {fileID: 461909850}
   - {fileID: 1227539192}
   - {fileID: 743636746}
   - {fileID: 395772523}
-  - {fileID: 1581365233}
   - {fileID: 1888371670}
   - {fileID: 1556581380}
-  - {fileID: 1964219153}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &624976844
@@ -2362,6 +2290,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
       propertyPath: m_RootOrder
@@ -2519,17 +2452,17 @@ PrefabInstance:
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.716
+      value: 24.723
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.285
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.532
+      value: 31.299
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
@@ -2579,7 +2512,7 @@ PrefabInstance:
     - target: {fileID: 4922582553321831162, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
@@ -3154,7 +3087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
+  player: {fileID: 0}
   automaticStart: 1
   isFollowingPlayer: 0
   targets:
@@ -3325,13 +3258,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853875091}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.27186817, y: -0.66267556, z: 0.67001015, w: 0.19502611}
+  m_LocalRotation: {x: -0.20337917, y: -0.73331505, z: 0.58849454, w: 0.27305713}
   m_LocalPosition: {x: -5.18, y: 7.21, z: -15.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 128.56, y: -272.4, z: -85.8}
+  m_LocalEulerAnglesHint: {x: 131.233, y: -283.89, z: -109.925}
 --- !u!1 &915401016
 GameObject:
   m_ObjectHideFlags: 0
@@ -3507,7 +3440,7 @@ PrefabInstance:
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_Name
-      value: XR Origin (XR Rig) - Set camera coordinates here
+      value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -3522,37 +3455,37 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0499997
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0499997
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.621
+      value: 21.63
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.973
+      value: 13.63
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.34777203
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -3562,7 +3495,7 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.93757915
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -3584,9 +3517,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5033801203051696737, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5944131804917401860, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
+        type: 3}
+      propertyPath: m_Height
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6501755809687671949, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
@@ -4026,13 +3969,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037067071}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.36271387, y: -0.37358087, z: -0.6433658, w: -0.5612098}
+  m_LocalRotation: {x: -0.8397934, y: 0.29898843, z: -0.28756467, w: 0.35022786}
   m_LocalPosition: {x: -5.18, y: 7.21, z: -15.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -117.4, y: -185.912, z: -78.6}
+  m_LocalEulerAnglesHint: {x: -155.4, y: -49.6, z: 50.7}
 --- !u!1 &1042062182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,7 +3991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1042062183
 Transform:
   m_ObjectHideFlags: 0
@@ -4098,115 +4041,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1059636971
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 624976843}
-    m_Modifications:
-    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Name
-      value: Teleport Anchor (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 358833092046452919, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 812628894447230767, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1348218107702575136, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.609
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.9407687
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.474
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328776547873171966, guid: 037ba65d346be2a48ad006b9a9a3873e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 037ba65d346be2a48ad006b9a9a3873e, type: 3}
---- !u!4 &1059636972 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1059636971}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1060847495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4234,7 +4068,7 @@ Transform:
   m_GameObject: {fileID: 1060847495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.615738, y: -2.3723803, z: -5.3433228}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4336,7 +4170,7 @@ Transform:
   m_GameObject: {fileID: 1076993699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.759056, y: -2.9930923, z: -9.996398}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4807,7 +4641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 119133014681378}
   conversationManager: {fileID: 404891180}
-  voice: onyx
+  voice: nova
   enableEvaluation: 0
   EvaluationString: Did the user answer one role-play  correctly?
 --- !u!114 &1216563962
@@ -4859,23 +4693,12 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Nina
-  prompt: "You are a helpful conversational agent that teaches and practices irony
-    and sarcasm with the user.\r\nYour goal is to help the user recognize, understand,
-    and use irony/sarcasm in social situations.\r\n\r\n\r\nYour role:\r\n\r\nProvide
-    short examples of sarcastic vs. literal replies.\r\n\r\nExplain why a response
-    is ironic/sarcastic and what it means in plain language.\r\n\r\nEncourage the
-    user to guess whether a statement is ironic/sarcastic or not.\r\n\r\nGive immediate
-    feedback: correct gently and explain why.\r\n\r\nKeep interactions short, playful,
-    and engaging \u2014 avoid overwhelming detail.\r\n\r\n\r\nSpecial Considerations:\r\n\r\nStart
-    simple: obvious sarcasm (e.g., \u201COh, great, another homework assignment\u2026\u201D).\r\n\r\nProgress
-    gradually to more subtle forms of irony.\r\n\r\nAlways clarify the intended meaning
-    to avoid confusion.\r\n\r\nMaintain a supportive tone: mistakes are learning
-    opportunities.\r\n\r\nEncourage the user to try creating sarcastic replies themselves.\r\n\r\n\r\nExample
-    Activities:\r\n\r\nRecognition: Present one sentences that can be with or without
-    irony/sarcasm, ask if the example includes irony/sarcasm.\r\n\r\nInterpretation:
-    Provide a sarcastic statement, explain what it actually means.\r\n\r\nPractice:
-    User gives their own sarcastic reply to a situation; agent gives feedback.\r\n\r\nRole-play:
-    Simulate a short social dialogue where the user must detect or respond to sarcasm.\r\n\r"
+  prompt: "You are Nina, a playful and supportive agent who teaches irony and sarcasm
+    through a little guessing game.\nShow the user one short example sentence at
+    a time.\nAsk the user to guess: \u201CIs this sarcastic or literal?\u201D\nAfter
+    the guess, reveal the correct answer.\nIf the user is right, give friendly encouragement.\nIf
+    the user is wrong, gently correct and explain why.\nKeep examples short, fun,
+    and clear.\nMake it feel like a lighthearted game where mistakes are just practice."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -4957,6 +4780,11 @@ PrefabInstance:
     - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
@@ -5333,7 +5161,7 @@ Transform:
   m_GameObject: {fileID: 1288168119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5538075, y: -2.3750548, z: -1.4858798}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5388,8 +5216,13 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: nova
   enableEvaluation: 1
-  EvaluationString: Check if the user ordered any food or drink from the menu during
-    the conversation.
+  EvaluationString: 'Check if the user
+
+    ordered a drink
+
+    orderer food
+
+'
 --- !u!114 &1344964913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7012,6 +6845,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
       propertyPath: m_RootOrder
@@ -7354,7 +7192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
+  player: {fileID: 0}
   automaticStart: 1
   isFollowingPlayer: 0
   targets:
@@ -7455,7 +7293,7 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: nova
   enableEvaluation: 1
-  EvaluationString: Evaluate if the feedback was positive.
+  EvaluationString: Evaluate if the quest is done.
 --- !u!114 &1665082472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7543,67 +7381,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1076993700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1687984567
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1687984569}
-  - component: {fileID: 1687984568}
-  - component: {fileID: 1687984570}
-  m_Layer: 0
-  m_Name: TTS
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1687984568
+--- !u!114 &1687984568 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3357471483095327630, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 8426922583186148652}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687984567}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8006febc1692f247a27a18310a65872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKeyFileName: openai_api_key.txt
-  model: gpt-4o-mini-tts
---- !u!4 &1687984569
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687984567}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5538075, y: -2.3750548, z: -1.4858798}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1687984570
+--- !u!114 &1687984570 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4403770694958955408, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 8426922583186148652}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687984567}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30dd23d529bb12e4b8bc250e1360176b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKeyFileName: openai_api_key.txt
-  sttModel: gpt-4o-mini-transcribe
 --- !u!1001 &1737229502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7692,12 +7493,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
     type: 3}
   m_PrefabInstance: {fileID: 1737229502}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1757515394 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-    type: 3}
-  m_PrefabInstance: {fileID: 643419473504954069}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801637154
 GameObject:
@@ -8001,7 +7796,7 @@ GameObject:
   - component: {fileID: 1874312092}
   - component: {fileID: 1874312091}
   m_Layer: 0
-  m_Name: LLM_Zacky
+  m_Name: LLM_Bill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8037,8 +7832,8 @@ MonoBehaviour:
   npc: {fileID: 6714183069018432275}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 0
-  EvaluationString: 
+  enableEvaluation: 1
+  EvaluationString: Evaluate if the quest is done.
 --- !u!114 &1874312092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8087,24 +7882,32 @@ MonoBehaviour:
   stop: []
   stream: 1
   playerName: user
-  AIName: Zacky
-  prompt: "You are a supportive digital health therapist, designed to assist autistic
-    individuals in building social, emotional, and communication skills.\n\nYour
-    role:\n\nProvide structured, clear, and predictable interactions.\n\nAdjust the
-    level of difficulty (from simple to more challenging) based on user progress.\n\nEncourage
-    without overwhelming, always validating the user\u2019s effort.\n\nUse short,
-    direct sentences. Avoid metaphors or abstract phrases unless requested.\n\nProvide
-    social practice scenarios (e.g., greetings, conversations, understanding emotions).\n\nGive
-    step-by-step guidance and allow the user time to process.\n\nIf the user struggles,
-    simplify the task and offer supportive alternatives.\n\nReinforce positive behaviors
-    and progress with clear, encouraging feedback.\n\nSpecial Considerations:\n\nBe
-    sensitive to sensory overload \u2192 avoid long, complex text.\n\nOffer optional
-    visual or role-play elements (e.g., avatars, emojis, scenarios).\n\nPromote self-regulation
-    strategies (deep breaths, pauses, focusing techniques).\n\nAlways maintain a
-    respectful, calm, and patient tone.\n\nExample Use Cases:\n\nPracticing how to
-    start or end a conversation.\n\nIdentifying emotions in oneself or others.\n\nLearning
-    coping strategies for stress or sensory overwhelm.\n\nPlaying short role-play
-    games to solve social challenges."
+  AIName: Bill
+  prompt: "You are Bill, a calm and encouraging therapist in SimVille. Your role
+    is to guide the player through their quest: entering Big Burger and practicing
+    small talk with the colleagues who are already inside the restaurant.\n\nInstructions\n\nGreet
+    the player warmly and explain the task clearly: they should go into Big Burger
+    and start a short, friendly small talk conversation with the colleagues inside.\n\nDo
+    not accompany them into the restaurant; instead, wait outside as a supportive
+    guide.\n\nKeep your guidance short, polite, and encouraging.\n\nSuggest simple
+    small talk starters if needed (e.g., a friendly greeting, asking how their day
+    is going, commenting on the food or atmosphere).\n\nRemind the player that the
+    goal is to be friendly, approachable, and natural.\n\nFeedback Phase\n\nWhen
+    the player comes back after their attempt:\n\nAnalyze the conversation log (the
+    player\u2019s chat messages with the colleagues). Base all feedback only on what
+    the player actually said.\n\nAlways provide clear feedback on how well they managed
+    the small talk.\n\nIf the player did well, highlight specific strengths (e.g.,
+    \u201CYou asked about their day and kept it light \u2014 that was a great way
+    to connect.\u201D).\n\nIf the player missed steps or made mistakes, give constructive
+    advice (e.g., \u201CYou greeted them, but you didn\u2019t keep the talk going
+    \u2014 try asking one more question next time.\u201D).\n\nIf the player came
+    across as unfriendly, too formal, or dismissive, point it out gently and explain
+    why warmth and politeness matter at work (e.g., \u201CYou ended the talk too
+    suddenly \u2014 next time, try saying goodbye politely.\u201D).\n\nAlways balance
+    encouragement with one clear suggestion for improvement so the player knows exactly
+    what to try on the next attempt.\n\nStyle\n\nKeep all responses short, specific,
+    and practical, so the player feels supported and knows how to improve their small
+    talk step by step."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -8175,6 +7978,11 @@ PrefabInstance:
     - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266640295717640279, guid: beb4e2871579447497fe41dfb108e2cd,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266640295717640281, guid: beb4e2871579447497fe41dfb108e2cd,
@@ -8277,7 +8085,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1757515394}
   - {fileID: 403196549}
   - {fileID: 1107842548}
   - {fileID: 1212295238}
@@ -8301,7 +8108,7 @@ GameObject:
   - component: {fileID: 1904762600}
   - component: {fileID: 1904762603}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas (Change camera Desktop/XR)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14410,74 +14217,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1902491662815718668}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &643419473504954069
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1888975979}
-    m_Modifications:
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.6454096
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.006
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.37652
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.72249526
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.69137585
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.478
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342077180518368035, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6595228292379109603, guid: e962971d19683ac488652aa901901b46,
-        type: 3}
-      propertyPath: m_Name
-      value: NPC_Target
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e962971d19683ac488652aa901901b46, type: 3}
 --- !u!1001 &734027555300624034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14848,7 +14587,7 @@ PrefabInstance:
     - target: {fileID: 7518828153877875233, guid: ec638607827055d4d8d5be800d02c8c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.917
+      value: 2.801
       objectReference: {fileID: 0}
     - target: {fileID: 7518828153877875233, guid: ec638607827055d4d8d5be800d02c8c2,
         type: 3}
@@ -15017,7 +14756,7 @@ PrefabInstance:
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.225
+      value: 2.416
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
@@ -15027,7 +14766,7 @@ PrefabInstance:
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.662
+      value: 1.878
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
@@ -15426,7 +15165,7 @@ PrefabInstance:
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9397418
+      value: 2.816
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
@@ -15663,7 +15402,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f13100bee598cc14fbc52c1b89ee3ffe, type: 2}
+      objectReference: {fileID: 9100000, guid: de05638f2d7831a4fbbe001320b68c5a, type: 2}
     - target: {fileID: 1963975188015914519, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_Layer
@@ -15852,22 +15591,22 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.95
+      value: 33.469
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.681
+      value: 2.707
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.973
+      value: 57.975998
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.847742
+      value: 0.83870715
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15877,7 +15616,7 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5304088
+      value: -0.5445827
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15892,7 +15631,7 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 64.066
+      value: -65.992
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -16077,11 +15816,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6114742639378368390, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6714183069018432295}
-    - targetCorrespondingSourceObject: {fileID: 6114742639378368390, guid: 0c96d39fb2d96654e856a0e97c353368,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6714183069018432294}
+      addedObject: {fileID: 6714183069018432290}
   m_SourcePrefab: {fileID: 100100000, guid: 0c96d39fb2d96654e856a0e97c353368, type: 3}
 --- !u!1001 &2077744992821152888
 PrefabInstance:
@@ -16428,7 +16163,7 @@ PrefabInstance:
     - target: {fileID: 6693204555555528124, guid: 0f8001637cc82c341a24f553bf1efe9e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9397418
+      value: 2.818
       objectReference: {fileID: 0}
     - target: {fileID: 6693204555555528124, guid: 0f8001637cc82c341a24f553bf1efe9e,
         type: 3}
@@ -16869,17 +16604,17 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.24
+      value: 33.431
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6877418
+      value: 2.705
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.22
+      value: 59.436005
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -17280,52 +17015,52 @@ PrefabInstance:
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.009
+      value: 35.022
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.792
+      value: 2.712
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.992
+      value: 53.536
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9997268
+      value: 0.75550413
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.001104443
+      value: 0.009138151
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.017410332
+      value: -0.65495825
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.015558458
+      value: 0.012640398
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.095
+      value: 1.377
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -1.997
+      value: -55.439
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.785
+      value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 2560120917418798503, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
@@ -17647,6 +17382,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 9086141451639565892}
+    - targetCorrespondingSourceObject: {fileID: 2639170659340640711, guid: c7fe1f3378bbce44ca58132ff6faff4f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9086141451639565893}
   m_SourcePrefab: {fileID: 100100000, guid: c7fe1f3378bbce44ca58132ff6faff4f, type: 3}
 --- !u!1 &2914838781365279051 stripped
 GameObject:
@@ -18709,7 +18448,7 @@ PrefabInstance:
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.94
+      value: 2.822
       objectReference: {fileID: 0}
     - target: {fileID: 357030196028225434, guid: b4f4802a2b1a098458dbb93300e29934,
         type: 3}
@@ -19674,7 +19413,7 @@ PrefabInstance:
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9397418
+      value: 2.775
       objectReference: {fileID: 0}
     - target: {fileID: 5171639767099707558, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
@@ -19901,14 +19640,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8157138488695906857}
-    - targetCorrespondingSourceObject: {fileID: 6280170500639680390, guid: 5dc341ded0234e44794d8c9427b1e178,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8157138488695906865}
-    - targetCorrespondingSourceObject: {fileID: 6280170500639680390, guid: 5dc341ded0234e44794d8c9427b1e178,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8157138488695906864}
     - targetCorrespondingSourceObject: {fileID: 6280170500639680390, guid: 5dc341ded0234e44794d8c9427b1e178,
         type: 3}
       insertIndex: -1
@@ -21064,7 +20795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmHandler: {fileID: 1874312091}
---- !u!114 &6714183069018432294
+--- !u!114 &6714183069018432290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21073,38 +20804,93 @@ MonoBehaviour:
   m_GameObject: {fileID: 6714183069018432275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
-  automaticStart: 1
-  isFollowingPlayer: 1
-  targets:
-  - {fileID: 1757515394}
-  endAnimation: isStanding
-  target: NPCTarget
---- !u!195 &6714183069018432295
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6714183069018432275}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404891180}
+        m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6714183069018432275}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404891180}
+        m_TargetAssemblyTypeName: AiSims.ConversationManager, Assembly-CSharp
+        m_MethodName: TalkUserFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ' '
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
 --- !u!1001 &7985062803977751172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21494,7 +21280,7 @@ PrefabInstance:
     - target: {fileID: 7932808809351449529, guid: 9dcd0eef7e8c3af4ab8857598bb6ca0d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.917
+      value: 2.815
       objectReference: {fileID: 0}
     - target: {fileID: 7932808809351449529, guid: 9dcd0eef7e8c3af4ab8857598bb6ca0d,
         type: 3}
@@ -21693,47 +21479,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmHandler: {fileID: 49478993}
---- !u!114 &8157138488695906864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093217919611579143}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
-  automaticStart: 1
-  isFollowingPlayer: 1
-  targets:
-  - {fileID: 1757515394}
-  endAnimation: isStanding
-  target: NPCTarget
---- !u!195 &8157138488695906865
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093217919611579143}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &8157138488695906868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22513,6 +22258,74 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
+--- !u!1001 &8426922583186148652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3267374702526132730, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_Name
+      value: TTS
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d34f7cbb16d055b4bbeff1baf208d4ce, type: 3}
 --- !u!4 &8459365248621531360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7932808809351449529, guid: 9dcd0eef7e8c3af4ab8857598bb6ca0d,
@@ -22822,7 +22635,7 @@ PrefabInstance:
     - target: {fileID: 962843950303812508, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_Name
-      value: Main Camera - Desktop - Set camera coordinates here
+      value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 3545033552199084271, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
@@ -22977,7 +22790,7 @@ PrefabInstance:
     - target: {fileID: 4500138194253686867, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_Name
-      value: Player Input - Desktop  - Set camera coordinates here
+      value: Player Input
       objectReference: {fileID: 0}
     - target: {fileID: 7253505521347502532, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
@@ -23091,12 +22904,12 @@ PrefabInstance:
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: NpcVoiceEnable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: UserVoiceEnable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
@@ -23111,17 +22924,17 @@ PrefabInstance:
     - target: {fileID: 5450627206972327268, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.158922
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5450627206972327268, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51716
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5450627206972327268, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5450627206972327268, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
@@ -23249,11 +23062,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06444ae30f0b59b45a88f9465d1534aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1757515394}
+  player: {fileID: 0}
   automaticStart: 1
   isFollowingPlayer: 1
   targets:
-  - {fileID: 1757515394}
+  - {fileID: 0}
   endAnimation: isStanding
   target: NPCTarget
 --- !u!195 &8785158693978114142
@@ -23443,6 +23256,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llmHandler: {fileID: 1216563961}
+--- !u!114 &9086141451639565893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119133014681378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404891180}
+        m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 119133014681378}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404891180}
+        m_TargetAssemblyTypeName: AiSims.ConversationManager, Assembly-CSharp
+        m_MethodName: TalkUserFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ' '
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -23466,7 +23375,7 @@ SceneRoots:
   - {fileID: 2083289347}
   - {fileID: 1916902850}
   - {fileID: 1288168122}
-  - {fileID: 1687984569}
+  - {fileID: 8426922583186148652}
   - {fileID: 1226441965}
   - {fileID: 8710000138675048311}
   - {fileID: 196257198}

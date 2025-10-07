@@ -29,7 +29,7 @@ namespace AiSims
         private string currentMessage;
 
         private bool isEvaluating = false;
-        private LLM_Handler lastNpc;
+        private LLM_Handler lastNpc = null;
 
         private readonly string userCanTalk = "User can talk.";
         private readonly string npcTalking = "NPC is thinking.";
@@ -47,8 +47,11 @@ namespace AiSims
                 talk.OnSpeechFinished += OnNpcSpeechFinished;
             }
 
-            messageDecorator.SetLlmHandler(questHandler);
-            Logger.Log(LoggingInfo.Scene, "Start Test scene", true);
+            if (questHandler)
+            {
+                messageDecorator.SetLlmHandler(questHandler);
+            }
+            Logger.Log(LoggingInfo.Scene, "Start Scene", true);
         }
 
         // This function will be called when the NPC finishes talking
@@ -58,25 +61,23 @@ namespace AiSims
             float chance = Random.value; // float between 0.0 and 1.0
             bool npcTalking = false;
 
-            if (npcConnection != null) 
+            if (npcConnection != null)
             {
                 LLM_Handler nextNpc = npcConnection.RandomHandler;
                 if (nextNpc != lastNpc && nextNpc != null && chance < chanceNpcTalking)
                 {
-                    lastNpc = nextNpc;
                     gameStatusInformation.text = string.Empty;
 
                     Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                     nextNpc.ProcessMessage(currentMessage);
                     npcTalking = true;
-                    //return;
+                    lastNpc = nextNpc;
                 }
             }
             else
             {
                 Debug.Log("NPC 1:1 conversation. | chance = " + chance);
             }
-            lastNpc = null;
 
             if (!npcTalking)
             {
@@ -94,6 +95,12 @@ namespace AiSims
         public void SetCurrentNPC(NPCToStoryBridge npc)
         {
             currentNPC = npc.llmHandler;
+            messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
+        }
+
+        public void SetCurrentNPC(LLM_Handler npc)
+        {
+            currentNPC = npc;
             messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
         }
 
@@ -231,7 +238,12 @@ namespace AiSims
 
         public void OrientateNpcToCameraAndStartTalk()
         {
-            if (talking) return;
+            // Check if stop recording is required
+            if (talking)
+            {
+                TalkUser();
+                return;
+            }
 
             if (Camera.main == null) return;
 
@@ -261,20 +273,17 @@ namespace AiSims
                     SetCurrentNPC(npcBridge);
                     TalkUser();
                 }
-                //else
-                //{
-                //    Debug.Log("Hit object does not have NPCToStoryBridge component.");
-                //}
             }
-            //else
-            //{
-            //    Debug.Log("Raycast did not hit any NPC.");
-            //}
         }
 
         public void OrientateNpcToCameraAndStartTalkNoRayCast(GameObject selectedObject)
         {
-            if (talking) return;
+            // Check if stop recording is required
+            if (talking)
+            {
+                TalkUser();
+                return;
+            }
 
             if (selectedObject == null)
             {
