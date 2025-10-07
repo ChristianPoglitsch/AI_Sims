@@ -12,7 +12,9 @@
 -> Scenes/SampleScene
 
 Before you start!
+
 GameState: Change between TTS/STT and chat based system
+
 Camera: Change between Desktop and XR camera
 
 ### Simple Chat
