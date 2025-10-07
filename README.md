@@ -18,7 +18,7 @@ Camera: Change between Desktop and XR camera
 -> Scene/LLM_Chat
 
 
-### TTS / STT
+### Text2Speech (TTS) / Speech2Text (STT)
 - Requires an **OpenAI API Key**, or  
 - Use a **local Whisper server** -> [tts_server.py](https://github.com/ChristianPoglitsch/AIAgents -> TTS_STT/tts_server.py)
 
