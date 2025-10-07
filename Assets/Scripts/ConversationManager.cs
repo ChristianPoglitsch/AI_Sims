@@ -31,8 +31,9 @@ namespace AiSims
         private bool isEvaluating = false;
         private LLM_Handler lastNpc = null;
 
-        private readonly string userCanTalk = "User can talk.";
-        private readonly string npcTalking = "NPC is thinking.";
+        private readonly string userCanTalk = "User can talk ... ";
+        private readonly string userIsTalking = "User is talking ... ";
+        private readonly string npcTalking = "NPC is thinking ...";        
 
         private Quaternion originalRotation;
 
@@ -59,7 +60,7 @@ namespace AiSims
         {
             NpcConnection npcConnection = currentNPC.GetNpcConnection();
             float chance = Random.value; // float between 0.0 and 1.0
-            bool npcTalking = false;
+            bool isNpcTalking = false;
 
             if (npcConnection != null)
             {
@@ -70,7 +71,7 @@ namespace AiSims
 
                     Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                     nextNpc.ProcessMessage(currentMessage);
-                    npcTalking = true;
+                    isNpcTalking = true;
                     lastNpc = nextNpc;
                 }
             }
@@ -79,7 +80,7 @@ namespace AiSims
                 Debug.Log("NPC 1:1 conversation. | chance = " + chance);
             }
 
-            if (!npcTalking)
+            if (!isNpcTalking)
             {
                 if (currentNPC.EvaluateConversation())
                 {
@@ -109,14 +110,13 @@ namespace AiSims
             if (gameStatusInformation.text == string.Empty) return;
             if(speech2Text.Recording())
             {
+                gameStatusInformation.text = npcTalking;
                 speech2Text.ToggleRecording();
-                gameStatusInformation.text = string.Empty;
                 return;
             }
 
             if (talking) return;
-
-            gameStatusInformation.text = "User is talking ... ";
+            gameStatusInformation.text = userIsTalking;
 
             if (UserVoiceEnable && currentNPC != null)
             {
@@ -128,10 +128,8 @@ namespace AiSims
 
         public void TalkUserFinished()
         {
-            gameStatusInformation.text = " ";
-
-            if (gameStatusInformation.text == string.Empty) return;
-            if (!talking) return;            
+            if (!talking) return;
+            gameStatusInformation.text = npcTalking;
 
             if (UserVoiceEnable && currentNPC != null)
             {
@@ -146,9 +144,7 @@ namespace AiSims
             if (message == string.Empty) return;
 
             talking = true;
-
-            if (gameStatusInformation)
-                gameStatusInformation.text = npcTalking;
+            gameStatusInformation.text = npcTalking;
 
             if (currentNPC != null)
             {
@@ -209,6 +205,8 @@ namespace AiSims
 
             if (NpcVoiceEnable && talk != null && npcHandler.npc != null)
             {
+                gameStatusInformation.text = string.Empty;
+
                 var voiceHandler = npcHandler.npc.GetComponent<VoiceHandler>();
 
                 // Finally call Text2Speech
