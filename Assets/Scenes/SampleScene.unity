@@ -1040,6 +1040,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &327511174 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2550441759580168271, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+    type: 3}
+  m_PrefabInstance: {fileID: 8642468337098103697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &327694482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2729,7 +2735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text
+  m_text: User can talk ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8184,7 +8190,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 8642468337098103698}
+  m_Camera: {fileID: 327511174}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -8209,7 +8215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce472f25cde45aa4ea85446843911bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldCanvasFollow
-  targetCamera: {fileID: 8642468337098103698}
+  targetCamera: {fileID: 327511174}
   distance: 1
 --- !u!1 &1916902849
 GameObject:
@@ -22812,12 +22818,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8d20b94304d6b4aa68dd42d0a9d562, type: 3}
---- !u!20 &8642468337098103698 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2550441759580168271, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
-    type: 3}
-  m_PrefabInstance: {fileID: 8642468337098103697}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8710000138675048311
 PrefabInstance:
   m_ObjectHideFlags: 0
