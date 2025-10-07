@@ -3440,12 +3440,12 @@ PrefabInstance:
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_Name
-      value: XR Origin (XR Rig) - Set camera coordinates here
+      value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -6269,12 +6269,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!20 &1401442792 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
-    type: 3}
-  m_PrefabInstance: {fileID: 995274364}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1418926994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8114,7 +8108,7 @@ GameObject:
   - component: {fileID: 1904762600}
   - component: {fileID: 1904762603}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas (Change camera Desktop/XR)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8190,7 +8184,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 1401442792}
+  m_Camera: {fileID: 8642468337098103698}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -8215,7 +8209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce472f25cde45aa4ea85446843911bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldCanvasFollow
-  targetCamera: {fileID: 1401442792}
+  targetCamera: {fileID: 8642468337098103698}
   distance: 1
 --- !u!1 &1916902849
 GameObject:
@@ -22641,7 +22635,7 @@ PrefabInstance:
     - target: {fileID: 962843950303812508, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_Name
-      value: Main Camera - Desktop - Set camera coordinates here
+      value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 3545033552199084271, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
@@ -22796,7 +22790,7 @@ PrefabInstance:
     - target: {fileID: 4500138194253686867, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_Name
-      value: Player Input - Desktop  - Set camera coordinates here
+      value: Player Input
       objectReference: {fileID: 0}
     - target: {fileID: 7253505521347502532, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
@@ -22811,13 +22805,19 @@ PrefabInstance:
     - target: {fileID: 7958516418553984496, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8d20b94304d6b4aa68dd42d0a9d562, type: 3}
+--- !u!20 &8642468337098103698 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2550441759580168271, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+    type: 3}
+  m_PrefabInstance: {fileID: 8642468337098103697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8710000138675048311
 PrefabInstance:
   m_ObjectHideFlags: 0

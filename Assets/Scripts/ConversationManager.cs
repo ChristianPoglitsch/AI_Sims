@@ -47,8 +47,11 @@ namespace AiSims
                 talk.OnSpeechFinished += OnNpcSpeechFinished;
             }
 
-            messageDecorator.SetLlmHandler(questHandler);
-            Logger.Log(LoggingInfo.Scene, "Start Test scene", true);
+            if (questHandler)
+            {
+                messageDecorator.SetLlmHandler(questHandler);
+            }
+            Logger.Log(LoggingInfo.Scene, "Start Scene", true);
         }
 
         // This function will be called when the NPC finishes talking
@@ -69,7 +72,6 @@ namespace AiSims
                     nextNpc.ProcessMessage(currentMessage);
                     npcTalking = true;
                     lastNpc = nextNpc;
-                    //return;
                 }
             }
             else
@@ -93,6 +95,12 @@ namespace AiSims
         public void SetCurrentNPC(NPCToStoryBridge npc)
         {
             currentNPC = npc.llmHandler;
+            messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
+        }
+
+        public void SetCurrentNPC(LLM_Handler npc)
+        {
+            currentNPC = npc;
             messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
         }
 
