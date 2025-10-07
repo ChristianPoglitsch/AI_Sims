@@ -9,12 +9,12 @@
 - Use a **local Whisper server** -> [tts_server.py](https://github.com/ChristianPoglitsch/AIAgents -> TTS_STT/tts_server.py)
 
 ### Game Scene
-'Scenes/SampleScene'
+-> Scenes/SampleScene
 
 Before you start!
 GameState: Change between TTS/STT and chat based system
 Camera: Change between Desktop and XR camera
 
 ### Simple Chat
-'Scene/LLM_Chat'
+-> Scene/LLM_Chat
 
