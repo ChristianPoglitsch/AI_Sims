@@ -12,6 +12,7 @@ namespace AiSims
     public class ConversationManager : MonoBehaviour
     {
         public TMP_Text gameStatusInformation;
+        public GameObject npcThinking;
 
         public Speech2Text speech2Text;
         public bool UserVoiceEnable = false;
@@ -26,6 +27,7 @@ namespace AiSims
         private MessageDecorator messageDecorator = null;
 
         private bool talking = false;
+        private bool isNpcTalking = false;
         private string currentMessage;
 
         private bool isEvaluating = false;
@@ -53,6 +55,9 @@ namespace AiSims
                 messageDecorator.SetLlmHandler(questHandler);
             }
             Logger.Log(LoggingInfo.Scene, "Start Scene", true);
+
+            if(npcThinking)
+                npcThinking.SetActive(false);
         }
 
         // This function will be called when the NPC finishes talking
@@ -60,7 +65,7 @@ namespace AiSims
         {
             NpcConnection npcConnection = currentNPC.GetNpcConnection();
             float chance = Random.value; // float between 0.0 and 1.0
-            bool isNpcTalking = false;
+            isNpcTalking = false;
 
             if (npcConnection != null)
             {
@@ -71,7 +76,6 @@ namespace AiSims
 
                     Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                     nextNpc.ProcessMessage(currentMessage);
-                    isNpcTalking = true;
                     lastNpc = nextNpc;
                 }
             }
@@ -107,14 +111,6 @@ namespace AiSims
 
         public void TalkUser()
         {
-            if (gameStatusInformation.text == string.Empty) return;
-            if(speech2Text.Recording())
-            {
-                gameStatusInformation.text = npcTalking;
-                speech2Text.ToggleRecording();
-                return;
-            }
-
             if (talking) return;
             gameStatusInformation.text = userIsTalking;
 
@@ -128,18 +124,25 @@ namespace AiSims
 
         public void TalkUserFinished()
         {
-            if (!talking) return;
-            gameStatusInformation.text = npcTalking;
+            if (isNpcTalking) return;
 
             if (UserVoiceEnable && currentNPC != null)
             {
+                isNpcTalking = true;
+                gameStatusInformation.text = npcTalking;
+
+                if (npcThinking)
+                {
+                    npcThinking.SetActive(true);
+                    PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinking.transform);
+                }
+
                 speech2Text.ToggleRecording();
             }
         }
 
         public void ProcessMessage(string message)
         {
-            if (gameStatusInformation.text == string.Empty) return;
             if (talking) return;
             if (message == string.Empty) return;
 
@@ -148,6 +151,12 @@ namespace AiSims
 
             if (currentNPC != null)
             {
+                if (npcThinking)
+                {
+                    npcThinking.SetActive(true);
+                    PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinking.transform);
+                }
+
                 Logger.Log(LoggingInfo.DialogueUser, message, true);
 
                 currentNPC.ProcessMessage(message);
@@ -206,6 +215,8 @@ namespace AiSims
             if (NpcVoiceEnable && talk != null && npcHandler.npc != null)
             {
                 gameStatusInformation.text = string.Empty;
+                if (npcThinking)
+                    npcThinking.SetActive(false);
 
                 var voiceHandler = npcHandler.npc.GetComponent<VoiceHandler>();
 
@@ -215,6 +226,8 @@ namespace AiSims
             else if(!isEvaluating)
             {
                 gameStatusInformation.text = string.Empty;
+                if (npcThinking)
+                    npcThinking.SetActive(false);
 
                 if (messageDecorator != null)
                 {
@@ -239,7 +252,6 @@ namespace AiSims
             // Check if stop recording is required
             if (talking)
             {
-                TalkUser();
                 return;
             }
 
@@ -279,7 +291,6 @@ namespace AiSims
             // Check if stop recording is required
             if (talking)
             {
-                TalkUser();
                 return;
             }
 
@@ -323,5 +334,56 @@ namespace AiSims
             selectedObject.transform.rotation = originalRotation;
             Debug.Log("Restored orientation for NPC: " + selectedObject.name);
         }
+
+        public bool Talking()
+        {
+            return talking;
+        }
+
+        /// <summary>
+        /// Positions the target transform (e.g., npcThinking) one meter to the right
+        /// of the specified NPC, based on the NPC's current world orientation.
+        /// Keeps the object independent (not parented) and updates immediately.
+        /// </summary>
+        /// <param name="npc">The NPC whose position and rotation define the placement.</param>
+        /// <param name="marker">The independent transform to position (e.g., npcThinking).</param>
+        /// <param name="horizontalDistance">Horizontal offset in meters to the right of the NPC (default 0.3).</param>
+        /// <param name="verticalOffset">Vertical offset in meters above the NPC (default 0.1).</param>
+        /// <param name="faceCamera">If true, rotates the marker to face the main camera instantly.</param>
+        public void PositionMarkerRightOfNPC(Transform npc, Transform marker,
+            float horizontalDistance = 0.4f, float verticalOffset = 1.7f, bool faceCamera = true)
+        {
+            if (npc == null || marker == null)
+                return;
+
+            // Calculate right-hand direction based on NPC orientation
+            Vector3 rightDir = npc.right;
+
+            // Compute target position: right side + vertical offset
+            Vector3 targetPos = npc.position + rightDir * horizontalDistance;
+            targetPos.y = npc.position.y + verticalOffset;
+
+            // Instantly set position (no interpolation)
+            marker.position = targetPos;
+
+            // Update rotation instantly
+            if (faceCamera && Camera.main != null)
+            {
+                // Make the marker face the camera directly
+                marker.LookAt(Camera.main.transform);
+
+                // Optionally, keep upright (prevent tilting)
+                Vector3 euler = marker.eulerAngles;
+                euler.x = 0f;
+                euler.z = 0f;
+                marker.eulerAngles = euler;
+            }
+            else
+            {
+                // Align rotation with the NPC
+                marker.rotation = npc.rotation;
+            }
+        }
+
     }
 }

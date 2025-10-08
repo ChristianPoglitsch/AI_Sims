@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace AiSims
 {
@@ -49,6 +50,12 @@ namespace AiSims
         public void OnFire()
         {
             if (inputField != null && inputFieldUsed) return;
+
+            if(conversationManager.Talking())
+            {
+                conversationManager.TalkUserFinished();
+                return;
+            }
 
             conversationManager.OrientateNpcToCameraAndStartTalk();
         }
