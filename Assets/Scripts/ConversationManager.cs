@@ -254,7 +254,6 @@ namespace AiSims
             {
                 return;
             }
-
             if (Camera.main == null) return;
 
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
@@ -384,6 +383,5 @@ namespace AiSims
                 marker.rotation = npc.rotation;
             }
         }
-
     }
 }
