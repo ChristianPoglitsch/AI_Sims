@@ -710,8 +710,58 @@ MonoBehaviour:
     delaySeconds: 0
     isActive: 1
     difficulty: 1
+  - llmCharacter: {fileID: 1665082472}
+    promptText: "You are Clara, a friendly and supportive colleague in the city of
+      SimVille. Your role is to guide the player through their first quest: ordering
+      food at the burger shop.\n\nInstructions\n\nGreet the player warmly and explain
+      the task clearly: they should go into the burger shop and order food.\n\nDo
+      not accompany them inside; wait outside as a supportive figure.\n\nKeep your
+      guidance short, polite, and encouraging.\n\nFeedback Phase\n\nWhen the player
+      returns after ordering:\n\nAnalyze the conversation log (the player\u2019s
+      chat messages during the order). Base all feedback on what the player actually
+      said.\n\nAlways provide clear feedback on their performance.\n\nIf the player
+      did well, highlight their strengths (e.g., \u201CYou were polite and confident\u201D,
+      \u201CYou asked about the drinks, which was great\u201D).\n\nIf the player
+      made mistakes or missed steps, give constructive negative feedback that helps
+      them improve (e.g., \u201CYou forgot to order food this time \u2014 try adding
+      it next round\u201D, \u201CYou didn\u2019t finish your order clearly\u201D).\n\nIf
+      the player behaved unfriendly or rude, mention it gently and explain why friendliness
+      is important (e.g., \u201CYou sounded a bit unfriendly \u2014 try adding a
+      smile or saying thank you next time\u201D).\n\nAlways balance criticism with
+      encouragement. Even when pointing out errors or unfriendly behavior, suggest
+      one clear improvement for the next attempt.\n\nKeep feedback short, specific,
+      and practical."
+    promptTextChallenging: "You are Clara, a friendly and supportive colleague in
+      the city of SimVille. Your role is to guide the player through their quest:
+      entering Big Burger and practicing small talk with the colleagues who are already
+      inside the restaurant.\n\nInstructions\n\nGreet the player warmly and explain
+      the task clearly: they should go into Big Burger and start a short, friendly
+      small talk conversation with the colleagues inside.\n\nDo not accompany them
+      into the restaurant; instead, wait outside as a supportive guide.\n\nKeep your
+      guidance short, polite, and encouraging.\n\nSuggest simple small talk starters
+      if needed (e.g., a friendly greeting, asking how their day is going, commenting
+      on the food or atmosphere).\n\nRemind the player that the goal is to be friendly,
+      approachable, and natural.\n\nFeedback Phase\n\nWhen the player comes back
+      after their attempt:\n\nAnalyze the conversation log (the player\u2019s chat
+      messages with the colleagues). Base all feedback only on what the player actually
+      said.\n\nAlways provide clear feedback on how well they managed the small talk.\n\nIf
+      the player did well, highlight specific strengths (e.g., \u201CYou asked about
+      their day and kept it light \u2014 that was a great way to connect.\u201D).\n\nIf
+      the player missed steps or made mistakes, give constructive advice (e.g., \u201CYou
+      greeted them, but you didn\u2019t keep the talk going \u2014 try asking one
+      more question next time.\u201D).\n\nIf the player came across as unfriendly,
+      too formal, or dismissive, point it out gently and explain why warmth and politeness
+      matter at work (e.g., \u201CYou ended the talk too suddenly \u2014 next time,
+      try saying goodbye politely.\u201D).\n\nAlways balance encouragement with one
+      clear suggestion for improvement so the player knows exactly what to try on
+      the next attempt.\n\nStyle\n\nKeep all responses short, specific, and practical,
+      so the player feels supported and knows how to improve their small talk step
+      by step."
+    delaySeconds: 0
+    isActive: 1
+    difficulty: 1
   useGlobalDifficulty: 1
-  globalDifficulty: 1
+  globalDifficulty: 0
 --- !u!4 &196257198
 Transform:
   m_ObjectHideFlags: 0
@@ -2402,8 +2452,8 @@ Transform:
   - {fileID: 1160763731}
   - {fileID: 1582766585}
   - {fileID: 1543839157}
-  - {fileID: 753370566}
   - {fileID: 1614776985}
+  - {fileID: 753370566}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &753370565
@@ -2422,7 +2472,7 @@ PrefabInstance:
     - target: {fileID: 1811122272821274886, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.044999927
+      value: 0.044999987
       objectReference: {fileID: 0}
     - target: {fileID: 1811122272821274886, guid: 76f3439a0ae796e4b81bee3f91f888ee,
         type: 3}
@@ -2672,142 +2722,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &753823213
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 753823214}
-  - component: {fileID: 753823216}
-  - component: {fileID: 753823215}
-  m_Layer: 5
-  m_Name: GameStateInfo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &753823214
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753823213}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1904762599}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.383, y: -0.26}
-  m_SizeDelta: {x: 10, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &753823215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753823213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: User can talk ...
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &753823216
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753823213}
-  m_CullTransparentMesh: 1
 --- !u!1001 &781581813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7645,7 +7559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1742231187
 Transform:
   m_ObjectHideFlags: 0
@@ -7654,14 +7568,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742231184}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.043238677, y: 0.14306378, z: -0.28605935, w: 0.94648474}
   m_LocalPosition: {x: 27.75013, y: 1.18168, z: 24.406}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2034393574}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 17.191, z: -33.633}
 --- !u!1 &1801637154
 GameObject:
   m_ObjectHideFlags: 0
@@ -8051,31 +7965,12 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Bill
-  prompt: "You are Bill, a calm and encouraging therapist in SimVille. Your role
-    is to guide the player through their quest: entering Big Burger and practicing
-    small talk with the colleagues who are already inside the restaurant.\n\nInstructions\n\nGreet
-    the player warmly and explain the task clearly: they should go into Big Burger
-    and start a short, friendly small talk conversation with the colleagues inside.\n\nDo
-    not accompany them into the restaurant; instead, wait outside as a supportive
-    guide.\n\nKeep your guidance short, polite, and encouraging.\n\nSuggest simple
-    small talk starters if needed (e.g., a friendly greeting, asking how their day
-    is going, commenting on the food or atmosphere).\n\nRemind the player that the
-    goal is to be friendly, approachable, and natural.\n\nFeedback Phase\n\nWhen
-    the player comes back after their attempt:\n\nAnalyze the conversation log (the
-    player\u2019s chat messages with the colleagues). Base all feedback only on what
-    the player actually said.\n\nAlways provide clear feedback on how well they managed
-    the small talk.\n\nIf the player did well, highlight specific strengths (e.g.,
-    \u201CYou asked about their day and kept it light \u2014 that was a great way
-    to connect.\u201D).\n\nIf the player missed steps or made mistakes, give constructive
-    advice (e.g., \u201CYou greeted them, but you didn\u2019t keep the talk going
-    \u2014 try asking one more question next time.\u201D).\n\nIf the player came
-    across as unfriendly, too formal, or dismissive, point it out gently and explain
-    why warmth and politeness matter at work (e.g., \u201CYou ended the talk too
-    suddenly \u2014 next time, try saying goodbye politely.\u201D).\n\nAlways balance
-    encouragement with one clear suggestion for improvement so the player knows exactly
-    what to try on the next attempt.\n\nStyle\n\nKeep all responses short, specific,
-    and practical, so the player feels supported and knows how to improve their small
-    talk step by step."
+  prompt: You are Bill, a friendly and supportive resident of SimVille. Speak in
+    a warm, welcoming tone. Greet the player and make them feel comfortable in the
+    city. Your main goal is to guide the player to Clara, who is standing in front
+    of Big Burger and waiting with new quests. Encourage the player to meet her for
+    further help and adventures. Keep your responses concise, positive, and in character
+    as a helpful local citizen.
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -8262,123 +8157,6 @@ Transform:
   - {fileID: 1737229503}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1904762598
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1904762599}
-  - component: {fileID: 1904762602}
-  - component: {fileID: 1904762601}
-  - component: {fileID: 1904762600}
-  - component: {fileID: 1904762603}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1904762599
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904762598}
-  m_LocalRotation: {x: -0, y: 0.93757915, z: -0, w: 0.34777203}
-  m_LocalPosition: {x: 0, y: 0, z: 27.645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 753823214}
-  m_Father: {fileID: 2083289347}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 22.436, y: 1.788}
-  m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1904762600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904762598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1904762601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904762598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
---- !u!223 &1904762602
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904762598}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 8642468337098103698}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!114 &1904762603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904762598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce472f25cde45aa4ea85446843911bd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WorldCanvasFollow
-  targetCamera: {fileID: 8642468337098103698}
-  distance: 1
 --- !u!1 &1916902849
 GameObject:
   m_ObjectHideFlags: 0
@@ -14440,38 +14218,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2036062489}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2083289346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2083289347}
-  m_Layer: 0
-  m_Name: UI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2083289347
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083289346}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1904762599}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &119133014681378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2639170659340640711, guid: c7fe1f3378bbce44ca58132ff6faff4f,
@@ -15023,7 +14769,7 @@ PrefabInstance:
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.416
+      value: 2.979
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
@@ -15033,7 +14779,7 @@ PrefabInstance:
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.878
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
@@ -15432,7 +15178,7 @@ PrefabInstance:
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.816
+      value: 2.776
       objectReference: {fileID: 0}
     - target: {fileID: 7244146772135435531, guid: 7de71eab801b1c543a963dcf118aa717,
         type: 3}
@@ -15858,22 +15604,22 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.469
+      value: 28.85
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.707
+      value: 2.701
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 57.975998
+      value: 56.23
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.83870715
+      value: 0.997162
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15883,7 +15629,7 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5445827
+      value: -0.07528691
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15898,7 +15644,7 @@ PrefabInstance:
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -65.992
+      value: -8.635
       objectReference: {fileID: 0}
     - target: {fileID: 5909305789699289006, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -15908,7 +15654,7 @@ PrefabInstance:
     - target: {fileID: 6114742639378368390, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
       propertyPath: m_Name
-      value: Zacky
+      value: Bill
       objectReference: {fileID: 0}
     - target: {fileID: 6114742639378368390, guid: 0c96d39fb2d96654e856a0e97c353368,
         type: 3}
@@ -16430,7 +16176,7 @@ PrefabInstance:
     - target: {fileID: 6693204555555528124, guid: 0f8001637cc82c341a24f553bf1efe9e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.818
+      value: 2.773
       objectReference: {fileID: 0}
     - target: {fileID: 6693204555555528124, guid: 0f8001637cc82c341a24f553bf1efe9e,
         type: 3}
@@ -17287,7 +17033,7 @@ PrefabInstance:
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.712
+      value: 2.707
       objectReference: {fileID: 0}
     - target: {fileID: 2394172735056364002, guid: c7fe1f3378bbce44ca58132ff6faff4f,
         type: 3}
@@ -21547,7 +21293,7 @@ PrefabInstance:
     - target: {fileID: 7932808809351449529, guid: 9dcd0eef7e8c3af4ab8857598bb6ca0d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.815
+      value: 2.777
       objectReference: {fileID: 0}
     - target: {fileID: 7932808809351449529, guid: 9dcd0eef7e8c3af4ab8857598bb6ca0d,
         type: 3}
@@ -21963,7 +21709,7 @@ PrefabInstance:
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.786
+      value: 2.771
       objectReference: {fileID: 0}
     - target: {fileID: 2045084469284747364, guid: 161b81a950d60f64ca5ce92b61a8a1ac,
         type: 3}
@@ -23079,12 +22825,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8d20b94304d6b4aa68dd42d0a9d562, type: 3}
---- !u!20 &8642468337098103698 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2550441759580168271, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
-    type: 3}
-  m_PrefabInstance: {fileID: 8642468337098103697}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8710000138675048311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23190,9 +22930,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
+      propertyPath: npcThinkingFeedback
+      value: 
+      objectReference: {fileID: 1063242900}
+    - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
+        type: 3}
+      propertyPath: userTalkingFeedback
+      value: 
+      objectReference: {fileID: 1742231184}
+    - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
+        type: 3}
       propertyPath: gameStatusInformation
       value: 
-      objectReference: {fileID: 753823215}
+      objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: maxNpcConversationsUntilEvaluation
@@ -23649,7 +23399,6 @@ SceneRoots:
   - {fileID: 624976843}
   - {fileID: 752409432}
   - {fileID: 1048704341}
-  - {fileID: 2083289347}
   - {fileID: 1916902850}
   - {fileID: 1288168122}
   - {fileID: 8426922583186148652}

@@ -11,8 +11,8 @@ namespace AiSims
 {
     public class ConversationManager : MonoBehaviour
     {
-        public TMP_Text gameStatusInformation;
-        public GameObject npcThinking;
+        public GameObject npcThinkingFeedback;
+        public GameObject userTalkingFeedback;
 
         public Speech2Text speech2Text;
         public bool UserVoiceEnable = false;
@@ -26,16 +26,12 @@ namespace AiSims
         private Talk talk;
         private MessageDecorator messageDecorator = null;
 
-        private bool talking = false;
+        private bool isUserTalking = false;
         private bool isNpcTalking = false;
         private string currentMessage;
 
         private bool isEvaluating = false;
-        private LLM_Handler lastNpc = null;
-
-        private readonly string userCanTalk = "User can talk ... ";
-        private readonly string userIsTalking = "User is talking ... ";
-        private readonly string npcTalking = "NPC is thinking ...";        
+        private LLM_Handler lastNpc = null;     
 
         private Quaternion originalRotation;
 
@@ -56,8 +52,10 @@ namespace AiSims
             }
             Logger.Log(LoggingInfo.Scene, "Start Scene", true);
 
-            if(npcThinking)
-                npcThinking.SetActive(false);
+            if(npcThinkingFeedback)
+                npcThinkingFeedback.SetActive(false);
+            if (userTalkingFeedback)
+                userTalkingFeedback.SetActive(false);
         }
 
         // This function will be called when the NPC finishes talking
@@ -72,8 +70,6 @@ namespace AiSims
                 LLM_Handler nextNpc = npcConnection.RandomHandler;
                 if (nextNpc != lastNpc && nextNpc != null && chance < chanceNpcTalking)
                 {
-                    gameStatusInformation.text = string.Empty;
-
                     Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                     nextNpc.ProcessMessage(currentMessage);
                     lastNpc = nextNpc;
@@ -92,8 +88,7 @@ namespace AiSims
                     messageDecorator.EvaluateConversation();
                 }
 
-                gameStatusInformation.text = userCanTalk;
-                talking = false;
+                isUserTalking = false;
             }
         }
 
@@ -111,12 +106,17 @@ namespace AiSims
 
         public void TalkUser()
         {
-            if (talking) return;
-            gameStatusInformation.text = userIsTalking;
+            if (isUserTalking) return;
+
+            if (userTalkingFeedback)
+            {
+                userTalkingFeedback.SetActive(true);
+                PositionMarkerRightOfNPC(currentNPC.npc.transform, userTalkingFeedback.transform);
+            }
 
             if (UserVoiceEnable && currentNPC != null)
             {
-                talking = true;
+                isUserTalking = true;
                 speech2Text.Set_LLM_Handler(currentNPC);
                 speech2Text.ToggleRecording();
             }
@@ -126,15 +126,17 @@ namespace AiSims
         {
             if (isNpcTalking) return;
 
+            if (userTalkingFeedback)
+                userTalkingFeedback.SetActive(false);
+
             if (UserVoiceEnable && currentNPC != null)
             {
                 isNpcTalking = true;
-                gameStatusInformation.text = npcTalking;
 
-                if (npcThinking)
+                if (npcThinkingFeedback)
                 {
-                    npcThinking.SetActive(true);
-                    PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinking.transform);
+                    npcThinkingFeedback.SetActive(true);
+                    PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinkingFeedback.transform);
                 }
 
                 speech2Text.ToggleRecording();
@@ -143,18 +145,20 @@ namespace AiSims
 
         public void ProcessMessage(string message)
         {
-            if (talking) return;
+            if (isUserTalking) return;
             if (message == string.Empty) return;
 
-            talking = true;
-            gameStatusInformation.text = npcTalking;
+            if (userTalkingFeedback)
+                userTalkingFeedback.SetActive(false);
+
+            isUserTalking = true;
 
             if (currentNPC != null)
             {
-                if (npcThinking)
+                if (npcThinkingFeedback)
                 {
-                    npcThinking.SetActive(true);
-                    PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinking.transform);
+                    npcThinkingFeedback.SetActive(true);
+                    PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinkingFeedback.transform);
                 }
 
                 Logger.Log(LoggingInfo.DialogueUser, message, true);
@@ -214,9 +218,8 @@ namespace AiSims
 
             if (NpcVoiceEnable && talk != null && npcHandler.npc != null)
             {
-                gameStatusInformation.text = string.Empty;
-                if (npcThinking)
-                    npcThinking.SetActive(false);
+                if (npcThinkingFeedback)
+                    npcThinkingFeedback.SetActive(false);
 
                 var voiceHandler = npcHandler.npc.GetComponent<VoiceHandler>();
 
@@ -225,9 +228,8 @@ namespace AiSims
             }
             else if(!isEvaluating)
             {
-                gameStatusInformation.text = string.Empty;
-                if (npcThinking)
-                    npcThinking.SetActive(false);
+                if (npcThinkingFeedback)
+                    npcThinkingFeedback.SetActive(false);
 
                 if (messageDecorator != null)
                 {
@@ -250,7 +252,7 @@ namespace AiSims
         public void OrientateNpcToCameraAndStartTalk()
         {
             // Check if stop recording is required
-            if (talking)
+            if (isUserTalking)
             {
                 return;
             }
@@ -273,7 +275,6 @@ namespace AiSims
                 if (npcBridge != null)
                 {
                     Debug.Log("Hit NPC: " + hit.collider.name);
-                    gameStatusInformation.text = userCanTalk;
 
                     // Make NPC look at player horizontally
                     Vector3 lookTarget = Camera.main.transform.position;
@@ -288,7 +289,7 @@ namespace AiSims
         public void OrientateNpcToCameraAndStartTalkNoRayCast(GameObject selectedObject)
         {
             // Check if stop recording is required
-            if (talking)
+            if (isUserTalking)
             {
                 return;
             }
@@ -336,7 +337,7 @@ namespace AiSims
 
         public bool Talking()
         {
-            return talking;
+            return isUserTalking;
         }
 
         /// <summary>

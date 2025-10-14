@@ -70,6 +70,11 @@ public class Complexity : MonoBehaviour
             }
         }
 
+        UpdateLlmInstruction();
+    }
+
+    public void UpdateLlmInstruction()
+    {
         // Handle LLM Characters
         foreach (var entry in llmEntries)
         {
@@ -81,7 +86,7 @@ public class Complexity : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("LlmEntry has a null LLMCharacter reference.");
+                Debug.LogWarning("LlmEntry has a null LLM Character reference.");
             }
         }
     }
