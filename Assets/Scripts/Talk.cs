@@ -9,7 +9,8 @@ namespace AiSims
     public class Talk : MonoBehaviour
     {
         public Text2Speech speech; // assign in Inspector
-        public AudioSource audioSource;
+        
+        private AudioSource audioSource;
 
         // Event to notify when speech finished
         public event Action OnSpeechFinished;

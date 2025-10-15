@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace AiSims
 {
@@ -20,20 +20,26 @@ namespace AiSims
         public float gravity = -9.81f;
 
         private Vector3 velocity;
-
-        // Reference to the main camera
         private float pitch = 0f;
-
-        // Camera height offset (like head height)
         public float cameraHeight = 1.0f;
 
         public ConversationManager conversationManager;
-
         public TMP_InputField inputField;
         private bool inputFieldUsed = false;
 
-        // --- NEW: toggle look ---
         private bool allowLook = false;
+
+        // Updated InteractionEntry
+        [System.Serializable]
+        public class InteractionEntry
+        {
+            [Header("Interaction Setup")]
+            public GameObject targetObject;     // The GameObject to detect (must have collider)
+            public UnityEvent onInteract;       // Directly assignable function call
+        }
+
+        [Header("Custom Interactions")]
+        public InteractionEntry[] interactionEntries;
 
         void Awake()
         {
@@ -43,21 +49,57 @@ namespace AiSims
 
         void Start()
         {
-            inputField.onSelect.AddListener(OnSelected);
-            inputField.onDeselect.AddListener(OnDeselected);
+            if (inputField != null)
+            {
+                inputField.onSelect.AddListener(OnSelected);
+                inputField.onDeselect.AddListener(OnDeselected);
+            }
         }
 
         public void OnFire()
         {
+            // Try all custom interactions first
+            if (TryCustomInteraction()) return;
+
             if (inputField != null && inputFieldUsed) return;
 
-            if(conversationManager.Talking())
+            // Default conversation logic
+            if (conversationManager != null)
             {
-                conversationManager.TalkUserFinished();
-                return;
+                if (conversationManager.Talking())
+                {
+                    conversationManager.TalkUserFinished();
+                    return;
+                }
+
+                conversationManager.OrientateNpcToCameraAndStartTalk();
+            }
+        }
+
+        private bool TryCustomInteraction()
+        {
+            Camera cam = Camera.main;
+            if (cam == null) return false;
+
+            foreach (var entry in interactionEntries)
+            {
+                if (entry.targetObject == null) continue;
+
+                Ray ray = Camera.main.ScreenPointToRay(UnityEngine.Input.mousePosition);
+                Debug.DrawRay(ray.origin, ray.direction * 50f, Color.green, 2f);
+                if (Physics.Raycast(ray, out RaycastHit hit, 6f))
+                {
+                    Debug.Log($"[Interaction] Hit {hit.collider.gameObject.name}");
+                    if (hit.collider.gameObject == entry.targetObject)
+                    {
+                        entry.onInteract?.Invoke(); // Direct UnityEvent call
+                        Debug.Log($"[Interaction] Invoked event on {entry.targetObject.name}");
+                        return true;
+                    }
+                }
             }
 
-            conversationManager.OrientateNpcToCameraAndStartTalk();
+            return false;
         }
 
         void Update()
@@ -66,61 +108,36 @@ namespace AiSims
 
             Transform camTransform = Camera.main.transform;
 
-            // --- INPUT ---
             moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
             lookInput = playerInput.actions["Look"].ReadValue<Vector2>();
 
-            // --- Toggle look on RMB press ---
             if (Mouse.current.rightButton.wasPressedThisFrame)
             {
                 allowLook = !allowLook;
-                //Debug.Log("Camera look toggled: " + allowLook);
             }
 
-            // --- MOVEMENT ---
-            Vector3 forward = transform.forward;
-            forward.y = 0f;
-            forward.Normalize();
-
-            Vector3 right = transform.right;
-            right.y = 0f;
-            right.Normalize();
+            Vector3 forward = transform.forward; forward.y = 0f; forward.Normalize();
+            Vector3 right = transform.right; right.y = 0f; right.Normalize();
 
             Vector3 move = forward * moveInput.y + right * moveInput.x;
             controller.Move(move * moveSpeed * Time.deltaTime);
 
-            // Apply gravity
-            if (controller.isGrounded && velocity.y < 0)
-            {
-                velocity.y = -2f;
-            }
+            if (controller.isGrounded && velocity.y < 0) velocity.y = -2f;
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
 
-            // --- ROTATION (only if enabled) ---
             if (allowLook)
             {
                 transform.Rotate(Vector3.up, lookInput.x * lookSpeed * Time.deltaTime);
-
                 pitch -= lookInput.y * lookSpeed * Time.deltaTime;
                 pitch = Mathf.Clamp(pitch, -80f, 80f);
                 camTransform.rotation = Quaternion.Euler(pitch, transform.eulerAngles.y, 0f);
             }
 
-            // --- CAMERA FOLLOW ---
             camTransform.position = transform.position + new Vector3(0, cameraHeight, 0);
         }
 
-        void OnSelected(string text)
-        {
-            //Debug.Log("Input field selected → user may start typing.");
-            inputFieldUsed = true;
-        }
-
-        void OnDeselected(string text)
-        {
-            //Debug.Log("Input field deselected → user stopped typing.");
-            inputFieldUsed = false;
-        }
+        void OnSelected(string text) => inputFieldUsed = true;
+        void OnDeselected(string text) => inputFieldUsed = false;
     }
 }
