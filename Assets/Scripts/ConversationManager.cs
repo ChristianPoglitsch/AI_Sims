@@ -21,7 +21,7 @@ namespace AiSims
         public LLM_Handler companionNPC;
         public float chanceNpcTalking = 0.3f;
 
-        private LLM_Handler currentNPC;       
+        private LLM_Handler currentNPC;
 
         private Talk talk;
         private MessageDecorator messageDecorator = null;
@@ -31,7 +31,7 @@ namespace AiSims
         private string currentMessage;
 
         private bool isEvaluating = false;
-        private LLM_Handler lastNpc = null;     
+        private LLM_Handler lastNpc = null;
 
         private Quaternion originalRotation;
 
@@ -52,7 +52,7 @@ namespace AiSims
             }
             Logger.Log(LoggingInfo.Scene, "Start Scene", true);
 
-            if(npcThinkingFeedback)
+            if (npcThinkingFeedback)
                 npcThinkingFeedback.SetActive(false);
             if (userTalkingFeedback)
                 userTalkingFeedback.SetActive(false);
@@ -61,6 +61,7 @@ namespace AiSims
         // This function will be called when the NPC finishes talking
         private void OnNpcSpeechFinished()
         {
+            Logger.Log(LoggingInfo.DialogueNpc, $"[NPC] NPC talk stop", true);
             NpcConnection npcConnection = currentNPC.GetNpcConnection();
             float chance = Random.value; // float between 0.0 and 1.0
             isNpcTalking = false;
@@ -71,6 +72,7 @@ namespace AiSims
                 if (nextNpc != lastNpc && nextNpc != null && chance < chanceNpcTalking)
                 {
                     Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
+                    Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start nextNpc", true);
                     nextNpc.ProcessMessage(currentMessage);
                     lastNpc = nextNpc;
                 }
@@ -85,6 +87,7 @@ namespace AiSims
                 if (currentNPC.EvaluateConversation())
                 {
                     isEvaluating = true;
+                    Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start EvaluateConversation", true);
                     messageDecorator.EvaluateConversation();
                 }
 
@@ -95,6 +98,7 @@ namespace AiSims
         public void SetCurrentNPC(NPCToStoryBridge npc)
         {
             currentNPC = npc.llmHandler;
+            Logger.Log(LoggingInfo.Scene, $"[NPC] {currentNPC.name}", true);
             messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
         }
 
@@ -114,6 +118,7 @@ namespace AiSims
                 PositionMarkerRightOfNPC(currentNPC.npc.transform, userTalkingFeedback.transform);
             }
 
+            Logger.Log(LoggingInfo.DialogueUser, $"[User] User talk start", true);
             if (UserVoiceEnable && currentNPC != null)
             {
                 isUserTalking = true;
@@ -139,6 +144,7 @@ namespace AiSims
                     PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinkingFeedback.transform);
                 }
 
+                Logger.Log(LoggingInfo.DialogueUser, "Stop talking", true);
                 speech2Text.ToggleRecording();
             }
         }
@@ -161,17 +167,22 @@ namespace AiSims
                     PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinkingFeedback.transform);
                 }
 
-                Logger.Log(LoggingInfo.DialogueUser, message, true);
-
+                Logger.Log(LoggingInfo.MessageUser, message, true);
+                Logger.Log(LoggingInfo.DialogueUser, $"[User] User talk stop", true);
+                Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start ProcessMessage", true);
                 currentNPC.ProcessMessage(message);
             }
         }
 
         public void TalkNpc(string replyMessage, LLM_Handler npc, string aiName)
         {
-            Logger.Log(LoggingInfo.DialoagNpc, replyMessage, true);
+            if (!isEvaluating)
+                Logger.Log(LoggingInfo.MessageNpc, replyMessage, true);
+            else
+                Logger.Log(LoggingInfo.MessageNpc, "Evaluation: " + replyMessage, true);
+            Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM stop", true);
 
-            StartCoroutine(TalkNpcCoroutine(replyMessage, npc,  aiName));
+            StartCoroutine(TalkNpcCoroutine(replyMessage, npc, aiName));
         }
 
         public void AddMessage(LLM_Handler handler, string message, MessageTypes type)
@@ -220,30 +231,32 @@ namespace AiSims
             {
                 if (npcThinkingFeedback)
                     npcThinkingFeedback.SetActive(false);
+                Logger.Log(LoggingInfo.DialogueNpc, $"[NPC] NPC talk start", true);
 
                 var voiceHandler = npcHandler.npc.GetComponent<VoiceHandler>();
 
                 // Finally call Text2Speech
                 talk.Text2Speech(currentMessage, voiceHandler, npcHandler.GetVoiceName());
             }
-            else if(!isEvaluating)
+            else if (!isEvaluating)
             {
                 if (npcThinkingFeedback)
                     npcThinkingFeedback.SetActive(false);
+                Logger.Log(LoggingInfo.DialogueNpc, $"[NPC] NPC talk start", true);
 
                 if (messageDecorator != null)
                 {
                     messageDecorator.ProcessMessage(replyMessage, aiName);
                 }
 
-                // 🕒 Estimate reading time: characters * factor
+                // Estimate reading time: characters * factor
                 float readingSpeed = 0.05f; // seconds per character (~200 wpm)
                 float waitTime = Mathf.Max(1.5f, replyMessage.Length * readingSpeed);
                 yield return new WaitForSeconds(waitTime);
 
                 OnNpcSpeechFinished();
             }
-            else if(isEvaluating)
+            else if (isEvaluating)
             {
                 isEvaluating = false;
             }

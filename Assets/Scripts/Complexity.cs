@@ -152,7 +152,14 @@ public class Complexity : MonoBehaviour
         }
 
         var entry = llmQuestEntries[index];
-        // Optionally refresh prompt immediately
+
+        if (questIndex < 0 || questIndex >= entry.promptTexts.Count)
+        {
+            Debug.LogWarning($"Invalid quest index {questIndex}. List size: {entry.promptTexts.Count}");
+            return;
+        }
+
+        // Refresh prompt immediately
         if (entry.isActive && entry.llmCharacter != null && questIndex < entry.promptTexts.Count)
         {
             string finalPrompt = entry.promptTexts[questIndex];

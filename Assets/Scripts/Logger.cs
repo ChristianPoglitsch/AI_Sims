@@ -9,7 +9,10 @@ namespace AiSims
     {
         // Dialogue/Interrupt
         DialogueUser,
-        DialoagNpc,
+        MessageUser,
+        DialogueNpc,
+        MessageNpc,
+        LlmProcessing,
         Scene
     }
 
@@ -25,20 +28,33 @@ namespace AiSims
         {
             // Dialogue/Interrupt
             {LoggingInfo.DialogueUser, "DialogueUser" },
-            {LoggingInfo.DialoagNpc, "DialoagNpc" },
+            {LoggingInfo.MessageUser, "MessageUser" },
+            {LoggingInfo.DialogueNpc, "DialogueNpc" },
+            {LoggingInfo.MessageNpc, "MessageNpc" },
+            {LoggingInfo.LlmProcessing, "LlmProcessing" },
             {LoggingInfo.Scene, "Scene" }
         };
 
-        public static string CreateLogEntry(LoggingInfo info, string message)
+        public static string CreateLogEntry(LoggingInfo info, string message, bool useUnixTimestamp = false)
         {
-          // string time = DateTime.Now.ToString("HH:mm:ss.fff");
-      
-          DateTime utcNow = DateTime.UtcNow;
-          long unixTimestampMilliseconds = ((DateTimeOffset)utcNow).ToUnixTimeMilliseconds();
+            string timeStamp;
 
-          var entry = $"[{unixTimestampMilliseconds}] [{info}] [{message}]";
+            if (useUnixTimestamp)
+            {
+                DateTime utcNow = DateTime.UtcNow;
+                long unixTimestampMilliseconds = ((DateTimeOffset)utcNow).ToUnixTimeMilliseconds();
+                timeStamp = unixTimestampMilliseconds.ToString();
+            }
+            else
+            {
+                // Local time in human-readable format
+                timeStamp = DateTime.Now.ToString("HH:mm:ss.fff");
+            }
+
+            var entry = $"[{timeStamp}] [{info}] {message}";
             return entry;
         }
+
 
         public static void Log(LoggingInfo info, string message, bool includeInFile = false)
         {
