@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Text;
 using System.IO;
+using LLMUnity;
 
 namespace AiSims
 {
@@ -59,6 +60,8 @@ namespace AiSims
         {
             string url = "https://api.openai.com/v1/audio/speech";
             string jsonBody = $"{{\"model\":\"gpt-4o-mini-tts\",\"voice\":\"{voice}\",\"input\":\"{text}\",\"response_format\":\"wav\"}}";
+
+            Debug.Log("[SpeakToClip] " + text);
 
             using (UnityWebRequest www = new UnityWebRequest(url, "POST"))
             {

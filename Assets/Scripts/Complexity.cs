@@ -25,10 +25,13 @@ public class LlmQuestEntry
 {
     [Header("LLM Character Reference")]
     public LLMCharacter llmCharacter; // Reference to an LLMCharacter
+    public LLM_Handler llmHandler;
 
     [Header("Prompts for this Quest")]
     [TextArea(5, 10), Chat]
     public List<string> promptTexts = new List<string>(); // Multiple prompt texts
+    [TextArea(5, 10), Chat]
+    public List<string> quests = new List<string>(); // Multiple prompt texts
 
     public float delaySeconds = 0f;  // Delay before this prompt is triggered
     public bool isActive = false;    // Enable/disable this entry
@@ -160,13 +163,14 @@ public class Complexity : MonoBehaviour
         }
 
         // Refresh prompt immediately
-        if (entry.isActive && entry.llmCharacter != null && questIndex < entry.promptTexts.Count)
+        if (entry.isActive && entry.llmCharacter != null && questIndex < entry.promptTexts.Count && questIndex < entry.quests.Count)
         {
             string finalPrompt = entry.promptTexts[questIndex];
 
             if (!string.IsNullOrEmpty(finalPrompt))
             {
                 entry.llmCharacter.SetPrompt(finalPrompt);
+                entry.llmHandler.EvaluationString = entry.quests[questIndex];
             }
             else
             {

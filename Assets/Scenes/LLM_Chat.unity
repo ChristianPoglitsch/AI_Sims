@@ -263,7 +263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &288815582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -700,6 +700,118 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &855276053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855276056}
+  - component: {fileID: 855276055}
+  - component: {fileID: 855276054}
+  m_Layer: 0
+  m_Name: LLM_for_Quests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &855276054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855276053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 0}
+  conversationManager: {fileID: 998713587}
+  voice: 
+  enableEvaluation: 0
+  EvaluationString: 
+--- !u!114 &855276055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855276053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6c87a428fd5d0be9bbc686bdc8c3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedOptions: 0
+  remote: 0
+  _llm: {fileID: 1150066791}
+  APIKey: 
+  host: localhost
+  port: 13333
+  numRetries: 10
+  save: 
+  saveCache: 0
+  debugPrompt: 0
+  numPredict: -1
+  slot: -1
+  grammar: 
+  grammarJSON: 
+  cachePrompt: 1
+  seed: 0
+  temperature: 0.2
+  topK: 40
+  topP: 0.9
+  minP: 0.05
+  repeatPenalty: 1.1
+  presencePenalty: 0
+  frequencyPenalty: 0
+  typicalP: 1
+  repeatLastN: 64
+  penalizeNl: 1
+  penaltyPrompt: 
+  mirostat: 0
+  mirostatTau: 5
+  mirostatEta: 0.1
+  nProbs: 0
+  ignoreEos: 0
+  nKeep: -1
+  stop: []
+  stream: 1
+  playerName: user
+  AIName: assistant
+  prompt: "You are a helpful, logical assistant. Your only possible replies are the
+    single digits 0 or 1.\r\n\r\nBehavior Rules:\r\n\r\nReply with 1 if the user\u2019s
+    answer, statement, or choice is correct, appropriate, or positive.\r\n\r\nReply
+    with 0 if the user\u2019s answer, statement, or choice is incorrect, inappropriate,
+    or negative.\r\n\r\nNever use words, punctuation, or explanations \u2014 respond
+    only with the digit 0 or 1.\r\n\r\nStay consistent and objective.\r\n\r\nDo not
+    generate any additional text, commentary, or reasoning.\r\n\r\nExample Behavior:\r\n\r\nUser
+    Input\tAgent Reply\r\nIs 2+2=4?\t1\r\nThe capital of France is Berlin.\t0\r\nDid
+    I complete the task successfully?\t1\r\nWas my order incorrect?\t0\r\n"
+  setNKeepToPrompt: 1
+  chat: []
+  grammarString: 
+  grammarJSONString: 
+--- !u!4 &855276056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855276053}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,11 +981,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npc: {fileID: 0}
+  npc: {fileID: 1259918293}
   conversationManager: {fileID: 998713587}
   voice: alloy
-  enableEvaluation: 0
-  EvaluationString: 
+  enableEvaluation: 1
+  EvaluationString: Did the user order and pay for one cheese burger and one cola?
 --- !u!114 &998713584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,9 +1035,29 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: assistant
-  prompt: 'You are a helpful assistant.
-
-    Provide an example for small talk.'
+  prompt: "Mia works at the burger restaurant in SimVille. She is easily frustrated,
+    short-tempered, and often reacts with sarcasm when customers take too long or
+    ask obvious questions. She still does her job correctly but tends to sound impatient
+    or dismissive rather than friendly.\n\nMenu\n\nBurgers\n\nClassic Burger \u2014
+    \u20AC4.50\n\nCheeseburger \u2014 \u20AC5.00 (Special combo with Cola: \u20AC6.00
+    total if directly asked)\n\nVeggie Burger \u2014 \u20AC5.50\n\nSides\n\nFrench
+    Fries \u2014 \u20AC2.50\n\nOnion Rings \u2014 \u20AC2.80\n\nSide Salad \u2014
+    \u20AC3.00\n\nDrinks\n\nCola \u2014 \u20AC2.00\n\nLemonade \u2014 \u20AC2.20\n\nMilkshake
+    \u2014 \u20AC3.50\n\nLLM Instruction\n\nMia should reply in one short, blunt,
+    or sarcastic sentence that sounds impatient or annoyed, but still provides correct
+    information.\nShe works at the burger restaurant in SimVille and may reference
+    the menu or prices, but should not mention the combo deal unless the customer
+    asks about cheaper options or prices.\n\nHer replies should:\n\nSound irritated,
+    sarcastic, or dismissive, but realistic for a restaurant worker.\n\nAvoid unnecessary
+    politeness \u2014 keep it brief and slightly cold.\n\nGive correct answers about
+    food or prices but with minimal enthusiasm.\n\nOnly mention the cheaper combo
+    (\u20AC6 for cheeseburger + cola) if the player specifically asks about cheaper
+    options.\n\nKeep sentences short, natural, and in-character.\n\nExample replies:\n\nYeah,
+    what do you want?\n\nCheeseburger\u2019s five euros, cola\u2019s two \u2014 you
+    can do the math.\n\nIf you\u2019re trying to save money, maybe ask about the
+    deals.\n\nSure, a cheeseburger and cola. Anything else or are we done?\n\nFine.
+    One cheeseburger and cola \u2014 that\u2019ll be six euros if you go for the
+    combo.\n\nYou want cheaper? Then ask before ordering next time.\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -970,11 +1102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61b50a279c66664eb8a72625b9c02a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStatusInformation: {fileID: 288815583}
+  npcThinkingFeedback: {fileID: 0}
+  userTalkingFeedback: {fileID: 0}
   speech2Text: {fileID: 0}
   UserVoiceEnable: 0
   NpcVoiceEnable: 0
-  questHandler: {fileID: 0}
+  questHandler: {fileID: 855276054}
   companionNPC: {fileID: 0}
   chanceNpcTalking: 0.3
 --- !u!1 &1009091506
@@ -1387,6 +1520,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197213031}
   m_CullTransparentMesh: 1
+--- !u!1 &1259918293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259918295}
+  - component: {fileID: 1259918294}
+  m_Layer: 0
+  m_Name: NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1259918294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259918293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1e4627ada789441939a261e5f4aded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AiSims.NPCToStoryBridge
+  llmHandler: {fileID: 998713583}
+--- !u!4 &1259918295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259918293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.07332, y: 0, z: 25.65258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1788891134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,3 +1884,5 @@ SceneRoots:
   - {fileID: 749200892}
   - {fileID: 998713585}
   - {fileID: 1150066792}
+  - {fileID: 1259918295}
+  - {fileID: 855276056}

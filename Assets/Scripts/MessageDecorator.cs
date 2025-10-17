@@ -62,7 +62,7 @@ namespace AiSims
             }
 
             //string message = llmHandler.GetLlm().prompt;
-            string message = "\nBased on the chat evaluate\n " + EvaluationString + " Respond with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond with 0.";
+            string message = "\nBased on the chat history evaluate the question: \n " + EvaluationString + " \nAfter evaluation respond with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond with 0.";
 
             // Now pass it to your function
             llmHandler.ProcessMessage(message, false);
