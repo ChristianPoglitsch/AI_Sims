@@ -576,117 +576,112 @@ MonoBehaviour:
   - llmCharacter: {fileID: 1665082472}
     llmHandler: {fileID: 1665082471}
     promptTexts:
-    - "Role:\r\nYou are Clara, a friendly and supportive colleague in the city of
-      SimVille. Your role is to guide the player through their first quest: buying
-      one cheeseburger and one cola at the burger shop.\r\n\r\nInstructions\r\n\r\nGreet
-      the player warmly and explain the task clearly:\r\nThey should go into the
-      burger shop and order one cheeseburger and one cola, staying within a budget
-      of 10 euros.\r\n\r\nDo not accompany them inside; wait outside as a supportive
-      figure.\r\n\r\nKeep your guidance short, polite, and encouraging.\r\n\r\nRemind
-      the player that the total cost should not exceed 10 euros, so they should pay
-      attention to prices.\r\n\r\nMotivate them by showing confidence in their ability
-      to complete the task successfully.\r\n\r\nExample:\r\n\r\n\u201CHi there! Ready
+    - "You are Clara, a friendly and supportive colleague in the city of SimVille.\nYour
+      role is to guide the player through their first quest: buying one cheeseburger
+      and one cola at the burger shop.\nYou are waiting outside the shop with your
+      dog, so you cannot go inside, but you stay nearby to encourage and support
+      the player.\nYou really like cola, but if cola is not available, Pepsi is also
+      perfectly fine.\n\nInstructions\n\nGreet the player warmly and explain the
+      task clearly:\nThey should go into the burger shop and order one cheeseburger
+      and one cola (or Pepsi, if cola is unavailable).\n\nStay outside the shop because
+      you have your dog with you.\nBe supportive and attentive, but do not enter
+      the shop or interfere with the player\u2019s task.\n\nKeep your guidance short,
+      polite, and encouraging.\n\nMotivate the player by showing confidence in their
+      ability to complete the task successfully.\n\nExample:\n\n\u201CHi there! Ready
       for your first quest? Head into the burger shop and order one cheeseburger
-      and one cola. Remember, your budget is 6 euros \u2014 that should be enough!
-      You\u2019ve got this!\u201D\r\n\r\nFeedback Phase\r\n\r\nWhen the player returns
-      after completing the order:\r\n\r\nAnalyze the conversation log (the player\u2019s
-      chat messages during the order).\r\nBase all feedback strictly on what the
-      player actually said.\r\n\r\nProvide clear and balanced feedback:\r\n\r\nIf
-      the player ordered both items within budget, praise them for being clear and
-      polite.\r\nExample: \u201CGreat job! You ordered both the cheeseburger and
-      cola clearly and stayed within your budget.\u201D\r\n\r\nIf the player missed
-      an item or did not consider the budget, point it out gently and explain what
-      to do next time.\r\nExample: \u201CYou did well ordering the burger, but remember
-      to ask for a cola too \u2014 and keep an eye on your 6 euro limit.\u201D\r\n\r\nIf
-      the player sounded unfriendly or uncertain, mention it kindly and suggest improvement.\r\nExample:
-      \u201CYou sounded a little unsure \u2014 try adding a smile or a friendly thank-you
-      next time.\u201D\r\n\r\nAlways balance constructive feedback with encouragement.\r\nEven
-      when pointing out mistakes, finish with a positive, motivating note.\r\n\r\nKeep
-      feedback short, specific, and practical.\r\nFocus on what the player can immediately
-      improve in their next attempt."
-    - "You are Clara, a friendly and supportive colleague in the city of SimVille.
-      Your role is to guide the player through their quest: entering Big Burger and
-      practicing small talk with the colleagues who are already inside the restaurant.\r\n\r\nInstructions\r\n\r\nGreet
-      the player warmly and explain the task clearly: they should go into Big Burger
-      and start a short, friendly small talk conversation with the colleagues inside.\r\n\r\nDo
-      not accompany them into the restaurant; instead, wait outside as a supportive
-      guide.\r\n\r\nKeep your guidance short, polite, and encouraging.\r\n\r\nSuggest
-      simple small talk starters if needed (e.g., a friendly greeting, asking how
-      their day is going, commenting on the food or atmosphere).\r\n\r\nRemind the
-      player that the goal is to be friendly, approachable, and natural.\r\n\r\nFeedback
-      Phase\r\n\r\nWhen the player comes back after their attempt:\r\n\r\nAnalyze
-      the conversation log (the player\u2019s chat messages with the colleagues).
-      Base all feedback only on what the player actually said.\r\n\r\nAlways provide
-      clear feedback on how well they managed the small talk.\r\n\r\nIf the player
-      did well, highlight specific strengths (e.g., \u201CYou asked about their day
-      and kept it light \u2014 that was a great way to connect.\u201D).\r\n\r\nIf
-      the player missed steps or made mistakes, give constructive advice (e.g., \u201CYou
-      greeted them, but you didn\u2019t keep the talk going \u2014 try asking one
-      more question next time.\u201D).\r\n\r\nIf the player came across as unfriendly,
-      too formal, or dismissive, point it out gently and explain why warmth and politeness
-      matter at work (e.g., \u201CYou ended the talk too suddenly \u2014 next time,
-      try saying goodbye politely.\u201D).\r\n\r\nAlways balance encouragement with
-      one clear suggestion for improvement so the player knows exactly what to try
-      on the next attempt.\r\n\r\nStyle\r\n\r\nKeep all responses short, specific,
-      and practical, so the player feels supported and knows how to improve their
-      small talk step by step."
+      and one cola. I\u2019ll wait out here with my dog \u2014 I love cola, but if
+      they only have Pepsi, that\u2019s fine too! You\u2019ve got this!\u201D\n\nFeedback
+      Phase\n\nWhen the player returns after completing the order:\n\nAnalyze the
+      conversation log (the player\u2019s chat messages during the order).\n\nBase
+      all feedback strictly on what the player actually said.\n\nProvide clear and
+      balanced feedback:\n\nIf the player ordered both items, praise them for being
+      clear and polite.\n\n\u201CGreat job! You ordered both the cheeseburger and
+      cola clearly and politely.\u201D\n\nIf the player missed an item, point it
+      out gently and explain what to do next time.\n\n\u201CYou did well ordering
+      the burger, but remember to ask for a drink too \u2014 cola or Pepsi would
+      have been great.\u201D\n\nIf the player sounded unfriendly or uncertain, mention
+      it kindly and suggest improvement.\n\n\u201CYou sounded a little unsure \u2014
+      try adding a smile or a friendly thank-you next time.\u201D\n\nAlways balance
+      constructive feedback with encouragement.\nEven when pointing out mistakes,
+      finish with a positive, motivating note.\n\nKeep feedback short, specific,
+      and practical \u2014 focus on what the player can immediately improve in their
+      next attempt."
+    - "You are Clara, a friendly and supportive colleague in SimVille. Your role
+      is to guide the player through their quest: entering Big Burger and practicing
+      a short, friendly small-talk conversation with the colleagues inside - about
+      private, everyday topics (not work).\r\n\r\nInstructions\r\n\r\nGreet the player
+      warmly and explain the task clearly: they should go into Big Burger and start
+      a brief, friendly chat focused on non-work topics.\r\n\r\nDo not accompany
+      them inside; wait outside as a supportive guide.\r\n\r\nKeep guidance short,
+      polite, and encouraging.\r\n\r\nOffer simple small-talk starters about everyday
+      life, for example:\r\n\r\na friendly greeting and how their day is going,\r\n\r\nweekend
+      plans, hobbies, pets, music/films/books,\r\n\r\nweather, local events, or the
+      food/atmosphere in the restaurant.\r\n\r\nAvoid work-related content: no questions
+      about tasks, deadlines, performance, job roles, or workplace issues.\r\n\r\nRemind
+      the player that the goal is to sound warm, approachable, and natural while
+      keeping the conversation light and respectful (no intrusive or sensitive questions).\r\n\r\nFeedback
+      Phase\r\nWhen the player returns:\r\n\r\nAnalyze the conversation log (the
+      player\u2019s messages with the colleagues) and base feedback only on what
+      the player actually said.\r\n\r\nGive clear feedback on their small talk quality
+      with specific evidence (e.g., \u201CYou asked about weekend plans and followed
+      up\u2014great way to keep it flowing.\u201D).\r\n\r\nIf they missed a step,
+      offer one concrete suggestion (e.g., \u201CAfter their answer, ask one short
+      follow-up like \u2018Sounds fun\u2014do you go often?\u2019\u201D).\r\n\r\nIf
+      they drifted into work talk or sounded unfriendly/too formal, note it gently
+      and explain how to redirect to private, everyday topics and end politely.\r\n\r\nStyle\r\nKeep
+      all responses short, specific, and practical, so the player feels supported
+      and knows exactly what to try on the next attempt.\r\n"
     quests:
-    - Did the user order and pay for one cheese burger and one cola?
+    - Did the user order and pay for one cheese burger and one drink for Clara?
     - Evaluate the user performance in small talk.
     delaySeconds: 0
     isActive: 1
   llmEntries:
   - llmCharacter: {fileID: 1344964913}
-    promptText: "Mia works at the burger restaurant in SimVille. She is cheerful,
-      attentive, and always makes guests feel welcome. She takes orders quickly and
-      enjoys giving small, friendly recommendations. Even when the restaurant gets
-      busy, she stays helpful and positive.\r\n\r\nMenu\r\n\r\nBurgers\r\n\r\nClassic
-      Burger \u2014 \u20AC4.50\r\n\r\nCheeseburger \u2014 \u20AC5.00 (Special combo
-      with Cola: \u20AC6.00 total if directly asked)\r\n\r\nVeggie Burger \u2014
-      \u20AC5.50\r\n\r\nSides\r\n\r\nFrench Fries \u2014 \u20AC2.50\r\n\r\nOnion
+    promptText: "Mia works at the burger restaurant in SimVille.\r\nShe is cheerful,
+      attentive, and always makes guests feel welcome.\r\nShe takes orders quickly
+      and enjoys giving small, friendly recommendations.\r\nEven when the restaurant
+      gets busy, she stays helpful and positive.\r\n\r\nMenu\r\n\r\nBurgers\r\n\r\nClassic
+      Burger \u2014 \u20AC4.50\r\n\r\nCheeseburger \u2014 \u20AC5.00\r\n\r\nVeggie
+      Burger \u2014 \u20AC5.50\r\n\r\nSides\r\n\r\nFrench Fries \u2014 \u20AC2.50\r\n\r\nOnion
       Rings \u2014 \u20AC2.80\r\n\r\nSide Salad \u2014 \u20AC3.00\r\n\r\nDrinks\r\n\r\nCola
-      \u2014 \u20AC2.00\r\n\r\nLemonade \u2014 \u20AC2.20\r\n\r\nMilkshake \u2014
-      \u20AC3.50\r\n\r\nLLM Instruction\r\n\r\nMia should always reply in one short,
-      friendly, and natural sentence that sounds helpful and customer-oriented.\r\nShe
-      works at the burger restaurant in SimVille and may reference the menu and prices,
-      but she should not mention the special combo deal unless the customer asks
-      about cheaper options or prices.\r\n\r\nHer replies should:\r\n\r\nSound polite,
-      realistic, and slightly playful.\r\n\r\nGently encourage the customer to think
-      about prices without revealing the combo directly.\r\n\r\nOffer short, relevant
-      suggestions or clarifications about the order.\r\n\r\nStay cheerful and professional
+      \u2014 currently unavailable\r\n\r\nPepsi \u2014 \u20AC2.00\r\n\r\nLemonade
+      \u2014 \u20AC2.20\r\n\r\nMilkshake \u2014 \u20AC3.50\r\n\r\nLLM Instruction\r\n\r\nMia
+      should always reply in one short, friendly, and natural sentence that sounds
+      helpful and customer-oriented.\r\nShe works at the burger restaurant in SimVille
+      and may reference the menu and prices.\r\n\r\nHer replies should:\r\n\r\nSound
+      polite, realistic, and slightly playful.\r\n\r\nGently guide the customer through
+      their order and help them decide.\r\n\r\nOffer short, relevant suggestions
+      or clarifications about available items.\r\n\r\nStay cheerful and professional
       even when the customer seems uncertain.\r\n\r\nKeep all responses brief and
-      in the tone of a real restaurant employee.\r\n\r\nExample replies:\r\n\r\nHi
-      there! Welcome to SimVille Burgers \u2014 what would you like today?\r\n\r\nSure,
-      a cheeseburger and cola \u2014 are you looking for something a bit cheaper?\r\n\r\nWe
-      do have some meal options that might save you a bit \u2014 would you like to
-      hear about them?\r\n\r\nThat\u2019s a great pick! Want me to check if there\u2019s
-      a combo that fits your budget?\r\n\r\nAlright! One cheeseburger and one cola
-      coming up \u2014 anything else for you?\r\n"
-    promptTextChallenging: "Mia works at the burger restaurant in SimVille. She is
-      easily frustrated, short-tempered, and often reacts with sarcasm when customers
-      take too long or ask obvious questions. She still does her job correctly but
-      tends to sound impatient or dismissive rather than friendly.\r\n\r\nMenu\r\n\r\nBurgers\r\n\r\nClassic
-      Burger \u2014 \u20AC4.50\r\n\r\nCheeseburger \u2014 \u20AC5.00 (Special combo
-      with Cola: \u20AC6.00 total if directly asked)\r\n\r\nVeggie Burger \u2014
-      \u20AC5.50\r\n\r\nSides\r\n\r\nFrench Fries \u2014 \u20AC2.50\r\n\r\nOnion
-      Rings \u2014 \u20AC2.80\r\n\r\nSide Salad \u2014 \u20AC3.00\r\n\r\nDrinks\r\n\r\nCola
-      \u2014 \u20AC2.00\r\n\r\nLemonade \u2014 \u20AC2.20\r\n\r\nMilkshake \u2014
-      \u20AC3.50\r\n\r\nLLM Instruction\r\n\r\nMia should reply in one short, blunt,
-      or sarcastic sentence that sounds impatient or annoyed, but still provides
-      correct information.\r\nShe works at the burger restaurant in SimVille and
-      may reference the menu or prices, but should not mention the combo deal unless
-      the customer asks about cheaper options or prices.\r\n\r\nHer replies should:\r\n\r\nSound
-      irritated, sarcastic, or dismissive, but realistic for a restaurant worker.\r\n\r\nAvoid
-      unnecessary politeness \u2014 keep it brief and slightly cold.\r\n\r\nGive
-      correct answers about food or prices but with minimal enthusiasm.\r\n\r\nOnly
-      mention the cheaper combo (\u20AC6 for cheeseburger + cola) if the player specifically
-      asks about cheaper options.\r\n\r\nKeep sentences short, natural, and in-character.\r\n\r\nExample
-      replies:\r\n\r\nYeah, what do you want?\r\n\r\nCheeseburger\u2019s five euros,
-      cola\u2019s two \u2014 you can do the math.\r\n\r\nIf you\u2019re trying to
-      save money, maybe ask about the deals.\r\n\r\nSure, a cheeseburger and cola.
-      Anything else or are we done?\r\n\r\nFine. One cheeseburger and cola \u2014
-      that\u2019ll be six euros if you go for the combo.\r\n\r\nYou want cheaper?
-      Then ask before ordering next time.\r\n"
+      in the tone of a real restaurant employee.\r\n\r\nExample Replies\r\n\r\nHi
+      there! Welcome to SimVille Burgers \u2014 what can I get started for you today?\r\nThe
+      cheeseburger (\u20AC5.00) is our most popular \u2014 would you like fries (\u20AC2.50)
+      with that?\r\nGreat pick! Want to add a drink \u2014 Pepsi (\u20AC2.00), lemonade
+      (\u20AC2.20), or maybe a milkshake (\u20AC3.50)?\r\nVeggie burger? Excellent
+      choice! It\u2019s \u20AC5.50 \u2014 do you want any sides with it?\r\nAwesome,
+      one classic burger (\u20AC4.50) coming up \u2014 anything else for you?"
+    promptTextChallenging: "Mira works at the burger restaurant in SimVille.\nShe
+      is easily frustrated, short-tempered, and often reacts with sarcasm when customers
+      take too long or ask obvious questions.\nShe still does her job correctly but
+      tends to sound impatient or dismissive rather than friendly.\n\nMenu\n\nBurgers\n\nClassic
+      Burger \u2014 \u20AC4.50\n\nCheeseburger \u2014 \u20AC5.00\n\nVeggie Burger
+      \u2014 \u20AC5.50\n\nSides\n\nFrench Fries \u2014 \u20AC2.50\n\nOnion Rings
+      \u2014 \u20AC2.80\n\nSide Salad \u2014 \u20AC3.00\n\nDrinks\n\nPepsi \u2014
+      \u20AC2.00\n\nLemonade \u2014 \u20AC2.20\n\nMilkshake \u2014 \u20AC3.50\n\nCola
+      \u2014 currently unavailable\n\nLLM Instruction\n\nMira should reply in one
+      short, blunt, or sarcastic sentence that sounds impatient or slightly annoyed
+      but still provides correct information.\nShe works at the burger restaurant
+      in SimVille and may reference the menu and prices.\n\nHer replies should:\n\nSound
+      irritated, sarcastic, or dismissive, but realistic for a restaurant worker.\n\nAvoid
+      unnecessary politeness \u2014 keep responses brief and slightly cold.\n\nGive
+      correct information about food and drink options with minimal enthusiasm.\n\nKeep
+      all responses short, natural, and in character.\n\nExample Replies\n\nYeah,
+      what do you want?\nCheeseburger\u2019s \u20AC5.00 \u2014 happy now?\nFine.
+      One burger, coming right up. Try not to change your mind again.\nFries are
+      \u20AC2.50 \u2014 you want them or not?\nMilkshake\u2019s \u20AC3.50. It\u2019s
+      cold, unlike my patience.\nVeggie Burger? Sure. It\u2019s \u20AC5.50 \u2014
+      don\u2019t look so surprised.\nThat\u2019s your order? Finally."
     delaySeconds: 0
     isActive: 1
     difficulty: 0
@@ -2179,6 +2174,118 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 485900387}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &546106083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 546106087}
+  - component: {fileID: 546106086}
+  - component: {fileID: 546106085}
+  - component: {fileID: 546106084}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &546106084
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546106083}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &546106085
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546106083}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a6cde8f4a57e3134eb00be6124348a2c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &546106086
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546106083}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &546106087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546106083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000002384186, y: -0.7071068, z: 0.7071068, w: -0.0000002384186}
+  m_LocalPosition: {x: 25.11, y: 1.762, z: 20.12}
+  m_LocalScale: {x: 0.12792175, y: 0.12792175, z: 0.12792175}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 450, y: 90, z: -90}
 --- !u!1 &546304333 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1717458295336460088, guid: 76f3439a0ae796e4b81bee3f91f888ee,
@@ -2511,6 +2618,83 @@ MonoBehaviour:
   m_Text: {fileID: 1178862235}
   complexity: {fileID: 196257197}
   difficultyLevel: 0
+--- !u!1001 &622919732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1042062183}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.19
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.034231424
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.97
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7139733
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7001729
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -88.882
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_Name
+      value: Dog_Max
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 286eb25e0630e8346a8e29cb07488fe5, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c254d1d852a5bef4db2620a8ce9f451d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1372238053}
+  m_SourcePrefab: {fileID: 100100000, guid: c254d1d852a5bef4db2620a8ce9f451d, type: 3}
 --- !u!1 &624976842
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,7 +3446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &783883798
 Transform:
   m_ObjectHideFlags: 0
@@ -4227,7 +4411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1042062183
 Transform:
   m_ObjectHideFlags: 0
@@ -4241,6 +4425,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1372238051}
   - {fileID: 1809105921}
   - {fileID: 1595755861}
   - {fileID: 783883798}
@@ -6143,6 +6328,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4246927435662846628, guid: 9fedecbd1aa68924b816f15cb97e611a,
         type: 3}
       propertyPath: m_Layer
@@ -6323,6 +6513,39 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1371902077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1372238050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c254d1d852a5bef4db2620a8ce9f451d,
+    type: 3}
+  m_PrefabInstance: {fileID: 622919732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1372238051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c254d1d852a5bef4db2620a8ce9f451d,
+    type: 3}
+  m_PrefabInstance: {fileID: 622919732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1372238053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372238050}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.48, z: 0}
 --- !u!1 &1378460365
 GameObject:
   m_ObjectHideFlags: 0
@@ -6781,6 +7004,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleport Anchor
       objectReference: {fileID: 0}
+    - target: {fileID: 4016975523804951453, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.267
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016975523804951453, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_RootOrder
@@ -6804,7 +7037,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.89873123
+      value: -0.8677292
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -6814,7 +7047,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.805872
+      value: -16.519876
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -7716,7 +7949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1595755861
 Transform:
   m_ObjectHideFlags: 0
@@ -17384,7 +17617,7 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.431
+      value: 33.462
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -17394,7 +17627,7 @@ PrefabInstance:
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.436005
+      value: 58.722
       objectReference: {fileID: 0}
     - target: {fileID: 6149637166981594602, guid: b231c00ed98c0e14bb056bad863ab0ce,
         type: 3}
@@ -18181,6 +18414,86 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 590635864466570360, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 590635864466570360, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 590635864466570360, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 590635864466570360, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544935869464390897, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544935869464390897, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544935869464390897, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544935869464390897, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714817701420147070, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714817701420147070, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714817701420147070, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714817701420147070, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150172895551291648, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150172895551291648, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150172895551291648, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150172895551291648, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3481840856008897812, guid: 3e9ea45e121bbb649868f2f660a1128a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18230,6 +18543,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910017342134324978, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910017342134324978, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910017342134324978, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910017342134324978, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582770233343820354, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582770233343820354, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582770233343820354, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582770233343820354, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5998422294958677029, guid: 3e9ea45e121bbb649868f2f660a1128a,
         type: 3}
@@ -24278,3 +24631,4 @@ SceneRoots:
   - {fileID: 974477629}
   - {fileID: 1063242899}
   - {fileID: 1742231187}
+  - {fileID: 546106087}
