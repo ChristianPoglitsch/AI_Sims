@@ -202,10 +202,13 @@ namespace AiSims
 
         private IEnumerator TalkNpcCoroutine(string replyMessage, LLM_Handler npcHandler, string aiName)
         {
-            if (currentNPC.EvaluateConversation())
+            if (currentNPC.EvaluateConversation() && !isEvaluating)
             {
-                AddMessage(messageDecorator.GetLlmHandler(), currentNPC.GetUserMessage(), MessageTypes.user);
-                AddMessage(messageDecorator.GetLlmHandler(), replyMessage, MessageTypes.assistant);
+                //AddMessage(messageDecorator.GetLlmHandler(), currentNPC.GetUserMessage(), MessageTypes.user);
+                //AddMessage(messageDecorator.GetLlmHandler(), replyMessage, MessageTypes.assistant);
+
+                messageDecorator.AddChatToHistory(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage());
+                messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
             }
 
             if (companionNPC && currentNPC != companionNPC)
@@ -285,7 +288,7 @@ namespace AiSims
             if (Physics.Raycast(ray, out hit, 6f))
             {
                 NPCToStoryBridge npcBridge = hit.collider.GetComponent<NPCToStoryBridge>();
-                if (npcBridge != null)
+                if (npcBridge != null && npcBridge.isActiveAndEnabled)
                 {
                     Debug.Log("Hit NPC: " + hit.collider.name);
 

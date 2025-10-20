@@ -21,7 +21,7 @@ namespace AiSims
 
         bool addToHistory = false;
 
-        [TextArea(5, 10), Chat] public string EvaluationString = string.Empty;
+        [TextArea(5, 10), Chat] public string EvaluationString = string.Empty;        
 
         private void Start()
         {

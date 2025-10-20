@@ -18,6 +18,8 @@ namespace AiSims
         private bool processMessage = false;
         private LLM_Handler llmHandler;
 
+        private string chatHistory = string.Empty;
+
         public bool ProcessedEvaluation { get; private set; } = false;
 
         public string EvaluationString { get; private set; } = string.Empty;
@@ -47,10 +49,9 @@ namespace AiSims
             EvaluationString = instruction;
         }
 
-        public void Clear()
+        public void AddChatToHistory(string message)
         {
-            if (ProcessedEvaluation)
-                llmHandler.GetLlm().ClearChat();
+            chatHistory += "\n" + message;
         }
 
         public void EvaluateConversation()
@@ -61,11 +62,14 @@ namespace AiSims
                 return;
             }
 
+            llmHandler.GetLlm().ClearChat();
+
             //string message = llmHandler.GetLlm().prompt;
-            string message = "\nBased on the chat history evaluate the question: \n " + EvaluationString + " \nAfter evaluation respond with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond with 0.";
+            string instruction = "\nBased on the chat history evaluate the question: \n " + EvaluationString + " \nAfter evaluation respond with exactly one character: 1 if Yes, 0 if No. If the outcome is unclear, respond with 0.";
+            llmHandler.GetLlm().SetPrompt(instruction);
 
             // Now pass it to your function
-            llmHandler.ProcessMessage(message, false);
+            llmHandler.ProcessMessage(chatHistory, false);
             ProcessedEvaluation = true;
         }
     }

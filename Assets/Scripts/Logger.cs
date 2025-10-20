@@ -23,6 +23,7 @@ namespace AiSims
         static string uniqueId = Guid.NewGuid().ToString();
 
         static string fullPath = filePath; //  Path.Combine(filePath, uniqueId);
+        static bool bShowFilePath = true;
 
         private static readonly Dictionary<LoggingInfo, string> logMessages = new Dictionary<LoggingInfo, string>
         {
@@ -55,12 +56,16 @@ namespace AiSims
             return entry;
         }
 
-
         public static void Log(LoggingInfo info, string message, bool includeInFile = false)
         {
             if (includeInFile)
             {
-                Debug.Log("Filepath: " + fullPath);
+                if (bShowFilePath)
+                {
+                    Debug.Log("Filepath: " + fullPath);
+                    bShowFilePath = false;
+                }
+
                 // Check if directory already esists, if not create it
                 if (!Directory.Exists(fullPath))
                 {

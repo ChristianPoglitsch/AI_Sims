@@ -53,7 +53,7 @@ namespace AiSims
 
             if(startAnimationName != string.Empty)
             {
-                animator.SetBool(startAnimationName, false);                
+                animator.SetBool(startAnimationName, false);
             }
 
             chooseTarget();
