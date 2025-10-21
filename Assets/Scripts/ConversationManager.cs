@@ -35,7 +35,7 @@ namespace AiSims
 
         private Quaternion originalRotation;
 
-        public void Start()
+        public void Awake()
         {
             talk = GetComponent<Talk>();
             messageDecorator = GetComponent<MessageDecorator>();
