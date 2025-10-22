@@ -58,7 +58,7 @@ namespace AiSims
         {
             if (llmHandler == null || llmHandler.GetLlm() == null || EvaluationString == string.Empty)
             {
-                Debug.Log("LLM Handler for evaluating quests is not assigned.");
+                //Debug.Log("LLM Handler for evaluating quests is not assigned.");
                 return;
             }
 

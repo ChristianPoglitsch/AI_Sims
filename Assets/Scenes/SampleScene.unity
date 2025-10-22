@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: e57d5a5ed5e6d1447be0beff84078177,
+  m_LightingDataAsset: {fileID: 112000000, guid: 14c5f8686df155743b946f66eadf9037,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2,
     type: 2}
@@ -121,6 +121,33 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &32224212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7958855880191460476, guid: 3e9ea45e121bbb649868f2f660a1128a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3402778014359763368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &32224216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32224212}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 12.86, z: 1.5}
+  m_Center: {x: -0.0000013113023, y: 6.3515663, z: 0.0000014305115}
 --- !u!1001 &47879890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -820,9 +847,7 @@ MonoBehaviour:
     quests:
     - Did the user order and pay for one cheese burger and one cola or pepsi for
       Clara with 6 or less euro?
-    - "Evaluate the user\u2019s small talk. Did the user talk with Mario, Bea, Sami,
-      Donald and Lenart?\nWas it friendly, clear, and engaging? Give one short sentence
-      of feedback."
+    - 
     delaySeconds: 0
     isActive: 1
   llmEntries:
@@ -1361,7 +1386,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3102235111441439032, guid: c3f576fec9299524b91ef6107359f09e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1185519990}
   m_SourcePrefab: {fileID: 100100000, guid: c3f576fec9299524b91ef6107359f09e, type: 3}
 --- !u!1 &324005824
 GameObject:
@@ -5418,6 +5447,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1185519988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3102235111441439032, guid: c3f576fec9299524b91ef6107359f09e,
+    type: 3}
+  m_PrefabInstance: {fileID: 256289457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1185519990
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185519988}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.52, y: 2.68, z: 3.52}
+  m_Center: {x: 0, y: 1.01, z: 0.29}
 --- !u!1001 &1212295237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19766,7 +19822,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7958855880191460476, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 32224216}
   m_SourcePrefab: {fileID: 100100000, guid: 3e9ea45e121bbb649868f2f660a1128a, type: 3}
 --- !u!1 &4283520511740580323 stripped
 GameObject:
@@ -25398,7 +25458,7 @@ PrefabInstance:
         type: 3}
       propertyPath: companionNPC
       value: 
-      objectReference: {fileID: 1665082471}
+      objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: questHandler

@@ -171,7 +171,7 @@ namespace AiSims
                     if (parts.Length > 1)
                         response.text = string.Join(" ", parts, 0, parts.Length - 1);
 
-                    Debug.Log("Whisper Response (Local Client): " + response.text);
+                    //Debug.Log("Whisper Response (Local Client): " + response.text);
                     llm_handler?.ProcessMessage(response.text);
                 }
             }
