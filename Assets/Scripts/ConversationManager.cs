@@ -20,7 +20,6 @@ namespace AiSims
         public LLM_Handler questHandler;
         public LLM_Handler companionNPC;
         public float chanceNpcTalking = 0.3f;
-        public bool waitForSpeech = true;
 
         private LLM_Handler currentNPC;
 
@@ -224,8 +223,8 @@ namespace AiSims
                 var allHandler = otherNpc.GetAllHandler();
                 foreach (var handler in allHandler)
                 {
-                    handler.AddMessage(MessageTypes.user.ToString() + ' ' + currentNPC.GetUserMessage(), MessageTypes.user.ToString());
-                    handler.AddMessage(aiName + ' ' + replyMessage, MessageTypes.user.ToString());
+                    handler.AddMessage(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage(), MessageTypes.user.ToString());
+                    handler.AddMessage(aiName + ": " + replyMessage, MessageTypes.user.ToString());
                 }
             }
 
@@ -256,8 +255,7 @@ namespace AiSims
                 // Estimate reading time: characters * factor
                 float readingSpeed = 0.05f; // seconds per character (~200 wpm)
                 float waitTime = Mathf.Max(1.5f, replyMessage.Length * readingSpeed);
-                if(waitForSpeech)
-                    yield return new WaitForSeconds(waitTime);
+                yield return new WaitForSeconds(waitTime);
 
                 OnNpcSpeechFinished();
             }
