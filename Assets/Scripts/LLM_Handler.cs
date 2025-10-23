@@ -77,8 +77,8 @@ namespace AiSims
                 // Step 3: Remove parentheses and their contents
                 string noBrackets = Regex.Replace(replyMessage, @"\([^)]*\)", "");
 
-                // Step 4: Remove unsafe characters (keep letters, numbers, umlauts, punctuation)
-                string sanitized = Regex.Replace(noBrackets, @"[^a-zA-Z0-9äöüÄÖÜß\s\?\.\!\-']", "");
+                // Step 4: Remove unsafe characters (keep letters, numbers, umlauts, punctuation, commas, apostrophes, and colons)
+                string sanitized = Regex.Replace(noBrackets, @"[^a-zA-Z0-9äöüÄÖÜß\s\?\.\!\-,'’:]", "");
 
                 // Step 5: Trim and normalize whitespace
                 sanitized = Regex.Replace(sanitized, @"\s+", " ").Trim();

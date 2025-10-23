@@ -1172,7 +1172,6 @@ GameObject:
   - component: {fileID: 638672337}
   - component: {fileID: 638672340}
   - component: {fileID: 638672339}
-  - component: {fileID: 638672338}
   m_Layer: 0
   m_Name: LLM_Clara
   m_TagString: Untagged
@@ -1195,19 +1194,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 975299888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &638672338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638672336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072ca9f0013e7d84db25f5e59400d290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AiSims.NpcConnection
-  llmHandlers: []
 --- !u!114 &638672339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,7 +1291,7 @@ MonoBehaviour:
     time, take the lead and guide the discussion with confidence. People will appreciate
     it.\u201D\r\n\r\nAlways end with encouragement and motivation.\r\nKeep all feedback
     short, clear, and practical \u2014 focus on one thing the player can improve
-    in their next attempt.\r\n"
+    in their next attempt.\r\n\nKeep your replies short."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
