@@ -20,6 +20,7 @@ namespace AiSims
         public LLM_Handler questHandler;
         public LLM_Handler companionNPC;
         public float chanceNpcTalking = 0.3f;
+        public bool waitForSpeech = true;
 
         private LLM_Handler currentNPC;
 
@@ -84,7 +85,7 @@ namespace AiSims
 
             if (!isNpcTalking)
             {
-                if (currentNPC.EvaluateConversation())
+                if (currentNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty)
                 {
                     isEvaluating = true;
                     Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start EvaluateConversation", true);
@@ -255,7 +256,8 @@ namespace AiSims
                 // Estimate reading time: characters * factor
                 float readingSpeed = 0.05f; // seconds per character (~200 wpm)
                 float waitTime = Mathf.Max(1.5f, replyMessage.Length * readingSpeed);
-                yield return new WaitForSeconds(waitTime);
+                if(waitForSpeech)
+                    yield return new WaitForSeconds(waitTime);
 
                 OnNpcSpeechFinished();
             }
