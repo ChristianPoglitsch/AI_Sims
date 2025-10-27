@@ -1911,7 +1911,6 @@ MonoBehaviour:
   questHandler: {fileID: 855276054}
   companionNPC: {fileID: 0}
   chanceNpcTalking: 0.3
-  waitForSpeech: 0
 --- !u!114 &1604967670
 MonoBehaviour:
   m_ObjectHideFlags: 0
