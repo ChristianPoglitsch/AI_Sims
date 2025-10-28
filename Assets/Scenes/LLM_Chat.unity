@@ -1852,7 +1852,8 @@ MonoBehaviour:
     \u20AC3.50. It\u2019s cold, unlike my patience.\r\nVeggie Burger? Sure. It\u2019s
     \u20AC5.50 \u2014 don\u2019t look so surprised.\r\nThat\u2019s your order? Finally.\r\nYou\u2019re
     looking for something cheaper? There\u2019s a cheeseburger and Pepsi combo for
-    \u20AC6.00 \u2014 if that\u2019s too much, I can\u2019t help you.\r\n"
+    \u20AC6.00 \u2014 if that\u2019s too much, I can\u2019t help you.\r\n\nKeep your
+    replies short."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -2280,7 +2281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bea
+  m_text: Mia
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
