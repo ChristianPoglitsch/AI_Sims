@@ -46,8 +46,8 @@ namespace AiSims
             if (m_Text != null)
                 m_Text.text = m_Count.ToString();
 
-            Debug.Log($"[ChangeQuest] Initialized m_Count randomly to {m_Count}");
-            Logger.Log(LoggingInfo.Scene, $"[ChangeQuest] {m_Count}", true);
+            Debug.Log($"[Quest] Initialized m_Count randomly to {m_Count}");
+            Logger.Log(LoggingInfo.Scene, $"[Quest] {m_Count}", true);
 
             // Optionally set the initial state in Complexity
             foreach (var entry in interactionEntries)
@@ -73,8 +73,8 @@ namespace AiSims
             {
                 if (entry == null) continue;
 
-                Debug.Log($"[ChangeQuest] Setting LLM index {entry.index} to {m_Count} (toggled)");
-                Logger.Log(LoggingInfo.Scene, $"[ChangeQuest] {m_Count}", true);
+                Debug.Log($"[Quest] Setting LLM index {entry.index} to {m_Count} (toggled)");
+                Logger.Log(LoggingInfo.Scene, $"[Quest] {m_Count}", true);
                 complexity.SetLlmQuestByIndex(entry.index, m_Count);
             }
         }

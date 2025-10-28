@@ -52,8 +52,8 @@ namespace AiSims
                 complexity.UpdateLlmInstruction();
             }
 
-            Debug.Log($"[ChangeComplexity] Randomized start: m_Count = {m_Count}, Difficulty = {difficultyLevel}");
-            Logger.Log(LoggingInfo.Scene, $"[ChangeComplexity] m_Count = {m_Count}, Difficulty = {difficultyLevel}", true);
+            Debug.Log($"[Complexity] Randomized start: m_Count = {m_Count}, Difficulty = {difficultyLevel}");
+            Logger.Log(LoggingInfo.Scene, $"[Complexity] Difficulty = {difficultyLevel}", true);
         }
 
         /// <summary>
@@ -78,8 +78,8 @@ namespace AiSims
                 complexity.UpdateLlmInstruction();
             }
 
-            Debug.Log($"[ChangeComplexity] Toggled difficulty: m_Count = {m_Count}, Difficulty = {difficultyLevel}");
-            Logger.Log(LoggingInfo.Scene, $"[ChangeComplexity] m_Count = {m_Count}, Difficulty = {difficultyLevel}", true);
+            Debug.Log($"[Complexity] Toggled difficulty: m_Count = {m_Count}, Difficulty = {difficultyLevel}");
+            Logger.Log(LoggingInfo.Scene, $"[Complexity] Difficulty = {difficultyLevel}", true);
         }
 
         /// <summary>
