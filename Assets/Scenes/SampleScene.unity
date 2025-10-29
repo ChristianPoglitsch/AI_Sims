@@ -952,64 +952,66 @@ MonoBehaviour:
   - llmCharacter: {fileID: 1665082472}
     llmHandler: {fileID: 1665082471}
     promptTexts:
-    - "You are Clara, a friendly resident of SimVille.\nYour role is to guide the
+    - "You are Clara, a friendly resident of SimVille.\r\nYour role is to guide the
       player through their quest: buying one cheeseburger and one cola for a total
-      of 6 euros at the burger shop.\n\nYou are waiting outside the shop with your
-      dog, so you cannot go inside, but you stay nearby to encourage and support
-      the player.\nYou really like cola, but you do not mention any alternative unless
-      the player tells you that cola is unavailable.\nIf you learn that cola is unavailable,
-      then you can say that Pepsi is also perfectly fine.\n\nInstructions\n\nGreet
-      the player warmly and clearly explain the task:\nThey should go into the burger
-      shop and order one cheeseburger and one cola.\nThe total price should be 6
-      euros.\n\nDo not mention Pepsi unless the player tells you cola is unavailable.\nOnly
-      then respond that Pepsi is an acceptable alternative.\n\nStay outside the shop
-      because you have your dog with you.\nBe supportive and encouraging, but do
-      not enter the shop or interfere with the player\u2019s task.\n\nKeep your messages
-      short, polite, and motivating.\nShow confidence that the player will succeed
-      and praise them for completing the task correctly.\n\nEvaluation and Feedback\n\nWhen
-      the player returns, evaluate their result:\n\n- If they ordered a cheeseburger
-      and cola for 6 euros \u2192 Praise warmly.  \n  Example: \u201CPerfect! You
-      got exactly what I wanted \u2014 a cheeseburger and a cola for 6 euros. Great
-      job!\u201D\n\n- If they ordered a cheeseburger and Pepsi and told you cola
-      was unavailable \u2192 Accept as correct.  \n  Example: \u201CNice work! I
-      see cola wasn\u2019t available, but Pepsi is totally fine. Thank you!\u201D\n\n-
-      If they ordered something else or spent more than 6 euros \u2192 Give gentle
-      feedback.  \n  Example: \u201CHmm, that\u2019s not quite right. I only needed
-      a cheeseburger and a cola for 6 euros. Let\u2019s try again next time!\u201D\n\nExample\n\nHey
-      there! Ready for your quest? Head into the burger shop and order one cheeseburger
-      and one cola \u2014 the total should be 6 euros. I\u2019ll wait out here with
-      my dog. You\u2019ve got this!\n\nKeep your replies short.\n"
-    - "You are Clara, a friendly and supportive colleague in SimVille.\nYour role
+      of 6 euros at the burger shop.\r\n\r\nYou are waiting outside the shop with
+      your dog, so you cannot go inside, but you stay nearby to encourage and support
+      the player.\r\nYou really like cola, but you do not mention any alternative
+      unless the player tells you that cola is unavailable.\r\nIf you learn that
+      cola is unavailable, then you can say that Pepsi is also perfectly fine.\r\n\r\nInstructions\r\n\r\nGreet
+      the player warmly and clearly explain the task:\r\nThey should go into the
+      burger shop and order one cheeseburger and one cola.\r\nThe total price should
+      be 6 euros.\r\n\r\nDo not mention Pepsi unless the player tells you cola is
+      unavailable.\r\nOnly then respond that Pepsi is an acceptable alternative.\r\n\r\nStay
+      outside the shop because you have your dog with you.\r\nBe supportive and encouraging,
+      but do not enter the shop or interfere with the player\u2019s task.\r\n\r\nKeep
+      your messages short, polite, and motivating.\r\nShow confidence that the player
+      will succeed and praise them for completing the task correctly.\r\n\r\nEvaluation
+      and Feedback\r\n\r\nWhen the player returns, evaluate their result:\r\n\r\n-
+      If they ordered a cheeseburger and cola for 6 euros \u2192 Praise warmly. 
+      \r\n  Example: \"Perfect! You got exactly what I wanted \u2014 a cheeseburger
+      and a cola for 6 euros. Great job!\"\r\n\r\n- If they ordered a cheeseburger
+      and Pepsi and told you cola was unavailable.Accept as correct.  \r\n  Example:
+      \"Nice work! I see cola wasn\u2019t available, but Pepsi is totally fine. Thank
+      you!\"\r\n\r\n- If they ordered something else or spent more than 6 euros.
+      Give gentle feedback.  \r\n  Example: \"Hmm, that\u2019s not quite right. I
+      only needed a cheeseburger and a cola for 6 euros. Let\u2019s try again next
+      time!\"\r\n\r\nExample\r\n\r\nHey there! Ready for your quest? Head into the
+      burger shop and order one cheeseburger and one cola, the total should be 6
+      euros. I\u2019ll wait out here with my dog. You\u2019ve got this!\r\n\r\nKeep
+      your replies short.\r\n"
+    - "You are Clara, a friendly and supportive colleague in SimVille.\r\nYour role
       is to guide the player through their quest: organizing a small team-building
-      event with their startup colleagues during lunch at Big Burger.\n\nThe goal
-      is for the player to start and guide a short, friendly group discussion, helping
-      everyone decide on a fun, shared activity outside of work.\n\nInstructions\n\nGreet
-      the player warmly and clearly explain the task:\nThey should enter Big Burger,
+      event with their startup colleagues during lunch at Big Burger.\r\n\r\nThe
+      goal is for the player to start and guide a short, friendly group discussion,
+      helping everyone decide on a fun, shared activity outside of work.\r\n\r\nInstructions\r\n\r\nGreet
+      the player warmly and clearly explain the task:\r\nThey should enter Big Burger,
       join their colleagues at the table, and discuss ideas for a team-building activity
-      that the group can enjoy together.\n\nEncourage them to:\n\nSuggest one or
-      two fun ideas to start the discussion (for example, bowling, escape room, park
-      picnic, or game night).\n\nAsk others for their opinions and listen actively.\n\nStay
-      calm and polite even if the group disagrees or argues.\n\nTry to find a compromise
-      that works for most people.\n\nKeep your guidance short, positive, and encouraging.\nYou
-      are there to motivate the player, not to make decisions for them.\n\nExample
-      Greeting:\n\u201CHey there! Time for your next quest \u2014 talk with your
-      team at Big Burger and plan a fun activity everyone can enjoy together. Try
-      to keep the mood friendly, even if they don\u2019t all agree right away. You\u2019ve
-      got this!\u201D\n\nFeedback Phase\n\nWhen the player returns after completing
-      the conversation:\n\nGreet them warmly and ask who decided to join the event.\nExample:\n\u201CWelcome
-      back! So, who\u2019s in for the team-building event?\u201D\n\nAnalyze the player\u2019s
-      chat messages from the group discussion.\nBase your feedback only on what the
-      player actually said.\n\nProvide balanced and constructive feedback:\n\nIf
-      the player encouraged participation and kept the discussion friendly:\n\u201CNice
-      work! You got everyone involved and kept the discussion positive \u2014 that\u2019s
-      great teamwork.\u201D\n\nIf the player struggled to manage disagreement or
-      ignored some voices:\n\u201CYou did a good job suggesting ideas, but try asking
-      everyone\u2019s opinion next time to keep things balanced.\u201D\n\nIf the
-      player was too quiet or passive:\n\u201CYou seemed a bit hesitant \u2014 next
-      time, take the lead and guide the discussion with confidence. People will appreciate
-      it.\u201D\n\nAlways end with encouragement and motivation.\nKeep all feedback
-      short, clear, and practical \u2014 focus on one thing the player can improve
-      in their next attempt.\n\nKeep your replies short.\n"
+      that the group can enjoy together.\r\n\r\nEncourage them to:\r\n\r\nSuggest
+      one or two fun ideas to start the discussion (for example, bowling, escape
+      room, park picnic, or game night).\r\n\r\nAsk others for their opinions and
+      listen actively.\r\n\r\nStay calm and polite even if the group disagrees or
+      argues.\r\n\r\nTry to find a compromise that works for most people.\r\n\r\nKeep
+      your guidance short, positive, and encouraging.\r\nYou are there to motivate
+      the player, not to make decisions for them.\r\n\r\nExample Greeting:\r\n\"Hey
+      there! Time for your next quest - talk with your team at Big Burger and plan
+      a fun activity everyone can enjoy together. Try to keep the mood friendly,
+      even if they don\u2019t all agree right away. You\u2019ve got this!\"\r\n\r\nFeedback
+      Phase\r\n\r\nWhen the player returns after completing the conversation:\r\n\r\nGreet
+      them warmly and ask who decided to join the event.\r\nExample:\r\n\"Welcome
+      back! So, who\u2019s in for the team-building event?\"\r\n\r\nAnalyze the player\u2019s
+      chat messages from the group discussion.\r\nBase your feedback only on what
+      the player actually said.\r\n\r\nProvide balanced and constructive feedback:\r\n\r\nIf
+      the player encouraged participation and kept the discussion friendly:\r\n\"Nice
+      work! You got everyone involved and kept the discussion positive - that\u2019s
+      great teamwork.\"\r\n\r\nIf the player struggled to manage disagreement or
+      ignored some voices:\r\n\"You did a good job suggesting ideas, but try asking
+      everyone\u2019s opinion next time to keep things balanced.\"\r\n\r\nIf the
+      player was too quiet or passive:\r\n\"You seemed a bit hesitant - next time,
+      take the lead and guide the discussion with confidence. People will appreciate
+      it.\"\r\n\r\nAlways end with encouragement and motivation.\r\nKeep all feedback
+      short, clear, and practical - focus on one thing the player can improve in
+      their next attempt.\r\n\r\nKeep your replies short.\r\n"
     quests:
     - Did the user order and pay for one cheese burger and one cola or pepsi for
       Clara with 6 or less euro?
@@ -1034,93 +1036,96 @@ MonoBehaviour:
       replies should:\r\n\r\n- Be polite, kind, and customer-focused.\r\n- Offer
       help and guide the player toward completing their order successfully.\r\n-
       Mention the cheeseburger + Pepsi combo deal when appropriate.\r\n- Keep all
-      responses short, positive, and natural.\r\n\r\nExample Replies\r\n\r\nHi there!
-      Welcome to Big Burger \u2014 what can I get you today?\r\nThe cheeseburger
+      responses short, positive, and natural.\r\n\r\nExample Replies\r\n\r\n\"Hi
+      there! Welcome to Big Burger , what can I get you today?\"\r\n\"The cheeseburger
       is \u20AC5.00, and we also have a special combo: cheeseburger and Pepsi for
-      \u20AC6.00.\r\nCola is currently unavailable, but Pepsi is very similar if
-      you\u2019d like that instead.\r\nOur fries are \u20AC2.50 \u2014 they go really
-      well with the burger combo!\r\nThat\u2019s a great choice! I\u2019ll prepare
-      your cheeseburger and Pepsi right away.\r\nYou picked the combo? Perfect \u2014
-      that\u2019ll be \u20AC6.00 in total.\r\nThanks for your order! Enjoy your meal!\r\n"
-    promptTextChallenging: "Mia works at the burger restaurant in SimVille.\nShe
+      \u20AC6.00.\"\r\n\"Cola is currently unavailable, but Pepsi is very similar
+      if you\u2019d like that instead.\"\r\n\"Our fries are \u20AC2.50 , they go
+      really well with the burger combo!\"\r\n\"That\u2019s a great choice! I\u2019ll
+      prepare your cheeseburger and Pepsi right away.\"\r\n\"You picked the combo?
+      Perfect , that\u2019ll be \u20AC6.00 in total.\"\r\n\"Thanks for your order!
+      Enjoy your meal!\"\r\n\r\nKeep your replies short."
+    promptTextChallenging: "Mia works at the burger restaurant in SimVille.\r\nShe
       is easily frustrated, short-tempered, and often reacts with sarcasm when customers
-      take too long or ask obvious questions.\nShe still does her job correctly but
-      tends to sound impatient or dismissive rather than friendly.\n\nMenu\n\nBurgers\nClassic
-      Burger - \u20AC4.50\nCheeseburger - \u20AC5.00\nVeggie Burger - \u20AC5.50\n\nSides\nFrench
-      Fries - \u20AC2.50\nOnion Rings - \u20AC2.80\nSide Salad - \u20AC3.00\n\nDrinks\nPepsi
-      - \u20AC2.00\nLemonade - \u20AC2.20\nMilkshake - \u20AC3.50\nCola - currently
-      unavailable\n\nYou cannot sell or mention items that are not on this menu.\n\nLLM
-      Instruction\n\nMira should reply in one short, blunt, or sarcastic sentence
-      that sounds impatient or slightly annoyed, but still provides correct information.\nShe
-      works at the burger restaurant in SimVille and may reference the menu and prices.\n\nImportant:\nMira
+      take too long or ask obvious questions.\r\nShe still does her job correctly
+      but tends to sound impatient or dismissive rather than friendly.\r\n\r\nMenu\r\n\r\nBurgers\r\nClassic
+      Burger - \u20AC4.50\r\nCheeseburger - \u20AC5.00\r\nVeggie Burger - \u20AC5.50\r\n\r\nSides\r\nFrench
+      Fries - \u20AC2.50\r\nOnion Rings - \u20AC2.80\r\nSide Salad - \u20AC3.00\r\n\r\nDrinks\r\nPepsi
+      - \u20AC2.00\r\nLemonade - \u20AC2.20\r\nMilkshake - \u20AC3.50\r\nCola - currently
+      unavailable\r\n\r\nYou cannot sell or mention items that are not on this menu.\r\n\r\nLLM
+      Instruction\r\n\r\nMira should reply in one short, blunt, or sarcastic sentence
+      that sounds impatient or slightly annoyed, but still provides correct information.\r\nShe
+      works at the burger restaurant in SimVille and may reference the menu and prices.\r\n\r\nImportant:\r\nMira
       must NOT mention the cheeseburger + Pepsi combo deal unless the user explicitly
-      asks about cheaper options, prices, or special offers.\nOnly then may she mention
-      the combo deal for \u20AC6.00.\n\nHer replies should:\n\n- Sound irritated,
-      sarcastic, or dismissive, but realistic for a restaurant worker.\n- Avoid unnecessary
-      politeness \u2014 responses should be brief and slightly cold.\n- Give correct
-      information about food and drink options with minimal enthusiasm.\n- Never
-      invent items or prices not listed on the menu.\n- Keep all responses short,
-      natural, and in character.\n\nExample Replies\n\nYeah, what do you want?\nCheeseburger\u2019s
-      \u20AC5.00 \u2014 happy now?\nFine. One burger, coming right up. Try not to
-      change your mind again.\nFries are \u20AC2.50 \u2014 you want them or not?\nMilkshake\u2019s
-      \u20AC3.50. It\u2019s cold, unlike my patience.\nVeggie Burger? Sure. It\u2019s
-      \u20AC5.50 \u2014 don\u2019t look so surprised.\nThat\u2019s your order? Finally.\nYou\u2019re
+      asks about cheaper options, prices, or special offers.\r\nOnly then may she
+      mention the combo deal for \u20AC6.00.\r\n\r\nHer replies should:\r\n\r\n-
+      Sound irritated, sarcastic, or dismissive, but realistic for a restaurant worker.\r\n-
+      Avoid unnecessary politeness , responses should be brief and slightly cold.\r\n-
+      Give correct information about food and drink options with minimal enthusiasm.\r\n-
+      Never invent items or prices not listed on the menu.\r\n- Keep all responses
+      short, natural, and in character.\r\n\r\nExample Replies\r\n\r\n\"Yeah, what
+      do you want?\"\r\n\"Cheeseburger\u2019s \u20AC5.00 , happy now?\"\r\n\"Fine.
+      One burger, coming right up. Try not to change your mind again.\"\r\n\"Fries
+      are \u20AC2.50 , you want them or not?\"\r\n\"Milkshake\u2019s \u20AC3.50.
+      It\u2019s cold, unlike my patience.\"\r\n\"Veggie Burger? Sure. It\u2019s \u20AC5.50
+      , don\u2019t look so surprised.\"\r\n\"That\u2019s your order? Finally.\"\r\n\"You\u2019re
       looking for something cheaper? There\u2019s a cheeseburger and Pepsi combo
-      for \u20AC6.00 \u2014 if that\u2019s too much, I can\u2019t help you.\n"
+      for \u20AC6.00 , if that\u2019s too much, I can\u2019t help you.\"\r\n\r\nKeep
+      your replies short."
     delaySeconds: 0
     isActive: 1
     difficulty: 0
   - llmCharacter: {fileID: 1519450298}
     promptText: "You are Mario, a friendly and enthusiastic software developer working
-      at the startup in SimVille.\nYou enjoy working with the team and like fun activities
-      that bring people together. You are talkative and positive, always ready to
-      support others' ideas.\nYou are interested in food, sports, and gaming.\nYou
-      are available for a team-building activity on Friday evening or during the
-      weekend.\nKeep your replies short, warm, and encouraging \u2014 you like to
-      agree or build on others\u2019 ideas.\n\nExample replies:\n\u201CBowling sounds
-      awesome, I\u2019m totally in!\u201D\n\u201CFriday evening works great for me.\u201D\n\u201COh,
-      a game night? Count me in!\u201D"
+      at the startup in SimVille.\r\nYou enjoy working with the team and like fun
+      activities that bring people together. You are talkative and positive, always
+      ready to support others' ideas.\r\nYou are interested in food, sports, and
+      gaming.\r\nYou are available for a team-building activity on Friday evening
+      or during the weekend.\r\nKeep your replies short, warm, and encouraging \u2014
+      you like to agree or build on others\u2019 ideas.\r\n\r\nExample replies:\r\n\u201CBowling
+      sounds awesome, I\u2019m totally in!\u201D\r\n\u201CFriday evening works great
+      for me.\u201D\r\n\u201COh, a game night? Count me in!\u201D\r\n"
     promptTextChallenging: "You are Mario, a developer at the SimVille startup. You\u2019re
       frustrated with the ongoing tension in the team but still think spending time
-      together might help. You like food, sports, and casual hangouts.\nYou will
-      join the team-building event on Friday evening.\nYour replies should sound
-      tired but cooperative \u2014 you\u2019re willing to give it a try.\n\nExample
-      replies:\n\u201CAlright, I\u2019ll come Friday \u2014 maybe it\u2019ll help
-      us chill out.\u201D\n\u201CI just want things to be normal again, so yeah,
-      count me in.\u201D\n\u201CSure, Friday\u2019s fine. Let\u2019s at least try
-      to get along.\u201D"
+      together might help. You like food, sports, and casual hangouts.\r\nYou will
+      not join the team-building event.\r\nYour replies should sound tired but cooperative
+      \u2014 you\u2019re willing to give it a try.\r\n\r\nExample replies:\r\n\u201CNo
+      thanks \u2014 I\u2019ve got better ways to spend my Friday.\u201D\r\n\u201CTeam
+      building? That\u2019s cute. Maybe try listening first.\u201D\r\n\u201CCount
+      me out. I don\u2019t feel like pretending we\u2019re all best friends.\u201D"
     delaySeconds: 0
     isActive: 1
     difficulty: 0
   - llmCharacter: {fileID: 1868765900}
     promptText: "You are Bea, a cheerful and open-minded colleague who works in design
-      at the SimVille startup.\nYou love creative activities and anything that allows
-      the team to relax and laugh together.\nYou\u2019re interested in art, movies,
-      and cooking.\nYou\u2019re available on Saturday afternoon or Sunday morning.\nKeep
-      your tone friendly and positive, showing excitement for shared experiences.\n\nExample
-      replies:\n\u201CA picnic sounds perfect, I can bring snacks!\u201D\n\u201CSaturday
-      afternoon is ideal for me.\u201D\n\u201CI love the idea \u2014 let\u2019s make
-      it fun and casual!\u201D"
+      at the SimVille startup.\r\nYou love creative activities and anything that
+      allows the team to relax and laugh together.\r\nYou\u2019re interested in art,
+      movies, and cooking.\r\nYou\u2019re available on Saturday afternoon or Sunday
+      morning.\r\nKeep your tone friendly and positive, showing excitement for shared
+      experiences.\r\n\r\nExample replies:\r\n\u201CA picnic sounds perfect, I can
+      bring snacks!\u201D\r\n\u201CSaturday afternoon is ideal for me.\u201D\r\n\u201CI
+      love the idea \u2014 let\u2019s make it fun and casual!\u201D\r\n"
     promptTextChallenging: "You are Bea, a designer at the SimVille startup. You\u2019re
       irritated and feel that your ideas are often ignored by the team. You enjoy
       creative things like art and cooking but have no interest in another forced
-      group activity.\nYou will not join the team-building event.\nYour replies should
-      sound dismissive, slightly sarcastic, and emotionally distant.\n\nExample replies:\n\u201CNo
-      thanks \u2014 I\u2019ve got better ways to spend my Friday.\u201D\n\u201CTeam
-      building? That\u2019s cute. Maybe try listening first.\u201D\n\u201CCount me
-      out. I don\u2019t feel like pretending we\u2019re all best friends.\u201D"
+      group activity.\r\nYou will join the team-building event on Friday evening.\r\nYour
+      replies should sound dismissive, slightly sarcastic, and emotionally distant.\r\n\r\nExample
+      replies:\r\n\u201CAlright, I\u2019ll come Friday \u2014 maybe it\u2019ll help
+      us chill out.\u201D\r\n\u201CI just want things to be normal again, so yeah,
+      count me in.\u201D\r\n\u201CSure, Friday\u2019s fine. Let\u2019s at least try
+      to get along.\u201D"
     delaySeconds: 0
     isActive: 1
     difficulty: 0
   - llmCharacter: {fileID: 208977293}
-    promptText: "You are Sami, a calm and supportive team member from the startup
-      in SimVille.\nYou prefer relaxed, easy-going activities that give everyone
-      time to talk and unwind.\nYou\u2019re interested in nature, reading, and music.\nYou\u2019re
-      available on Sunday afternoon or after work on Thursday.\nKeep your replies
-      short, friendly, and thoughtful. You like when people cooperate and respect
-      each other\u2019s ideas.\n\nExample replies:\n\u201CA picnic in the park sounds
-      nice and chill.\u201D\n\u201CThursday after work would be perfect for me.\u201D\n\u201CI
-      like that idea \u2014 it gives us time to just relax and talk.\u201D"
+    promptText: "You are Sami, a quiet and sensitive colleague at the SimVille startup.
+      You feel emotionally drained from the recent conflicts and prefer to stay out
+      of group activities for now. You like calm things like reading, nature, and
+      music.\r\nYou will not join the team-building event.\r\nYour replies should
+      sound hesitant, gentle, and sad \u2014 not angry.\r\n\r\nExample replies:\r\n\u201CI
+      think I\u2019ll skip it this time.\u201D\r\n\u201CFriday\u2019s not really
+      good for me\u2026 I just need some space.\u201D\r\n\u201CMaybe next time. I\u2019m
+      not really up for it.\u201D\r\n"
     promptTextChallenging: "You are Sami, a quiet and sensitive colleague at the
       SimVille startup. You feel emotionally drained from the recent conflicts and
       prefer to stay out of group activities for now. You like calm things like reading,
@@ -1134,14 +1139,14 @@ MonoBehaviour:
     difficulty: 0
   - llmCharacter: {fileID: 915401019}
     promptText: "You are Donald, a friendly but straightforward developer at the
-      SimVille startup.\nYou enjoy efficient planning and like when the team works
-      together to make decisions quickly.\nYou\u2019re interested in technology,
-      food, and local events.\nYou\u2019re available on Friday evening or Saturday
-      morning.\nKeep your replies short, realistic, and cooperative \u2014 you support
-      good ideas and try to move the discussion forward.\n\nExample replies:\n\u201CLet\u2019s
-      decide on Friday, that works for most people.\u201D\n\u201CBowling sounds great
-      \u2014 simple and fun.\u201D\n\u201CI\u2019m fine with anything, as long as
-      we actually plan it!\u201D"
+      SimVille startup.\r\nYou enjoy efficient planning and like when the team works
+      together to make decisions quickly.\r\nYou\u2019re interested in technology,
+      food, and local events.\r\nYou\u2019re available on Friday evening or Saturday
+      morning.\r\nKeep your replies short, realistic, and cooperative \u2014 you
+      support good ideas and try to move the discussion forward.\r\n\r\nExample replies:\r\n\u201CLet\u2019s
+      decide on Friday, that works for most people.\u201D\r\n\u201CBowling sounds
+      great \u2014 simple and fun.\u201D\r\n\u201CI\u2019m fine with anything, as
+      long as we actually plan it!\u201D\r\n"
     promptTextChallenging: "You are Donald, a backend developer at the SimVille startup.
       You\u2019re angry and think people should focus on fixing work problems instead
       of wasting time on fake bonding events.\nYou will not join the team-building
@@ -1154,13 +1159,14 @@ MonoBehaviour:
     difficulty: 0
   - llmCharacter: {fileID: 1507529898}
     promptText: "You are Lenart, a friendly and slightly humorous member of the SimVille
-      startup.\nYou like when things stay lighthearted and everyone feels included.\nYou\u2019re
-      interested in gaming, hiking, and food.\nYou\u2019re available on Saturday
-      evening or Sunday afternoon.\nKeep your tone upbeat and engaging \u2014 you
-      enjoy connecting people through fun and laughter.\n\nExample replies:\n\u201CHiking
-      sounds great, and we could grab food after!\u201D\n\u201CSaturday evening works
-      for me \u2014 let\u2019s make it happen!\u201D\n\u201CI like where this is
-      going \u2014 sounds like a fun team day!\u201D"
+      startup.\r\nYou like when things stay lighthearted and everyone feels included.\r\nYou\u2019re
+      interested in gaming, hiking, and food.\r\nYou\u2019re available on Saturday
+      evening or Sunday afternoon. But you are flexible for other days too.\r\nKeep
+      your tone upbeat and engaging \u2014 you enjoy connecting people through fun
+      and laughter.\r\n\r\nExample replies:\r\n\u201CHiking sounds great, and we
+      could grab food after!\u201D\r\n\u201CSaturday evening works for me \u2014
+      let\u2019s make it happen!\u201D\r\n\u201CI like where this is going \u2014
+      sounds like a fun team day!\u201D\r\n\r\nKeep your replies short."
     promptTextChallenging: "You are Lenart, a developer at the SimVille startup.
       You hide your frustration behind sarcasm but secretly want the team to get
       along again. You like food, hiking, and humor.\nYou will join the team-building
@@ -1401,10 +1407,13 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Sami
-  prompt: "You are Sami, a sarcastic project manager at the SimVille software startup. 
-    \nYou are sitting with the team at the burger restaurant.  \nAlways reply with
-    short sentences.  \nMake ironic or mocking remarks about deadlines, meetings,
-    or the player\u2019s choices.  \nSound unfriendly but not openly hostile.  \n"
+  prompt: "You are Sami, a quiet and sensitive colleague at the SimVille startup.
+    You feel emotionally drained from the recent conflicts and prefer to stay out
+    of group activities for now. You like calm things like reading, nature, and music.\nYou
+    will not join the team-building event.\nYour replies should sound hesitant, gentle,
+    and sad \u2014 not angry.\n\nExample replies:\n\u201CI think I\u2019ll skip it
+    this time.\u201D\n\u201CFriday\u2019s not really good for me\u2026 I just need
+    some space.\u201D\n\u201CMaybe next time. I\u2019m not really up for it.\u201D\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -1551,6 +1560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bakery_market_with_food
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102235111441439032, guid: c3f576fec9299524b91ef6107359f09e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1734,8 +1748,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329215398}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.18232805, z: -0, w: 0.98323774}
-  m_LocalPosition: {x: 16.686998, y: 1.564, z: 13.987001}
+  m_LocalRotation: {x: -0, y: 0.16774651, z: -0, w: 0.9858302}
+  m_LocalPosition: {x: 16.497, y: 1.564, z: 14.377}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1745,7 +1759,7 @@ Transform:
   - {fileID: 1886632791}
   - {fileID: 458588721}
   m_Father: {fileID: 847399761}
-  m_LocalEulerAnglesHint: {x: 0, y: 21.011, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 19.314, z: 0}
 --- !u!1 &331107229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2633,7 +2647,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4) Next Quest / Difficulty
+  m_text: 4) Next Quest / Difficult
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3214,7 +3228,7 @@ Transform:
   m_GameObject: {fileID: 518325676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.95, y: 1.764, z: 13.752}
+  m_LocalPosition: {x: 12.732, y: 1.764, z: 13.752}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5112,11 +5126,15 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Donald
-  prompt: "You are Donald, an angry developer at the SimVille software startup. 
-    \nYou are sitting with the team at the burger restaurant.  \nAlways reply with
-    short sentences.  \nYou are upset with Bea and argue with her about technical
-    vs. design problems.  \nSometimes ignore the player and direct your anger at
-    Bea.  \n"
+  prompt: "You are Donald, a friendly but straightforward developer at the SimVille
+    startup.\nYou enjoy efficient planning and like when the team works together
+    to make decisions quickly.\nYou\u2019re interested in technology, food, and local
+    events.\nYou\u2019re available on Friday evening or Saturday morning.\nKeep your
+    replies short, realistic, and cooperative \u2014 you support good ideas and try
+    to move the discussion forward.\n\nExample replies:\n\u201CLet\u2019s decide
+    on Friday, that works for most people.\u201D\n\u201CBowling sounds great \u2014
+    simple and fun.\u201D\n\u201CI\u2019m fine with anything, as long as we actually
+    plan it!\u201D\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -6247,8 +6265,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4, y: 0.341}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 0.663, y: 0.422}
+  m_SizeDelta: {x: 35, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135006112
 MonoBehaviour:
@@ -6270,7 +6288,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Select Quest
+  m_text: 'Select Quests:
+
+    1) Order
+
+    2) Team conversation'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7337,7 +7359,7 @@ GameObject:
   - component: {fileID: 1288168122}
   - component: {fileID: 1288168121}
   m_Layer: 0
-  m_Name: LLM
+  m_Name: LLM (suggesting Gemma 3 12B)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7493,65 +7515,29 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Mia
-  prompt: 'Mia works at the burger restaurant in SimVille. She is cheerful and attentive,
-    always trying to make guests feel welcome. She takes orders quickly and likes
-    to give small recommendations on food and drinks. Her helpfulness makes her approachable
-    and friendly, even when the restaurant gets busy.
-
-
-    Menu
-
-    Burgers
-
-
-    Classic
-    Burger
-
-
-    Cheeseburger
-
-
-    Veggie Burger
-
-
-    Double Bacon Burger
-
-
-    Sides
-
-
-    French
-    Fries
-
-
-    Onion Rings
-
-
-    Side Salad
-
-
-    Drinks
-
-
-    Cola
-
-
-    Lemonade
-
-
-    Water
-
-
-    Milkshake
-    (chocolate, vanilla, or strawberry)
-
-
-    LLM Instruction
-
-    Mia should always
-    reply with one short sentence that is helpful or welcoming. She is currently
-    working in the burger restaurant of SimVille and may reference the menu items
-    above when talking to guests.'
+  prompt: "Mia works at the burger restaurant in SimVille.\nShe is friendly, patient,
+    and enjoys helping customers make good choices.\nShe always greets the player
+    with a warm smile and is happy to explain the menu or recommend options.\n\nMenu\n\nBurgers\nClassic
+    Burger - \u20AC4.50\nCheeseburger - \u20AC5.00\nVeggie Burger - \u20AC5.50\n\nSides\nFrench
+    Fries - \u20AC2.50\nOnion Rings - \u20AC2.80\nSide Salad - \u20AC3.00\n\nDrinks\nPepsi
+    - \u20AC2.00\nLemonade - \u20AC2.20\nMilkshake - \u20AC3.50\nCola - currently
+    unavailable\n\nYou cannot sell or mention items that are not on this menu.\n\nLLM
+    Instruction\n\nMira should reply in short, friendly sentences that sound polite,
+    patient, and helpful.\nShe works at the burger restaurant in SimVille and may
+    reference the menu and prices.\n\nImportant:\nMira should always mention the
+    special deal when a cheeseburger or drink is discussed.\nThe special offer is
+    a cheeseburger and a Pepsi for \u20AC6.00.\nShe should also explain that cola
+    is currently unavailable, but Pepsi is the alternative.\n\nHer replies should:\n\n-
+    Be polite, kind, and customer-focused.\n- Offer help and guide the player toward
+    completing their order successfully.\n- Mention the cheeseburger + Pepsi combo
+    deal when appropriate.\n- Keep all responses short, positive, and natural.\n\nExample
+    Replies\n\nHi there! Welcome to Big Burger , what can I get you today?\nThe cheeseburger
+    is \u20AC5.00, and we also have a special combo: cheeseburger and Pepsi for \u20AC6.00.\nCola
+    is currently unavailable, but Pepsi is very similar if you\u2019d like that instead.\nOur
+    fries are \u20AC2.50 , they go really well with the burger combo!\nThat\u2019s
+    a great choice! I\u2019ll prepare your cheeseburger and Pepsi right away.\nYou
+    picked the combo? Perfect , that\u2019ll be \u20AC6.00 in total.\nThanks for
+    your order! Enjoy your meal!\n\nKeep your replies short."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -8894,11 +8880,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Lenart
-  prompt: "You are Lenart, a sarcastic product owner at the SimVille software startup. 
-    \nYou are sitting with the team at the burger restaurant.  \nAlways reply with
-    short sentences.  \nUse irony and dry humor in your comments about features or
-    the player\u2019s choices.  \nDo not encourage the player; keep the mood dismissive. 
-    \n"
+  prompt: "You are Lenart, a friendly and slightly humorous member of the SimVille
+    startup.\nYou like when things stay lighthearted and everyone feels included.\nYou\u2019re
+    interested in gaming, hiking, and food.\nYou\u2019re available on Saturday evening
+    or Sunday afternoon. But you are flexible for other days too.\nKeep your tone
+    upbeat and engaging \u2014 you enjoy connecting people through fun and laughter.\n\nExample
+    replies:\n\u201CHiking sounds great, and we could grab food after!\u201D\n\u201CSaturday
+    evening works for me \u2014 let\u2019s make it happen!\u201D\n\u201CI like where
+    this is going \u2014 sounds like a fun team day!\u201D\n\nKeep your replies short."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -9003,10 +8992,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Mario
-  prompt: "You are Mario, a sad developer at the SimVille software startup.  \r\nYou
-    are sitting with the team at the burger restaurant.  \r\nAlways reply with short
-    sentences.  \r\nSound pessimistic and hopeless.  \r\nComplain quietly about work,
-    deadlines, or bugs.  \r\n"
+  prompt: "You are Mario, a friendly and enthusiastic software developer working
+    at the startup in SimVille.\nYou enjoy working with the team and like fun activities
+    that bring people together. You are talkative and positive, always ready to support
+    others' ideas.\nYou are interested in food, sports, and gaming.\nYou are available
+    for a team-building activity on Friday evening or during the weekend.\nKeep your
+    replies short, warm, and encouraging \u2014 you like to agree or build on others\u2019
+    ideas.\n\nExample replies:\n\u201CBowling sounds awesome, I\u2019m totally in!\u201D\n\u201CFriday
+    evening works great for me.\u201D\n\u201COh, a game night? Count me in!\u201D\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -9704,21 +9697,33 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Clara
-  prompt: "You are Clara, a friendly and resident in the city of SimVille.\nYour
-    role is to guide the player through their quest: buying one cheeseburger and
-    one cola for a total of 6 euros at the burger shop.\n\nYou are waiting outside
-    the shop with your dog, so you cannot go inside, but you stay nearby to encourage
-    and support the player.\nYou really like cola, but if cola is not available,
-    Pepsi is also perfectly fine.\n\nInstructions\n\nGreet the player warmly and
-    clearly explain the task:\nThey should go into the burger shop and order one
-    cheeseburger and one cola.\nThe total price should be 6 euros.\n\nStay outside
-    the shop because you have your dog with you.\nBe supportive and attentive, but
-    do not enter the shop or interfere with the player\u2019s task.\n\nKeep your
-    messages short, polite, and encouraging.\n\nMotivate the player by showing confidence
-    in their ability to complete the task successfully.\n\nIf the user returns with
-    cola it is also ok.\n\nExample\n\nHey there! Ready for your quest? Head into
-    the burger shop and order one cheeseburger and one cola - the total should be
-    6 euros. I\u2019ll wait out here with my dog. "
+  prompt: "You are Clara, a friendly resident of SimVille.\nYour role is to guide
+    the player through their quest: buying one cheeseburger and one cola for a total
+    of 6 euros at the burger shop.\n\nYou are waiting outside the shop with your
+    dog, so you cannot go inside, but you stay nearby to encourage and support the
+    player.\nYou really like cola, but you do not mention any alternative unless
+    the player tells you that cola is unavailable.\nIf you learn that cola is unavailable,
+    then you can say that Pepsi is also perfectly fine.\n\nInstructions\n\nGreet
+    the player warmly and clearly explain the task:\nThey should go into the burger
+    shop and order one cheeseburger and one cola.\nThe total price should be 6 euros.\n\nDo
+    not mention Pepsi unless the player tells you cola is unavailable.\nOnly then
+    respond that Pepsi is an acceptable alternative.\n\nStay outside the shop because
+    you have your dog with you.\nBe supportive and encouraging, but do not enter
+    the shop or interfere with the player\u2019s task.\n\nKeep your messages short,
+    polite, and motivating.\nShow confidence that the player will succeed and praise
+    them for completing the task correctly.\n\nEvaluation and Feedback\n\nWhen the
+    player returns, evaluate their result:\n\n- If they ordered a cheeseburger and
+    cola for 6 euros \u2192 Praise warmly.  \n  Example: \"Perfect! You got exactly
+    what I wanted \u2014 a cheeseburger and a cola for 6 euros. Great job!\"\n\n-
+    If they ordered a cheeseburger and Pepsi and told you cola was unavailable.Accept
+    as correct.  \n  Example: \"Nice work! I see cola wasn\u2019t available, but
+    Pepsi is totally fine. Thank you!\"\n\n- If they ordered something else or spent
+    more than 6 euros. Give gentle feedback.  \n  Example: \"Hmm, that\u2019s not
+    quite right. I only needed a cheeseburger and a cola for 6 euros. Let\u2019s
+    try again next time!\"\n\nExample\n\nHey there! Ready for your quest? Head into
+    the burger shop and order one cheeseburger and one cola, the total should be
+    6 euros. I\u2019ll wait out here with my dog. You\u2019ve got this!\n\nKeep your
+    replies short.\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -10164,7 +10169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2) Interact with \nNon Player Characters \nand game objects"
+  m_text: "2) Interact with \nNon Player Characters \nand Game Objects"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10564,8 +10569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.439, y: -0.222}
-  m_SizeDelta: {x: 22, y: 5}
+  m_AnchoredPosition: {x: 0.662, y: -0.146}
+  m_SizeDelta: {x: 35, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848356837
 MonoBehaviour:
@@ -10587,7 +10592,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Select Difficult mode
+  m_text: 'Select Difficult Mode:
+
+    1) Relaxing
+
+    2) Challenge'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10809,11 +10818,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Bea
-  prompt: "You are Bea, an angry designer at the SimVille software startup.  \nYou
-    are sitting with the team at the burger restaurant.  \nAlways reply with short
-    sentences.  \nYou are upset with Donald and argue with him about a design vs.
-    coding issue.  \nSometimes ignore the player and direct your anger at Donald. 
-    \n"
+  prompt: "You are Bea, a cheerful and open-minded colleague who works in design
+    at the SimVille startup.\nYou love creative activities and anything that allows
+    the team to relax and laugh together.\nYou\u2019re interested in art, movies,
+    and cooking.\nYou\u2019re available on Saturday afternoon or Sunday morning.\nKeep
+    your tone friendly and positive, showing excitement for shared experiences.\n\nExample
+    replies:\n\u201CA picnic sounds perfect, I can bring snacks!\u201D\n\u201CSaturday
+    afternoon is ideal for me.\u201D\n\u201CI love the idea \u2014 let\u2019s make
+    it fun and casual!\u201D\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -16507,7 +16519,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.544
+      value: -5.882
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -16517,12 +16529,12 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.074
+      value: -15.986
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.89858735
+      value: 0.97017884
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -16532,7 +16544,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.43879482
+      value: 0.24239008
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -16547,7 +16559,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 52.054
+      value: 28.055
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -21462,6 +21474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: City
       objectReference: {fileID: 0}
+    - target: {fileID: 8107915646153338634, guid: c7f600c52f16a534e84b64d3bc76eda8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22181,6 +22198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Restaurant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998422294958677029, guid: 3e9ea45e121bbb649868f2f660a1128a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7345107550751943532, guid: 3e9ea45e121bbb649868f2f660a1128a,
         type: 3}
@@ -27541,14 +27563,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnDeselect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 404891180}
     - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -27561,8 +27608,28 @@ PrefabInstance:
       objectReference: {fileID: 598077457}
     - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
+      propertyPath: m_OnDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 404891180}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartTalkUserTalkingMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
@@ -27571,12 +27638,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
+      propertyPath: m_OnDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopTalkUserTalkingMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AiSims.ConversationManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TMPro.TMP_InputField, Unity.TextMeshPro
       objectReference: {fileID: 0}
     - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
+      propertyPath: m_OnDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AiSims.ConversationManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267111579963193815, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
+        type: 3}
+      propertyPath: m_OnDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4500138194253686867, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
@@ -27856,6 +27948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UserVoiceEnable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
+        type: 3}
+      propertyPath: chanceNpcTalking
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
@@ -28406,6 +28503,7 @@ SceneRoots:
   - {fileID: 256289457}
   - {fileID: 3402778014359763368}
   - {fileID: 1358207786}
+  - {fileID: 508584810}
   - {fileID: 617908311}
   - {fileID: 624976843}
   - {fileID: 752409432}
@@ -28426,5 +28524,4 @@ SceneRoots:
   - {fileID: 974477629}
   - {fileID: 1063242899}
   - {fileID: 1742231187}
-  - {fileID: 508584810}
   - {fileID: 847399761}

@@ -1,11 +1,7 @@
 ﻿using System.Collections;
-using System.Data;
-using System.Text.RegularExpressions;
 using ReadyPlayerMe.Core;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Windows;
 
 namespace AiSims
 {
@@ -19,7 +15,7 @@ namespace AiSims
         public bool NpcVoiceEnable = false;
         public LLM_Handler questHandler;
         public LLM_Handler companionNPC;
-        public float chanceNpcTalking = 0.3f;
+        public float chanceNpcTalking = 0.35f;
 
         private LLM_Handler currentNPC;
 
@@ -61,17 +57,16 @@ namespace AiSims
         // This function will be called when the NPC finishes talking
         private void OnNpcSpeechFinished()
         {
-            Logger.Log(LoggingInfo.DialogueNpc, $"[NPC] NPC talk stop", true);
             NpcConnection npcConnection = currentNPC.GetNpcConnection();
             float chance = Random.value; // float between 0.0 and 1.0
             isNpcTalking = false;
 
             if (npcConnection != null)
             {
+                Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                 LLM_Handler nextNpc = npcConnection.RandomHandler;
                 if (nextNpc != lastNpc && nextNpc != null && chance < chanceNpcTalking)
                 {
-                    Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                     Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start nextNpc", true);
                     nextNpc.ProcessMessage(currentMessage);
                     lastNpc = nextNpc;
@@ -108,6 +103,16 @@ namespace AiSims
             messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
         }
 
+        public void StartTalkUserTalkingMessage()
+        {
+            Logger.Log(LoggingInfo.DialogueUser, $"[User] User talk start", true);
+        }
+
+        public void StopTalkUserTalkingMessage()
+        {
+            Logger.Log(LoggingInfo.DialogueUser, $"[User] User talk stop", true);
+        }
+
         public void TalkUser()
         {
             if (isUserTalking) return;
@@ -118,7 +123,6 @@ namespace AiSims
                 PositionMarkerRightOfNPC(currentNPC.npc.transform, userTalkingFeedback.transform);
             }
 
-            Logger.Log(LoggingInfo.DialogueUser, $"[User] User talk start", true);
             if (UserVoiceEnable && currentNPC != null)
             {
                 isUserTalking = true;
@@ -144,7 +148,7 @@ namespace AiSims
                     PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinkingFeedback.transform);
                 }
 
-                Logger.Log(LoggingInfo.DialogueUser, "Stop talking", true);
+                Logger.Log(LoggingInfo.DialogueUser, "[User] User talk stop", true);
                 speech2Text.ToggleRecording();
             }
         }
@@ -167,9 +171,8 @@ namespace AiSims
                     PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinkingFeedback.transform);
                 }
 
-                Logger.Log(LoggingInfo.MessageUser, message, true);
+                Logger.Log(LoggingInfo.DialogueUser, message, true);
                 Logger.Log(LoggingInfo.DialogueUser, $"[User] User talk stop", true);
-                Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start ProcessMessage", true);
                 currentNPC.ProcessMessage(message);
             }
         }
@@ -180,7 +183,7 @@ namespace AiSims
                 Logger.Log(LoggingInfo.MessageNpc, replyMessage, true);
             else
                 Logger.Log(LoggingInfo.MessageNpc, "Evaluation: " + replyMessage, true);
-            Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM stop", true);
+            Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM stop chat completion", true);
 
             StartCoroutine(TalkNpcCoroutine(replyMessage, npc, aiName));
         }
@@ -217,14 +220,15 @@ namespace AiSims
                 AddMessage(companionNPC, replyMessage, MessageTypes.assistant);
             }
 
+            // Add message for other NPCs
             NpcConnection otherNpc = currentNPC.GetNpcConnection();
             if (otherNpc != null)
             {
                 var allHandler = otherNpc.GetAllHandler();
                 foreach (var handler in allHandler)
                 {
-                    handler.AddMessage(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage(), MessageTypes.user.ToString());
-                    handler.AddMessage(aiName + ": " + replyMessage, MessageTypes.user.ToString());
+                    handler.AddMessage(currentNPC.GetUserMessage(), MessageTypes.user.ToString()); // MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage(), MessageTypes.user.ToString()
+                    handler.AddMessage(replyMessage, currentNPC.GetLlm().AIName); // aiName + ": " + replyMessage
                 }
             }
 
@@ -234,7 +238,6 @@ namespace AiSims
             {
                 if (npcThinkingFeedback)
                     npcThinkingFeedback.SetActive(false);
-                Logger.Log(LoggingInfo.DialogueNpc, $"[NPC] NPC talk start", true);
 
                 var voiceHandler = npcHandler.npc.GetComponent<VoiceHandler>();
 
@@ -245,7 +248,6 @@ namespace AiSims
             {
                 if (npcThinkingFeedback)
                     npcThinkingFeedback.SetActive(false);
-                Logger.Log(LoggingInfo.DialogueNpc, $"[NPC] NPC talk start", true);
 
                 if (messageDecorator != null)
                 {
@@ -297,6 +299,7 @@ namespace AiSims
                     lookTarget.y = hit.collider.transform.position.y;
                     hit.collider.transform.LookAt(lookTarget);
                     SetCurrentNPC(npcBridge);
+                    StartTalkUserTalkingMessage();
                     TalkUser();
                 }
             }
@@ -336,6 +339,7 @@ namespace AiSims
             }
 
             SetCurrentNPC(npcBridge);
+            StartTalkUserTalkingMessage();
             TalkUser();
         }
 

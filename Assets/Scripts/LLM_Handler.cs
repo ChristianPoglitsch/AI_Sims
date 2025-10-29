@@ -107,15 +107,16 @@ namespace AiSims
 
         public void ProcessMessage(string message, bool addToHist = true)
         {
+            Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start chat completion", true);
             Debug.Log(message);
             userMessage = message;
             addToHistory = addToHist;
             _ = llmCharacter.Chat(message, HandleReply, ReplyCompleted, addToHistory);
         }
 
-        public void AddMessage(string message, string userName)
+        public void AddMessage(string message, string speaker)
         {
-            llmCharacter.AddMessage(userName, message);
+            llmCharacter.AddMessage(speaker, message);
         }
     }
 }

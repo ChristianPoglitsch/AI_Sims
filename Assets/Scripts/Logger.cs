@@ -9,10 +9,11 @@ namespace AiSims
     {
         // Dialogue/Interrupt
         DialogueUser,
-        MessageUser,
         DialogueNpc,
         MessageNpc,
         LlmProcessing,
+        TTS,
+        STT,
         Scene
     }
 
@@ -29,10 +30,11 @@ namespace AiSims
         {
             // Dialogue/Interrupt
             {LoggingInfo.DialogueUser, "DialogueUser" },
-            {LoggingInfo.MessageUser, "MessageUser" },
             {LoggingInfo.DialogueNpc, "DialogueNpc" },
             {LoggingInfo.MessageNpc, "MessageNpc" },
             {LoggingInfo.LlmProcessing, "LlmProcessing" },
+            {LoggingInfo.TTS, "Text2Speech" },
+            {LoggingInfo.STT, "Speech2Text" },
             {LoggingInfo.Scene, "Scene" }
         };
 

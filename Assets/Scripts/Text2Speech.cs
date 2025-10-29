@@ -71,7 +71,9 @@ namespace AiSims
                 www.SetRequestHeader("Content-Type", "application/json");
                 www.SetRequestHeader("Authorization", "Bearer " + apiKey);
 
+                Logger.Log(LoggingInfo.STT, "TTS start", true);
                 yield return www.SendWebRequest();
+                Logger.Log(LoggingInfo.STT, "TTS stop", true);
 
                 if (www.result != UnityWebRequest.Result.Success)
                 {

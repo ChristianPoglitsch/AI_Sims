@@ -95,7 +95,9 @@ namespace AiSims
                 Microphone.End(micDevice);
                 isRecording = false;
 
+
                 byte[] wavData = WavUtility.FromAudioClip(recording);
+                Logger.Log(LoggingInfo.STT, "STT start", true);
 
                 if (sttMode == STTMode.OpenAI_API)
                 {
@@ -131,7 +133,9 @@ namespace AiSims
                 }
                 else
                 {
-                    Debug.Log("Whisper Response (OpenAI): " + www.downloadHandler.text);
+                    Debug.Log("Whisper Response (OpenAI): " + www.downloadHandler.text);                    
+                    Logger.Log(LoggingInfo.DialogueUser, www.downloadHandler.text, true);
+                    Logger.Log(LoggingInfo.STT, "STT stop", true);
                     llm_handler?.ProcessMessage(www.downloadHandler.text);
                 }
             }
@@ -171,7 +175,9 @@ namespace AiSims
                     if (parts.Length > 1)
                         response.text = string.Join(" ", parts, 0, parts.Length - 1);
 
-                    //Debug.Log("Whisper Response (Local Client): " + response.text);
+                    Debug.Log("Whisper Response (Local Client): " + response.text);                    
+                    Logger.Log(LoggingInfo.DialogueUser, www.downloadHandler.text, true);
+                    Logger.Log(LoggingInfo.STT, "STT stop", true);
                     llm_handler?.ProcessMessage(response.text);
                 }
             }
