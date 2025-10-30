@@ -56,7 +56,7 @@ Camera: Change between Desktop and XR camera
 
 
 
-
+📄 Read the Paper: https://github.com/ChristianPoglitsch/AI\_Sims/blob/main/SimVille.pdf
 
 
 

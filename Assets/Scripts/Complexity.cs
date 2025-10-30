@@ -1,4 +1,4 @@
-using AiSims;
+﻿using AiSims;
 using LLMUnity;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +21,23 @@ public class NpcEntry
 }
 
 [System.Serializable]
+public class LlmQuestEntry
+{
+    [Header("LLM Character Reference")]
+    public LLMCharacter llmCharacter; // Reference to an LLMCharacter
+    public LLM_Handler llmHandler;
+
+    [Header("Prompts for this Quest")]
+    [TextArea(5, 10), Chat]
+    public List<string> promptTexts = new List<string>(); // Multiple prompt texts
+    [TextArea(5, 10), Chat]
+    public List<string> quests = new List<string>(); // Multiple prompt texts
+
+    public float delaySeconds = 0f;  // Delay before this prompt is triggered
+    public bool isActive = false;    // Enable/disable this entry
+}
+
+[System.Serializable]
 public class LlmEntry
 {
     [Header("LLM Character Reference")]
@@ -39,12 +56,15 @@ public class Complexity : MonoBehaviour
     [Header("NPC Entries")]
     public List<NpcEntry> npcEntries = new List<NpcEntry>();
 
-    [Header("LLM Character Entries")]
+    [Header("LLM Character Quest Entries")]
+    public List<LlmQuestEntry> llmQuestEntries = new List<LlmQuestEntry>();
+
+    [Header("LLM Character Complexity Entries")]
     public List<LlmEntry> llmEntries = new List<LlmEntry>();
 
-    [Header("Global Difficulty Settings")]
-    public bool useGlobalDifficulty = false; // Toggle to override all entries
-    public DifficultyLevel globalDifficulty = DifficultyLevel.Easy; // Global difficulty level
+    [Header("Global Difficulty Settings (Complexity Entries)")]
+    public bool useGlobalDifficulty = false;
+    public DifficultyLevel globalDifficulty = DifficultyLevel.Easy;
 
     void Start()
     {
@@ -70,10 +90,14 @@ public class Complexity : MonoBehaviour
             }
         }
 
-        // Handle LLM Characters
+        UpdateLlmInstruction();
+    }
+
+    public void UpdateLlmInstruction()
+    {
         foreach (var entry in llmEntries)
         {
-            if (!entry.isActive) continue; // Skip inactive entries
+            if (!entry.isActive) continue;
 
             if (entry.llmCharacter != null)
             {
@@ -81,7 +105,7 @@ public class Complexity : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("LlmEntry has a null LLMCharacter reference.");
+                Debug.LogWarning("LlmEntry has a null LLM Character reference.");
             }
         }
     }
@@ -105,19 +129,11 @@ public class Complexity : MonoBehaviour
     {
         yield return new WaitForSeconds(entry.delaySeconds);
 
-        // Determine which difficulty setting to use
         DifficultyLevel effectiveDifficulty = useGlobalDifficulty ? globalDifficulty : entry.difficulty;
 
-        string finalPrompt = string.Empty;
-
-        if (effectiveDifficulty == DifficultyLevel.Easy)
-        {
-            finalPrompt = entry.promptText;
-        }
-        else if (effectiveDifficulty == DifficultyLevel.Challenging)
-        {
-            finalPrompt = entry.promptTextChallenging;
-        }
+        string finalPrompt = effectiveDifficulty == DifficultyLevel.Challenging
+            ? entry.promptTextChallenging
+            : entry.promptText;
 
         if (!string.IsNullOrEmpty(finalPrompt))
         {
@@ -126,6 +142,40 @@ public class Complexity : MonoBehaviour
         else
         {
             Debug.LogWarning($"No prompt text specified for {entry.llmCharacter.name} (Difficulty: {effectiveDifficulty})");
+        }
+    }
+
+    // Change difficulty for a specific LLM Entry
+    public void SetLlmQuestByIndex(int index, int questIndex)
+    {
+        if (index < 0 || index >= llmQuestEntries.Count)
+        {
+            Debug.LogWarning($"Invalid LLM index {index}. List size: {llmQuestEntries.Count}");
+            return;
+        }
+
+        var entry = llmQuestEntries[index];
+
+        if (questIndex < 0 || questIndex >= entry.promptTexts.Count)
+        {
+            Debug.LogWarning($"Invalid quest index {questIndex}. List size: {entry.promptTexts.Count}");
+            return;
+        }
+
+        // Refresh prompt immediately
+        if (entry.isActive && entry.llmCharacter != null && questIndex < entry.promptTexts.Count && questIndex < entry.quests.Count)
+        {
+            string finalPrompt = entry.promptTexts[questIndex];
+
+            if (!string.IsNullOrEmpty(finalPrompt))
+            {
+                entry.llmCharacter.SetPrompt(finalPrompt);
+                entry.llmHandler.EvaluationString = entry.quests[questIndex];
+            }
+            else
+            {
+                Debug.LogWarning($"No prompt text specified for {entry.llmCharacter.name})");
+            }
         }
     }
 }

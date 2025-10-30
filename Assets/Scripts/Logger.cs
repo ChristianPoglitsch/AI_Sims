@@ -9,7 +9,11 @@ namespace AiSims
     {
         // Dialogue/Interrupt
         DialogueUser,
-        DialoagNpc,
+        DialogueNpc,
+        MessageNpc,
+        LlmProcessing,
+        TTS,
+        STT,
         Scene
     }
 
@@ -20,23 +24,37 @@ namespace AiSims
         static string uniqueId = Guid.NewGuid().ToString();
 
         static string fullPath = filePath; //  Path.Combine(filePath, uniqueId);
+        static bool bShowFilePath = true;
 
         private static readonly Dictionary<LoggingInfo, string> logMessages = new Dictionary<LoggingInfo, string>
         {
             // Dialogue/Interrupt
             {LoggingInfo.DialogueUser, "DialogueUser" },
-            {LoggingInfo.DialoagNpc, "DialoagNpc" },
+            {LoggingInfo.DialogueNpc, "DialogueNpc" },
+            {LoggingInfo.MessageNpc, "MessageNpc" },
+            {LoggingInfo.LlmProcessing, "LlmProcessing" },
+            {LoggingInfo.TTS, "Text2Speech" },
+            {LoggingInfo.STT, "Speech2Text" },
             {LoggingInfo.Scene, "Scene" }
         };
 
-        public static string CreateLogEntry(LoggingInfo info, string message)
+        public static string CreateLogEntry(LoggingInfo info, string message, bool useUnixTimestamp = false)
         {
-          // string time = DateTime.Now.ToString("HH:mm:ss.fff");
-      
-          DateTime utcNow = DateTime.UtcNow;
-          long unixTimestampMilliseconds = ((DateTimeOffset)utcNow).ToUnixTimeMilliseconds();
+            string timeStamp;
 
-          var entry = $"[{unixTimestampMilliseconds}] [{info}] [{message}]";
+            if (useUnixTimestamp)
+            {
+                DateTime utcNow = DateTime.UtcNow;
+                long unixTimestampMilliseconds = ((DateTimeOffset)utcNow).ToUnixTimeMilliseconds();
+                timeStamp = unixTimestampMilliseconds.ToString();
+            }
+            else
+            {
+                // Local time in human-readable format
+                timeStamp = DateTime.Now.ToString("HH:mm:ss.fff");
+            }
+
+            var entry = $"[{timeStamp}] [{info}] {message}";
             return entry;
         }
 
@@ -44,7 +62,12 @@ namespace AiSims
         {
             if (includeInFile)
             {
-                Debug.Log("Filepath: " + fullPath);
+                if (bShowFilePath)
+                {
+                    Debug.Log("Filepath: " + fullPath);
+                    bShowFilePath = false;
+                }
+
                 // Check if directory already esists, if not create it
                 if (!Directory.Exists(fullPath))
                 {

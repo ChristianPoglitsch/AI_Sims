@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Text;
 using System.IO;
+using LLMUnity;
 
 namespace AiSims
 {
@@ -58,7 +59,9 @@ namespace AiSims
         public IEnumerator SpeakToClip(string text, string voice, Action<AudioClip> onReady)
         {
             string url = "https://api.openai.com/v1/audio/speech";
-            string jsonBody = $"{{\"model\":\"gpt-4o-mini-tts\",\"voice\":\"{voice}\",\"input\":\"{text}\",\"response_format\":\"wav\"}}";
+            string jsonBody = $"{{\"model\":\"{model}\",\"voice\":\"{voice}\",\"input\":\"{text}\",\"response_format\":\"wav\"}}";
+
+            //Debug.Log("[SpeakToClip] " + text);
 
             using (UnityWebRequest www = new UnityWebRequest(url, "POST"))
             {
@@ -68,7 +71,9 @@ namespace AiSims
                 www.SetRequestHeader("Content-Type", "application/json");
                 www.SetRequestHeader("Authorization", "Bearer " + apiKey);
 
+                Logger.Log(LoggingInfo.STT, "TTS start", true);
                 yield return www.SendWebRequest();
+                Logger.Log(LoggingInfo.STT, "TTS stop", true);
 
                 if (www.result != UnityWebRequest.Result.Success)
                 {
