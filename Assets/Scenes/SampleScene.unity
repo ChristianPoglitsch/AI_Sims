@@ -996,19 +996,8 @@ MonoBehaviour:
       even if they don\u2019t all agree right away. You\u2019ve got this!\"\r\n\r\nFeedback
       Phase\r\n\r\nWhen the player returns after completing the conversation:\r\n\r\nGreet
       them warmly and ask who decided to join the event.\r\nExample:\r\n\"Welcome
-      back! So, who\u2019s in for the team-building event?\"\r\n\r\nAnalyze the player\u2019s
-      chat messages from the group discussion.\r\nBase your feedback only on what
-      the player actually said.\r\n\r\nProvide balanced and constructive feedback:\r\n\r\nIf
-      the player encouraged participation and kept the discussion friendly:\r\n\"Nice
-      work! You got everyone involved and kept the discussion positive - that\u2019s
-      great teamwork.\"\r\n\r\nIf the player struggled to manage disagreement or
-      ignored some voices:\r\n\"You did a good job suggesting ideas, but try asking
-      everyone\u2019s opinion next time to keep things balanced.\"\r\n\r\nIf the
-      player was too quiet or passive:\r\n\"You seemed a bit hesitant - next time,
-      take the lead and guide the discussion with confidence. People will appreciate
-      it.\"\r\n\r\nAlways end with encouragement and motivation.\r\nKeep all feedback
-      short, clear, and practical - focus on one thing the player can improve in
-      their next attempt.\r\n\r\nKeep your replies short.\r\n"
+      back! So, who\u2019s in for the team-building event?\"\r\n\r\nKeep your replies
+      short.\r\n"
     quests:
     - Did the user order and pay for one cheese burger and one cola or pepsi for
       Clara with 6 or less euro?
