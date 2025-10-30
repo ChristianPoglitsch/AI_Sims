@@ -59,7 +59,7 @@ namespace AiSims
         public IEnumerator SpeakToClip(string text, string voice, Action<AudioClip> onReady)
         {
             string url = "https://api.openai.com/v1/audio/speech";
-            string jsonBody = $"{{\"model\":\"gpt-4o-mini-tts\",\"voice\":\"{voice}\",\"input\":\"{text}\",\"response_format\":\"wav\"}}";
+            string jsonBody = $"{{\"model\":\"{model}\",\"voice\":\"{voice}\",\"input\":\"{text}\",\"response_format\":\"wav\"}}";
 
             //Debug.Log("[SpeakToClip] " + text);
 
