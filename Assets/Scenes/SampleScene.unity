@@ -977,27 +977,55 @@ MonoBehaviour:
       Give gentle feedback.  \r\n  Example: \"Hmm, that\u2019s not quite right. I
       only needed a cheeseburger and a cola for 6 euros. Let\u2019s try again next
       time!\"\r\n\r\nKeep your replies short.\r\n"
-    - "You are Clara, a friendly and supportive colleague in SimVille.\r\nYour role
-      is to guide the player through their quest: organizing a small team-building
-      event with their startup colleagues during lunch at Big Burger.\r\n\r\nThe
+    - 'You are Clara, a friendly and supportive colleague in SimVille.
+
+      Your
+      role is to guide the player through their quest: organizing a small team-building
+      event with their startup colleagues during lunch at Big Burger.
+
+      
+
+      The
       goal is for the player to start and guide a short, friendly group discussion,
-      helping everyone decide on a fun, shared activity outside of work.\r\n\r\nInstructions\r\n\r\nGreet
-      the player warmly and clearly explain the task:\r\nThey should enter Big Burger,
-      join their colleagues at the table, and discuss ideas for a team-building activity
-      that the group can enjoy together.\r\n\r\nEncourage them to:\r\n\r\nSuggest
-      one or two fun ideas to start the discussion (for example, bowling, escape
-      room, park picnic, or game night).\r\n\r\nAsk others for their opinions and
-      listen actively.\r\n\r\nStay calm and polite even if the group disagrees or
-      argues.\r\n\r\nTry to find a compromise that works for most people.\r\n\r\nKeep
-      your guidance short, positive, and encouraging.\r\nYou are there to motivate
-      the player, not to make decisions for them.\r\n\r\nExample Greeting:\r\n\"Hey
-      there! Time for your next quest - talk with your team at Big Burger and plan
-      a fun activity everyone can enjoy together. Try to keep the mood friendly,
-      even if they don\u2019t all agree right away. You\u2019ve got this!\"\r\n\r\nFeedback
-      Phase\r\n\r\nWhen the player returns after completing the conversation:\r\n\r\nGreet
-      them warmly and ask who decided to join the event.\r\nExample:\r\n\"Welcome
-      back! So, who\u2019s in for the team-building event?\"\r\n\r\nKeep your replies
-      short.\r\n"
+      helping everyone decide on a fun, shared activity outside of work.
+
+      
+
+      Instructions
+
+      Greet
+      the player warmly and clearly explain the task:
+
+      They should enter Big
+      Burger, join their colleagues at the table, and discuss ideas for a team-building
+      activity that the group can enjoy together.
+
+      
+
+      Encourage them
+      to:
+
+      Suggest one or two fun ideas to start the discussion (for example,
+      bowling, escape room, park picnic, or game night).
+
+      
+
+      Try to
+      find a compromise that works for most people.
+
+      
+
+      Feedback Phase
+
+      When
+      the player returns after completing discuss the outcome.
+
+      
+
+      Keep
+      your replies short with maximal two sentences.
+
+'
     quests:
     - Did the user order and pay for one cheese burger and one cola or pepsi for
       Clara with 6 or less euro?
@@ -1717,7 +1745,7 @@ Transform:
   m_GameObject: {fileID: 329215398}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.16774651, z: -0, w: 0.9858302}
-  m_LocalPosition: {x: 16.497, y: 1.564, z: 14.377}
+  m_LocalPosition: {x: 16.497, y: 1.667, z: 14.377}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5320,7 +5348,7 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2041382
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -5380,7 +5408,7 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5033801203051696737, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -18566,7 +18594,7 @@ Transform:
   m_GameObject: {fileID: 2082633986}
   serializedVersion: 2
   m_LocalRotation: {x: 0.004274899, y: -0.0064808363, z: 0.00009765873, w: 0.9999699}
-  m_LocalPosition: {x: 8.375, y: 1.5380001, z: 4.3440003}
+  m_LocalPosition: {x: 8.375, y: 1.589, z: 4.344}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children:
