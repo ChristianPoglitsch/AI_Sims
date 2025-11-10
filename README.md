@@ -56,7 +56,61 @@ Camera: Change between Desktop and XR camera
 
 
 
-📄 Read the Paper: https://github.com/ChristianPoglitsch/AI\_Sims/blob/main/SimVille.pdf
+📄 Read the Paper: \[Download SimVille.pdf](https://github.com/ChristianPoglitsch/AI\_Sims/raw/main/SimVille.pdf)
+
+
+
+
+
+---
+
+
+
+\## 🧰 System Requirements
+
+
+
+\### General
+
+\- \*\*Memory:\*\* 16 GB (minimum)
+
+
+
+\### 🧠 Large Language Models (LLMs)
+
+> ⚙️ \*GPU strongly recommended for performance\*
+
+
+
+| Model   | GPU Memory Requirement |
+
+|----------|------------------------|
+
+| \*\*Mistral\*\* | ~6 GB VRAM |
+
+| \*\*Gemini\*\*  | ~12 GB VRAM |
+
+
+
+\### 🎙️ Whisper (Speech-to-Text)
+
+> 🖥️ \*GPU recommended\*
+
+\- \*\*Memory:\*\* ~500 MB VRAM
+
+
+
+---
+
+
+
+\## 🚀 Notes
+
+\- LLMs can run on CPU, but performance will be significantly slower.
+
+\- For best results, use a GPU with CUDA support (e.g., NVIDIA RTX series).
+
+\- Check `requirements.txt` for Python dependencies.
 
 
 
