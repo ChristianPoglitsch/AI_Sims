@@ -2627,7 +2627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4) Next Quest / Difficult
+  m_text: 4) Next Quest / Difficulty
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6380,7 +6380,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Select Quests:
 
-    1) Order
+    1) Order food
 
     2) Team conversation'
   m_isRightToLeft: 0
@@ -10658,7 +10658,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.662, y: -0.146}
-  m_SizeDelta: {x: 35, y: 5}
+  m_SizeDelta: {x: 36, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848356837
 MonoBehaviour:
@@ -10680,7 +10680,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Select Difficult Mode:
+  m_text: 'Select Difficulty Mode:
 
     1) Easy
 
