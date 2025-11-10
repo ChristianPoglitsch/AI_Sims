@@ -56,9 +56,7 @@ Camera: Change between Desktop and XR camera
 
 
 
-📄 Read the Paper: \[Download SimVille.pdf](https://github.com/ChristianPoglitsch/AI\_Sims/raw/main/SimVille.pdf)
-
-
+📄 Read the Paper: \[Download SimVille.pdf](https://github.com/ChristianPoglitsch/AI_Sims/blob/main/SimVille.pdf)
 
 
 
@@ -99,18 +97,11 @@ Camera: Change between Desktop and XR camera
 \- \*\*Memory:\*\* ~500 MB VRAM
 
 
-
----
-
-
-
 \## 🚀 Notes
 
 \- LLMs can run on CPU, but performance will be significantly slower.
 
 \- For best results, use a GPU with CUDA support (e.g., NVIDIA RTX series).
-
-\- Check `requirements.txt` for Python dependencies.
 
 
 
