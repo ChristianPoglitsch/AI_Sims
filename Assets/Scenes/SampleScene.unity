@@ -1729,7 +1729,7 @@ Transform:
   m_GameObject: {fileID: 329215398}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.16774651, z: -0, w: 0.9858302}
-  m_LocalPosition: {x: 16.497, y: 1.667, z: 14.377}
+  m_LocalPosition: {x: 16.515, y: 1.667, z: 14.486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3393,17 +3393,17 @@ PrefabInstance:
     - target: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.07
+      value: 9.748
       objectReference: {fileID: 0}
     - target: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.63
+      value: -0.524
       objectReference: {fileID: 0}
     - target: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.615
+      value: 20.743
       objectReference: {fileID: 0}
     - target: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
@@ -5181,7 +5181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 4627315776802419469}
   conversationManager: {fileID: 404891180}
-  voice: nova
+  voice: shimmer
   enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &939867603
@@ -5233,16 +5233,10 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Alex
-  prompt: 'You are Clara, a friendly resident of SimVille.
-
-    Goal of the game:
-    Guide the user through two quests, each with two difficulty modes.
-
-    Tell
-    the user the goal of the game!
-
-    Keep your replies brief, just one sentence
-    per response.'
+  prompt: "You are Alex, a friendly resident of SimVille.\r\nGoal of the game: You
+    can select quests and the difficulty at the desk in front of Big Burger. Afterwards,
+    visit Clara to start and finish your quest.\r\nTell the user the goal of the
+    game! \r\nKeep your replies brief."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -5323,7 +5317,7 @@ PrefabInstance:
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -5333,17 +5327,17 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.45293015
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2293999
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -5398,7 +5392,7 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5033801203051696737, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -7481,8 +7475,8 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   contextSize: 8192
   batchSize: 512
-  model: Mistral-7B-Instruct-v0.3-Q3_K_M.gguf
-  chatTemplate: mistral chat
+  model: gemma-3-12b-it-Q4_K_M.gguf
+  chatTemplate: gemma
   lora: 
   loraWeights: 
   flashAttention: 0
@@ -7492,9 +7486,9 @@ MonoBehaviour:
   SSLKey: 
   SSLKeyPath: 
   minContextLength: 0
-  maxContextLength: 32768
+  maxContextLength: 131072
   embeddingsOnly: 0
-  embeddingLength: 4096
+  embeddingLength: 3840
 --- !u!4 &1288168122
 Transform:
   m_ObjectHideFlags: 0
@@ -7557,7 +7551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 4283520511740580323}
   conversationManager: {fileID: 404891180}
-  voice: nova
+  voice: shimmer
   enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &1344964913
@@ -18583,7 +18577,7 @@ Transform:
   m_GameObject: {fileID: 2082633986}
   serializedVersion: 2
   m_LocalRotation: {x: 0.004274899, y: -0.0064808363, z: 0.00009765873, w: 0.9999699}
-  m_LocalPosition: {x: 8.375, y: 1.589, z: 4.344}
+  m_LocalPosition: {x: 8.432, y: 1.583, z: 5.03}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -19524,7 +19518,7 @@ PrefabInstance:
     - target: {fileID: 2770828757637116277, guid: 7510e882cdf9aaa48a72cf83cb30cfeb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.241972
+      value: 16.211
       objectReference: {fileID: 0}
     - target: {fileID: 2770828757637116277, guid: 7510e882cdf9aaa48a72cf83cb30cfeb,
         type: 3}
@@ -19534,7 +19528,7 @@ PrefabInstance:
     - target: {fileID: 2770828757637116277, guid: 7510e882cdf9aaa48a72cf83cb30cfeb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.615955
+      value: 49.888
       objectReference: {fileID: 0}
     - target: {fileID: 2770828757637116277, guid: 7510e882cdf9aaa48a72cf83cb30cfeb,
         type: 3}
@@ -28250,7 +28244,7 @@ PrefabInstance:
     - target: {fileID: 7958516418553984496, guid: 5b8d20b94304d6b4aa68dd42d0a9d562,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28353,12 +28347,12 @@ PrefabInstance:
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: NpcVoiceEnable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: UserVoiceEnable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
