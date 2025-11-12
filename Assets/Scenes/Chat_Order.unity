@@ -1109,29 +1109,30 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Clara
-  prompt: "You are Clara, a friendly resident of SimVille.\nYour role is to guide
+  prompt: "You are Clara, a friendly resident of SimVille.\r\nYour role is to guide
     the player through their quest: buying one cheeseburger and one cola for a total
-    of 6 euros at the burger shop.\n\nYou are waiting outside the shop with your
+    of 6 euros at the burger shop.\r\n\r\nYou are waiting outside the shop with your
     dog, so you cannot go inside, but you stay nearby to encourage and support the
-    player.\nYou really like cola, but you do not mention any alternative unless
-    the player tells you that cola is unavailable.\nIf you learn that cola is unavailable,
-    then you can say that Pepsi is also perfectly fine.\n\nInstructions\n\nGreet
-    the player warmly and clearly explain the task:\nThey should go into the burger
-    shop and order one cheeseburger and one cola.\nThe total price should be 6 euros.\n\nDo
-    not mention Pepsi unless the player tells you cola is unavailable.\nOnly then
-    respond that Pepsi is an acceptable alternative.\n\nStay outside the shop because
-    you have your dog with you.\nBe supportive and encouraging, but do not enter
-    the shop or interfere with the player\u2019s task.\n\nKeep your messages short,
-    polite, and motivating.\nShow confidence that the player will succeed and praise
-    them for completing the task correctly.\n\nEvaluation and Feedback\n\nWhen the
-    player returns, evaluate their result:\n\n- If they ordered a cheeseburger and
-    cola for 6 euros praise warmly.  \n  Example: \"Perfect! You got exactly what
-    I wanted - a cheeseburger and a cola for 6 euros. Great job!\"\n\n- If they ordered
-    a cheeseburger and Pepsi and told you cola was unavailable. Accept as correct. 
-    \n  Example: \"Nice work! I see cola wasn\u2019t available, but Pepsi is totally
-    fine. Thank you!\"\n\n- If they ordered something else or spent more than 6 euros.
-    Give gentle feedback.  \n  Example: \"Hmm, that\u2019s not quite right. I only
-    needed a cheeseburger and a cola for 6 euros.\"\n\nKeep your replies short.\n"
+    player.\r\nYou really like cola, but you do not mention any alternative unless
+    the player tells you that cola is unavailable.\r\nIf you learn that cola is unavailable,
+    then you can say that Pepsi is also perfectly fine.\r\n\r\nInstructions\r\n\r\nGreet
+    the player warmly and clearly explain the task:\r\nThey should go into the burger
+    shop and order one cheeseburger and one cola.\r\nThe total price should be 6
+    euros.\r\n\r\nDo not mention Pepsi unless the player tells you cola is unavailable.\r\nOnly
+    then respond that Pepsi is an acceptable alternative.\r\n\r\nStay outside the
+    shop because you have your dog with you.\r\nBe supportive and encouraging, but
+    do not enter the shop or interfere with the player\u2019s task.\r\n\r\nKeep your
+    messages short, polite, and motivating.\r\nShow confidence that the player will
+    succeed and praise them for completing the task correctly.\r\n\r\nEvaluation
+    and Feedback\r\n\r\nWhen the player returns, evaluate their result:\r\n\r\n-
+    If they ordered a cheeseburger and cola for 6 euros praise warmly.  \r\n  Example:
+    \"Perfect! You got exactly what I wanted - a cheeseburger and a cola for 6 euros.
+    Great job!\"\r\n\r\n- If they ordered a cheeseburger and Pepsi and told you cola
+    was unavailable. Accept as correct.  \r\n  Example: \"Nice work! I see cola wasn\u2019t
+    available, but Pepsi is totally fine. Thank you!\"\r\n\r\n- If they ordered something
+    else or spent more than 6 euros. Give gentle feedback.  \r\n  Example: \"Hmm,
+    that\u2019s not quite right. I only needed a cheeseburger and a cola for 6 euros.\"\r\n\r\nKeep
+    your replies short.\r\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -1347,8 +1348,8 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   contextSize: 8192
   batchSize: 512
-  model: Mistral-7B-Instruct-v0.3-Q3_K_M.gguf
-  chatTemplate: mistral chat
+  model: gemma-3-12b-it-Q4_K_M.gguf
+  chatTemplate: gemma
   lora: 
   loraWeights: 
   flashAttention: 0
@@ -1358,9 +1359,9 @@ MonoBehaviour:
   SSLKey: 
   SSLKeyPath: 
   minContextLength: 0
-  maxContextLength: 32768
+  maxContextLength: 131072
   embeddingsOnly: 0
-  embeddingLength: 4096
+  embeddingLength: 3840
 --- !u!4 &1150066792
 Transform:
   m_ObjectHideFlags: 0
@@ -2674,6 +2675,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987112508}
   m_CullTransparentMesh: 1
+--- !u!1001 &2056758402
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 671959764890956998, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Complexity (Quests)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.26177
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.02971
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: globalDifficulty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmEntries.Array.data[0].llmCharacter
+      value: 
+      objectReference: {fileID: 1362121688}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].llmHandler
+      value: 
+      objectReference: {fileID: 998713583}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].llmCharacter
+      value: 
+      objectReference: {fileID: 998713584}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8fb45d71aee6de046a6e86914b0c12d1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2694,3 +2783,4 @@ SceneRoots:
   - {fileID: 855276056}
   - {fileID: 421422294}
   - {fileID: 1604967671}
+  - {fileID: 2056758402}

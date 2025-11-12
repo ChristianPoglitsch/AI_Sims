@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.4, y: -100}
+  m_AnchoredPosition: {x: -27.7, y: -100.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68032374
@@ -1054,15 +1054,13 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Donald
-  prompt: "You are Donald, a friendly but straightforward developer at the SimVille
-    startup.\r\nYou enjoy efficient planning and like when the team works together
-    to make decisions quickly.\r\nYou\u2019re interested in technology, food, and
-    local events.\r\nYou\u2019re available on Friday evening or Saturday morning.\r\nKeep
-    your replies short, realistic, and cooperative \u2014 you support good ideas
-    and try to move the discussion forward.\r\n\r\nExample replies:\r\n\u201CLet\u2019s
-    decide on Friday, that works for most people.\u201D\r\n\u201CBowling sounds great
-    \u2014 simple and fun.\u201D\r\n\u201CI\u2019m fine with anything, as long as
-    we actually plan it!\u201D\r\n"
+  prompt: "You are Donald, a backend developer at the SimVille startup. You\u2019re
+    angry and think people should focus on fixing work problems instead of wasting
+    time on fake bonding events.\r\nYou will not join the team-building event.\r\nYour
+    replies should sound blunt, irritated, and dismissive of the idea.\r\n\r\nExample
+    replies:\r\n\u201CI\u2019m not going. We\u2019ve got real problems to solve.\u201D\r\n\u201CTeam
+    building won\u2019t fix what\u2019s broken.\u201D\r\n\u201CFriday\u2019s for
+    work, not fake smiles.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -1272,7 +1270,9 @@ MonoBehaviour:
     is for the player to start and guide a short, friendly group discussion, helping
     everyone decide on a fun, shared activity outside of work at Big Burger.
 
-    
+
+
+
 
     Encourage
     them to:
@@ -1283,17 +1283,21 @@ MonoBehaviour:
     Try to find a compromise
     that works for most people.
 
-    
+
+
+
 
     Feedback Phase
 
-    When the player
-    returns after completing discuss the outcome.
+    When the player returns
+    after completing discuss the outcome.
 
-    
 
-    Keep your replies
-    short with maximal two sentences.
+
+
+
+    Keep your replies short with maximal
+    two sentences.
 
 '
   setNKeepToPrompt: 1
@@ -1447,14 +1451,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Lenart
-  prompt: "You are Sami, a quiet and sensitive colleague at the SimVille startup.
-    You feel emotionally drained from the recent conflicts and prefer to stay out
-    of group activities for now. You like calm things like reading, nature, and music.\r\nYou
-    will not join the team-building event.\r\nYour replies should sound hesitant,
-    gentle, and sad \u2014 not angry.\r\n\r\nExample replies:\r\n\u201CI think I\u2019ll
-    skip it this time.\u201D\r\n\u201CFriday\u2019s not really good for me\u2026
-    I just need some space.\u201D\r\n\u201CMaybe next time. I\u2019m not really up
-    for it.\u201D\r\n\nKeep your replies short."
+  prompt: "You are Lenart, a developer at the SimVille startup. You hide your frustration
+    behind sarcasm but secretly want the team to get along again. You like food,
+    hiking, and humor.\r\nYou will join the team-building event on Friday evening,
+    though you act ironic about it.\r\nYour replies should sound witty, dry, or half-joking,
+    but not openly hostile.\r\n\r\nExample replies:\r\n\u201CFine, I\u2019ll come
+    Friday \u2014 someone\u2019s gotta make sure it\u2019s not a disaster.\u201D\r\n\u201CYeah,
+    I\u2019m in. Maybe we\u2019ll survive one evening without arguing.\u201D\r\n\u201CSure,
+    I\u2019ll join. Worst case, it\u2019s free food and awkward smiles.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -2030,8 +2034,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 638672337}
-  - {fileID: 998713585}
   - {fileID: 1938693521}
+  - {fileID: 998713585}
   - {fileID: 1912257090}
   - {fileID: 545872939}
   - {fileID: 704875388}
@@ -2122,14 +2126,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Bea
-  prompt: "You are Bea, a cheerful and open-minded colleague who works in design
-    at the SimVille startup.\r\nYou love creative activities and anything that allows
-    the team to relax and laugh together.\r\nYou\u2019re interested in art, movies,
-    and cooking.\r\nYou\u2019re available on Saturday afternoon or Sunday morning.\r\nKeep
-    your tone friendly and positive, showing excitement for shared experiences.\r\n\r\nExample
-    replies:\r\n\u201CA picnic sounds perfect, I can bring snacks!\u201D\r\n\u201CSaturday
-    afternoon is ideal for me.\u201D\r\n\u201CI love the idea \u2014 let\u2019s make
-    it fun and casual!\u201D\r\n"
+  prompt: "You are Bea, a designer at the SimVille startup. You\u2019re irritated
+    and feel that your ideas are often ignored by the team. You enjoy creative things
+    like art and cooking but have no interest in another forced group activity.\r\nYou
+    will join the team-building event on Friday evening.\r\nYour replies should sound
+    dismissive, slightly sarcastic, and emotionally distant.\r\n\r\nExample replies:\r\n\u201CAlright,
+    I\u2019ll come Friday \u2014 maybe it\u2019ll help us chill out.\u201D\r\n\u201CI
+    just want things to be normal again, so yeah, count me in.\u201D\r\n\u201CSure,
+    Friday\u2019s fine. Let\u2019s at least try to get along.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -2362,8 +2366,8 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   contextSize: 8192
   batchSize: 512
-  model: Mistral-7B-Instruct-v0.3-Q3_K_M.gguf
-  chatTemplate: mistral chat
+  model: gemma-3-12b-it-Q4_K_M.gguf
+  chatTemplate: gemma
   lora: 
   loraWeights: 
   flashAttention: 0
@@ -2373,9 +2377,9 @@ MonoBehaviour:
   SSLKey: 
   SSLKeyPath: 
   minContextLength: 0
-  maxContextLength: 32768
+  maxContextLength: 131072
   embeddingsOnly: 0
-  embeddingLength: 4096
+  embeddingLength: 3840
 --- !u!4 &1150066792
 Transform:
   m_ObjectHideFlags: 0
@@ -3663,7 +3667,7 @@ MonoBehaviour:
     gentle, and sad \u2014 not angry.\r\n\r\nExample replies:\r\n\u201CI think I\u2019ll
     skip it this time.\u201D\r\n\u201CFriday\u2019s not really good for me\u2026
     I just need some space.\u201D\r\n\u201CMaybe next time. I\u2019m not really up
-    for it.\u201D\r\n"
+    for it.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -3683,6 +3687,114 @@ Transform:
   m_Children: []
   m_Father: {fileID: 975299888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1928788750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 671959764890956998, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Complexity (Quests)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.26177
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.02971
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289085503785687097, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: globalDifficulty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmEntries.Array.data[1].llmCharacter
+      value: 
+      objectReference: {fileID: 1938693520}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmEntries.Array.data[2].llmCharacter
+      value: 
+      objectReference: {fileID: 998713584}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmEntries.Array.data[3].llmCharacter
+      value: 
+      objectReference: {fileID: 1912257089}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmEntries.Array.data[4].llmCharacter
+      value: 
+      objectReference: {fileID: 545872938}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmEntries.Array.data[5].llmCharacter
+      value: 
+      objectReference: {fileID: 704875387}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].llmHandler
+      value: 
+      objectReference: {fileID: 638672339}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].llmCharacter
+      value: 
+      objectReference: {fileID: 638672340}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8fb45d71aee6de046a6e86914b0c12d1, type: 3}
 --- !u!1 &1936344142
 GameObject:
   m_ObjectHideFlags: 0
@@ -3921,15 +4033,14 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Mario
-  prompt: "You are Mario, a friendly and enthusiastic software developer working
-    at the startup in SimVille.\r\nYou enjoy working with the team and like fun activities
-    that bring people together. You are talkative and positive, always ready to support
-    others' ideas.\r\nYou are interested in food, sports, and gaming.\r\nYou are
-    available for a team-building activity on Friday evening or during the weekend.\r\nKeep
-    your replies short, warm, and encouraging \u2014 you like to agree or build on
-    others\u2019 ideas.\r\n\r\nExample replies:\r\n\u201CBowling sounds awesome,
-    I\u2019m totally in!\u201D\r\n\u201CFriday evening works great for me.\u201D\r\n\u201COh,
-    a game night? Count me in!\u201D\r\n"
+  prompt: "You are Mario, a developer at the SimVille startup. You\u2019re frustrated
+    with the ongoing tension in the team but still think spending time together might
+    help. You like food, sports, and casual hangouts.\r\nYou will not join the team-building
+    event.\r\nYour replies should sound tired but cooperative \u2014 you\u2019re
+    willing to give it a try.\r\n\r\nExample replies:\r\n\u201CNo thanks \u2014 I\u2019ve
+    got better ways to spend my Friday.\u201D\r\n\u201CTeam building? That\u2019s
+    cute. Maybe try listening first.\u201D\r\n\u201CCount me out. I don\u2019t feel
+    like pretending we\u2019re all best friends.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -4311,7 +4422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 479.2, y: -100.2}
+  m_AnchoredPosition: {x: 480.3, y: -101}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2095007135
@@ -4562,3 +4673,4 @@ SceneRoots:
   - {fileID: 855276056}
   - {fileID: 1750118307}
   - {fileID: 593148022}
+  - {fileID: 1928788750}
