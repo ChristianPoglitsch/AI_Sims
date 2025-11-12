@@ -39,7 +39,7 @@ Before you start:
 
 ## 🧰 System Requirements
 
-\- Memory: 16 GB (minimum)
+\- Memory: 32 GB (minimum)
 
 
 \### 🧠 Large Language Models (LLMs)
@@ -63,4 +63,4 @@ Before you start:
 
 > 🖥️ \*GPU recommended\*
 
-\- Memory: ~500 MB VRAM
+\- Memory: ~2 GB VRAM
