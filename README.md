@@ -42,9 +42,9 @@ Before you start:
 \- Memory: 32 GB (minimum)
 
 
-\### 🧠 Large Language Models (LLMs)
+\# 🧠 Large Language Models (LLMs)
 
-> ⚙️ \*GPU strongly recommended for performance\*
+> ⚙️ GPU recommended
 
 | Model   | GPU Memory Requirement |
 
@@ -52,15 +52,22 @@ Before you start:
 
 | Gemini  | ~12 GB VRAM |
 
-\## 🚀 Notes
+🚀 Notes
 
 \- LLMs can run on CPU, but performance will be significantly slower.
 
 \- For best results, use a GPU with CUDA support (e.g., NVIDIA RTX series).
 
 
-\### 🎙️ Whisper (Speech-to-Text)
+\# 🎙️ Whisper (Speech-to-Text)
 
-> 🖥️ \*GPU recommended\*
+> 🖥️ GPU recommended
+
+\- Memory: ~2 GB VRAM
+
+
+\# Game
+
+> 🖥️ GPU
 
 \- Memory: ~2 GB VRAM

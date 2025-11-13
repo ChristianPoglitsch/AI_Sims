@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -9,6 +10,7 @@ namespace AiSims
     {
         public GameObject npcThinkingFeedback;
         public GameObject userTalkingFeedback;
+        public GameObject questSuccessfull; // ONLY as test!
 
         public Speech2Text speech2Text;
         public bool UserVoiceEnable = false;
@@ -46,6 +48,7 @@ namespace AiSims
             {
                 messageDecorator.SetLlmHandler(questHandler);
             }
+
             Logger.Log(LoggingInfo.Scene, "Start Scene", true);
 
             if (npcThinkingFeedback)
@@ -58,7 +61,7 @@ namespace AiSims
         private void OnNpcSpeechFinished()
         {
             NpcConnection npcConnection = currentNPC.GetNpcConnection();
-            float chance = Random.value; // float between 0.0 and 1.0
+            float chance = UnityEngine.Random.value; // float between 0.0 and 1.0
             isNpcTalking = false;
 
             if (npcConnection != null)
@@ -79,7 +82,7 @@ namespace AiSims
 
             if (!isNpcTalking)
             {
-                if (currentNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty)
+                if (companionNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty)
                 {
                     isEvaluating = true;
                     Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start EvaluateConversation", true);
@@ -94,13 +97,13 @@ namespace AiSims
         {
             currentNPC = npc.llmHandler;
             Logger.Log(LoggingInfo.Scene, $"[NPC] {currentNPC.name}", true);
-            messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
+            messageDecorator.SetEvaluationInstruction(companionNPC.EvaluationString);
         }
 
         public void SetCurrentNPC(LLM_Handler npc)
         {
             currentNPC = npc;
-            messageDecorator.SetEvaluationInstruction(currentNPC.EvaluationString);
+            messageDecorator.SetEvaluationInstruction(companionNPC.EvaluationString);
         }
 
         public void StartTalkUserTalkingMessage()
@@ -182,10 +185,24 @@ namespace AiSims
             if (!isEvaluating)
                 Logger.Log(LoggingInfo.MessageNpc, replyMessage, true);
             else
-                Logger.Log(LoggingInfo.MessageNpc, "Evaluation: " + replyMessage, true);
+            {
+                if (int.TryParse(replyMessage, out int number))
+                {
+                    QuestEvaluation(number);
+                }
+            }
             Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM stop chat completion", true);
 
             StartCoroutine(TalkNpcCoroutine(replyMessage, npc, aiName));
+        }
+
+        public void QuestEvaluation(int eval)
+        {
+            Logger.Log(LoggingInfo.MessageNpc, "Evaluation: " + eval.ToString(), true);
+            if(questSuccessfull && eval == 1) // Evaluated by LLM
+            {
+                questSuccessfull.SetActive(true);
+            }
         }
 
         public void AddMessage(LLM_Handler handler, string message, MessageTypes type)
@@ -205,20 +222,17 @@ namespace AiSims
 
         private IEnumerator TalkNpcCoroutine(string replyMessage, LLM_Handler npcHandler, string aiName)
         {
-            if (currentNPC.EvaluateConversation() && !isEvaluating)
+            if (companionNPC.EvaluateConversation() && !isEvaluating)
             {
-                //AddMessage(messageDecorator.GetLlmHandler(), currentNPC.GetUserMessage(), MessageTypes.user);
-                //AddMessage(messageDecorator.GetLlmHandler(), replyMessage, MessageTypes.assistant);
-
                 messageDecorator.AddChatToHistory(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage());
                 messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
             }
 
-            if (companionNPC && currentNPC != companionNPC)
-            {
-                AddMessage(companionNPC, currentNPC.GetUserMessage(), MessageTypes.user);
-                AddMessage(companionNPC, replyMessage, MessageTypes.assistant);
-            }
+            //if (companionNPC && currentNPC != companionNPC)
+            //{
+            //    AddMessage(companionNPC, currentNPC.GetUserMessage(), MessageTypes.user);
+            //    AddMessage(companionNPC, replyMessage, MessageTypes.assistant);
+            //}
 
             // Add message for other NPCs
             NpcConnection otherNpc = currentNPC.GetNpcConnection();

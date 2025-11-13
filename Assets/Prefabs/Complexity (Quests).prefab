@@ -132,8 +132,7 @@ MonoBehaviour:
 
 '
     quests:
-    - Did the user order and pay for one cheese burger and one cola or pepsi for
-      Clara with 6 or less euro?
+    - Did the user pay?
     - 
     delaySeconds: 0
     isActive: 1
