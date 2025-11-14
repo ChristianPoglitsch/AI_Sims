@@ -1,4 +1,5 @@
 using GLTFast.Schema;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,6 +9,7 @@ namespace AiSims
     public class NpcMovement : MonoBehaviour
     {
         private Transform currentTarget;
+        private Vector3 positionLastTarget;
         public Transform player;
         public bool automaticStart = true;
         private NavMeshAgent navMeshAgent = null;
@@ -73,7 +75,7 @@ namespace AiSims
 
             if (player != null && isFollowingPlayer == true)
             {
-                navMeshAgent.SetDestination(player.position);
+                MoveAgentNearPlayer(navMeshAgent, player, 1f);
             }
             else
             {
@@ -89,17 +91,32 @@ namespace AiSims
                     StartChasingTarget();
                 }
             }
+            else
+            {
+                if(Vector3.Distance(positionLastTarget, player.position) > 1f)
+                {
+                    StartMovement();
+                    StartChasingTarget();
+                    MoveAgentNearPlayer(navMeshAgent, player, 1f);
+                }
+            }
         }
 
-        public void StartChasingTarget()
+        public void StartChasingTarget(int speed = 2)
         {
-            //isFollowingPlayer = true;
-            navMeshAgent.speed = navSpeed;
+            navMeshAgent.speed = speed;
         }
 
         public void chooseTarget()
         {
-            int newTargetIndex = Random.Range(0, targets.Count);
+            if (targets.Count <= 1)
+            {
+                currentTarget = targets[0];
+                positionLastTarget = currentTarget.position;
+                return;
+            }
+
+            int newTargetIndex = UnityEngine.Random.Range(0, targets.Count);
             Transform NewTarget = targets[newTargetIndex];
             if (NewTarget == currentTarget)
             {
@@ -110,6 +127,20 @@ namespace AiSims
             {
                 currentTarget = NewTarget;
             }
+            positionLastTarget = currentTarget.position;
+        }
+
+        public void MoveAgentNearPlayer(NavMeshAgent agent, Transform player, float stopDistance = 1f)
+        {
+            // Direction from agent to player (ignore vertical differences)
+            Vector3 direction = player.position - agent.transform.position;
+            direction.y = 0f;
+            direction.Normalize();
+
+            // Target point 1 meter away from player
+            Vector3 targetPos = player.position - direction * stopDistance;
+
+            agent.SetDestination(targetPos);
         }
 
         public void OnTriggerEnter(Collider other)
