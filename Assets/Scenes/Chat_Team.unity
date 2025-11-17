@@ -1092,6 +1092,7 @@ GameObject:
   - component: {fileID: 593148021}
   - component: {fileID: 593148023}
   - component: {fileID: 593148024}
+  - component: {fileID: 593148025}
   m_Layer: 0
   m_Name: ConversationManager
   m_TagString: Untagged
@@ -1113,11 +1114,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcThinkingFeedback: {fileID: 0}
   userTalkingFeedback: {fileID: 0}
+  questManager: {fileID: 0}
   speech2Text: {fileID: 0}
   UserVoiceEnable: 0
   NpcVoiceEnable: 0
   questHandler: {fileID: 855276054}
-  companionNPC: {fileID: 0}
+  companionNPC: {fileID: 638672339}
   chanceNpcTalking: 0.5
 --- !u!4 &593148022
 Transform:
@@ -1161,6 +1163,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ApplyConversationFunction
   conversationManager: {fileID: 593148021}
   targetObject: {fileID: 998713583}
+--- !u!114 &593148025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593148020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0dafea2f064e449af5f523e4df6566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetQuest
+  complexity: {fileID: 1928788751}
+  currentEntry: 1
+  currentQuest: 0
 --- !u!1 &638672336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,6 +3812,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fb45d71aee6de046a6e86914b0c12d1, type: 3}
+--- !u!114 &1928788751 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1928788750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0f89476826f87448fe92f5f9419a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1936344142
 GameObject:
   m_ObjectHideFlags: 0

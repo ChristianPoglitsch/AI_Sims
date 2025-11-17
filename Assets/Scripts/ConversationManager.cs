@@ -10,7 +10,8 @@ namespace AiSims
     {
         public GameObject npcThinkingFeedback;
         public GameObject userTalkingFeedback;
-        public GameObject questSuccessfull; // ONLY as test!
+
+        public Complexity questManager;
 
         public Speech2Text speech2Text;
         public bool UserVoiceEnable = false;
@@ -103,7 +104,8 @@ namespace AiSims
         public void SetCurrentNPC(LLM_Handler npc)
         {
             currentNPC = npc;
-            messageDecorator.SetEvaluationInstruction(companionNPC.EvaluationString);
+            if(companionNPC)
+                messageDecorator.SetEvaluationInstruction(companionNPC.EvaluationString);
         }
 
         public void StartTalkUserTalkingMessage()
@@ -199,9 +201,9 @@ namespace AiSims
         public void QuestEvaluation(int eval)
         {
             Logger.Log(LoggingInfo.MessageNpc, "Evaluation: " + eval.ToString(), true);
-            if(questSuccessfull && eval == 1) // Evaluated by LLM
+            if(eval == 1 && questManager != null) // Evaluated by LLM
             {
-                questSuccessfull.SetActive(true);
+                questManager.SetCurrentQuestSuccessful();
             }
         }
 

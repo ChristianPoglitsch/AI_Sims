@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc: {fileID: 0}
-  conversationManager: {fileID: 0}
+  conversationManager: {fileID: 1604967669}
   voice: 
   enableEvaluation: 0
   EvaluationString: 
@@ -888,6 +888,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &944214680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2056758402}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0f89476826f87448fe92f5f9419a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,8 +1070,8 @@ MonoBehaviour:
   npc: {fileID: 1259918293}
   conversationManager: {fileID: 1604967669}
   voice: alloy
-  enableEvaluation: 0
-  EvaluationString: 
+  enableEvaluation: 1
+  EvaluationString: Did the user pay?
 --- !u!114 &998713584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,6 +1886,7 @@ GameObject:
   - component: {fileID: 1604967669}
   - component: {fileID: 1604967670}
   - component: {fileID: 1604967672}
+  - component: {fileID: 1604967673}
   m_Layer: 0
   m_Name: ConversationManager
   m_TagString: Untagged
@@ -1895,11 +1908,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcThinkingFeedback: {fileID: 0}
   userTalkingFeedback: {fileID: 0}
+  questManager: {fileID: 944214680}
   speech2Text: {fileID: 0}
   UserVoiceEnable: 0
   NpcVoiceEnable: 0
   questHandler: {fileID: 855276054}
-  companionNPC: {fileID: 0}
+  companionNPC: {fileID: 998713583}
   chanceNpcTalking: 0.3
 --- !u!114 &1604967670
 MonoBehaviour:
@@ -1943,6 +1957,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ApplyConversationFunction
   conversationManager: {fileID: 1604967669}
   targetObject: {fileID: 998713583}
+--- !u!114 &1604967673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604967668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0dafea2f064e449af5f523e4df6566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetQuest
+  complexity: {fileID: 944214680}
+  currentEntry: 0
+  currentQuest: 0
 --- !u!1 &1630074311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,6 +2235,7 @@ RectTransform:
   - {fileID: 1986540675}
   - {fileID: 1630074312}
   - {fileID: 1264606449}
+  - {fileID: 2074660847}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2740,8 +2770,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
-      propertyPath: globalDifficulty
+      propertyPath: currentEntry
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: currentQuest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: globalDifficulty
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -2758,11 +2798,91 @@ PrefabInstance:
       propertyPath: llmQuestEntries.Array.data[0].llmCharacter
       value: 
       objectReference: {fileID: 998713584}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].questSuccessfull.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2074660844}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fb45d71aee6de046a6e86914b0c12d1, type: 3}
+--- !u!1 &2074660844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074660847}
+  - component: {fileID: 2074660846}
+  - component: {fileID: 2074660845}
+  m_Layer: 5
+  m_Name: Burger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2074660845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074660844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: db3e7b7c8db355e499429545071a0321, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2074660846
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074660844}
+  m_CullTransparentMesh: 1
+--- !u!224 &2074660847
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074660844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1788891138}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -862, y: -209}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

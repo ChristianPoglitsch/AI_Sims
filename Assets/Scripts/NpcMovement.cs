@@ -41,10 +41,10 @@ namespace AiSims
             }
         }
 
-        public void StartMovement()
+        public virtual void StartMovement()
         {
-            if(animator == null) animator = GetComponentInChildren<Animator>();
-            if(navMeshAgent == null) navMeshAgent = GetComponent<NavMeshAgent>(); // Use Stop() and Resume()
+            if (animator == null) animator = GetComponentInChildren<Animator>();
+            if (navMeshAgent == null) navMeshAgent = GetComponent<NavMeshAgent>();
 
             running = true;
 
@@ -53,13 +53,14 @@ namespace AiSims
             animator.SetBool(walkingAnimation, true);
             animator.SetBool(endAnimation, false);
 
-            if(startAnimationName != string.Empty)
+            if (startAnimationName != string.Empty)
             {
                 animator.SetBool(startAnimationName, false);
             }
 
             chooseTarget();
         }
+
 
         public void SetAnimation(string animationName)
         {
@@ -102,7 +103,7 @@ namespace AiSims
             }
         }
 
-        public void StartChasingTarget(int speed = 2)
+        public virtual void StartChasingTarget(int speed = 2)
         {
             navMeshAgent.speed = speed;
         }

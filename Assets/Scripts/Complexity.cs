@@ -1,5 +1,6 @@
 ﻿using AiSims;
 using LLMUnity;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,6 +36,8 @@ public class LlmQuestEntry
 
     public float delaySeconds = 0f;  // Delay before this prompt is triggered
     public bool isActive = false;    // Enable/disable this entry
+
+    public List<GameObject> questSuccessfull;
 }
 
 [System.Serializable]
@@ -65,6 +68,9 @@ public class Complexity : MonoBehaviour
     [Header("Global Difficulty Settings (Complexity Entries)")]
     public bool useGlobalDifficulty = false;
     public DifficultyLevel globalDifficulty = DifficultyLevel.Easy;
+
+    private int currentEntry = -1;
+    private int currentQuest = -1;
 
     void Start()
     {
@@ -162,6 +168,9 @@ public class Complexity : MonoBehaviour
             return;
         }
 
+        currentEntry = index;
+        currentQuest = questIndex;
+
         // Refresh prompt immediately
         if (entry.isActive && entry.llmCharacter != null && questIndex < entry.promptTexts.Count && questIndex < entry.quests.Count)
         {
@@ -177,5 +186,11 @@ public class Complexity : MonoBehaviour
                 Debug.LogWarning($"No prompt text specified for {entry.llmCharacter.name})");
             }
         }
+    }
+
+    public void SetCurrentQuestSuccessful()
+    {
+        if(currentQuest >= 0 && currentQuest < llmQuestEntries.Count && currentEntry >= 0 && currentQuest < llmQuestEntries[currentQuest].questSuccessfull.Count)
+            llmQuestEntries[currentEntry].questSuccessfull[currentQuest].SetActive(true);
     }
 }
