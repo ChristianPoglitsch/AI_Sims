@@ -14,6 +14,7 @@ namespace AiSims
         public bool automaticStart = true;
         private NavMeshAgent navMeshAgent = null;
         public bool isFollowingPlayer = true;
+        public bool goClose = false;
         public List<Transform> targets = new List<Transform>();
         private float RunAwayTimer = 0f;
         private float RunAwayInterval = 20f;
@@ -70,11 +71,11 @@ namespace AiSims
         }
 
         // Update is called once per frame
-        void Update()
+        public virtual void Update()
         {
             if (!running) return;
 
-            if (player != null && isFollowingPlayer == true)
+            if (player != null && goClose == true)
             {
                 MoveAgentNearPlayer(navMeshAgent, player, 1f);
             }
@@ -82,24 +83,15 @@ namespace AiSims
             {
                 navMeshAgent.SetDestination(currentTarget.position);
             }
+        }
 
-            if (isFollowingPlayer == false)
+        public void CheckUpdate()
+        {
+            if (Vector3.Distance(positionLastTarget, player.position) > 1f)
             {
-                RunAwayTimer = RunAwayTimer + Time.deltaTime;
-                if (RunAwayTimer > RunAwayInterval)
-                {
-                    RunAwayTimer = 0;
-                    StartChasingTarget();
-                }
-            }
-            else
-            {
-                if(Vector3.Distance(positionLastTarget, player.position) > 1f)
-                {
-                    StartMovement();
-                    StartChasingTarget();
-                    MoveAgentNearPlayer(navMeshAgent, player, 1f);
-                }
+                StartMovement();
+                StartChasingTarget();
+                MoveAgentNearPlayer(navMeshAgent, player, 1f);
             }
         }
 
@@ -121,13 +113,13 @@ namespace AiSims
             Transform NewTarget = targets[newTargetIndex];
             if (NewTarget == currentTarget)
             {
-                chooseTarget();
-                StartChasingTarget();
+                chooseTarget();                
             }
             else
             {
                 currentTarget = NewTarget;
             }
+            StartChasingTarget();
             positionLastTarget = currentTarget.position;
         }
 
@@ -146,7 +138,7 @@ namespace AiSims
 
         public void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag(target) && isFollowingPlayer == true)
+            if (other.gameObject.CompareTag(target) && isFollowingPlayer == false)
             {
                 navMeshAgent.speed = 0;
                 animator.SetBool(endAnimation, true);

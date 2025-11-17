@@ -36,6 +36,12 @@ namespace AiSims
             }
         }
 
+        public override void Update()
+        {
+            CheckUpdate();
+            base.Update();
+        }
+
         private void StopChaseSound()
         {
             if (audioSource != null && isPlayingChaseSound)
@@ -47,7 +53,8 @@ namespace AiSims
 
         private void OnTriggerEnter(Collider other)
         {
-            StopChaseSound();
+            if (other.gameObject.CompareTag(target))                
+                StopChaseSound();
             base.OnTriggerEnter(other);
         }
     }
