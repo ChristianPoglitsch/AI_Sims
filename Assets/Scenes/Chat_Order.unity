@@ -1914,7 +1914,7 @@ MonoBehaviour:
   NpcVoiceEnable: 0
   questHandler: {fileID: 855276054}
   companionNPC: {fileID: 998713583}
-  chanceNpcTalking: 0.3
+  chanceNpcTalking: 0.4
 --- !u!114 &1604967670
 MonoBehaviour:
   m_ObjectHideFlags: 0

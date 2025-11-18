@@ -28,9 +28,7 @@ namespace AiSims
         private bool isUserTalking = false;
         private bool isNpcTalking = false;
         private string currentMessage;
-
         private bool isEvaluating = false;
-        private LLM_Handler lastNpc = null;
 
         private Quaternion originalRotation;
 
@@ -69,11 +67,10 @@ namespace AiSims
             {
                 Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                 LLM_Handler nextNpc = npcConnection.RandomHandler;
-                if (nextNpc != lastNpc && nextNpc != null && chance < chanceNpcTalking)
+                if (nextNpc != null && chance < chanceNpcTalking)
                 {
                     Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start nextNpc", true);
                     nextNpc.ProcessMessage(currentMessage);
-                    lastNpc = nextNpc;
                 }
             }
             else

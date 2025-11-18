@@ -1120,7 +1120,7 @@ MonoBehaviour:
   NpcVoiceEnable: 0
   questHandler: {fileID: 855276054}
   companionNPC: {fileID: 638672339}
-  chanceNpcTalking: 0.5
+  chanceNpcTalking: 0.4
 --- !u!4 &593148022
 Transform:
   m_ObjectHideFlags: 0

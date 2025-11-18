@@ -1624,7 +1624,7 @@ PrefabInstance:
     - target: {fileID: 6910721658033247306, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_Name
-      value: Blaser-Long
+      value: Pipe-Long
       objectReference: {fileID: 0}
     - target: {fileID: 6910721658033247306, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
@@ -3345,7 +3345,7 @@ PrefabInstance:
     - target: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.748
+      value: 4.55
       objectReference: {fileID: 0}
     - target: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
@@ -3355,7 +3355,7 @@ PrefabInstance:
     - target: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.743
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5354890054544157949, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
@@ -3400,7 +3400,7 @@ PrefabInstance:
     - target: {fileID: 6910721658033247306, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_Name
-      value: Blaser-Long (1)
+      value: Pipe-Long (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6910721658033247306, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
@@ -5109,10 +5109,11 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Alex
-  prompt: "You are Alex, a friendly resident of SimVille.\r\nGoal of the game: You
-    can select quests and the difficulty at the desk in front of Big Burger. Afterwards,
-    visit Clara to start and finish your quest.\r\nTell the user the goal of the
-    game! \r\nKeep your replies brief."
+  prompt: "You are Alex, a friendly resident of SimVille. \r\nFirst, the tutorial
+    of the game is to throw the blue pipe so that Barnaby the dog can chase it.\r\n\r\nInstruction:\r\nWhen
+    the player returns explain the game\u2019s goal: players can choose quests and
+    their difficulty at the desk in front of Big Burger, then visit Clara to start
+    and finish each quest. \r\n\r\nKeep your replies brief.\r\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -6484,7 +6485,7 @@ PrefabInstance:
     - target: {fileID: 6910721658033247306, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_Name
-      value: Blaser-Long (3)
+      value: Pipe-Long (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6910721658033247306, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
@@ -9642,37 +9643,37 @@ PrefabInstance:
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.637
+      value: 15.38
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.773
+      value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.861
+      value: 25.69
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.56098557
+      value: 0.510755
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4304593
+      value: 0.4890085
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.4304593
+      value: 0.4890085
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.56098557
+      value: 0.510755
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
@@ -9682,7 +9683,7 @@ PrefabInstance:
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 75
+      value: 87.508
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
@@ -9692,7 +9693,7 @@ PrefabInstance:
     - target: {fileID: 6689992741278781415, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_Name
-      value: Blaser_Dog
+      value: Pipe_Dog
       objectReference: {fileID: 0}
     - target: {fileID: 6689992741278781415, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
@@ -10623,16 +10624,13 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Christina
-  prompt: "You are Christina, a confident and cool woman sitting with your partner
-    Fred and the player at a restaurant table.  \nYou stay composed and rarely show
-    strong emotions. When Fred gets loud or emotional, you respond with sarcasm,
-    dry humor, or dismissive remarks like \u201COh, here we go again\u201D or \u201CCalm
-    down, it\u2019s just food.\u201D  \nYou enjoy maintaining control in the conversation,
-    keeping your tone calm but sharp, which often makes Fred even more upset.  \nEven
-    in arguments, you never lose your cool, and you sometimes turn to the player
-    for support or to make witty side comments.  \nYour goal is to embody a relaxed,
-    stylish, and sarcastic presence that contrasts with Fred\u2019s emotional energy. 
-    \n\nReply short with one sentence.\n"
+  prompt: "You are Christina, a confident, cool, and stylish woman sitting with your
+    partner Fred at Big Burger in SimVille; Fred is annoying from time to time, and
+    while you handle him with calm sarcasm and dry humor, you\u2019re subtly intrigued
+    by the player, giving them warm, curious glances or playful remarks that show
+    you\u2019d like to get to know them better and might even consider a date if
+    the vibe is right; reply short with one sentence.\nYour goal is to embody a relaxed,
+    stylish, and sarcastic presence that contrasts with Fred\u2019s emotional energy."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -17403,7 +17401,7 @@ PrefabInstance:
     - target: {fileID: 6910721658033247306, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
       propertyPath: m_Name
-      value: Blaser-Long (2)
+      value: Pipe-Long (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6910721658033247306, guid: fe7fcf44eedd467489de26ce92577bc3,
         type: 3}
@@ -29162,7 +29160,7 @@ PrefabInstance:
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}
       propertyPath: chanceNpcTalking
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4155472122666467541, guid: 7d789f4184e4dd542939ed6df6e26831,
         type: 3}

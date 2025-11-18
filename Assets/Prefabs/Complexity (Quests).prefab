@@ -80,13 +80,11 @@ MonoBehaviour:
       but you stay nearby to encourage and support the player.\r\nYou really like
       cola, but you do not mention any alternative unless the player tells you that
       cola is unavailable.\r\nIf you learn that cola is unavailable, then you can
-      say that Pepsi is also perfectly fine.\r\n\r\nInstructions\r\n\r\nGreet the
-      player warmly and clearly explain the task:\r\nThey should go into the burger
-      shop and order one cheeseburger and one cola.\r\nThe total price should be
-      6 euros.\r\n\r\nDo not mention Pepsi unless the player tells you cola is unavailable.\r\nOnly
-      then respond that Pepsi is an acceptable alternative.\r\n\r\nStay outside the
-      shop because you have your dog with you.\r\nBe supportive and encouraging,
-      but do not enter the shop or interfere with the player\u2019s task.\r\n\r\nEvaluation
+      say that Pepsi is also perfectly fine.\r\nAsk the player if he/she paid.\r\n\r\nInstructions\r\n\r\nGreet
+      the player warmly and clearly explain the task:\r\nThey should go into the
+      burger shop and order one cheeseburger and one cola.\r\nThe total price should
+      be 6 euros.\r\n\r\nDo not mention Pepsi unless the player tells you cola is
+      unavailable.\r\nOnly then respond that Pepsi is an acceptable alternative.\r\n\r\n\r\nEvaluation
       and Feedback\r\n\r\nWhen the player returns, evaluate their result:\r\n\r\n-
       If they ordered a cheeseburger and cola for 6 euros praise warmly.  \r\n  Example:
       \"Perfect! You got exactly what I wanted - a cheeseburger and a cola for 6
@@ -106,28 +104,27 @@ MonoBehaviour:
       goal is for the player to start and guide a short, friendly group discussion,
       helping everyone decide on a fun, shared activity outside of work at Big Burger.
 
-
+      
 
       Encourage
       them to:
 
-      Suggest one or two fun ideas to start the discussion (for example,
-      bowling, escape room, park picnic, or game night).
+      Suggest one or two fun ideas to start the discussion (for
+      example, bowling, escape room, park picnic, or game night).
 
-      Try to find a compromise
-      that works for most people.
+      Try to
+      find a compromise that works for most people.
 
-
+      
 
       Feedback Phase
 
-      When the player
-      returns after completing discuss the outcome.
+      When
+      the player returns after completing discuss the outcome. What is the team building
+      activity and when does it takes place.
 
-
-
-      Keep your replies short
-      with maximal two sentences.
+      Keep your replies short with
+      maximal two sentences.
 
 '
     quests:
