@@ -1871,6 +1871,115 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &364087738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364087739}
+  - component: {fileID: 364087741}
+  - component: {fileID: 364087740}
+  m_Layer: 0
+  m_Name: LLM_Robert
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &364087739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364087738}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.1433182, y: 0.62071204, z: 4.653075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1076993700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &364087740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364087738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 1131932706116917643}
+  conversationManager: {fileID: 404891180}
+  voice: verse
+  enableEvaluation: 0
+  EvaluationString: 
+--- !u!114 &364087741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364087738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6c87a428fd5d0be9bbc686bdc8c3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedOptions: 0
+  remote: 0
+  _llm: {fileID: 1288168121}
+  APIKey: 
+  host: localhost
+  port: 13333
+  numRetries: 10
+  save: 
+  saveCache: 0
+  debugPrompt: 0
+  numPredict: -1
+  slot: -1
+  grammar: 
+  grammarJSON: 
+  cachePrompt: 1
+  seed: 0
+  temperature: 0.2
+  topK: 40
+  topP: 0.9
+  minP: 0.05
+  repeatPenalty: 1.1
+  presencePenalty: 0
+  frequencyPenalty: 0
+  typicalP: 1
+  repeatLastN: 64
+  penalizeNl: 1
+  penaltyPrompt: 
+  mirostat: 0
+  mirostatTau: 5
+  mirostatEta: 0.1
+  nProbs: 0
+  ignoreEos: 0
+  nKeep: -1
+  stop: []
+  stream: 1
+  playerName: user
+  AIName: Robert
+  prompt: "You are Robert, a nice, friendly, and warm resident of SimVille currently
+    chatting with your friend Anna, who\u2019s standing beside you in a red rogue
+    cosplay; you greet the player with genuine kindness, subtly show interest in
+    getting to know them better, and are open to going on a date or seeing where
+    a deeper connection might lead, while keeping all replies short, positive, and
+    easy to understand."
+  setNKeepToPrompt: 1
+  chat: []
+  grammarString: 
+  grammarJSONString: 
 --- !u!1001 &365684113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5909,6 +6018,8 @@ Transform:
   - {fileID: 208977291}
   - {fileID: 915401020}
   - {fileID: 1507529895}
+  - {fileID: 364087739}
+  - {fileID: 2078856274}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1103039409
@@ -18884,6 +18995,115 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2067090908}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2078856273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078856274}
+  - component: {fileID: 2078856276}
+  - component: {fileID: 2078856275}
+  m_Layer: 0
+  m_Name: LLM_Anna
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2078856274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078856273}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.1433182, y: 0.62071204, z: 4.653075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1076993700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2078856275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078856273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb1dcddace3b364d881d58a9d86a3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 2524271233621534688}
+  conversationManager: {fileID: 404891180}
+  voice: nova
+  enableEvaluation: 0
+  EvaluationString: 
+--- !u!114 &2078856276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078856273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6c87a428fd5d0be9bbc686bdc8c3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedOptions: 0
+  remote: 0
+  _llm: {fileID: 1288168121}
+  APIKey: 
+  host: localhost
+  port: 13333
+  numRetries: 10
+  save: 
+  saveCache: 0
+  debugPrompt: 0
+  numPredict: -1
+  slot: -1
+  grammar: 
+  grammarJSON: 
+  cachePrompt: 1
+  seed: 0
+  temperature: 0.2
+  topK: 40
+  topP: 0.9
+  minP: 0.05
+  repeatPenalty: 1.1
+  presencePenalty: 0
+  frequencyPenalty: 0
+  typicalP: 1
+  repeatLastN: 64
+  penalizeNl: 1
+  penaltyPrompt: 
+  mirostat: 0
+  mirostatTau: 5
+  mirostatEta: 0.1
+  nProbs: 0
+  ignoreEos: 0
+  nKeep: -1
+  stop: []
+  stream: 1
+  playerName: user
+  AIName: Anna
+  prompt: "You are Anna, a cheerful, creative resident of SimVille standing next
+    to your friend Robert while wearing a red rogue cosplay; you\u2019re friendly,
+    playful, and talk to the player with light humor and upbeat energy, subtly showing
+    interest in getting to know them better, open to going on a date, and potentially
+    interested in a deeper relationship if things naturally develop, while keeping
+    all replies short, warm, and easy to understand."
+  setNKeepToPrompt: 1
+  chat: []
+  grammarString: 
+  grammarJSONString: 
 --- !u!1 &2082633986
 GameObject:
   m_ObjectHideFlags: 0
@@ -23140,6 +23360,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6705889030637580027}
+    - targetCorrespondingSourceObject: {fileID: 863445780933197017, guid: 66b398c799400b54cac4449df2a7c0f3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6705889030637580033}
+    - targetCorrespondingSourceObject: {fileID: 863445780933197017, guid: 66b398c799400b54cac4449df2a7c0f3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6705889030637580032}
+    - targetCorrespondingSourceObject: {fileID: 863445780933197017, guid: 66b398c799400b54cac4449df2a7c0f3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6705889030637580031}
   m_SourcePrefab: {fileID: 100100000, guid: 66b398c799400b54cac4449df2a7c0f3, type: 3}
 --- !u!4 &4112874044541815100 stripped
 Transform:
@@ -26898,6 +27130,136 @@ MonoBehaviour:
   m_EditorClassIdentifier: ReadyPlayerMe.Core::ReadyPlayerMe.Core.EyeAnimationHandler
   blinkDuration: 0.1
   blinkInterval: 3
+--- !u!114 &6705889030637580031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524271233621534688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404891180}
+        m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2524271233621534688}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404891180}
+        m_TargetAssemblyTypeName: AiSims.ConversationManager, Assembly-CSharp
+        m_MethodName: TalkUserFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ' '
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+--- !u!114 &6705889030637580032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524271233621534688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1e4627ada789441939a261e5f4aded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llmHandler: {fileID: 2078856275}
+--- !u!65 &6705889030637580033
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524271233621534688}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6, y: 1.45, z: 0.6}
+  m_Center: {x: 0, y: 0.98, z: 0}
 --- !u!1 &6714183069018432275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6114742639378368390, guid: 0c96d39fb2d96654e856a0e97c353368,
@@ -27273,6 +27635,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8191334241604604050}
+    - targetCorrespondingSourceObject: {fileID: 3575875946557369529, guid: 813ea68e88aa41143b0e1ff394e589d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8191334241604604056}
+    - targetCorrespondingSourceObject: {fileID: 3575875946557369529, guid: 813ea68e88aa41143b0e1ff394e589d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8191334241604604055}
+    - targetCorrespondingSourceObject: {fileID: 3575875946557369529, guid: 813ea68e88aa41143b0e1ff394e589d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8191334241604604054}
   m_SourcePrefab: {fileID: 100100000, guid: 813ea68e88aa41143b0e1ff394e589d5, type: 3}
 --- !u!4 &7090376666803659509 stripped
 Transform:
@@ -28332,6 +28706,136 @@ MonoBehaviour:
   m_EditorClassIdentifier: ReadyPlayerMe.Core::ReadyPlayerMe.Core.EyeAnimationHandler
   blinkDuration: 0.1
   blinkInterval: 3
+--- !u!114 &8191334241604604054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131932706116917643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404891180}
+        m_TargetAssemblyTypeName: ConversationManager, Assembly-CSharp
+        m_MethodName: OrientateNpcToCameraAndStartTalkNoRayCast
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1131932706116917643}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404891180}
+        m_TargetAssemblyTypeName: AiSims.ConversationManager, Assembly-CSharp
+        m_MethodName: TalkUserFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ' '
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+--- !u!114 &8191334241604604055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131932706116917643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1e4627ada789441939a261e5f4aded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llmHandler: {fileID: 364087740}
+--- !u!65 &8191334241604604056
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131932706116917643}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6, y: 1.45, z: 0.6}
+  m_Center: {x: 0, y: 0.98, z: 0}
 --- !u!1001 &8220291300038494951
 PrefabInstance:
   m_ObjectHideFlags: 0
