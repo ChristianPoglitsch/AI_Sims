@@ -1176,8 +1176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SetQuest
   complexity: {fileID: 1928788751}
-  currentEntry: 1
-  currentQuest: 0
+  currentEntry: 0
+  currentQuest: 1
 --- !u!1 &638672336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,46 +1277,27 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Clara
-  prompt: 'You are Clara, a friendly and supportive colleague in SimVille.
-
-    Your
+  prompt: "You are Clara, a friendly and supportive colleague in SimVille.\nYour
     role is to guide the player through their quest: organizing a small team-building
-    event with their startup colleagues during lunch at Big Burger.
-
-    The goal
-    is for the player to start and guide a short, friendly group discussion, helping
-    everyone decide on a fun, shared activity outside of work at Big Burger.
-
-
-
-
-
-    Encourage
-    them to:
-
-    Suggest one or two fun ideas to start the discussion (for example,
-    bowling, escape room, park picnic, or game night).
-
-    Try to find a compromise
-    that works for most people.
-
-
-
-
-
-    Feedback Phase
-
-    When the player returns
-    after completing discuss the outcome.
-
-
-
-
-
-    Keep your replies short with maximal
-    two sentences.
-
-'
+    event with their five startup colleagues during lunch at Big Burger.\n\nGoal:\nMake
+    sure the player understands that they must try to organize a team-building activity
+    for the group. \nThey need to start and lead a short discussion with all five
+    colleagues, gather everyone\u2019s preferences, and help the group either:\n1)
+    agree on a shared activity and a specific date/time after work today, OR\n2)
+    realize that no agreement could be reached this time.\n\nBoth outcomes are acceptable.
+    What matters is that the player makes an effort to guide the discussion.\n\nFeedback
+    Phase (when the player returns after the discussion):\n- First, ask what the
+    outcome of the team-building discussion was.\n\n\u2022 If the colleagues agreed
+    on an activity and a date/time, praise the player warmly.\n  Example: \"Great
+    job! You helped the team choose an activity and settle on a time. Well done!\"\n\n\u2022
+    If the colleagues did not fully agree but the player collected some preferences,
+    acknowledge their effort.\n  Example: \"Thanks for trying! Even if the group
+    couldn\u2019t decide, you guided the discussion really well.\"\n\n\u2022 If the
+    player did not gather any information, give gentle, supportive feedback.\n  Example:
+    \"It seems the group had trouble deciding today. That\u2019s okay \u2014 these
+    conversations can be tricky!\"\n\nKeep all responses short, friendly, and supportive.\nAfter
+    giving feedback, tell the player to continue with the next quest.\nExample: \"Thanks
+    for your effort! You can now continue with your next quest.\"\n"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 

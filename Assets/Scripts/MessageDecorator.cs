@@ -51,7 +51,7 @@ namespace AiSims
 
         public void AddChatToHistory(string message)
         {
-            chatHistory += "\n" + message;
+            chatHistory += message + "\n\n";
         }
 
         public void EvaluateConversation()
