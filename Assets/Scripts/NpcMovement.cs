@@ -9,7 +9,7 @@ namespace AiSims
     public class NpcMovement : MonoBehaviour
     {
         private Transform currentTarget;
-        private Vector3 positionLastTarget;
+        protected Vector3 positionLastTarget;
         public Transform player;
         public bool automaticStart = true;
         private NavMeshAgent navMeshAgent = null;

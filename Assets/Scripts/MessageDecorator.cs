@@ -54,6 +54,11 @@ namespace AiSims
             chatHistory += message + "\n\n";
         }
 
+        public void ClearHistory()
+        {
+            chatHistory = string.Empty;
+        }
+
         public void EvaluateConversation()
         {
             if (llmHandler == null || llmHandler.GetLlm() == null || EvaluationString == string.Empty)

@@ -19,6 +19,9 @@ namespace AiSims
         [Header("Current Difficulty")]
         public DifficultyLevel difficultyLevel = DifficultyLevel.Easy;
 
+        [Header("Clear Chat")]
+        public ClearAllLLMChats clearChat;
+
         public Text text
         {
             get => m_Text;
@@ -80,6 +83,9 @@ namespace AiSims
 
             Debug.Log($"[Complexity] Toggled difficulty: m_Count = {m_Count}, Difficulty = {difficultyLevel}");
             Logger.Log(LoggingInfo.Scene, $"[Complexity] Difficulty = {difficultyLevel}", true);
+
+            if (clearChat != null)
+                clearChat.ClearAllChats();
         }
 
         /// <summary>

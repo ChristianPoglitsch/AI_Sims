@@ -25,6 +25,9 @@ namespace AiSims
         [Header("Custom Interactions")]
         public InteractionEntryAdapt[] interactionEntries;
 
+        [Header("Clear Chat")]
+        public ClearAllLLMChats clearChat;
+
         public Text text
         {
             get => m_Text;
@@ -75,8 +78,12 @@ namespace AiSims
 
                 Debug.Log($"[Quest] Setting LLM index {entry.index} to {m_Count} (toggled)");
                 Logger.Log(LoggingInfo.Scene, $"[Quest] {m_Count}", true);
+             
                 complexity.SetLlmQuestByIndex(entry.index, m_Count);
             }
+
+            if(clearChat != null)
+                clearChat.ClearAllChats();
         }
     }
 }

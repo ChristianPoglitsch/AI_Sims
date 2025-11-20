@@ -1,3 +1,4 @@
+using AiSims;
 using LLMUnity;
 using UnityEngine;
 
@@ -5,6 +6,9 @@ public class ClearAllLLMChats : MonoBehaviour
 {
     [Tooltip("Root object whose children will be searched for LLMCharacter components.")]
     public GameObject rootNode;
+
+    [Tooltip("Message decorator.")]
+    public MessageDecorator decorator;
 
     /// <summary>
     /// Finds all LLMCharacter components under the root node and calls ClearChat() on each.
@@ -28,5 +32,8 @@ public class ClearAllLLMChats : MonoBehaviour
                 Debug.Log($"Cleared chat for: {character.name}");
             }
         }
+
+        if(decorator != null)
+            decorator.ClearHistory();
     }
 }
