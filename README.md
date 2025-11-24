@@ -4,7 +4,7 @@ We present SimVille, a mixed reality game that combines extended reality (XR), l
 
 ## 📄 Paper (Draft)
 
- \[Download SimVille.pdf](https://github.com/ChristianPoglitsch/AI_Sims/blob/main/SimVille.pdf)
+ \[Download SimVille.pdf](https://github.com/ChristianPoglitsch/AI_Sims/blob/dev/SimVille.pdf)
 
 ## Unity Game Scene
 ### Game Scene
