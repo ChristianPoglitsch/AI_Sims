@@ -71,3 +71,17 @@ Before you start:
 > 🖥️ GPU
 
 \- Memory: ~2 GB VRAM
+
+
+## Switching Between XR and Desktop
+
+Switch from XR to Desktop version by deactivating XR Origin (XR Rig) and activating Desktop Camera as shown in the image below.
+
+![XR to Desktop](xr2desktop.png)
+
+## Switching Between TTS/STT and Chat-Based Mode
+
+Switch between Text2Speech/Speech2Text mode and the Chat-based system by adjusting the GameState settings, as shown in the image below.
+
+![TTS-STT to Chat](tts-sst-chat.png)
+
