@@ -19,7 +19,7 @@ Before you start:
 
 ### Simple Chat
 
--> Assets/Scenes/LLM_Chat
+-> Assets/Scenes/Chat_Order, Assets/Scenes/Chat_Team
 
 ## Unity Plugins
 
