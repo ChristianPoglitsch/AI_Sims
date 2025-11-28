@@ -244,7 +244,7 @@ public class Complexity : MonoBehaviour
             if (entry.llmCharacter != null && entry.llmCharacter.transform.parent != null)
             {
                 entry.llmCharacter.transform.parent.rotation = originalOrientation[i];
-                entry.isActive = false;
+                //entry.isActive = false;
             }
         }
     }
