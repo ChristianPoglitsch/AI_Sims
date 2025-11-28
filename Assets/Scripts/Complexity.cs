@@ -30,12 +30,13 @@ public class LlmQuestEntry
 
     [Header("Prompts for this Quest")]
     [TextArea(5, 10), Chat]
-    public List<string> promptTexts = new List<string>(); // Multiple prompt texts
-    [TextArea(5, 10), Chat]
-    public List<string> quests = new List<string>(); // Multiple prompt texts
+    public List<string> promptTexts = new List<string>();
 
-    public float delaySeconds = 0f;  // Delay before this prompt is triggered
-    public bool isActive = false;    // Enable/disable this entry
+    [TextArea(5, 10), Chat]
+    public List<string> quests = new List<string>();
+
+    public float delaySeconds = 0f;
+    public bool isActive = false;
 
     public List<GameObject> questSuccessfull;
 }
@@ -44,14 +45,14 @@ public class LlmQuestEntry
 public class LlmEntry
 {
     [Header("LLM Character Reference")]
-    public LLMCharacter llmCharacter; // Reference to an LLMCharacter
+    public LLMCharacter llmCharacter;
 
-    [TextArea(5, 10), Chat] public string promptText; // Easy prompt
-    [TextArea(5, 10), Chat] public string promptTextChallenging; // Challenging prompt
+    [TextArea(5, 10), Chat] public string promptText;
+    [TextArea(5, 10), Chat] public string promptTextChallenging;
 
-    public float delaySeconds = 0f; // Delay before this prompt is triggered
-    public bool isActive = false; // Enable/disable this entry
-    public DifficultyLevel difficulty = DifficultyLevel.Easy; // Default difficulty
+    public float delaySeconds = 0f;
+    public bool isActive = false;
+    public DifficultyLevel difficulty = DifficultyLevel.Easy;
 }
 
 public class Complexity : MonoBehaviour
@@ -72,8 +73,26 @@ public class Complexity : MonoBehaviour
     private int currentEntry = -1;
     private int currentQuest = -1;
 
+    private List<Quaternion> originalOrientation = new List<Quaternion>();
+
+
     void Start()
     {
+        // Store original orientations of LLM Quest parents
+        originalOrientation.Clear();
+        foreach (var entry in llmQuestEntries)
+        {
+            if (entry.llmCharacter != null && entry.llmCharacter.transform.parent != null)
+            {
+                originalOrientation.Add(entry.llmCharacter.transform.parent.rotation);
+            }
+            else
+            {
+                originalOrientation.Add(Quaternion.identity);
+                Debug.LogWarning("Could not save orientation: LLMQuestEntry missing character or parent.");
+            }
+        }
+
         // Handle NPCs
         foreach (var entry in npcEntries)
         {
@@ -86,9 +105,7 @@ public class Complexity : MonoBehaviour
                 }
 
                 if (entry.isActive)
-                {
                     StartCoroutine(StartNpcMovementAfterDelay(entry));
-                }
             }
             else
             {
@@ -99,8 +116,11 @@ public class Complexity : MonoBehaviour
         UpdateLlmInstruction();
     }
 
+
     public void UpdateLlmInstruction()
     {
+        ResetOrientation();   // Reset whenever LLM instructions change
+
         foreach (var entry in llmEntries)
         {
             if (!entry.isActive) continue;
@@ -111,10 +131,11 @@ public class Complexity : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("LlmEntry has a null LLM Character reference.");
+                Debug.LogWarning("LlmEntry has a null character reference.");
             }
         }
     }
+
 
     private System.Collections.IEnumerator StartNpcMovementAfterDelay(NpcEntry entry)
     {
@@ -127,9 +148,10 @@ public class Complexity : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"NpcMovement component not found on {entry.npc.name}");
+            Debug.LogWarning($"NpcMovement not found on: {entry.npc.name}");
         }
     }
+
 
     private System.Collections.IEnumerator SendPromptAfterDelay(LlmEntry entry)
     {
@@ -137,7 +159,7 @@ public class Complexity : MonoBehaviour
 
         DifficultyLevel effectiveDifficulty = useGlobalDifficulty ? globalDifficulty : entry.difficulty;
 
-        string finalPrompt = effectiveDifficulty == DifficultyLevel.Challenging
+        string finalPrompt = (effectiveDifficulty == DifficultyLevel.Challenging)
             ? entry.promptTextChallenging
             : entry.promptText;
 
@@ -147,16 +169,18 @@ public class Complexity : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"No prompt text specified for {entry.llmCharacter.name} (Difficulty: {effectiveDifficulty})");
+            Debug.LogWarning($"No prompt assigned for {entry.llmCharacter.name} at difficulty {effectiveDifficulty}");
         }
     }
 
-    // Change difficulty for a specific LLM Entry
+
     public void SetLlmQuestByIndex(int index, int questIndex)
     {
+        ResetOrientation();   // Reset when switching quests
+
         if (index < 0 || index >= llmQuestEntries.Count)
         {
-            Debug.LogWarning($"Invalid LLM index {index}. List size: {llmQuestEntries.Count}");
+            Debug.LogWarning($"Invalid index {index} for LLM Quest Entries.");
             return;
         }
 
@@ -164,15 +188,17 @@ public class Complexity : MonoBehaviour
 
         if (questIndex < 0 || questIndex >= entry.promptTexts.Count)
         {
-            Debug.LogWarning($"Invalid quest index {questIndex}. List size: {entry.promptTexts.Count}");
+            Debug.LogWarning($"Invalid quest index {questIndex}.");
             return;
         }
 
         currentEntry = index;
         currentQuest = questIndex;
 
-        // Refresh prompt immediately
-        if (entry.isActive && entry.llmCharacter != null && questIndex < entry.promptTexts.Count && questIndex < entry.quests.Count)
+        if (entry.isActive &&
+            entry.llmCharacter != null &&
+            questIndex < entry.promptTexts.Count &&
+            questIndex < entry.quests.Count)
         {
             string finalPrompt = entry.promptTexts[questIndex];
 
@@ -183,14 +209,43 @@ public class Complexity : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"No prompt text specified for {entry.llmCharacter.name})");
+                Debug.LogWarning($"Prompt text missing for {entry.llmCharacter.name}.");
             }
         }
     }
 
+
     public void SetCurrentQuestSuccessful()
     {
-        if(currentQuest >= 0 && currentQuest < llmQuestEntries.Count && currentEntry >= 0 && currentQuest < llmQuestEntries[currentQuest].questSuccessfull.Count)
+        if (currentEntry >= 0 &&
+            currentEntry < llmQuestEntries.Count &&
+            currentQuest >= 0 &&
+            currentQuest < llmQuestEntries[currentEntry].questSuccessfull.Count)
+        {
             llmQuestEntries[currentEntry].questSuccessfull[currentQuest].SetActive(true);
+        }
+    }
+
+
+    // ==================================================
+    // RESET ORIENTATION FOR ALL QUEST CHARACTERS
+    // ==================================================
+    public void ResetOrientation()
+    {
+        if (originalOrientation.Count != llmQuestEntries.Count)
+        {
+            Debug.LogWarning("Orientation list mismatch — cannot reset.");
+            return;
+        }
+
+        for (int i = 0; i < llmQuestEntries.Count; i++)
+        {
+            var entry = llmQuestEntries[i];
+            if (entry.llmCharacter != null && entry.llmCharacter.transform.parent != null)
+            {
+                entry.llmCharacter.transform.parent.rotation = originalOrientation[i];
+                entry.isActive = false;
+            }
+        }
     }
 }
