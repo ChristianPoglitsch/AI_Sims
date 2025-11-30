@@ -29,6 +29,8 @@ namespace AiSims
         private bool isNpcTalking = false;
         private string currentMessage;
         private bool isEvaluating = false;
+        private bool addSystemChat = false;
+        private bool addChatToCompanion = false;
 
         private Quaternion originalRotation;
 
@@ -89,6 +91,14 @@ namespace AiSims
 
                 isUserTalking = false;
             }
+        }
+
+        public void CancelConversation()
+        {
+            isUserTalking = false;
+            isNpcTalking = false;
+            npcThinkingFeedback.SetActive(false);
+            userTalkingFeedback.SetActive(false);
         }
 
         public void SetCurrentNPC(NPCToStoryBridge npc)
@@ -223,15 +233,16 @@ namespace AiSims
         {
             if (companionNPC.EvaluateConversation() && !isEvaluating)
             {
+                if(addChatToCompanion)
+                    messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
                 messageDecorator.AddChatToHistory(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage());
-                messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
             }
 
-            //if (companionNPC && currentNPC != companionNPC)
-            //{
-            //    AddMessage(companionNPC, currentNPC.GetUserMessage(), MessageTypes.user);
-            //    AddMessage(companionNPC, replyMessage, MessageTypes.assistant);
-            //}
+            if (addSystemChat && companionNPC && currentNPC != companionNPC)
+            {
+                AddMessage(companionNPC, replyMessage, MessageTypes.assistant);
+                AddMessage(companionNPC, currentNPC.GetUserMessage(), MessageTypes.user);
+            }
 
             // Add message for other NPCs
             NpcConnection otherNpc = currentNPC.GetNpcConnection();

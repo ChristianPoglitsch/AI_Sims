@@ -1055,20 +1055,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameLabGraz (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7435035628136942914, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.671381
+      value: 22.49138
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.58245
+      value: 1.50245
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -34.774147
+      value: 12.88415
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
@@ -1130,15 +1135,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493332, guid: 35e7ce7e1bb8eeb4f8e896fdfa8176db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2025928
+      value: 24.696
       objectReference: {fileID: 0}
     - target: {fileID: 493332, guid: 35e7ce7e1bb8eeb4f8e896fdfa8176db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3511306
+      value: 1.159
       objectReference: {fileID: 0}
     - target: {fileID: 493332, guid: 35e7ce7e1bb8eeb4f8e896fdfa8176db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.098419
+      value: 21.605
       objectReference: {fileID: 0}
     - target: {fileID: 493332, guid: 35e7ce7e1bb8eeb4f8e896fdfa8176db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1362,6 +1367,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Teleport Anchor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -4106,52 +4116,52 @@ PrefabInstance:
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6146696
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.61466956
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6146696
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3557
+      value: 24.856
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.274
+      value: 1.193
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.2491
+      value: 34.436
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.697665
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000015247952
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7164242
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000015657948
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
@@ -4167,6 +4177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6689992741278781415, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
@@ -5067,52 +5082,52 @@ PrefabInstance:
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6146696
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.61466956
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6146696
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3557
+      value: 25.451
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.274
+      value: 1.204
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.2491
+      value: 34.688
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.697665
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000015247952
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7164242
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000015657948
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
@@ -5122,12 +5137,17 @@ PrefabInstance:
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.508
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287248408654313296, guid: 3549fdaf258e11846b85a316c16c699c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6689992741278781415, guid: 3549fdaf258e11846b85a316c16c699c,
         type: 3}
@@ -6665,19 +6685,56 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Alex
-  prompt: "You are Alex, a friendly resident of SimVille.\r\n\r\nYour first task
-    is to ask the player:\r\n\u201CDid you play with Barnaby?\u201D\r\n\r\nIf the
-    player answers **yes**:\r\n- Acknowledge it warmly.\r\n- Guide them to the next
-    step: explain that they can choose quests and difficulty levels at the desk in
-    front of Big Burger, and that Clara will start and finish each quest.\r\n- Encourage
-    them to go to the desk to begin.\r\n\r\nIf the player answers **no**:\r\n- Briefly
-    remind them that the tutorial requires throwing the blue pipe so Barnaby can
-    chase it.\r\n- Ask them to play with Barnaby first before moving on.\r\n\r\nGeneral
-    Behavior:\r\n- Speak in short, friendly messages.\r\n- Keep explanations brief
-    and easy to understand.\r\n\r\nMain Instruction:\r\nOnce the player has completed
-    the Barnaby step, explain:\r\n\u201CYou can choose your quests and difficulty
-    at the desk in front of Big Burger. After selecting one, talk to Clara to start
-    and finish the quest. Return to the desk when you think the quest is done.\u201D\r\n"
+  prompt: 'You are Alex, a friendly resident of SimVille.
+
+
+
+    Your first task
+    is to ask the player:
+
+    "Hi, nice to meet you. Can you play with Barnaby?
+    He is in front of Big Burger."
+
+
+
+    If the player answers **yes**:
+
+    - Acknowledge
+    it warmly.
+
+    - Clara will start and finish each quest.
+
+
+
+    If the player
+    answers **no**:
+
+    - Briefly remind them that the tutorial requires throwing
+    the blue pipe so Barnaby can chase it.
+
+    - Ask them to play with Barnaby first
+    before moving on.
+
+
+
+    General Behavior:
+
+    - Speak in short, friendly messages.
+
+    -
+    Keep explanations brief and easy to understand.
+
+
+
+    Main Instruction:
+
+    Once
+    the player has completed the Barnaby step, explain:
+
+    "Talk to Clara to start
+    and finish the quest."
+
+'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -9945,35 +10002,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameLabGraz (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7435035628136942914, guid: d0eb7aeca03643546b202a3ba5a0a942,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.838
+      value: 22.49138
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.16464996
+      value: 1.50245
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.568
+      value: 12.88415
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
@@ -10051,7 +10113,7 @@ Transform:
   m_GameObject: {fileID: 1358207785}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.49138, y: 1.50245, z: 12.88415}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19210,6 +19272,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleport Anchor (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_RootOrder
@@ -22551,17 +22618,17 @@ PrefabInstance:
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.979
+      value: 25.063
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.57751
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.48
+      value: 14.843
       objectReference: {fileID: 0}
     - target: {fileID: 7777646213891828815, guid: d0eb7aeca03643546b202a3ba5a0a942,
         type: 3}

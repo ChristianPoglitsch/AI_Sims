@@ -107,6 +107,15 @@ namespace AiSims
 
         public void ProcessMessage(string message, bool addToHist = true)
         {
+            if (conversationManager == null)
+                return;
+
+            if(message == string.Empty || message == " ") 
+            {
+                conversationManager.CancelConversation();
+                return;
+            }
+
             Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start chat completion", true);
             Debug.Log(message);
             userMessage = message;
