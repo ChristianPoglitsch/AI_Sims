@@ -32346,7 +32346,7 @@ PrefabInstance:
     - target: {fileID: 4403770694958955408, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
         type: 3}
       propertyPath: sttMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7760952267304529600, guid: d34f7cbb16d055b4bbeff1baf208d4ce,
         type: 3}

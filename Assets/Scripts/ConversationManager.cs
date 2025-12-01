@@ -279,7 +279,7 @@ namespace AiSims
                 }
 
                 // Estimate reading time: characters * factor
-                float readingSpeed = 0.05f; // seconds per character (~200 wpm)
+                float readingSpeed = 0.0001f; // seconds per character
                 float waitTime = Mathf.Max(1.5f, replyMessage.Length * readingSpeed);
                 yield return new WaitForSeconds(waitTime);
 
