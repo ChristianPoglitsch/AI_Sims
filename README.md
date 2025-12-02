@@ -85,3 +85,12 @@ Switch between Text2Speech/Speech2Text mode and the Chat-based system by adjusti
 
 ![TTS-STT to Chat](tts-sst-chat.png)
 
+## Future Work
+
+Facial Animations + Emotions:
+https://docs.readyplayer.me/ready-player-me/integration-guides/unity/setup-for-xr-beta/facial-animations
+
+
+## Authors
+
+- Christian Poglitsch
