@@ -120,6 +120,7 @@ namespace AiSims
         {
             WWWForm form = new WWWForm();
             form.AddField("model", sttModel);
+            form.AddField("language", "en");
             form.AddBinaryData("file", wavData, "recording.wav", "audio/wav");
 
             using (UnityWebRequest www = UnityWebRequest.Post("https://api.openai.com/v1/audio/transcriptions", form))
@@ -133,10 +134,10 @@ namespace AiSims
                 }
                 else
                 {
-                    Debug.Log("Whisper Response (OpenAI): " + www.downloadHandler.text);                    
-                    Logger.Log(LoggingInfo.DialogueUser, www.downloadHandler.text, true);
+                    Debug.Log("Whisper Response (OpenAI): " + ExtractText(www.downloadHandler.text));                    
+                    Logger.Log(LoggingInfo.DialogueUser, ExtractText(www.downloadHandler.text), true);
                     Logger.Log(LoggingInfo.STT, "STT stop", true);
-                    llm_handler?.ProcessMessage(www.downloadHandler.text);
+                    llm_handler?.ProcessMessage(ExtractText(www.downloadHandler.text));
                 }
             }
         }
@@ -176,7 +177,7 @@ namespace AiSims
                         response.text = string.Join(" ", parts, 0, parts.Length - 1);
 
                     Debug.Log("Whisper Response (Local Client): " + response.text);
-                    Logger.Log(LoggingInfo.DialogueUser, www.downloadHandler.text, true);
+                    Logger.Log(LoggingInfo.DialogueUser, response.text, true);
                     Logger.Log(LoggingInfo.STT, "STT stop", true);
                     llm_handler?.ProcessMessage(response.text);
                 }
