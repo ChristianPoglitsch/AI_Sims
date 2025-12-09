@@ -28,6 +28,9 @@ namespace AiSims
         [Header("Clear Chat")]
         public ClearAllLLMChats clearChat;
 
+        [Header("Number of Quests")]
+        public int numberOfQuests;
+
         public Text text
         {
             get => m_Text;
@@ -44,8 +47,8 @@ namespace AiSims
 
         protected void Start()
         {
-            // Randomize initial quest count between 0 and 1
-            m_Count = Random.Range(0, 2); // 0 or 1
+            // Randomize initial quest count
+            m_Count = Random.Range(0, numberOfQuests);
             if (m_Text != null)
                 m_Text.text = m_Count.ToString();
 
@@ -65,8 +68,7 @@ namespace AiSims
         /// </summary>
         public void Increment()
         {
-            // Invert between 0 and 1
-            m_Count = (m_Count == 0) ? 1 : 0;
+            m_Count = (m_Count + 1) % numberOfQuests;
 
             if (m_Text != null)
                 m_Text.text = m_Count.ToString();
