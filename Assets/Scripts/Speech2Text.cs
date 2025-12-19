@@ -85,16 +85,15 @@ namespace AiSims
         {
             if (!isRecording)
             {
-                Debug.Log("Recording started...");
                 isRecording = true;
-                recording = Microphone.Start(micDevice, false, 60, 16000);
+                Debug.Log("Recording started...");                
+                recording = Microphone.Start(micDevice, false, 500, 16000);
             }
             else
             {
-                Debug.Log("Recording stopped, sending to Whisper...");
                 Microphone.End(micDevice);
                 isRecording = false;
-
+                Debug.Log("Recording stopped, sending to Whisper...");
 
                 byte[] wavData = WavUtility.FromAudioClip(recording);
                 Logger.Log(LoggingInfo.STT, "STT start", true);

@@ -127,7 +127,7 @@ namespace AiSims
 
         public void TalkUser()
         {
-            if (isUserTalking) return;
+            if (isUserTalking || isNpcTalking) return;
 
             if (userTalkingFeedback)
             {
@@ -145,7 +145,7 @@ namespace AiSims
 
         public void TalkUserFinished()
         {
-            if (isNpcTalking) return;
+            if (!isUserTalking || isNpcTalking) return;
 
             if (userTalkingFeedback)
                 userTalkingFeedback.SetActive(false);
@@ -351,6 +351,10 @@ namespace AiSims
                 return;
             }
 
+            SetCurrentNPC(npcBridge);
+            StartTalkUserTalkingMessage();
+            TalkUser();
+
             //Debug.Log("Selected NPC: " + npcBridge.name);
             originalRotation = npcBridge.transform.rotation;
 
@@ -361,10 +365,6 @@ namespace AiSims
                 lookTarget.y = npcBridge.transform.position.y;
                 npcBridge.transform.LookAt(lookTarget);
             }
-
-            SetCurrentNPC(npcBridge);
-            StartTalkUserTalkingMessage();
-            TalkUser();
         }
 
         public void RestoreNpcOrientation(GameObject selectedObject)
