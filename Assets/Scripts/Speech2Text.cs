@@ -87,7 +87,7 @@ namespace AiSims
             {
                 isRecording = true;
                 Debug.Log("Recording started...");                
-                recording = Microphone.Start(micDevice, false, 500, 16000);
+                recording = Microphone.Start(micDevice, false, 80, 16000);
             }
             else
             {
