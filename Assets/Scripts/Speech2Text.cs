@@ -33,7 +33,6 @@ namespace AiSims
         private LLM_Handler llm_handler;
         private string micDevice;
         private AudioClip recording;
-        private bool isRecording = false;
         private string apiKey;
 
         void Start()
@@ -80,38 +79,28 @@ namespace AiSims
             }
         }
 
-        /// Toggle recording on/off
-        public void ToggleRecording()
+        public void StartRecording()
         {
-            if (!isRecording)
-            {
-                isRecording = true;
-                Debug.Log("Recording started...");                
-                recording = Microphone.Start(micDevice, false, 80, 16000);
-            }
-            else
-            {
-                Microphone.End(micDevice);
-                isRecording = false;
-                Debug.Log("Recording stopped, sending to Whisper...");
-
-                byte[] wavData = WavUtility.FromAudioClip(recording);
-                Logger.Log(LoggingInfo.STT, "STT start", true);
-
-                if (sttMode == STTMode.OpenAI_API)
-                {
-                    StartCoroutine(SendToOpenAI(wavData));
-                }
-                else if (sttMode == STTMode.Local_Client)
-                {
-                    StartCoroutine(SendToLocalServer(wavData));
-                }
-            }
+            Debug.Log("Recording started...");
+            recording = Microphone.Start(micDevice, false, 80, 16000);
         }
 
-        public bool Recording()
+        public void StopRecording()
         {
-            return isRecording;
+            Microphone.End(micDevice);
+            Debug.Log("Recording stopped, sending to Whisper...");
+
+            byte[] wavData = WavUtility.FromAudioClip(recording);
+            Logger.Log(LoggingInfo.STT, "STT start", true);
+
+            if (sttMode == STTMode.OpenAI_API)
+            {
+                StartCoroutine(SendToOpenAI(wavData));
+            }
+            else if (sttMode == STTMode.Local_Client)
+            {
+                StartCoroutine(SendToLocalServer(wavData));
+            }
         }
 
         // --- OpenAI Whisper API ---
