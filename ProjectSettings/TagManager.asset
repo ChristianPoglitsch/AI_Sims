@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - NPCTarget
+  - Scooter
   layers:
   - Default
   - TransparentFX
