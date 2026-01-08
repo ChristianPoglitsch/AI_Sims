@@ -228,9 +228,12 @@ namespace AiSims
         {
             if (companionNPC.EvaluateConversation() && !isEvaluating)
             {
-                if(addChatToCompanion)
-                    messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
-                messageDecorator.AddChatToHistory(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage());
+                if (questManager.GetQuestCharacter() == currentNPC)
+                {
+                    if (addChatToCompanion)
+                        messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
+                    messageDecorator.AddChatToHistory(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage());
+                }
             }
 
             if (addSystemChat && companionNPC && currentNPC != companionNPC)

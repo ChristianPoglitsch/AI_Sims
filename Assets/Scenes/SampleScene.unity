@@ -9818,7 +9818,7 @@ MonoBehaviour:
   remote: 0
   port: 13333
   numThreads: -1
-  numGPULayers: 50
+  numGPULayers: 16
   debug: 0
   parallelPrompts: -1
   dontDestroyOnLoad: 1
@@ -30506,6 +30506,16 @@ PrefabInstance:
       propertyPath: 'llmQuestEntries.Array.data[0].quests.Array.data[0]'
       value: Did the user pay?
       objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].questCharacter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].questCharacter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1344964912}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].questSuccessfull.Array.data[0]'
