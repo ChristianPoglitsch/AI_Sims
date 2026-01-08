@@ -80,17 +80,15 @@ namespace AiSims
                 Debug.Log("NPC 1:1 conversation. | chance = " + chance);
             }
 
-            if (!isNpcTalking)
-            {
-                if (companionNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty)
-                {
-                    isEvaluating = true;
-                    Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start EvaluateConversation", true);
-                    messageDecorator.EvaluateConversation();
-                }
 
-                isUserTalking = false;
+            if (companionNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty)
+            {
+                isEvaluating = true;
+                Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start EvaluateConversation", true);
+                messageDecorator.EvaluateConversation();
             }
+
+            isUserTalking = false;
         }
 
         public void CancelConversation()
@@ -139,13 +137,13 @@ namespace AiSims
             {
                 isUserTalking = true;
                 speech2Text.Set_LLM_Handler(currentNPC);
-                speech2Text.ToggleRecording();
+                speech2Text.StartRecording();
             }
         }
 
         public void TalkUserFinished()
         {
-            if (isNpcTalking) return;
+            if (!isUserTalking) return;
 
             if (userTalkingFeedback)
                 userTalkingFeedback.SetActive(false);
@@ -161,19 +159,16 @@ namespace AiSims
                 }
 
                 Logger.Log(LoggingInfo.DialogueUser, "[User] User talk stop", true);
-                speech2Text.ToggleRecording();
+                speech2Text.StopRecording();
             }
         }
 
         public void ProcessMessage(string message)
         {
-            if (isUserTalking) return;
             if (message == string.Empty) return;
 
             if (userTalkingFeedback)
                 userTalkingFeedback.SetActive(false);
-
-            isUserTalking = true;
 
             if (currentNPC != null)
             {
@@ -233,9 +228,12 @@ namespace AiSims
         {
             if (companionNPC.EvaluateConversation() && !isEvaluating)
             {
-                if(addChatToCompanion)
-                    messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
-                messageDecorator.AddChatToHistory(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage());
+                if (questManager.GetQuestCharacter() == currentNPC)
+                {
+                    if (addChatToCompanion)
+                        messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
+                    messageDecorator.AddChatToHistory(MessageTypes.user.ToString() + ": " + currentNPC.GetUserMessage());
+                }
             }
 
             if (addSystemChat && companionNPC && currentNPC != companionNPC)
@@ -293,11 +291,6 @@ namespace AiSims
 
         public void OrientateNpcToCameraAndStartTalk()
         {
-            // Check if stop recording is required
-            if (isUserTalking)
-            {
-                return;
-            }
             if (Camera.main == null) return;
 
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
@@ -331,12 +324,6 @@ namespace AiSims
 
         public void OrientateNpcToCameraAndStartTalkNoRayCast(GameObject selectedObject)
         {
-            // Check if stop recording is required
-            if (isUserTalking)
-            {
-                return;
-            }
-
             if (selectedObject == null)
             {
                 Debug.LogWarning("No GameObject provided to OrientateNpcToCameraAndStartTalkNoRayCast.");
@@ -351,6 +338,10 @@ namespace AiSims
                 return;
             }
 
+            StartTalkUserTalkingMessage();
+            SetCurrentNPC(npcBridge);            
+            TalkUser();
+
             //Debug.Log("Selected NPC: " + npcBridge.name);
             originalRotation = npcBridge.transform.rotation;
 
@@ -361,10 +352,6 @@ namespace AiSims
                 lookTarget.y = npcBridge.transform.position.y;
                 npcBridge.transform.LookAt(lookTarget);
             }
-
-            SetCurrentNPC(npcBridge);
-            StartTalkUserTalkingMessage();
-            TalkUser();
         }
 
         public void RestoreNpcOrientation(GameObject selectedObject)

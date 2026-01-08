@@ -32,6 +32,8 @@ public class LlmQuestEntry
     [TextArea(5, 10), Chat] public List<string> promptTexts = new List<string>();
     [TextArea(5, 10), Chat] public List<string> quests = new List<string>();
 
+    public List<LLM_Handler> questCharacter;
+
     public float delaySeconds = 0f;
     public bool isActive = false;
 
@@ -174,6 +176,12 @@ public class Complexity : MonoBehaviour
             Debug.LogWarning($"Missing prompt for {entry.llmCharacter.name}");
     }
 
+    public LLM_Handler GetQuestCharacter()
+    {
+        if ((currentQuest >= 0 && currentQuest <= llmQuestEntries.Count) && llmQuestEntries[currentQuest].questCharacter.Count > 0)
+            return llmQuestEntries[currentQuest].questCharacter[0];
+        return null;
+    }
 
     public void SetLlmQuestByIndex(int index, int questIndex)
     {

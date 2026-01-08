@@ -12111,7 +12111,7 @@ MonoBehaviour:
   remote: 0
   port: 13333
   numThreads: -1
-  numGPULayers: 50
+  numGPULayers: 16
   debug: 0
   parallelPrompts: -1
   dontDestroyOnLoad: 1
@@ -35554,75 +35554,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
-      propertyPath: 'llmQuestEntries.Array.data[0].quests.Array.data[2]'
-      value: Did the user and Noah agree on a concrete real-life meeting with a specific
-        activity and a clear time or date.
+      propertyPath: llmQuestEntries.Array.data[0].questCharacter.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
-      propertyPath: 'llmQuestEntries.Array.data[0].quests.Array.data[3]'
-      value: Did the player discover that a blind man knocked over the scooter?
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
-        type: 3}
-      propertyPath: llmQuestEntries.Array.data[0].promptTexts.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
-        type: 3}
-      propertyPath: 'llmQuestEntries.Array.data[0].promptTexts.Array.data[2]'
-      value: 'You are Clara, a friendly and supportive local in SimVille. Your role
-        is to guide the player through their next quest: meeting Noah in person for
-        the first time. Clearly tell the player that Noah is their online friend
-        from a cooperative video game called SimRaiders, that this is their first
-        face-to-face meeting, and that he is waiting near the bakery market, sitting
-        at a small table next to the stand. Explain that the goal of this quest is
-        to smoothly transition their online friendship into a comfortable real-life
-        conversation and arrange a concrete second real-life meeting. Encourage the
-        player to stay calm, listen actively, and share one or two small personal
-        details to build trust.
-
-
-        Keep your replies short, warm, and supportive.
-
-
-        Feedback
-        phase:
-
-        The feedback phase begins as soon as the player comes back
-        to you after finishing the conversation with Noah. Then ask the player: "Did
-        you arrange a new real life meeting?" If the player did manage to arrange
-        one, tell the player they can continue with the next quest, nothing else.
-        If the player did not manage to arrange one, tell the player to try again,
-        but be very supportive.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
-        type: 3}
-      propertyPath: 'llmQuestEntries.Array.data[0].promptTexts.Array.data[3]'
-      value: "You are Clara, a friendly and supportive local in SimVille. Your role
-        is to guide the player through their next quest: helping to resolve a conflict
-        around Lukas\u2019s e-scooter. Clearly tell the player that Lukas\u2019s
-        scooter was found lying on the ground near the bakery market, that Lukas
-        feels wronged and believes Jack is responsible, and that the situation is
-        tense. Tell the player that Lukas is currently standing by the e-scooters
-        together with Jack and Lily. Explain that the goal of this quest is to calm
-        Lukas down and de-escalate the conflict, so that everyone in the group can
-        feel heard and things don\u2019t escalate further. Encourage the player to
-        approach them, listen carefully to what Lukas says, stay neutral, and try
-        to bring everyone back into a calmer, more understanding mood.\n\nKeep your
-        replies short, warm, and supportive.\n\nFeedback phase:\r\nThe feedback phase
-        begins as soon as the player comes back to you after trying to help Lukas.
-        Then ask the player: \u201CWere you able to calm Lukas down and resolve the
-        conflict?\u201D If the player did manage to calm him down and resolve it,
-        tell the player they can continue with the next quest, nothing else. If the
-        player did not manage to resolve it, tell the player to try again, but be
-        very supportive."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
-        type: 3}
-      propertyPath: llmQuestEntries.Array.data[0].questSuccessfull.Array.size
-      value: 4
-      objectReference: {fileID: 0}
+      propertyPath: 'llmQuestEntries.Array.data[0].questCharacter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1344964912}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].questSuccessfull.Array.data[0]'
