@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -228,7 +227,9 @@ namespace AiSims
         {
             if (companionNPC.EvaluateConversation() && !isEvaluating)
             {
-                if (questManager.GetQuestCharacter() == currentNPC)
+                var isNpcPartOfQuest = questManager.GetQuestCharacters().Contains(currentNPC);
+
+                if (isNpcPartOfQuest)
                 {
                     if (addChatToCompanion)
                         messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
