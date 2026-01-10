@@ -80,7 +80,7 @@ namespace AiSims
             }
 
 
-            if (companionNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty)
+            if (currentNPC != companionNPC && companionNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty)
             {
                 isEvaluating = true;
                 Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start EvaluateConversation", true);

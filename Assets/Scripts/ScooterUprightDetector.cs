@@ -1,3 +1,5 @@
+using AiSims;
+using LLMUnity;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -21,6 +23,9 @@ public class ScooterUprightDetector : MonoBehaviour
 
     [SerializeField]
     private bool playOnlyOnce = true;
+
+    [SerializeField]
+    private GameObject visuals;
 
     private bool played;
     private readonly Dictionary<Transform, float> uprightTimers = new();
@@ -70,6 +75,7 @@ public class ScooterUprightDetector : MonoBehaviour
 
             if (uprightTimers[root] >= requiredUprightTime)
             {
+                visuals.SetActive(false);
                 confetti.SetActive(true);
                 played = true;
                 grabInteractable.enabled = false;
