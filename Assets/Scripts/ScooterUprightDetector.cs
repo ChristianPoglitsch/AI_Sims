@@ -1,5 +1,3 @@
-using AiSims;
-using LLMUnity;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -80,6 +78,7 @@ public class ScooterUprightDetector : MonoBehaviour
                 played = true;
                 grabInteractable.enabled = false;
                 rigidbody.isKinematic = true;
+                QuestEventStore.Instance.SetQuestEvent(QuestEvent.PickedUpScooter, true);
             }
         }
         else

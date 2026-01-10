@@ -32,6 +32,9 @@ public class LlmQuestEntry
     [TextArea(5, 10), Chat] public List<string> promptTexts = new List<string>();
     [TextArea(5, 10), Chat] public List<string> quests = new List<string>();
 
+    [Header("Needed Quest Events")]
+    public List<QuestEvents> questEvents = new List<QuestEvents>();
+
     public List<LLM_Handler> questCharacters;
 
     public float delaySeconds = 0f;
@@ -223,6 +226,10 @@ public class Complexity : MonoBehaviour
         }
     }
 
+    public bool FinishedAllQuestEvents()
+    {
+        return QuestEventStore.Instance.FinishedAllQuestEvents(llmQuestEntries[currentEntry].questEvents[currentQuest].events);
+    }
 
     public void SetCurrentQuestSuccessful()
     {

@@ -202,7 +202,7 @@ namespace AiSims
         public void QuestEvaluation(int eval)
         {
             Logger.Log(LoggingInfo.MessageNpc, "Evaluation: " + eval.ToString(), true);
-            if(eval == 1 && questManager != null) // Evaluated by LLM
+            if(eval == 1 && questManager != null && questManager.FinishedAllQuestEvents()) // Evaluated by LLM && event handler
             {
                 questManager.SetCurrentQuestSuccessful();
             }

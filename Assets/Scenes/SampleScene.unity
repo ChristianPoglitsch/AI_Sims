@@ -5625,6 +5625,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 600173274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &616849708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616849710}
+  - component: {fileID: 616849709}
+  m_Layer: 0
+  m_Name: Quest Event Store
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &616849709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616849708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e0316ad59420241a8bc98b0efffde4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlagStore
+  availableQuestEvents:
+  - questEvent: 0
+    finished: 0
+--- !u!4 &616849710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616849708}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.97003, y: 1.34563, z: 32.57229}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &617908310
 GameObject:
   m_ObjectHideFlags: 0
@@ -36259,7 +36306,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].questFlags.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
       propertyPath: llmQuestEntries.Array.data[0].promptTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].questEvents.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
@@ -36395,6 +36452,26 @@ PrefabInstance:
       propertyPath: 'llmQuestEntries.Array.data[0].questSuccessfull.Array.data[3]'
       value: 
       objectReference: {fileID: 16387662}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].questFlags.Array.data[0].flags.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].questFlags.Array.data[3].flags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].questEvents.Array.data[3].events.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].questFlags.Array.data[3].flags.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40185,6 +40262,7 @@ SceneRoots:
   - {fileID: 7210839193542821838}
   - {fileID: 426710797}
   - {fileID: 2067090908}
+  - {fileID: 616849710}
   - {fileID: 1060847496}
   - {fileID: 1076993700}
   - {fileID: 324005825}
