@@ -1,8 +1,8 @@
 ﻿using AiSims;
 using LLMUnity;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 // Difficulty levels for LLM Characters
 public enum DifficultyLevel
@@ -34,6 +34,10 @@ public class LlmQuestEntry
 
     [Header("Needed Quest Events")]
     public List<QuestEvents> questEvents = new List<QuestEvents>();
+
+    [Header("Hints for this Quest")]
+    [TextArea(5, 10), Chat]
+    public List<string> questHints = new List<string>();
 
     public List<LLM_Handler> questCharacters;
 
@@ -73,8 +77,24 @@ public class Complexity : MonoBehaviour
     public bool useGlobalDifficulty = false;
     public DifficultyLevel globalDifficulty = DifficultyLevel.Easy;
 
-    private int currentEntry = -1;
-    private int currentQuest = -1;
+    [Header("Clear Chat")]
+    public ClearAllLLMChats clearChat;
+
+    [Header("Menu for Quests")]
+    public QuestMenu questMenu;
+
+    [Header("Number of Quests")]
+    public int numberOfQuests = 4;
+
+    [Header("Randomize Global Difficulty")]
+    public bool randomizeDifficulty = false;
+
+    [Header("Randomize Quest Order")]
+    public bool randomizeQuests = false;
+
+    private int currentEntry = 0;
+    // Only play my quests
+    private int currentQuest = 2; // Set to 0 to play all quests
 
     // Full transform storage: position, rotation, scale
     private List<List<Vector3>> originalPositions = new List<List<Vector3>>();
@@ -131,9 +151,81 @@ public class Complexity : MonoBehaviour
             }
         }
 
+        if (randomizeDifficulty)
+        {
+            RandomizeGlobalDifficulty();
+        }
+
         UpdateLlmInstruction();
+
+        if (randomizeQuests)
+        {
+            currentQuest = Random.Range(0, numberOfQuests);
+        }
+
+        for (var i = 0; i < llmQuestEntries.Count; i++)
+        {
+            if (llmQuestEntries[i] == null)
+            {
+                continue;
+            }
+
+            SetLlmQuestByIndex(i, currentQuest);
+        }
+
+        Debug.Log("Current Quest: " + currentQuest + " Current Diffifulty: " + globalDifficulty);
     }
 
+    private void RandomizeGlobalDifficulty()
+    {
+        var rand = Random.Range(0, 2);
+
+        globalDifficulty = rand == 0
+            ? DifficultyLevel.Easy
+            : DifficultyLevel.Challenging;
+    }
+
+    private void RandomizeQuestOrder()
+    {
+        var nextQuest = Random.Range(0, numberOfQuests - 1);
+        if (nextQuest >= currentQuest)
+        {
+            nextQuest++;
+        }
+        currentQuest = nextQuest;
+    }
+
+    public void CheckIfDifficultyNeedsUpdate()
+    {
+        if (randomizeDifficulty)
+        {
+            RandomizeGlobalDifficulty();
+
+            UpdateLlmInstruction();
+
+            clearChat.ClearAllChats();
+        }
+
+        Debug.Log("Current Diffifulty: " + globalDifficulty);
+    }
+
+    public void SetNextQuest()
+    {
+        if (randomizeQuests && numberOfQuests > 1)
+        {
+            RandomizeQuestOrder();
+        }
+        else
+        {
+            currentQuest = (currentQuest + 1) % numberOfQuests;
+        }
+
+        SetLlmQuestByIndex(currentEntry, currentQuest);
+
+        clearChat.ClearAllChats();
+
+        Debug.Log("Current Quest: " + currentQuest);
+    }
 
     public void UpdateLlmInstruction()
     {
@@ -224,6 +316,8 @@ public class Complexity : MonoBehaviour
                 Debug.LogWarning($"Missing prompt for {entry.llmCharacter.name}");
             }
         }
+
+        questMenu.SetText(llmQuestEntries[currentEntry].questHints[currentQuest]);
     }
 
     public bool FinishedAllQuestEvents()

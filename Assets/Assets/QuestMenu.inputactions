@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "QuestMenu",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "1a92aea0-b5b9-45f9-95a0-46f0d7b277be",
+            "actions": [
+                {
+                    "name": "ToogleQuestMenu",
+                    "type": "Button",
+                    "id": "1bc4445b-6586-42a3-9d39-70f8011caf01",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "59312c70-1a4d-4d33-b5f9-0e164b8d2fa7",
+                    "path": "<XRController>{LeftHand}/menu",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToogleQuestMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

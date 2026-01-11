@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class ScooterUprightDetector : MonoBehaviour
 {
     [SerializeField]
-    private GameObject confetti;
+    private AudioSource soundEffect;
 
     [SerializeField]
     private string scooterTag = "Scooter";
@@ -30,7 +30,7 @@ public class ScooterUprightDetector : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
-        if (played && playOnlyOnce || confetti == null)
+        if (played && playOnlyOnce || soundEffect == null)
         {
             return;
         }
@@ -74,7 +74,7 @@ public class ScooterUprightDetector : MonoBehaviour
             if (uprightTimers[root] >= requiredUprightTime)
             {
                 visuals.SetActive(false);
-                confetti.SetActive(true);
+                soundEffect.Play();
                 played = true;
                 grabInteractable.enabled = false;
                 rigidbody.isKinematic = true;

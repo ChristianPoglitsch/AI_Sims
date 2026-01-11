@@ -28,8 +28,9 @@ namespace AiSims
         private bool isNpcTalking = false;
         private string currentMessage;
         private bool isEvaluating = false;
+        private bool isGivingFeedback = false;
         private bool addSystemChat = false;
-        private bool addChatToCompanion = false;
+        private bool addChatToCompanion = true;
 
         private Quaternion originalRotation;
 
@@ -80,11 +81,17 @@ namespace AiSims
             }
 
 
-            if (currentNPC != companionNPC && companionNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty)
+            if (currentNPC != companionNPC && companionNPC.EvaluateConversation() && messageDecorator.EvaluationString != string.Empty && !isGivingFeedback)
             {
                 isEvaluating = true;
                 Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start EvaluateConversation", true);
                 messageDecorator.EvaluateConversation();
+            }
+
+            if (isGivingFeedback)
+            {
+                isGivingFeedback = false;
+                StartCoroutine(StartNextQuestAfterDelay(2));
             }
 
             isUserTalking = false;
@@ -96,6 +103,11 @@ namespace AiSims
             isNpcTalking = false;
             npcThinkingFeedback.SetActive(false);
             userTalkingFeedback.SetActive(false);
+
+            if (isEvaluating)
+            {
+                isEvaluating = false;
+            }
         }
 
         public void SetCurrentNPC(NPCToStoryBridge npc)
@@ -205,7 +217,21 @@ namespace AiSims
             if(eval == 1 && questManager != null && questManager.FinishedAllQuestEvents()) // Evaluated by LLM && event handler
             {
                 questManager.SetCurrentQuestSuccessful();
+
+                GiveFeedback();
             }
+        }
+
+        private void GiveFeedback()
+        {
+            isGivingFeedback = true;
+
+            string instruction = $"\nYou are: {currentNPC.GetLlm().AIName}. Speak directly to the player.\n" +
+                $"Quest goal (already completed): {messageDecorator.EvaluationString}. Based on the chat history, give the player feedback on how good they handled it.\n" +
+                $"Maximum 3 sentences: first sentence = praise, second sentence = one concrete improvement tip (if there is any), " +
+                $"third sentence = tell the player to head back to Clara to begin the next quest.";
+
+            currentNPC.ProcessMessage(instruction, false);
         }
 
         public void AddMessage(LLM_Handler handler, string message, MessageTypes type)
@@ -223,9 +249,16 @@ namespace AiSims
             handler.GetLlm().AddMessage(role, role + ": " + message);
         }
 
+        private IEnumerator StartNextQuestAfterDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            questManager.CheckIfDifficultyNeedsUpdate();
+            questManager.SetNextQuest();
+        }
+
         private IEnumerator TalkNpcCoroutine(string replyMessage, LLM_Handler npcHandler, string aiName)
         {
-            if (companionNPC.EvaluateConversation() && !isEvaluating)
+            if (companionNPC.EvaluateConversation() && !isEvaluating && !isGivingFeedback)
             {
                 var isNpcPartOfQuest = questManager.GetQuestCharacters().Contains(currentNPC);
 
