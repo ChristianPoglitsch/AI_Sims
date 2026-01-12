@@ -228,7 +228,7 @@ namespace AiSims
         {
             if (companionNPC.EvaluateConversation() && !isEvaluating)
             {
-                if (questManager.GetQuestCharacter() == currentNPC)
+                //if (questManager.GetQuestCharacter() == currentNPC)
                 {
                     if (addChatToCompanion)
                         messageDecorator.AddChatToHistory(MessageTypes.assistant.ToString() + ": " + replyMessage);
