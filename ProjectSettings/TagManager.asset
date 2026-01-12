@@ -6,6 +6,12 @@ TagManager:
   tags:
   - NPCTarget
   - Scooter
+  - Cupcake
+  - Large Sprinkle Cake
+  - Cookie
+  - Blueberry Cake
+  - Pretzel
+  - Bread
   layers:
   - Default
   - TransparentFX

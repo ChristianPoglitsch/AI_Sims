@@ -19,7 +19,10 @@ public class QuestEvents
 
 public enum QuestEvent
 {
-    PickedUpScooter
+    PickedUpScooter,
+    ServedStacy,
+    ServedCloud,
+    ServedZoe
 }
 
 public class QuestEventStore : MonoBehaviour

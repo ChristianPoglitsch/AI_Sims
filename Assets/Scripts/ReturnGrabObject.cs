@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 [RequireComponent(typeof(Rigidbody))]
 public class ReturnGrabObject : MonoBehaviour
 {
+    [Header("Return Motion")]
     public float returnDelay = 3f;
     public float returnDuration = 0.7f;
     public float arcHeight = 0.15f;
@@ -15,6 +16,26 @@ public class ReturnGrabObject : MonoBehaviour
     public ParticleSystem returnParticles;
     public AudioSource returnAudio;
 
+    [Header("Auto Return When Moved (e.g., knocked over)")]
+    [SerializeField] 
+    private bool returnWhenMoved = true;
+
+    [SerializeField] 
+    private float movedDistanceThreshold = 0.15f;
+
+    [SerializeField] 
+    private float movedVelocityThreshold = 0.25f;
+
+    [Header("Stability / Anti-Loop")]
+    [SerializeField] 
+    private float captureStartPoseDelay = 2f;
+
+    [SerializeField] 
+    private float homeRadius = 0.05f;
+
+    [SerializeField] 
+    private float cooldownAfterReturn = 0.75f;
+
     private XRGrabInteractable grab;
     private Rigidbody rigidBody;
 
@@ -22,14 +43,28 @@ public class ReturnGrabObject : MonoBehaviour
     private Quaternion startRotation;
 
     private Coroutine returnRoutine;
+    private bool hasStartPose;
+
+    private float ignoreMovedCheckUntil;
 
     private void Awake()
     {
         grab = GetComponent<XRGrabInteractable>();
         rigidBody = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(CaptureStartPoseDelayed());
+    }
+
+    private IEnumerator CaptureStartPoseDelayed()
+    {
+        yield return new WaitForSeconds(captureStartPoseDelay);
 
         startPosition = transform.position;
         startRotation = transform.rotation;
+        hasStartPose = true;
     }
 
     private void OnEnable()
@@ -44,6 +79,36 @@ public class ReturnGrabObject : MonoBehaviour
         grab.selectExited.RemoveListener(OnRelease);
     }
 
+    private void Update()
+    {
+        if (!returnWhenMoved || !hasStartPose)
+            return;
+
+        if (Time.time < ignoreMovedCheckUntil)
+            return;
+
+        if (grab != null && grab.isSelected)
+            return;
+
+        if (returnRoutine != null)
+            return;
+
+        float distSqr = (transform.position - startPosition).sqrMagnitude;
+        float velSqr = rigidBody != null ? rigidBody.linearVelocity.sqrMagnitude : 0f;
+
+        float distThSqr = movedDistanceThreshold * movedDistanceThreshold;
+        float velThSqr = movedVelocityThreshold * movedVelocityThreshold;
+        float homeSqr = homeRadius * homeRadius;
+
+        bool farEnough = distSqr >= distThSqr;
+        bool movingAndNotAtHome = distSqr >= homeSqr && velSqr >= velThSqr;
+
+        if (farEnough || movingAndNotAtHome)
+        {
+            returnRoutine = StartCoroutine(ReturnAfterDelay());
+        }
+    }
+
     private void OnGrab(SelectEnterEventArgs args)
     {
         if (returnRoutine != null)
@@ -52,16 +117,19 @@ public class ReturnGrabObject : MonoBehaviour
             returnRoutine = null;
         }
 
+        rigidBody.isKinematic = false;
+        rigidBody.WakeUp();
+
         returnParticles?.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         returnAudio?.Stop();
+
+        ignoreMovedCheckUntil = 0f;
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
         if (returnRoutine != null)
-        {
             StopCoroutine(returnRoutine);
-        }
 
         returnRoutine = StartCoroutine(ReturnAfterDelay());
     }
@@ -70,7 +138,7 @@ public class ReturnGrabObject : MonoBehaviour
     {
         yield return new WaitForSeconds(returnDelay);
 
-        if (grab.isSelected)
+        if (grab != null && grab.isSelected)
         {
             returnRoutine = null;
             yield break;
@@ -100,11 +168,20 @@ public class ReturnGrabObject : MonoBehaviour
 
         while (elapsed < returnDuration)
         {
+            if (grab != null && grab.isSelected)
+            {
+                returnParticles?.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                returnAudio?.Stop();
+
+                rigidBody.isKinematic = false;
+                rigidBody.WakeUp();
+                yield break;
+            }
+
             float t = elapsed / returnDuration;
             float smoothT = t * t * (3f - 2f * t);
 
             Vector3 basePos = Vector3.Lerp(fromPos, startPosition, smoothT);
-
             float heightOffset = Mathf.Sin(t * Mathf.PI) * arcHeight;
             basePos.y += heightOffset;
 
@@ -113,15 +190,6 @@ public class ReturnGrabObject : MonoBehaviour
 
             elapsed += Time.deltaTime;
             yield return null;
-
-            if (grab.isSelected)
-            {
-                returnParticles?.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-                returnAudio?.Stop();
-
-                rigidBody.isKinematic = false;
-                yield break;
-            }
         }
 
         transform.SetPositionAndRotation(startPosition, startRotation);
@@ -130,5 +198,10 @@ public class ReturnGrabObject : MonoBehaviour
         returnAudio?.Stop();
 
         rigidBody.isKinematic = false;
+        rigidBody.linearVelocity = Vector3.zero;
+        rigidBody.angularVelocity = Vector3.zero;
+        rigidBody.Sleep();
+
+        ignoreMovedCheckUntil = Time.time + cooldownAfterReturn;
     }
 }
