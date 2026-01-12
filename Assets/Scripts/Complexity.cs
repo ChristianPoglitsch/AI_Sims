@@ -178,8 +178,8 @@ public class Complexity : MonoBehaviour
 
     public LLM_Handler GetQuestCharacter()
     {
-        if ((currentQuest >= 0 && currentQuest <= llmQuestEntries.Count) && llmQuestEntries[currentQuest].questCharacter.Count > 0)
-            return llmQuestEntries[currentQuest].questCharacter[0];
+        if ((currentQuest >= 0 && currentQuest <= llmQuestEntries.Count) && llmQuestEntries[0].questCharacter.Count > 0)
+            return llmQuestEntries[0].questCharacter[0];
         return null;
     }
 
