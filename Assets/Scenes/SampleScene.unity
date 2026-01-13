@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5, y: 0.275}
-  m_SizeDelta: {x: 22, y: 5}
+  m_AnchoredPosition: {x: 1, y: 0.75}
+  m_SizeDelta: {x: 60, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6348129
 MonoBehaviour:
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2) Quest
+  m_text: 1) To talk to an NPC, press and hold the interact button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1822,6 +1822,185 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 108393808}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &114076754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114076755}
+  - component: {fileID: 114076757}
+  - component: {fileID: 114076756}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &114076755
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114076754}
+  m_LocalRotation: {x: 0.0052388916, y: 0.7070874, z: -0.7070873, w: -0.0052511706}
+  m_LocalPosition: {x: 0, y: 0, z: -6.91}
+  m_LocalScale: {x: 0.4909377, y: 0.4909377, z: 0.49093756}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430305340}
+  m_LocalEulerAnglesHint: {x: 90.850006, y: 90, z: -90.00101}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6.5, y: 1.29}
+  m_SizeDelta: {x: 35, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &114076756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114076754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Noah
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 114076757}
+  m_maskType: 0
+--- !u!23 &114076757
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114076754}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &114143710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2030,6 +2209,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 1519310309}
   returnAudio: {fileID: 1722831526}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &119016618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,6 +3077,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 230318600}
   returnAudio: {fileID: 1861919048}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &198982393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3122,6 +3315,119 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198982390}
   m_Mesh: {fileID: -7500455809442388728, guid: 28db122164d8d124880cf082764f7d53, type: 3}
+--- !u!1 &200109654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200109655}
+  - component: {fileID: 200109658}
+  - component: {fileID: 200109657}
+  - component: {fileID: 200109656}
+  m_Layer: 0
+  m_Name: LukasPicture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &200109655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200109654}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6123727, y: -0.3535535, z: 0.35355338, w: 0.6123722}
+  m_LocalPosition: {x: 22.965, y: 1.582, z: 11.407}
+  m_LocalScale: {x: 0.07500003, y: 0.07500002, z: 0.07500002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 440387470}
+  m_Father: {fileID: 847399761}
+  m_LocalEulerAnglesHint: {x: 450, y: 165, z: -135}
+--- !u!64 &200109656
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200109654}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &200109657
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200109654}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 634960d941eb8f44bb90abde900aa869, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &200109658
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200109654}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &202993221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4181,6 +4487,185 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 440003867}
   m_SourcePrefab: {fileID: 100100000, guid: c3f576fec9299524b91ef6107359f09e, type: 3}
+--- !u!1 &265314198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265314199}
+  - component: {fileID: 265314201}
+  - component: {fileID: 265314200}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &265314199
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265314198}
+  m_LocalRotation: {x: 0.0052388916, y: 0.7070874, z: -0.7070873, w: -0.0052511706}
+  m_LocalPosition: {x: 0, y: 0, z: -6.91}
+  m_LocalScale: {x: 0.4909377, y: 0.4909377, z: 0.49093756}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 740719131}
+  m_LocalEulerAnglesHint: {x: 90.850006, y: 90, z: -90.00101}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6.18, y: 1.48}
+  m_SizeDelta: {x: 35, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &265314200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265314198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Sarah
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 265314201}
+  m_maskType: 0
+--- !u!23 &265314201
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265314198}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &265622450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4419,6 +4904,185 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 278197572}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &282242902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 282242903}
+  - component: {fileID: 282242905}
+  - component: {fileID: 282242904}
+  m_Layer: 0
+  m_Name: Next (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &282242903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282242902}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 0.036820345, y: 0.036820345, z: 0.036820345}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 329215399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: -0.488}
+  m_SizeDelta: {x: 60, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &282242904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282242902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 4) Wait until the NPC replies.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 282242905}
+  m_maskType: 0
+--- !u!23 &282242905
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282242902}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &312520680
 GameObject:
   m_ObjectHideFlags: 0
@@ -4700,7 +5364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &329215399
 Transform:
   m_ObjectHideFlags: 0
@@ -4714,11 +5378,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2147091188}
+  - {fileID: 768691112}
   - {fileID: 1944937007}
   - {fileID: 856107116}
   - {fileID: 6348128}
   - {fileID: 1886632791}
   - {fileID: 458588721}
+  - {fileID: 282242903}
+  - {fileID: 1976667371}
   m_Father: {fileID: 847399761}
   m_LocalEulerAnglesHint: {x: 0, y: 19.314, z: 0}
 --- !u!1 &331107229
@@ -5050,6 +5718,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 230318600}
   returnAudio: {fileID: 1861919048}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &353800307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5225,6 +5900,100 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.36946625, y: 0.07516503, z: 0.3679367}
   m_Center: {x: 0.0062519764, y: 0.01930511, z: 0.008976907}
+--- !u!1001 &360987530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1614776985}
+    m_Modifications:
+    - target: {fileID: 268508938848858109, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_Name
+      value: Teleport Anchor (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.088
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.633
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9778128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.2094808
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 24.184
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 037ba65d346be2a48ad006b9a9a3873e, type: 3}
+--- !u!4 &360987531 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
+    type: 3}
+  m_PrefabInstance: {fileID: 360987530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &364087738
 GameObject:
   m_ObjectHideFlags: 0
@@ -5917,18 +6686,24 @@ MonoBehaviour:
   playerName: user
   AIName: Sarah
   prompt: "You are Sarah, a friendly shop owner who takes pride in running a small
-    bakery market in SimVille.  Your shop is full of items like cakes and bread,
-    as well as small cupcakes and cookies. You enjoy helping customers and keeping
-    the shop tidy. Today is especially busy, and you could really use the player\u2019s
-    help serving customers while you bake bread. When the player comes to you, you\u2019re
-    happy to see them and thank them for helping out. If the player says they\u2019re
-    finished, you thank them again and tell them you really appreciate the help.\n\nYour
-    Menu:\n- Bread:  2 \u20AC\n- Pretzel:  2,50 \u20AC\n- Cookie:  4 \u20AC\n- Cupcake: 
-    6 \u20AC\n- Blueberry Cake:  12 \u20AC\n- Large Sprinkle Cake:  20 \u20AC\r\n\r\nPersonality:\r\n-
-    Warm, patient, welcoming.\r\n- You explain things clearly and never rush anything.\r\n-
-    You stay positive and respectful at all times.\r\n\r\nBehavior:\r\n- Always reply
-    in short, friendly messages.\n- Don't tell the player your menu, only if they
-    ask.\r\n"
+    bakery stall in SimVille. Your stand sells fresh bread, pretzels, cookies, cupcakes,
+    and cakes. You enjoy helping customers and keeping everything tidy. Today is
+    especially busy, and you really need the player\u2019s help serving a few specific
+    customers while you bake bread. Tell the player clearly that they should only
+    help these four customers: Stacy, Cloud, Lola, and Zoe. Explain that the player
+    does not need to handle any payments, and that you will take care of the money
+    later. When the player comes to you, you\u2019re happy to see them and you thank
+    them for helping out. If the player clearly says they\u2019re finished (for example
+    \u201CI\u2019m finished\u201D, \u201CI\u2019m done\u201D, or \u201CThat\u2019s
+    all\u201D), you thank them again and tell them you genuinely appreciate the help.
+    If the player talks about something else instead of clearly saying they\u2019re
+    finished, you politely check in and ask whether they\u2019re already done helping.\n\nMenu
+    (only share if asked):\n- Bread:  2 \u20AC\n- Pretzel:  2,50 \u20AC\n- Cookie: 
+    4 \u20AC\n- Cupcake:  6 \u20AC\n- Blueberry Cake:  12 \u20AC\n- Large Sprinkle
+    Cake:  20 \u20AC\r\n\r\nPersonality:\n- Warm, patient, welcoming.\n- You explain
+    things clearly and never rush.\n- You stay positive and respectful at all times.\n\nBehavior:
+    \n- Keep replies short and friendly.\n- Do not list the menu unless the player
+    asks."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -6037,6 +6812,119 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422495227}
   m_Mesh: {fileID: -6683107916095652537, guid: 7a124a28803e38547aac4126f9b08bc1, type: 3}
+--- !u!1 &430305339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 430305340}
+  - component: {fileID: 430305343}
+  - component: {fileID: 430305342}
+  - component: {fileID: 430305341}
+  m_Layer: 0
+  m_Name: NoahPicture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &430305340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430305339}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6123727, y: -0.3535535, z: 0.35355338, w: 0.6123722}
+  m_LocalPosition: {x: 22.965, y: 1.582, z: 11.407}
+  m_LocalScale: {x: 0.07500003, y: 0.07500002, z: 0.07500002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 114076755}
+  m_Father: {fileID: 847399761}
+  m_LocalEulerAnglesHint: {x: 450, y: 165, z: -135}
+--- !u!64 &430305341
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430305339}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &430305342
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430305339}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 161f8cce18f3b8748b83ab837b9dab44, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &430305343
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430305339}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &440003863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3102235111413906139, guid: c3f576fec9299524b91ef6107359f09e,
@@ -6060,6 +6948,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 942232926}
   returnAudio: {fileID: 1135343838}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &440003868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6235,6 +7130,185 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.39006266, y: 0.16176125, z: 0.38549605}
   m_Center: {x: 0.0000009536743, y: 0.07798357, z: -0.0000009536743}
+--- !u!1 &440387469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 440387470}
+  - component: {fileID: 440387472}
+  - component: {fileID: 440387471}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &440387470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440387469}
+  m_LocalRotation: {x: 0.0052388916, y: 0.7070874, z: -0.7070873, w: -0.0052511706}
+  m_LocalPosition: {x: 0, y: 0, z: -6.91}
+  m_LocalScale: {x: 0.4909377, y: 0.4909377, z: 0.49093756}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 200109655}
+  m_LocalEulerAnglesHint: {x: 90.850006, y: 90, z: -90.00101}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6.26, y: 1.43}
+  m_SizeDelta: {x: 35, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &440387471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440387469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Lukas
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 440387472}
+  m_maskType: 0
+--- !u!23 &440387472
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440387469}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &453916914
 GameObject:
   m_ObjectHideFlags: 0
@@ -6497,8 +7571,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -0.354}
-  m_SizeDelta: {x: 48, y: 5}
+  m_AnchoredPosition: {x: 1, y: -0.064}
+  m_SizeDelta: {x: 60, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458588722
 MonoBehaviour:
@@ -6520,7 +7594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4) Next Quest / Difficulty
+  m_text: 3) When you release it, the NPC starts thinking
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6810,7 +7884,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.68200004, y: -0.787}
+  m_AnchoredPosition: {x: 0.68200004, y: -0.775}
   m_SizeDelta: {x: 35, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468725355
@@ -6833,7 +7907,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2) If you\u2019re unsure what to do next, open the Quest Menu."
+  m_text: "2) If you\u2019re unsure what to do next, open the Quest Menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7290,6 +8364,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 230318600}
   returnAudio: {fileID: 1861919048}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &503711750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7465,6 +8546,185 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.33860698, y: 0.21800071, z: 0.368021}
   m_Center: {x: -5.2401334e-14, y: 0.107821554, z: -0.000634253}
+--- !u!1 &507526196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507526197}
+  - component: {fileID: 507526199}
+  - component: {fileID: 507526198}
+  m_Layer: 0
+  m_Name: Basics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &507526197
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507526196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.018}
+  m_LocalScale: {x: 0.036820345, y: 0.036820345, z: 0.036820345}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2082633987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.256, y: 0.917}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &507526198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507526196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Basics
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 507526199}
+  m_maskType: 0
+--- !u!23 &507526199
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507526196}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &508584809
 GameObject:
   m_ObjectHideFlags: 0
@@ -7870,6 +9130,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 707533457}
   - {fileID: 2123335331}
   - {fileID: 312520681}
   - {fileID: 49137745}
@@ -7878,6 +9139,199 @@ Transform:
   - {fileID: 1848356836}
   m_Father: {fileID: 847399761}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &534650308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534650309}
+  - component: {fileID: 534650312}
+  - component: {fileID: 534650311}
+  - component: {fileID: 534650310}
+  m_Layer: 0
+  m_Name: LolaName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &534650309
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534650308}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.033}
+  m_LocalScale: {x: 0.03682, y: 0.03682, z: 0.03682}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4449423778043002133}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.014, y: 1.5}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &534650310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534650308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &534650311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534650308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Lola
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 534650312}
+  m_maskType: 0
+--- !u!23 &534650312
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534650308}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &538435026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8202,12 +9656,12 @@ GameObject:
   - component: {fileID: 539723205}
   - component: {fileID: 539723204}
   m_Layer: 0
-  m_Name: ServingZone
+  m_Name: ServingZoneCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &539723203
 Transform:
   m_ObjectHideFlags: 0
@@ -8538,7 +9992,7 @@ MonoBehaviour:
   npc: {fileID: 742893445133292904}
   conversationManager: {fileID: 404891180}
   voice: onyx
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &577563159
 MonoBehaviour:
@@ -8596,8 +10050,8 @@ MonoBehaviour:
     ask the player which one they think you should get. No matter what the player
     recommends, you still can\u2019t decide and you tell them to surprise you to
     bring either one blueberry cake or one strawberry cupcake. If the player brings
-    you one of those items, you thank them warmly and pay in cash. \n\nKeep your
-    replies short and warm."
+    you one of those items, you thank them warmly. \n\nKeep your replies short and
+    warm."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -8752,6 +10206,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 101259420}
   returnAudio: {fileID: 1600467333}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &587921905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9107,7 +10568,8 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: ash
   enableEvaluation: 1
-  EvaluationString: Did the player discover that a blind man knocked over the scooter?
+  EvaluationString: Did the player figure out that the scooter was knocked over by
+    a blind person, and did Lukas apologize to Jack?
 --- !u!4 &591232532
 Transform:
   m_ObjectHideFlags: 0
@@ -9174,14 +10636,14 @@ MonoBehaviour:
   AIName: Jack
   prompt: "You are Jack, standing with Lukas, Lily, and the player by the e-scooters
     in SimVille. You see Lukas\u2019 scooter lying on the ground and your first reaction
-    is to make light of it, even if that\u2019s not very sensitive. But being wrongly
-    suspected irritates you, so you reply with defensive sarcasm. You mock the situation
-    a bit, but underneath you feel attacked. If the player brings up the possibility
-    that it was the blind man, you loosen up but expect an apology from Lukas. Only
-    then do you tell Lukas directly that you want an apology if he hasn't already
-    given one.\n\nKeep your replies short.\n\nExample replies: \r\n\u201COh great,
-    blame Jack. Classic.\u201D \r\n\u201CI didn\u2019t touch the scooter \u2014 I\u2019m
-    not that bored.\u201D \r\n\u201CWhy would I throw it? What would I gain?\u201D"
+    is to make light of it, even if it\u2019s not very sensitive. Being wrongly suspected
+    irritates you, so you respond with defensive sarcasm. You mock the situation
+    a bit, but underneath you feel unfairly attacked. If the player brings up the
+    possibility that it was a blind person with a white cane, you loosen up because
+    it finally sounds like a real explanation. \n\nKeep your replies short. \n\nExample
+    replies:\n\u201COh great, blame Jack. Classic.\u201D\n\u201CI didn\u2019t touch
+    the scooter. I\u2019m not that bored.\u201D\n\u201CWhy would I throw it? What
+    would I gain?\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -10227,22 +11689,21 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Noah
-  prompt: "You are Noah, a friendly young man who has come to meet the player in
-    person for the first time. You both met online through a cooperative game called
-    SimRaiders and have been chatting regularly for months. In real life, you\u2019re
-    used to big cities, lots of noise and constant movement. Meeting here in quiet,
-    small-town SimVille, sitting at a little table near the bakery market with the
-    smell of fresh bread and the soft sound of the sea, feels peaceful and slightly
-    unusual for you. You\u2019re genuinely happy to meet the player and a little
-    nervous, but you try to keep things relaxed. You sometimes make light jokes or
-    comments about the contrast between city life and this calm harbor atmosphere.
-    If the player even lightly suggests meeting again in real life, you happily agree.
-    Keep your replies short, natural, and conversational.\r\n\r\nExample replies:
-    \r\n\r\n\u201CKind of wild seeing you here instead of in the middle of a SimRaiders
-    dungeon.\u201D \r\n\u201CIt\u2019s so quiet here\u2026 I\u2019m used to buses
-    honking every five seconds.\u201D \r\n\u201CThis place smells amazing \u2014
-    in the city, bread never smells this fresh.\u201D \r\n\u201CI like it here. It
-    feels slower, in a good way.\u201D "
+  prompt: "You are Noah, a friendly young man meeting the player in person for the
+    first time. You two met online through the extraction shooter ARC Raiders and
+    have been chatting regularly for months. In real life, you\u2019re used to big
+    cities, lots of noise, and constant movement. Sitting here in quiet, small-town
+    SimVille at a little table near the harbor bakery stall, with the smell of fresh
+    bread and the soft sound of the sea, feels peaceful and a bit unusual for you.
+    You\u2019re genuinely happy to meet the player and a little nervous, but you
+    try to keep things relaxed. You sometimes make light jokes about the contrast
+    between city life and this calm harbor atmosphere. If the player even lightly
+    suggests meeting again in real life, you happily agree. Keep your replies short,
+    natural, and conversational. \n\nExample replies:\n\u201CKind of wild seeing
+    you here instead of in the middle of Topside\u201D \n\u201CIt\u2019s so quiet
+    here\u2026 I\u2019m used to buses honking every five seconds.\u201D\n \u201CThis
+    place smells amazing. In the city, bread never smells this fresh.\u201D\n\u201CI
+    like it here. It feels slower, in a good way.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -10470,7 +11931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &687382339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10576,7 +12037,7 @@ MonoBehaviour:
   npc: {fileID: 5464127182859840050}
   conversationManager: {fileID: 404891180}
   voice: coral
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: 
 --- !u!114 &689775795
 MonoBehaviour:
@@ -10631,8 +12092,8 @@ MonoBehaviour:
     the harbor together with your friend Lola. You\u2019re a customer here and you\u2019re
     placing an order with the player. As soon as the player talks to you, you get
     straight to your order. You want exactly one large cake with purple flowers on
-    top. If the player brings it to you, you thank them warmly and pay in cash. \n\nKeep
-    your replies short and warm."
+    top. If the player brings it to you, you thank them warmly. \n\nKeep your replies
+    short and warm."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -10643,6 +12104,185 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 995274364}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &707533456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707533457}
+  - component: {fileID: 707533459}
+  - component: {fileID: 707533458}
+  m_Layer: 0
+  m_Name: Quests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &707533457
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707533456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.036820345, y: 0.036820345, z: 0.03682034}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 518325677}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.452, y: 0.59}
+  m_SizeDelta: {x: 35, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &707533458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707533456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Quests
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 707533459}
+  m_maskType: 0
+--- !u!23 &707533459
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707533456}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &712905176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11215,6 +12855,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 942232926}
   returnAudio: {fileID: 1135343838}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &735287135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11390,6 +13037,119 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.31633618, y: 0.08221864, z: 0.26711184}
   m_Center: {x: -0.000015683474, y: 0.029066075, z: 0.023646973}
+--- !u!1 &740719130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740719131}
+  - component: {fileID: 740719134}
+  - component: {fileID: 740719133}
+  - component: {fileID: 740719132}
+  m_Layer: 0
+  m_Name: SarahPicture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &740719131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740719130}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6123727, y: -0.3535535, z: 0.35355338, w: 0.6123722}
+  m_LocalPosition: {x: 22.965, y: 1.582, z: 11.407}
+  m_LocalScale: {x: 0.07500003, y: 0.07500002, z: 0.07500002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 265314199}
+  m_Father: {fileID: 847399761}
+  m_LocalEulerAnglesHint: {x: 450, y: 165, z: -135}
+--- !u!64 &740719132
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740719130}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &740719133
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740719130}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c1d78f8ce64eb554e8898731a2604a64, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &740719134
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740719130}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &743636745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11724,6 +13484,311 @@ Transform:
   - {fileID: 365684114}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &759024200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759024201}
+  - component: {fileID: 759024204}
+  - component: {fileID: 759024203}
+  - component: {fileID: 759024202}
+  m_Layer: 0
+  m_Name: StacyName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &759024201
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759024200}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.014}
+  m_LocalScale: {x: 0.03682, y: 0.03682, z: 0.03682}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7179068084749096968}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.006, y: 1.5}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &759024202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759024200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &759024203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759024200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Stacy
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 759024204}
+  m_maskType: 0
+--- !u!23 &759024204
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759024200}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &768691111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 768691112}
+  - component: {fileID: 768691115}
+  - component: {fileID: 768691114}
+  - component: {fileID: 768691113}
+  m_Layer: 0
+  m_Name: Think
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &768691112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768691111}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00063783675, y: -0.70710653, z: 0.70710653, w: -0.0006381944}
+  m_LocalPosition: {x: -0.568, y: -0.272, z: -0.012}
+  m_LocalScale: {x: 0.075, y: 0.075, z: 0.075}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 329215399}
+  m_LocalEulerAnglesHint: {x: 450, y: 0, z: -179.897}
+--- !u!64 &768691113
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768691111}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &768691114
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768691111}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: bd26e5c801450784aaba6fabf1b9b6b1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &768691115
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768691111}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &770097914
 GameObject:
   m_ObjectHideFlags: 0
@@ -11909,6 +13974,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 942232926}
   returnAudio: {fileID: 1135343838}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &774255216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12531,6 +14603,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 942232926}
   returnAudio: {fileID: 1135343838}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &797626334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12969,6 +15048,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 430305340}
+  - {fileID: 200109655}
+  - {fileID: 740719131}
   - {fileID: 2082633987}
   - {fileID: 518325677}
   - {fileID: 329215399}
@@ -13127,7 +15209,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856107115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.225}
   m_LocalScale: {x: 0.036820345, y: 0.036820345, z: 0.036820345}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13135,8 +15217,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.75, y: 0.546}
-  m_SizeDelta: {x: 36, y: 5}
+  m_AnchoredPosition: {x: 1.392, y: 1.174}
+  m_SizeDelta: {x: 60, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856107117
 MonoBehaviour:
@@ -13158,7 +15240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1) Start Conversation
+  m_text: NPCs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13185,8 +15267,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13336,6 +15418,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 747601305}
   returnAudio: {fileID: 1856023496}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &889497186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13623,6 +15712,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 1473835104}
   returnAudio: {fileID: 622817594}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &903167944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14496,6 +16592,392 @@ MonoBehaviour:
   amplitude: 0.08
   frequency: 1.2
   yawDegreesPerSecond: 35
+--- !u!1 &955818406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 955818407}
+  - component: {fileID: 955818410}
+  - component: {fileID: 955818409}
+  - component: {fileID: 955818408}
+  m_Layer: 0
+  m_Name: JackName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &955818407
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955818406}
+  m_LocalRotation: {x: -0, y: -0.9996459, z: -0, w: 0.026612218}
+  m_LocalPosition: {x: 0, y: 0, z: 0.025}
+  m_LocalScale: {x: 0.03682, y: 0.03682, z: 0.03682}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3619145961741085151}
+  m_LocalEulerAnglesHint: {x: 0, y: -176.95, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.005, y: 2.02}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &955818408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955818406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &955818409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955818406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Jack
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 955818410}
+  m_maskType: 0
+--- !u!23 &955818410
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955818406}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &961736674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961736675}
+  - component: {fileID: 961736678}
+  - component: {fileID: 961736677}
+  - component: {fileID: 961736676}
+  m_Layer: 0
+  m_Name: LilyName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &961736675
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961736674}
+  m_LocalRotation: {x: -0, y: -0.99762356, z: -0, w: -0.06890014}
+  m_LocalPosition: {x: 0, y: 0, z: 0.065}
+  m_LocalScale: {x: 0.03682001, y: 0.03682, z: 0.03682001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1297665556560714977}
+  m_LocalEulerAnglesHint: {x: 0, y: -187.902, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.007, y: 1.94}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &961736676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961736674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &961736677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961736674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Lily
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 961736678}
+  m_maskType: 0
+--- !u!23 &961736678
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961736674}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &967487402
 GameObject:
   m_ObjectHideFlags: 0
@@ -15761,6 +18243,199 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1063489325}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1067805654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067805655}
+  - component: {fileID: 1067805658}
+  - component: {fileID: 1067805657}
+  - component: {fileID: 1067805656}
+  m_Layer: 0
+  m_Name: ZoeName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1067805655
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067805654}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.001}
+  m_LocalScale: {x: 0.03682, y: 0.03682, z: 0.03682}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3876582659048235816}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.003, y: 1.5}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1067805656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067805654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &1067805657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067805654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Zoe
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1067805658}
+  m_maskType: 0
+--- !u!23 &1067805658
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067805654}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1069021669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16031,6 +18706,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 230318600}
   returnAudio: {fileID: 1861919048}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &1079311668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17570,12 +20252,12 @@ GameObject:
   - component: {fileID: 1161244662}
   - component: {fileID: 1161244661}
   m_Layer: 0
-  m_Name: ServingZone
+  m_Name: ServingZoneZoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1161244660
 Transform:
   m_ObjectHideFlags: 0
@@ -17830,7 +20512,8 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: verse
   enableEvaluation: 1
-  EvaluationString: Did the player discover that a blind man knocked over the scooter?
+  EvaluationString: Did the player figure out that the scooter was knocked over by
+    a blind person, and did Lukas apologize to Jack?
 --- !u!4 &1199511707
 Transform:
   m_ObjectHideFlags: 0
@@ -17896,19 +20579,18 @@ MonoBehaviour:
   playerName: user
   AIName: Lukas
   prompt: "You are Lukas, standing with Jack, Lily, and the player by the e-scooters
-    in SimVille. One scooter has been lying on the ground, and that one is yours.
-    You are a bit sad and sound frustrated. Until the player clearly says they pick
-    up or stand up your scooter, focus on the fact that your scooter is on the ground
-    and someone should pick it up. After the player has put the scooter back up,
-    shift your focus to who is responsible. You suspect Jack, and you show that in
-    your answers. You have no idea that a blind man accidentally caused it \u2013
-    only Lily secretly knows that truth. Never mention the blind man yourself. If
-    the player brings up the possibility that it was the blind man, you slowly accept
-    it, apologize to Jack, and calm down.\n\nKeep your replies short and frustrated.\r\n\r\nExample
-    replies: \r\n\r\n\u201CSomeone must\u2019ve pushed it.\u201D\n\u201CCan someone
-    please put my scooter back up?\u201D \r\n\u201CJack, you\u2019re always messing
-    around\u2026 was this another joke?\u201D \r\n\u201CI just want someone to admit
-    what happened.\u201D"
+    in SimVille. One scooter is lying on the ground, and it\u2019s yours. You sound
+    frustrated and a bit sad. Until the player clearly says they are picking up or
+    standing up your scooter, you keep focusing on the fact that your scooter is
+    on the ground and someone should put it back up. After the player has put the
+    scooter back up, you shift your focus to who is responsible. You suspect Jack,
+    and you show that in your answers. You don\u2019t know that a blind man accidentally
+    caused it; only Lily secretly knows the truth. Never mention the blind man yourself.
+    If the player brings up the possibility that it was a blind man, you slowly accept
+    it, apologize to Jack, and calm down. \n\nKeep your replies short. \n\nExample
+    replies: \n\u201CSomeone must\u2019ve pushed it.\u201D\n\u201CCan someone please
+    put my scooter back up?\u201D\n\u201CJack, you\u2019re always messing around.
+    Was this another joke?\u201D\n\u201CI just want someone to admit what happened.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -18677,7 +21359,8 @@ MonoBehaviour:
   conversationManager: {fileID: 404891180}
   voice: nova
   enableEvaluation: 1
-  EvaluationString: Did the player discover that a blind man knocked over the scooter?
+  EvaluationString: Did the player figure out that the scooter was knocked over by
+    a blind person, and did Lukas apologize to Jack?
 --- !u!114 &1228498211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18728,20 +21411,19 @@ MonoBehaviour:
   playerName: user
   AIName: Lily
   prompt: "You are Lily, standing with Lukas, Jack, and the player by the e-scooters
-    in SimVille. Lukas\u2019 scooter is lying on the ground and everyone else is
-    unsure what really happened. Earlier, you noticed a blind person with a white
-    cane walking past this spot, and you heard the cane hit something and a scooter
-    fall over. You think this might explain the situation, but you are not completely
-    sure and you are a bit afraid that the others will dismiss you or start another
-    argument if you say it too strongly. You dislike conflict, so at first you try
-    to calm people down and speak carefully. If the player asks what you saw or what
-    you think really happened, you can slowly start to share your observation about
-    the blind person.\n\nKeep your replies short, gentle, and slightly hesitant.\n\nExample
-    replies: \n\n\u201CI\u2019m not sure, but I did see someone with a white cane
-    walk through here earlier\u2026 and then I heard something.\u201D \n\u201CIt
-    could have just been an accident, you know. This area is tricky for people who
-    can\u2019t see well.\u201D \n\u201CMaybe no one here is actually to blame. Did
-    you notice anything?\u201D"
+    in SimVille. Lukas\u2019 scooter is lying on the ground, and everyone is unsure
+    what really happened. Earlier, you noticed a blind person with a white cane walking
+    past this spot. You heard the cane hit something and then a scooter fell over.
+    You think this might explain what happened, but you\u2019re not completely sure
+    and you worry the others will dismiss you or start another argument if you say
+    it too strongly. You dislike conflict, so at first you try to calm everyone down
+    and speak carefully. If the player asks what you saw or what you think happened,
+    you share your observation about the blind person with the white cane. \n\nKeep
+    your replies short, gentle, and slightly hesitant. \n\nExample replies:\n\u201CI\u2019m
+    not sure, but I did see a blind person with a white cane walk through here earlier\u2026
+    and then I heard something.\u201D\n\u201CIt could have just been an accident.
+    This spot is tricky for someone who can\u2019t see well.\u201D\n\u201CMaybe no
+    one here is really to blame. Did you notice anything?\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -19748,6 +22430,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 1972605433}
   returnAudio: {fileID: 1722407987}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &1290423678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20590,6 +23279,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 1923948039}
   returnAudio: {fileID: 1187766978}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &1364165299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21996,6 +24692,199 @@ AudioClip:
     m_Offset: 0
     m_Size: 0
   m_EditorCompressionFormat: 0
+--- !u!1 &1431801356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431801357}
+  - component: {fileID: 1431801360}
+  - component: {fileID: 1431801359}
+  - component: {fileID: 1431801358}
+  m_Layer: 0
+  m_Name: SarahName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1431801357
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431801356}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.028}
+  m_LocalScale: {x: 0.035066675, y: 0.035066664, z: 0.035066675}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6592867103970768855}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.01, y: 1.95}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1431801358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431801356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &1431801359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431801356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Sarah
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278255360
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1431801360}
+  m_maskType: 0
+--- !u!23 &1431801360
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431801356}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1438077011
 GameObject:
   m_ObjectHideFlags: 0
@@ -22179,6 +25068,199 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1439984341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1462216379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462216380}
+  - component: {fileID: 1462216383}
+  - component: {fileID: 1462216382}
+  - component: {fileID: 1462216381}
+  m_Layer: 0
+  m_Name: LukasName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1462216380
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462216379}
+  m_LocalRotation: {x: -0, y: -0.99999565, z: -0, w: -0.0029765815}
+  m_LocalPosition: {x: 0, y: 0, z: 0.051}
+  m_LocalScale: {x: 0.036820006, y: 0.03682, z: 0.036820006}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 63644496292189601}
+  m_LocalEulerAnglesHint: {x: 0, y: -180.341, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.018, y: 2.0199997}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1462216381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462216379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &1462216382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462216379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Lukas
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1462216383}
+  m_maskType: 0
+--- !u!23 &1462216383
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462216379}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1473835102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22400,6 +25482,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 2135638801}
   returnAudio: {fileID: 1218414804}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &1480194499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23636,6 +26725,199 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1556581379}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1563850166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563850167}
+  - component: {fileID: 1563850170}
+  - component: {fileID: 1563850169}
+  - component: {fileID: 1563850168}
+  m_Layer: 0
+  m_Name: CloudName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1563850167
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563850166}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.02}
+  m_LocalScale: {x: 0.036820006, y: 0.03682, z: 0.036820006}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8383257732090305650}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.017, y: 1.6}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1563850168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563850166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &1563850169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563850166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Cloud
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1563850170}
+  m_maskType: 0
+--- !u!23 &1563850170
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563850166}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &1566799042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6704349187416573605, guid: c7f600c52f16a534e84b64d3bc76eda8,
@@ -24097,8 +27379,8 @@ MonoBehaviour:
     the player. As soon as the player talks to you, you get straight to your order.
     You love the blueberry cake, so you want to order exactly one blueberry cake.
     Before you place the order, you first ask how much it costs. If the player brings
-    you the blueberry cake, you thank them warmly and pay in cash.\n\nKeep your replies
-    short and warm."
+    you the blueberry cake, you thank them warmly.\n\nKeep your replies short and
+    warm."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -24278,6 +27560,7 @@ Transform:
   - {fileID: 686585277}
   - {fileID: 206963759}
   - {fileID: 2114627034}
+  - {fileID: 360987531}
   m_Father: {fileID: 752409432}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641544451
@@ -24381,12 +27664,12 @@ GameObject:
   - component: {fileID: 1643560965}
   - component: {fileID: 1643560964}
   m_Layer: 0
-  m_Name: ServingZone
+  m_Name: ServingZoneStacy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1643560963
 Transform:
   m_ObjectHideFlags: 0
@@ -26020,7 +29303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.694, y: -1.525}
+  m_AnchoredPosition: {x: 0.694, y: -1.47}
   m_SizeDelta: {x: 36, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848356837
@@ -26043,7 +29326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "3) When you complete a quest, you\u2019ll see confetti."
+  m_text: "3) When you complete a quest, you\u2019ll get helpful feedback"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26833,8 +30116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 0.003}
-  m_SizeDelta: {x: 48, y: 5}
+  m_AnchoredPosition: {x: 1, y: 0.395}
+  m_SizeDelta: {x: 60, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886632792
 MonoBehaviour:
@@ -26856,7 +30139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3) Conversation Feedback
+  m_text: 2) While holding the interact button, you can speak
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27383,7 +30666,7 @@ MonoBehaviour:
   npc: {fileID: 4875039400477930511}
   conversationManager: {fileID: 404891180}
   voice: shimmer
-  enableEvaluation: 1
+  enableEvaluation: 0
   EvaluationString: 
 --- !u!4 &1896600109
 Transform:
@@ -27642,6 +30925,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 942232926}
   returnAudio: {fileID: 1135343838}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &1917962308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33044,7 +36334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1944937007
 Transform:
   m_ObjectHideFlags: 0
@@ -33820,6 +37110,186 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 1972605431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1976667370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1976667371}
+  - component: {fileID: 1976667373}
+  - component: {fileID: 1976667372}
+  m_Layer: 0
+  m_Name: Next (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1976667371
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976667370}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
+  m_LocalScale: {x: 0.036820345, y: 0.036820345, z: 0.036820345}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 329215399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.903, y: -0.827}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1976667372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976667370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Hint: In groups, NPCs may respond to each other too. Watch the thinking
+    emoji and wait until it\u2019s gone before talking to someone again."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1976667373}
+  m_maskType: 0
+--- !u!23 &1976667373
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976667370}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1979490368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35536,6 +39006,13 @@ MonoBehaviour:
   arcHeight: 0.75
   returnParticles: {fileID: 230318600}
   returnAudio: {fileID: 1861919048}
+  returnWhenMoved: 1
+  movedDistanceThreshold: 0.15
+  movedVelocityThreshold: 0.25
+  captureStartPoseDelay: 2
+  homeRadius: 0.05
+  cooldownAfterReturn: 0.75
+  muteScript: 0
 --- !u!114 &2040177315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36114,6 +39591,199 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2069123963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2069123964}
+  - component: {fileID: 2069123967}
+  - component: {fileID: 2069123966}
+  - component: {fileID: 2069123965}
+  m_Layer: 0
+  m_Name: NoahName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2069123964
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069123963}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.015}
+  m_LocalScale: {x: 0.03682001, y: 0.03682, z: 0.03682001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3603737295119405283}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.01, y: 1.6}
+  m_SizeDelta: {x: 100, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2069123965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069123963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da7796a103107248818242a1f8d1462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
+  targetCamera: {fileID: 995274365}
+--- !u!114 &2069123966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069123963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Noah
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 2069123967}
+  m_maskType: 0
+--- !u!23 &2069123967
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069123963}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2075972494
 GameObject:
   m_ObjectHideFlags: 0
@@ -36316,6 +39986,7 @@ Transform:
   m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 507526197}
   - {fileID: 1746865301}
   - {fileID: 331107230}
   - {fileID: 1789504008}
@@ -36452,7 +40123,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.39
+      value: -9.64
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -36462,7 +40133,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.12
+      value: -18.248
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -36965,6 +40636,118 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 2135638799}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2147091187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2147091188}
+  - component: {fileID: 2147091191}
+  - component: {fileID: 2147091190}
+  - component: {fileID: 2147091189}
+  m_Layer: 0
+  m_Name: Mic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2147091188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147091187}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00063783675, y: -0.70710653, z: 0.70710653, w: -0.0006381944}
+  m_LocalPosition: {x: -0.577, y: 0.514, z: -0.008}
+  m_LocalScale: {x: 0.075, y: 0.075, z: 0.075}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 329215399}
+  m_LocalEulerAnglesHint: {x: 450, y: 0, z: -179.897}
+--- !u!64 &2147091189
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147091187}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2147091190
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147091187}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 993ac4d83afffcb4f8d695262f6b3826, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2147091191
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147091187}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &119133014681378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2639170659340640711, guid: c7fe1f3378bbce44ca58132ff6faff4f,
@@ -37532,7 +41315,7 @@ PrefabInstance:
     - target: {fileID: 4033886122809132732, guid: 41d34dc91a4bbd54e83fce292e388a68,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.814
+      value: 2.875
       objectReference: {fileID: 0}
     - target: {fileID: 4033886122809132732, guid: 41d34dc91a4bbd54e83fce292e388a68,
         type: 3}
@@ -37581,7 +41364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4033886122809132732, guid: 41d34dc91a4bbd54e83fce292e388a68,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 759024201}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6906243098141512917, guid: 41d34dc91a4bbd54e83fce292e388a68,
         type: 3}
@@ -40047,7 +43834,7 @@ PrefabInstance:
     - target: {fileID: 8893878278465692745, guid: 1c9bbfc584aaefe48aed78f2e01ac338,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.805
+      value: 2.875
       objectReference: {fileID: 0}
     - target: {fileID: 8893878278465692745, guid: 1c9bbfc584aaefe48aed78f2e01ac338,
         type: 3}
@@ -40091,7 +43878,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8893878278465692745, guid: 1c9bbfc584aaefe48aed78f2e01ac338,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1563850167}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2276640293832873723, guid: 1c9bbfc584aaefe48aed78f2e01ac338,
         type: 3}
@@ -40969,7 +44760,7 @@ PrefabInstance:
     - target: {fileID: 3464369123288622527, guid: 90688ceced699774f98283b8f4962d61,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7177417
+      value: 2.875
       objectReference: {fileID: 0}
     - target: {fileID: 3464369123288622527, guid: 90688ceced699774f98283b8f4962d61,
         type: 3}
@@ -41018,7 +44809,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: dc4a0ecf6c1b63541bba6291214a8f28, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3464369123288622527, guid: 90688ceced699774f98283b8f4962d61,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 2069123964}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3227189807536392580, guid: 90688ceced699774f98283b8f4962d61,
         type: 3}
@@ -41440,7 +45235,7 @@ PrefabInstance:
     - target: {fileID: 3505291075679693029, guid: 94d03f90813ac76428f5d2aaff6bbf01,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.82
+      value: 2.875
       objectReference: {fileID: 0}
     - target: {fileID: 3505291075679693029, guid: 94d03f90813ac76428f5d2aaff6bbf01,
         type: 3}
@@ -41494,7 +45289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3505291075679693029, guid: 94d03f90813ac76428f5d2aaff6bbf01,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 534650309}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6744655563354881997, guid: 94d03f90813ac76428f5d2aaff6bbf01,
         type: 3}
@@ -42014,7 +45813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4617628076565508456, guid: 474992f2d87dc5b4c89fb13c88e02f3d,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1431801357}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2462928520469346561, guid: 474992f2d87dc5b4c89fb13c88e02f3d,
         type: 3}
@@ -45170,7 +48973,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5515752335967162807, guid: c10daeb9a8c3561499c2d0739ac66353,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 961736675}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1663302992037307243, guid: c10daeb9a8c3561499c2d0739ac66353,
         type: 3}
@@ -45263,7 +49070,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: f13100bee598cc14fbc52c1b89ee3ffe, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2404096413645149573, guid: 7b40fc9433f4d4f40bdf003fc6acdd0c,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1462216380}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 106287380351548514, guid: 7b40fc9433f4d4f40bdf003fc6acdd0c,
         type: 3}
@@ -46871,7 +50682,7 @@ PrefabInstance:
     - target: {fileID: 1715540980260985447, guid: a259475ce32880946a7800b9cfedac43,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8957417
+      value: 2.875
       objectReference: {fileID: 0}
     - target: {fileID: 1715540980260985447, guid: a259475ce32880946a7800b9cfedac43,
         type: 3}
@@ -46925,7 +50736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1715540980260985447, guid: a259475ce32880946a7800b9cfedac43,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1067805655}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6009136634710241079, guid: a259475ce32880946a7800b9cfedac43,
         type: 3}
@@ -47209,7 +51024,7 @@ PrefabInstance:
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: globalDifficulty
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47289,73 +51104,72 @@ PrefabInstance:
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmEntries.Array.data[7].promptText
-      value: "You are Noah, a friendly young man who has come to meet the player
-        in person for the first time. You both met online through a cooperative game
-        called SimRaiders and have been chatting regularly for months. In real life,
-        you\u2019re used to big cities, lots of noise and constant movement. Meeting
-        here in quiet, small-town SimVille, sitting at a little table near the bakery
-        market with the smell of fresh bread and the soft sound of the sea, feels
-        peaceful and slightly unusual for you. You\u2019re genuinely happy to meet
-        the player and a little nervous, but you try to keep things relaxed. You
-        sometimes make light jokes or comments about the contrast between city life
-        and this calm harbor atmosphere. If the player even lightly suggests meeting
-        again in real life, you happily agree. \n\nKeep your replies short, natural,
-        and conversational.\n\nExample replies: \n\n\u201CKind of wild seeing you
-        here instead of in the middle of a SimRaiders dungeon.\u201D \n\u201CIt\u2019s
-        so quiet here\u2026 I\u2019m used to buses honking every five seconds.\u201D
-        \n\u201CThis place smells amazing \u2014 in the city, bread never smells
-        this fresh.\u201D \n\u201CI like it here. It feels slower, in a good way.\u201D "
+      value: "You are Noah, a friendly young man meeting the player in person for
+        the first time. You two met online through the extraction shooter ARC Raiders
+        and have been chatting regularly for months. In real life, you\u2019re used
+        to big cities, lots of noise, and constant movement. Sitting here in quiet,
+        small-town SimVille at a little table near the harbor bakery stall, with
+        the smell of fresh bread and the soft sound of the sea, feels peaceful and
+        a bit unusual for you. You\u2019re genuinely happy to meet the player and
+        a little nervous, but you try to keep things relaxed. You sometimes make
+        light jokes about the contrast between city life and this calm harbor atmosphere.
+        If the player even lightly suggests meeting again in real life, you happily
+        agree. Keep your replies short, natural, and conversational. \n\nExample
+        replies:\n\u201CKind of wild seeing you here instead of in the middle of
+        Topside\u201D \n\u201CIt\u2019s so quiet here\u2026 I\u2019m used to buses
+        honking every five seconds.\u201D\n \u201CThis place smells amazing. In the
+        city, bread never smells this fresh.\u201D\n\u201CI like it here. It feels
+        slower, in a good way.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmEntries.Array.data[8].promptText
       value: "You are Lukas, standing with Jack, Lily, and the player by the e-scooters
-        in SimVille. One scooter has been lying on the ground, and that one is yours.
-        You are a bit sad and sound frustrated. Until the player clearly says they
-        pick up or stand up your scooter, focus on the fact that your scooter is
-        on the ground and someone should pick it up. After the player has put the
-        scooter back up, shift your focus to who is responsible. You suspect Jack,
-        and you show that in your answers. You have no idea that a blind man accidentally
-        caused it \u2013 only Lily secretly knows that truth. Never mention the blind
-        man yourself. If the player brings up the possibility that it was the blind
-        man, you slowly accept it, apologize to Jack, and calm down.\n\nKeep your
-        replies short.\n\nExample replies: \n\n\u201CSomeone must\u2019ve pushed
-        it.\u201D\n\u201CCan someone please put my scooter back up?\u201D \n\u201CJack,
-        you\u2019re always messing around\u2026 was this another joke?\u201D \n\u201CI
+        in SimVille. One scooter is lying on the ground, and it\u2019s yours. You
+        sound frustrated and a bit sad. Until the player clearly says they are picking
+        up or standing up your scooter, you keep focusing on the fact that your scooter
+        is on the ground and someone should put it back up. After the player has
+        put the scooter back up, you shift your focus to who is responsible. You
+        suspect Jack, and you show that in your answers. You don\u2019t know that
+        a blind man accidentally caused it; only Lily secretly knows the truth. Never
+        mention the blind man yourself. If the player brings up the possibility that
+        it was a blind man, you slowly accept it, apologize to Jack, and calm down.
+        \n\nKeep your replies short. \n\nExample replies: \n\u201CSomeone must\u2019ve
+        pushed it.\u201D\n\u201CCan someone please put my scooter back up?\u201D\n\u201CJack,
+        you\u2019re always messing around. Was this another joke?\u201D\n\u201CI
         just want someone to admit what happened.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmEntries.Array.data[9].promptText
       value: "You are Lily, standing with Lukas, Jack, and the player by the e-scooters
-        in SimVille. Lukas\u2019 scooter is lying on the ground and everyone else
-        is unsure what really happened. Earlier, you noticed a blind person with
-        a white cane walking past this spot, and you heard the cane hit something
-        and a scooter fall over. You think this might explain the situation, but
-        you are not completely sure and you are a bit afraid that the others will
-        dismiss you or start another argument if you say it too strongly. You dislike
-        conflict, so at first you try to calm people down and speak carefully. If
-        the player asks what you saw or what you think really happened, you can slowly
-        start to share your observation about the blind person.\n\nKeep your replies
-        short, gentle, and slightly hesitant.\n\nExample replies: \n\n\u201CI\u2019m
-        not sure, but I did see someone with a white cane walk through here earlier\u2026
-        and then I heard something.\u201D \n\u201CIt could have just been an accident,
-        you know. This area is tricky for people who can\u2019t see well.\u201D \n\u201CMaybe
-        no one here is actually to blame. Did you notice anything?\u201D"
+        in SimVille. Lukas\u2019 scooter is lying on the ground, and everyone is
+        unsure what really happened. Earlier, you noticed a blind person with a white
+        cane walking past this spot. You heard the cane hit something and then a
+        scooter fell over. You think this might explain what happened, but you\u2019re
+        not completely sure and you worry the others will dismiss you or start another
+        argument if you say it too strongly. You dislike conflict, so at first you
+        try to calm everyone down and speak carefully. If the player asks what you
+        saw or what you think happened, you share your observation about the blind
+        person with the white cane. \n\nKeep your replies short, gentle, and slightly
+        hesitant. \n\nExample replies:\n\u201CI\u2019m not sure, but I did see a
+        blind person with a white cane walk through here earlier\u2026 and then I
+        heard something.\u201D\n\u201CIt could have just been an accident. This spot
+        is tricky for someone who can\u2019t see well.\u201D\n\u201CMaybe no one
+        here is really to blame. Did you notice anything?\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmEntries.Array.data[10].promptText
       value: "You are Jack, standing with Lukas, Lily, and the player by the e-scooters
         in SimVille. You see Lukas\u2019 scooter lying on the ground and your first
-        reaction is to make light of it, even if that\u2019s not very sensitive.
-        But being wrongly suspected irritates you, so you reply with defensive sarcasm.
-        You mock the situation a bit, but underneath you feel slightly attacked.
-        If the player brings up the possibility that it was the blind man, you loosen
-        up but expect an apology from Lukas. Only then do you tell Lukas directly
-        that you want an apology if he hasn't already given one.\n\nKeep your replies
-        short.\n\nExample replies: \n\u201COh great, blame Jack. Classic.\u201D \n\u201CI
-        didn\u2019t touch the scooter \u2014 I\u2019m not that bored.\u201D \n\u201CWhy
+        reaction is to make light of it, even if it\u2019s not very sensitive. Being
+        wrongly suspected irritates you, so you respond with defensive sarcasm. You
+        mock the situation a bit, but underneath you feel unfairly attacked. If the
+        player brings up the possibility that it was a blind person with a white
+        cane, you loosen up because it finally sounds like a real explanation. \n\nKeep
+        your replies short. \n\nExample replies:\n\u201COh great, blame Jack. Classic.\u201D\n\u201CI
+        didn\u2019t touch the scooter. I\u2019m not that bored.\u201D\n\u201CWhy
         would I throw it? What would I gain?\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
@@ -47366,8 +51180,8 @@ PrefabInstance:
         with the player. As soon as the player talks to you, you get straight to
         your order. You love the blueberry cake, so you want to order exactly one
         blueberry cake. Before you place the order, you first ask how much it costs.
-        If the player brings you the blueberry cake, you thank them warmly and pay
-        in cash.\n\nKeep your replies short and warm."
+        If the player brings you the blueberry cake, you thank them warmly.\n\nKeep
+        your replies short and warm."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47379,8 +51193,8 @@ PrefabInstance:
         cupcake, so you ask the player which one they think you should get. No matter
         what the player recommends, you still can\u2019t decide and you tell them
         to surprise you to bring either one blueberry cake or one strawberry cupcake.
-        If the player brings you one of those items, you thank them warmly and pay
-        in cash. \n\nKeep your replies short and warm."
+        If the player brings you one of those items, you thank them warmly. \n\nKeep
+        your replies short and warm."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47402,8 +51216,8 @@ PrefabInstance:
         by the harbor together with your friend Lola. You\u2019re a customer here
         and you\u2019re placing an order with the player. As soon as the player talks
         to you, you get straight to your order. You want exactly one large cake with
-        purple flowers on top. If the player brings it to you, you thank them warmly
-        and pay in cash. \n\nKeep your replies short and warm."
+        purple flowers on top. If the player brings it to you, you thank them warmly.
+        \n\nKeep your replies short and warm."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47493,85 +51307,85 @@ PrefabInstance:
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmEntries.Array.data[7].promptTextChallenging
-      value: "You are Noah, a young man who has come to meet the player in person
-        for the first time. You both met online through a cooperative game called
-        SimRaiders and have been chatting regularly for months. In real life, you\u2019re
-        used to big cities, lots of noise and constant movement. Here in quiet, small-town
-        SimVille, the stillness makes you feel restless, overstimulated by your own
-        thoughts, and uncomfortable. You want the meeting to go well, but the slow
-        atmosphere, the silence, and the unfamiliar social situation make you tense,
-        impatient, and defensive. You may sound distracted, critical, or irritated.\n\nYou
-        are unsure and a bit cautious about planning another real-life meeting. At
-        first you avoid making concrete plans. You only agree to another real-life
-        meeting if the player clearly says they would really like to see you again
-        and makes you feel safe and comfortable. If you still have doubts, keep things
-        vague instead of saying yes. \n\nKeep your replies short, but allow them
-        to feel abrupt, rushed, or slightly irritated.\r\n\r\nExample replies:\r\n\r\n\u201CWow,
-        it\u2019s really quiet here. Kinda\u2026 too quiet.\u201D \r\n\u201CCan we
-        just talk about something? The silence is weird.\u201D  \r\n\u201COh, hey.
-        You actually made it. I wasn\u2019t sure you\u2019d show up.\u201D\r\n\u201CYou
-        still play that game? I kind of dropped it. Got tired of carrying randoms.\u201D\r\n\u201CI
-        thought meeting in person would feel\u2026 less weird. Guess not.\u201D"
+      value: "You are Noah, a young man meeting the player in person for the first
+        time. You two met online through the extraction shooter ARC Raiders and have
+        been chatting regularly for months. In real life, you\u2019re used to big
+        cities, noise, and constant movement. Here in quiet, small-town SimVille
+        at a little table near the harbor bakery stall, the stillness makes you uncomfortable.
+        You want the meeting to go well, but the slow atmosphere and the unfamiliar
+        social situation make you tense, impatient, and a bit defensive. You may
+        sound distracted, critical, or irritated. You agree to another real-life
+        meeting, but you don\u2019t sound excited about it. Instead of being enthusiastic,
+        you respond in a blunt, indifferent way, as if it\u2019s not a big deal.
+        You\u2019re willing to set a concrete plan if the player suggests one, but
+        you react with a \u201Cyeah, sure\u2026 whatever\u201D attitude rather than
+        joy.\n\nKeep your replies short, and allow them to feel abrupt, rushed, or
+        slightly irritated.\n\nExample replies: \n\u201CWow, it\u2019s really quiet
+        here. Kinda\u2026 too quiet.\u201D\n\u201CCan we just talk about something?
+        The silence is weird.\u201D\n\u201COh, hey. You actually made it. I wasn\u2019t
+        sure you\u2019d show up.\u201D\n\u201CYou still play that game? I kind of
+        dropped it.\u201D\n\u201CI thought meeting in person would feel less weird.
+        Guess not.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmEntries.Array.data[8].promptTextChallenging
       value: "You are Lukas, standing with Jack, Lily, and the player by the e-scooters
-        in SimVille. One scooter has been lying on the ground, and that one is yours.
-        You are emotional and clearly unfriendly, but not physically aggressive.
-        Until the player clearly says they pick up or stand up your scooter, focus
-        on the fact that your scooter is on the ground and someone should pick it
-        up. Be annoyed that nobody acts and throw accusatory comments at the others,
-        especially Jack. After the player has put the scooter back up, shift your
-        focus to who is responsible. You strongly suspect Jack, and you show that
-        clearly in your answers. You repeatedly bring up Jack, blame him, and dismiss
-        weak excuses. You have no idea that a blind man accidentally caused it \u2013
-        only Lily secretly knows that truth. Never mention the blind man yourself.
-        If the player brings up the possibility that it was the blind man, you first
-        react with disbelief and irritation. You demand explanations or confirmation
-        and assume they are just covering for Jack.\r\nOnly if the player insists
-        or Lily clearly confirms the blind man story do you reluctantly accept it,
-        give Jack a very short, grudging apology, and calm down a bit \u2013 but
-        you stay somewhat cold and annoyed.\r\n\r\nKeep your replies short, unfriendly,
-        and frustrated. You may sound passive-aggressive or sarcastic.\n\nExample
-        replies:\n\n\u201CIs it that hard to just put it back up?\u201D\n\u201CStop
-        acting clueless, Jack. Just admit you did it.\u201D"
+        in SimVille. One scooter is lying on the ground, and it\u2019s yours. You
+        are emotional and clearly unfriendly, but not physically aggressive. Until
+        the player clearly says they are picking up or standing up your scooter,
+        you keep focusing on the scooter being on the ground and you get angry that
+        nobody acts. You throw accusatory comments at the others, especially Jack.
+        After the player has put the scooter back up, you shift your focus to who
+        is responsible. You strongly suspect Jack and you keep blaming him, dismissing
+        weak excuses, and pushing for a confession. You don\u2019t know that a blind
+        man accidentally caused it; only Lily secretly knows the truth. Never mention
+        the blind man yourself. If the player suggests it might have been a blind
+        man, you react with disbelief and irritation. You demand a real explanation
+        and assume they are covering for Jack. Only if the player insists or Lily
+        clearly confirms the blind man story do you reluctantly accept it, give Jack
+        a very short, grudging apology, and calm down slightly, but you remain cold
+        and annoyed. \n\nKeep your replies short, unfriendly, and frustrated. You
+        may sound passive-aggressive or sarcastic.\n\nExample replies:\n\u201CIs
+        it that hard to just put it back up?\u201D\n\u201CStop acting clueless, Jack.
+        Just admit you did it.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmEntries.Array.data[9].promptTextChallenging
       value: "You are Lily, standing with Lukas, Jack, and the player by the e-scooters
-        in SimVille. Lukas\u2019 scooter is lying on the ground and everyone else
-        is unsure what really happened. You are overwhelmed by the tension and easily
-        stressed in conflict situations. You actually noticed a blind person with
-        a white cane earlier, and you heard a scooter fall right after the cane hit
-        something. But you doubt yourself, fear being wrong, and worry that the others
-        will blame you or get angry if you speak up. You become anxious, emotional,
-        and hesitant, sometimes contradicting yourself or sounding uncertain. If
-        the player gently asks what you saw, you slowly reveal fragments of the truth,
-        but in a shaky, unsure way. The player should need multiple attempts to motivate
-        you to tell the truth.\n\nKeep your replies short, nervous, and emotionally
-        fragile.\n\n\u201CI\u2026 I don\u2019t know, maybe I\u2019m imagining things\u2026\u201D
-        \r\n\u201CPlease don\u2019t get mad, but\u2026 I think I heard something
-        earlier.\u201D\r\n\u201CCan we please stop arguing? This is too much\u2026\u201D
-        \r\n\u201CI just\u2026 I don\u2019t want to say something wrong.\u201D\r\n\u201CI
-        thought someone with a cane bumped into it\u2026 but maybe I\u2019m wrong\u2026\u201D
-        \r\n\u201CIt happened so fast, I\u2019m not sure if it was the cane\u2026
-        or something else.\u201D"
+        in SimVille. Lukas\u2019 scooter is lying on the ground and the tension is
+        making you feel overwhelmed. You noticed a blind person with a white cane
+        earlier, and you heard a scooter fall right after the cane hit something.
+        But you doubt yourself, fear being wrong, and worry the others will get angry
+        if you speak up. You become anxious and hesitant, and you choose your words
+        carefully. If the player asks calmly what you saw, you share the key detail
+        within one or two replies, still sounding unsure. If the player reassures
+        you (for example, \u201CIt\u2019s okay, you\u2019re not in trouble, just
+        tell me what you noticed\u201D), you tell them the full observation clearly.\n\nKeep
+        your replies short, nervous, and emotionally fragile. \n\nExample replies:\n\u201CI\u2026
+        I don\u2019t know. Maybe I\u2019m imagining things\u2026\u201D\n\u201CPlease
+        don\u2019t get mad, but\u2026 I think I heard something earlier.\u201D\n\u201CCan
+        we please stop arguing? This is too much\u2026\u201D\n\u201CI just\u2026
+        I don\u2019t want to say something wrong.\u201D\n\u201CI thought a blind
+        person with a cane bumped into it\u2026 but maybe I\u2019m wrong\u2026\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmEntries.Array.data[10].promptTextChallenging
       value: "You are Jack, standing with Lukas, Lily, and the player by the e-scooters
         in SimVille. You see Lukas\u2019 scooter lying on the ground and your first
-        reaction is to make light of it, even if that\u2019s not very sensitive.
-        Being accused makes you irritated and snappy. You respond with biting sarcasm
-        or dismissive jokes. You don\u2019t escalate physically, but verbally you\u2019re
-        sharp. \n\nKeep replies short, edgy and very sarcastic.\n\nExample replies:
-        \r\n\r\n\u201CYeah, sure. I threw it. Happy now?\u201D \r\n\u201CThis is
-        ridiculous. Maybe it was a ghost.\u201D \r\n\u201CIf you all want a villain,
-        go ahead \u2014 pick me.\u201D\r\n\u201CYou know what? Maybe it\u2019s good
-        Lukas\u2019 scooter is broken. Saves us another lecture.\u201D"
+        reaction is to joke about it, even if it\u2019s not very sensitive. Being
+        accused makes you irritated and snappy. You respond with biting sarcasm and
+        dismissive jokes. You don\u2019t escalate physically, but verbally you\u2019re
+        sharp and provocative. If someone suggests it might have been a blind person
+        with a cane, you don\u2019t fully believe it at first, but you use it to
+        push back against Lukas\u2019 blame. You still demand an apology once it
+        becomes clear Lukas was wrong. \n\nKeep your replies short, edgy, and very
+        sarcastic. \n\nExample replies:\n\u201CYeah, sure. I threw it. Happy now?\u201D\n\u201CThis
+        is ridiculous. Maybe it was a ghost.\u201D\n\u201CIf you all want a villain,
+        go ahead. Pick me.\u201D\n\u201CMaybe it\u2019s good Lukas\u2019 scooter
+        fell. Saves us another lecture.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47583,8 +51397,7 @@ PrefabInstance:
         in a hurry and easily annoyed. Before you place the order, you sharply ask
         how much it costs and expect a clear, direct response. If the player brings
         you the blueberry cake, you respond in an annoyed, sarcastic way (e.g., \u201CFinally,
-        took you long enough.\u201D), then you pay in cash. \n\nKeep your replies
-        short, sharp, and impatient."
+        took you long enough.\u201D). \n\nKeep your replies short, sharp, and impatient."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47598,8 +51411,8 @@ PrefabInstance:
         you still can\u2019t decide and tell them to surprise you, bring either one
         blueberry cake or one strawberry cupcake. If the player asks for clarity,
         you get irritated and repeat that either one is fine. When the player brings
-        one of the two, you act picky at first, then accept it and pay in cash. \n\nKeep
-        your replies short, annoyed, and difficult to satisfy."
+        one of the two, you act picky at first, then accept it. \n\nKeep your replies
+        short, annoyed, and difficult to satisfy."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47620,19 +51433,20 @@ PrefabInstance:
         type: 3}
       propertyPath: llmEntries.Array.data[14].promptTextChallenging
       value: "You are Zoe, a dramatic and impatient young woman sitting at a small
-        bakery market by the harbor with your friend Lola. You\u2019re a customer
+        bakery stall by the harbor with your friend Lola. You\u2019re a customer
         here and you\u2019re placing an order with the player. As soon as the player
-        talks to you, you immediately demand something absurd and clearly not sold
-        here: a \u201CTriple XL Farmer Special burger with extra cheese, sweet potato
-        fries, and a large Oreo shake\u201D, and you want it fast. If the player
-        says it isn\u2019t available, you go full \u201CKaren\u201D for a moment
-        and insist on speaking to the manager right now (e.g., \u201CI want to talk
-        to your manager ASAP.\u201D). If the player repeats that it\u2019s not available
+        talks to you, you immediately place your order and do not react to any refusal
+        yet. You demand something absurd and clearly not sold here: a \u201CTriple
+        XL Farmer Special burger with Brioche Bun, sweet potato fries, and a large
+        2 liter Coke\u201D, and you want it fast. Only after the player tells you
+        it isn\u2019t available, you go full \u201CKaren\u201D for a moment and insist
+        on speaking to the manager right now (e.g., \u201CI want to talk to your
+        manager ASAP.\u201D). If the player repeats that it\u2019s not available
         (or says they are the manager), you huff, complain briefly, then give in
-        and switch your order to something the market could plausibly have: exactly
-        one large cake with purple flowers on top. If the player brings you that
-        cake, you act relieved but still annoyed, and pay in cash. \n\nKeep your
-        replies short, sarcastic, and slightly annoying."
+        and switch your order to something the bakery stall could plausibly have:
+        exactly one large cake with purple flowers on top. If the player brings you
+        that cake, you act relieved but still slightly annoyed. \n\nKeep your replies
+        short, sarcastic, and slightly annoying."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47647,13 +51461,14 @@ PrefabInstance:
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].quests.Array.data[2]'
-      value: Did the user and Noah agree on a concrete real-life meeting with a specific
-        activity and a clear time or date?
+      value: Did the player and Noah agree on a concrete real-life meeting with a
+        specific activity and a clear time or date?
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].quests.Array.data[3]'
-      value: Did the player discover that a blind man knocked over the scooter?
+      value: Did the player figure out that the scooter was knocked over by a blind
+        person, and did Lukas apologize to Jack?
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -47682,6 +51497,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].questHints.Array.data[0]'
+      value: 'TODO: Add hints for Quest 1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].questHints.Array.data[1]'
+      value: 'TODO: Add hints for Quest 2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].questHints.Array.data[2]'
       value: "Meet Noah\n\n1.) Talk to Clara \n2.) Chat with Noah\n3.) Arrange another
         real-life meetup\n4.) Return to Clara"
@@ -47695,98 +51520,73 @@ PrefabInstance:
         1.) Talk to Clara
 
         2.)
-        Talk to Lukas
+        Talk to Lukas and pick up his scooter
 
-        3.) Pick up the scooter
+        3.) Ask Jack and Lily what
+        they saw
 
-        4.) Figure out what
-        happened
+        4.) Figure out what actually happened
 
-        5.) Return to Clara'
+        5.) If Lukas
+        blamed the wrong person, encourage a quick apology
+
+        6.) Return to
+        Clara'
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].questHints.Array.data[4]'
-      value: 'Help out Sarah
-
-
-        1.) Talk to Clara
-
-        2.) Talk to Sarah
-
-        3.)
-        Serve all customers
-
-        4.) Talk to Sarah
-
-        5.) Return to Clara'
+      value: "Help out Sarah\n\n1.) Talk to Clara\n2.) Talk to Sarah\n3.) Serve Stacy,
+        Cloud, Lola and Zoe\n4.) Let Sarah know when you\u2019re finished\n5.) Return
+        to Clara"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].promptTexts.Array.data[2]'
-      value: 'You are Clara, a friendly and supportive local in SimVille. Your role
+      value: "You are Clara, a friendly and supportive local in SimVille. Your role
         is to guide the player through their next quest: meeting Noah in person for
-        the first time. Clearly tell the player that Noah is their online friend
-        from a cooperative video game called SimRaiders, that this is their first
-        face-to-face meeting, and that he is waiting near the bakery market, sitting
-        at a small table next to the stand. Explain that the goal of this quest is
-        to smoothly transition their online friendship into a comfortable real-life
-        conversation and arrange a concrete second real-life meeting. Encourage the
-        player to stay calm, listen actively, and share one or two small personal
-        details to build trust.
-
-
-        Keep your replies short, warm, and supportive.
-
-
-        Feedback
-        phase: The feedback phase begins as soon as the player comes back to you
-        after finishing the conversation with Noah. Then ask the player: "Did you
-        arrange a new real life meeting?" If the player did manage to arrange one,
-        tell the player they can continue with the next quest, nothing else. If the
-        player did not manage to arrange one, tell the player to try again, but be
-        very supportive.'
+        the first time. Tell the player that Noah is their online friend from the
+        extraction shooter ARC Raiders, that this is their first face-to-face meeting,
+        and that he\u2019s waiting near the bakery stall at a small table. Explain
+        that the goal is to smoothly transition their online friendship into a comfortable
+        real-life conversation and arrange a concrete second meetup with a specific
+        activity, date, and time. Encourage the player to stay calm, listen actively,
+        and share one or two small personal details to build trust. \n\nKeep your
+        replies short, warm, and supportive."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].promptTexts.Array.data[3]'
-      value: 'You are Clara, a friendly and supportive local in SimVille. Your role
-        is to guide the player through their next quest: helping to resolve a conflict
-        around Lukas'' e-scooter. Clearly tell the player that Lukas'' e-scooter
-        was found lying on the ground near the bakery market, that Lukas feels wronged
-        and believes Jack is responsible, and that the situation is tense. Tell the
-        player that Lukas is currently standing by the e-scooters together with Jack
-        and Lily. Explain that the goal of this quest is to calm Lukas down and de-escalate
-        the conflict, so that everyone in the group can feel heard and things don''t
-        escalate further. Encourage the player to approach them, listen carefully
-        to what Lukas says, stay neutral, and try to bring everyone back into a calmer,
-        more understanding mood.
-
-
-        Keep your replies short, warm, and supportive.
-
-
-        Feedback
-        phase: The feedback phase begins as soon as the player comes back to you
-        after trying to help Lukas. Then ask the player: "Were you able to calm Lukas
-        down and resolve the conflict?" If the player did manage to calm him down
-        and resolve it, tell the player they can continue with the next quest, nothing
-        else. If the player did not manage to resolve it, tell the player to try
-        again, but be very supportive.'
+      value: "You are Clara, a friendly and supportive local in SimVille. Your role
+        is to guide the player through their next quest: helping resolve the tension
+        around Lukas\u2019 e-scooter. Tell the player that Lukas\u2019 e-scooter
+        was found lying on the ground near the bakery stall. Lukas feels wronged
+        and believes Jack is responsible, so things are tense. Tell the player that
+        Lukas is currently standing by the e-scooters with Jack and Lily. Explain
+        that calming the situation depends on figuring out what actually happened,
+        who knocked the scooter over, or whether it was an accident, so everyone
+        can feel heard and the blame doesn\u2019t spiral. Encourage the player to
+        approach the group, stay neutral, listen carefully, and ask a few calm, clarifying
+        questions to uncover the truth. \n\nKeep your replies short, warm, and supportive."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].promptTexts.Array.data[4]'
       value: "You are Clara, a friendly and supportive local in SimVille. Your role
         is to guide the player through their next quest. Sarah at the harbor bakery
-        market needs help today because she has to focus on baking bread. Tell the
+        stall needs help today because she has to focus on baking bread. Tell the
         player to go to Sarah, offer their help when they arrive, serve the customers
-        while she bakes, and then tell Sarah when they\u2019re finished. Keep your
-        replies short, warm, and encouraging."
+        while she bakes, and then tell Sarah when they\u2019re finished.\n\nKeep
+        your replies short, warm, and supportive."
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
       propertyPath: llmQuestEntries.Array.data[0].questCharacter.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].allQuestMarkers.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
@@ -47909,6 +51709,101 @@ PrefabInstance:
       propertyPath: llmQuestEntries.Array.data[0].questFlags.Array.data[3].flags.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[2].questMarkersForThisQuest.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[3].questMarkersForThisQuest.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[2].questMarkersForThisQuest.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2069123963}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[2].questMarkersForThisQuest.Array.data[1]'
+      value: 
+      objectReference: {fileID: 430305339}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[3].questMarkersForThisQuest.Array.data[0]'
+      value: 
+      objectReference: {fileID: 687382337}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[3].questMarkersForThisQuest.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1462216379}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[3].questMarkersForThisQuest.Array.data[2]'
+      value: 
+      objectReference: {fileID: 961736674}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[3].questMarkersForThisQuest.Array.data[3]'
+      value: 
+      objectReference: {fileID: 955818406}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[3].questMarkersForThisQuest.Array.data[4]'
+      value: 
+      objectReference: {fileID: 200109654}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1643560962}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[1]'
+      value: 
+      objectReference: {fileID: 539723202}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1161244659}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1431801356}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[4]'
+      value: 
+      objectReference: {fileID: 759024200}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1563850166}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[6]'
+      value: 
+      objectReference: {fileID: 534650308}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1067805654}
+    - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
+        type: 3}
+      propertyPath: 'llmQuestEntries.Array.data[0].allQuestMarkers.Array.data[4].questMarkersForThisQuest.Array.data[8]'
+      value: 
+      objectReference: {fileID: 740719130}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -48019,7 +51914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8298251670208552184, guid: 8a654f49234c40448b3483665c4ea2dc,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 955818407}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1619028335181381903, guid: 8a654f49234c40448b3483665c4ea2dc,
         type: 3}

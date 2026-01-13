@@ -1,5 +1,6 @@
 ﻿using AiSims;
 using LLMUnity;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -9,6 +10,12 @@ public enum DifficultyLevel
 {
     Easy,
     Challenging
+}
+
+[Serializable]
+public class QuestMarkers
+{
+    public List<GameObject> questMarkersForThisQuest = new();
 }
 
 [System.Serializable]
@@ -38,6 +45,8 @@ public class LlmQuestEntry
     [Header("Hints for this Quest")]
     [TextArea(5, 10), Chat]
     public List<string> questHints = new List<string>();
+
+    public List<QuestMarkers> allQuestMarkers = new List<QuestMarkers>();
 
     public List<LLM_Handler> questCharacters;
 
@@ -84,7 +93,7 @@ public class Complexity : MonoBehaviour
     public QuestMenu questMenu;
 
     [Header("Number of Quests")]
-    public int numberOfQuests = 4;
+    public int numberOfQuests = 5;
 
     [Header("Randomize Global Difficulty")]
     public bool randomizeDifficulty = false;
@@ -171,6 +180,7 @@ public class Complexity : MonoBehaviour
             }
 
             SetLlmQuestByIndex(i, currentQuest);
+            SetNextQuestMarkers(i, currentQuest, currentQuest, true);
         }
 
         Debug.Log("Current Quest: " + currentQuest + " Current Diffifulty: " + globalDifficulty);
@@ -195,6 +205,24 @@ public class Complexity : MonoBehaviour
         currentQuest = nextQuest;
     }
 
+    private void SetNextQuestMarkers(int entry, int oldQuest, int newQuest, bool initialStart = false)
+    {
+        if (!initialStart)
+        {
+            SetQuestMarkerState(entry, oldQuest, false);
+        }
+
+        SetQuestMarkerState(entry, newQuest, true);
+    }
+
+    private void SetQuestMarkerState(int entry, int quest, bool active)
+    {
+        foreach (var newMarker in llmQuestEntries[entry].allQuestMarkers[quest].questMarkersForThisQuest)
+        {
+            newMarker.SetActive(active);
+        }
+    }
+
     public void CheckIfDifficultyNeedsUpdate()
     {
         if (randomizeDifficulty)
@@ -211,6 +239,8 @@ public class Complexity : MonoBehaviour
 
     public void SetNextQuest()
     {
+        var oldQuest = currentQuest;
+
         if (randomizeQuests && numberOfQuests > 1)
         {
             RandomizeQuestOrder();
@@ -221,6 +251,7 @@ public class Complexity : MonoBehaviour
         }
 
         SetLlmQuestByIndex(currentEntry, currentQuest);
+        SetNextQuestMarkers(currentEntry, oldQuest, currentQuest);
 
         clearChat.ClearAllChats();
 

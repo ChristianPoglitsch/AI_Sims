@@ -72,6 +72,13 @@ namespace AiSims
                 if (nextNpc != null && chance < chanceNpcTalking)
                 {
                     Logger.Log(LoggingInfo.LlmProcessing, $"[LlmProcessing] LLM start nextNpc", true);
+
+                    if (npcThinkingFeedback)
+                    {
+                        npcThinkingFeedback.SetActive(true);
+                        PositionMarkerRightOfNPC(nextNpc.npc.transform, npcThinkingFeedback.transform);
+                    }
+
                     nextNpc.ProcessMessage(currentMessage);
                 }
             }

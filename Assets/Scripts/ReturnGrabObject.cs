@@ -36,6 +36,9 @@ public class ReturnGrabObject : MonoBehaviour
     [SerializeField] 
     private float cooldownAfterReturn = 0.75f;
 
+    [SerializeField]
+    private bool muteScript;
+
     private XRGrabInteractable grab;
     private Rigidbody rigidBody;
 
@@ -81,7 +84,7 @@ public class ReturnGrabObject : MonoBehaviour
 
     private void Update()
     {
-        if (!returnWhenMoved || !hasStartPose)
+        if (!returnWhenMoved || !hasStartPose || muteScript)
             return;
 
         if (Time.time < ignoreMovedCheckUntil)
@@ -129,7 +132,9 @@ public class ReturnGrabObject : MonoBehaviour
     private void OnRelease(SelectExitEventArgs args)
     {
         if (returnRoutine != null)
+        {
             StopCoroutine(returnRoutine);
+        }
 
         returnRoutine = StartCoroutine(ReturnAfterDelay());
     }
@@ -151,6 +156,16 @@ public class ReturnGrabObject : MonoBehaviour
 
     private IEnumerator SmoothReturn()
     {
+        if (muteScript)
+        {
+            if (rigidBody != null)
+            {
+                rigidBody.isKinematic = false;
+                rigidBody.WakeUp();
+            }
+            yield break;
+        }
+
         rigidBody.linearVelocity = Vector3.zero;
         rigidBody.angularVelocity = Vector3.zero;
         rigidBody.isKinematic = true;
@@ -203,5 +218,22 @@ public class ReturnGrabObject : MonoBehaviour
         rigidBody.Sleep();
 
         ignoreMovedCheckUntil = Time.time + cooldownAfterReturn;
+    }
+
+    public void SetMuted(bool muted)
+    {
+        muteScript = muted;
+
+        if (muted && returnRoutine != null)
+        {
+            StopCoroutine(returnRoutine);
+            returnRoutine = null;
+        }
+
+        if (muted && rigidBody != null)
+        {
+            rigidBody.isKinematic = false;
+            rigidBody.WakeUp();
+        }
     }
 }

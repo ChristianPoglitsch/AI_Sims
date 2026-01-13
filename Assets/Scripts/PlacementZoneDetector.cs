@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class ServingDetector : MonoBehaviour
+public class PlacementZoneDetector : MonoBehaviour
 {
     [SerializeField]
     private AudioSource soundEffect;
@@ -71,7 +71,7 @@ public class ServingDetector : MonoBehaviour
                 var returnGrabObject = root.GetComponentInChildren<ReturnGrabObject>(true);
                 if (returnGrabObject)
                 {
-                    returnGrabObject.enabled = false;
+                    returnGrabObject.SetMuted(true);
                 }
 
                 foreach (var questEvent in questEvents)
