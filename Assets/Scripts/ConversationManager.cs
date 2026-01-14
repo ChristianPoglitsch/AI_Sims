@@ -234,6 +234,7 @@ namespace AiSims
             if (npcThinkingFeedback)
             {
                 npcThinkingFeedback.SetActive(true);
+                PositionMarkerRightOfNPC(currentNPC.npc.transform, npcThinkingFeedback.transform);
             }
 
             isGivingFeedback = true;
