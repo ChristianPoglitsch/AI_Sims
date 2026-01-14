@@ -65,7 +65,7 @@ namespace AiSims
             float chance = UnityEngine.Random.value; // float between 0.0 and 1.0
             isNpcTalking = false;
 
-            if (npcConnection != null)
+            if (npcConnection != null && !isGivingFeedback)
             {
                 Debug.Log("Num conversation partner #" + npcConnection.GetNumNpcs() + " | chance = " + chance);
                 LLM_Handler nextNpc = npcConnection.RandomHandler;
@@ -231,6 +231,11 @@ namespace AiSims
 
         private void GiveFeedback()
         {
+            if (npcThinkingFeedback)
+            {
+                npcThinkingFeedback.SetActive(true);
+            }
+
             isGivingFeedback = true;
 
             string instruction = $"\nYou are: {currentNPC.GetLlm().AIName}. Speak directly to the player.\n" +

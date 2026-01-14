@@ -3342,14 +3342,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200109654}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6123727, y: -0.3535535, z: 0.35355338, w: 0.6123722}
+  m_LocalRotation: {x: 0.6408566, y: -0.29883638, z: 0.29883623, w: 0.64085615}
   m_LocalPosition: {x: 22.965, y: 1.582, z: 11.407}
   m_LocalScale: {x: 0.07500003, y: 0.07500002, z: 0.07500002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 440387470}
   m_Father: {fileID: 847399761}
-  m_LocalEulerAnglesHint: {x: 450, y: 165, z: -135}
+  m_LocalEulerAnglesHint: {x: 450, y: 175, z: -135}
 --- !u!64 &200109656
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5936,7 +5936,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.21
+      value: -6.441
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -5946,7 +5946,7 @@ PrefabInstance:
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.633
+      value: -16.78
       objectReference: {fileID: 0}
     - target: {fileID: 6707876468356395517, guid: 037ba65d346be2a48ad006b9a9a3873e,
         type: 3}
@@ -6839,14 +6839,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430305339}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6123727, y: -0.3535535, z: 0.35355338, w: 0.6123722}
+  m_LocalRotation: {x: 0.6408566, y: -0.29883638, z: 0.29883623, w: 0.64085615}
   m_LocalPosition: {x: 22.965, y: 1.582, z: 11.407}
   m_LocalScale: {x: 0.07500003, y: 0.07500002, z: 0.07500002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 114076755}
   m_Father: {fileID: 847399761}
-  m_LocalEulerAnglesHint: {x: 450, y: 165, z: -135}
+  m_LocalEulerAnglesHint: {x: 450, y: 175, z: -135}
 --- !u!64 &430305341
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11369,7 +11369,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 75}
+  m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &661952279
 GameObject:
@@ -11639,7 +11639,7 @@ MonoBehaviour:
   voice: ash
   enableEvaluation: 1
   EvaluationString: Did the user and Noah agree on a concrete real-life meeting with
-    a specific activity and a clear time or date.
+    a specific activity and a clear time and date.
 --- !u!114 &671243188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11697,13 +11697,14 @@ MonoBehaviour:
     bread and the soft sound of the sea, feels peaceful and a bit unusual for you.
     You\u2019re genuinely happy to meet the player and a little nervous, but you
     try to keep things relaxed. You sometimes make light jokes about the contrast
-    between city life and this calm harbor atmosphere. If the player even lightly
-    suggests meeting again in real life, you happily agree. Keep your replies short,
-    natural, and conversational. \n\nExample replies:\n\u201CKind of wild seeing
-    you here instead of in the middle of Topside\u201D \n\u201CIt\u2019s so quiet
-    here\u2026 I\u2019m used to buses honking every five seconds.\u201D\n \u201CThis
-    place smells amazing. In the city, bread never smells this fresh.\u201D\n\u201CI
-    like it here. It feels slower, in a good way.\u201D"
+    between city life and this calm harbor atmosphere. If the player suggests meeting
+    again, you happily agree and ask them to set a concrete plan with a specific
+    activity, date, and time. \n\nKeep your replies short, natural, and conversational.
+    \n\nExample replies:\n\u201CKind of wild seeing you here instead of in the middle
+    of Topside\u201D \n\u201CIt\u2019s so quiet here\u2026 I\u2019m used to buses
+    honking every five seconds.\u201D\n \u201CThis place smells amazing. In the city,
+    bread never smells this fresh.\u201D\n\u201CI like it here. It feels slower,
+    in a good way.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -13064,14 +13065,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740719130}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6123727, y: -0.3535535, z: 0.35355338, w: 0.6123722}
+  m_LocalRotation: {x: 0.6408566, y: -0.29883638, z: 0.29883623, w: 0.64085615}
   m_LocalPosition: {x: 22.965, y: 1.582, z: 11.407}
   m_LocalScale: {x: 0.07500003, y: 0.07500002, z: 0.07500002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 265314199}
   m_Father: {fileID: 847399761}
-  m_LocalEulerAnglesHint: {x: 450, y: 165, z: -135}
+  m_LocalEulerAnglesHint: {x: 450, y: 175, z: -135}
 --- !u!64 &740719132
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20584,13 +20585,14 @@ MonoBehaviour:
     standing up your scooter, you keep focusing on the fact that your scooter is
     on the ground and someone should put it back up. After the player has put the
     scooter back up, you shift your focus to who is responsible. You suspect Jack,
-    and you show that in your answers. You don\u2019t know that a blind man accidentally
-    caused it; only Lily secretly knows the truth. Never mention the blind man yourself.
-    If the player brings up the possibility that it was a blind man, you slowly accept
-    it, apologize to Jack, and calm down. \n\nKeep your replies short. \n\nExample
-    replies: \n\u201CSomeone must\u2019ve pushed it.\u201D\n\u201CCan someone please
-    put my scooter back up?\u201D\n\u201CJack, you\u2019re always messing around.
-    Was this another joke?\u201D\n\u201CI just want someone to admit what happened.\u201D"
+    and you show that in your answers. You don\u2019t know that a blind person accidentally
+    caused it; only Lily secretly knows the truth. Never mention the blind person
+    yourself. If Lily mentions a blind person, you react uncertainly and do not accept
+    it yet. You only accept it and apologize to Jack after the player brings it up
+    or clearly confirms it. \n\nKeep your replies short. \n\nExample replies: \n\u201CSomeone
+    must\u2019ve pushed it.\u201D\n\u201CCan someone please put my scooter back up?\u201D\n\u201CJack,
+    you\u2019re always messing around. Was this another joke?\u201D\n\u201CI just
+    want someone to admit what happened.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -30441,7 +30443,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 100}
+  m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888610324
 MonoBehaviour:
@@ -51113,13 +51115,13 @@ PrefabInstance:
         a bit unusual for you. You\u2019re genuinely happy to meet the player and
         a little nervous, but you try to keep things relaxed. You sometimes make
         light jokes about the contrast between city life and this calm harbor atmosphere.
-        If the player even lightly suggests meeting again in real life, you happily
-        agree. Keep your replies short, natural, and conversational. \n\nExample
-        replies:\n\u201CKind of wild seeing you here instead of in the middle of
-        Topside\u201D \n\u201CIt\u2019s so quiet here\u2026 I\u2019m used to buses
-        honking every five seconds.\u201D\n \u201CThis place smells amazing. In the
-        city, bread never smells this fresh.\u201D\n\u201CI like it here. It feels
-        slower, in a good way.\u201D"
+        If the player suggests meeting again, you happily agree and ask them to set
+        a concrete plan with a specific activity, date, and time. \n\nKeep your replies
+        short, natural, and conversational. \n\nExample replies:\n\u201CKind of wild
+        seeing you here instead of in the middle of Topside\u201D \n\u201CIt\u2019s
+        so quiet here\u2026 I\u2019m used to buses honking every five seconds.\u201D\n
+        \u201CThis place smells amazing. In the city, bread never smells this fresh.\u201D\n\u201CI
+        like it here. It feels slower, in a good way.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -51131,13 +51133,14 @@ PrefabInstance:
         is on the ground and someone should put it back up. After the player has
         put the scooter back up, you shift your focus to who is responsible. You
         suspect Jack, and you show that in your answers. You don\u2019t know that
-        a blind man accidentally caused it; only Lily secretly knows the truth. Never
-        mention the blind man yourself. If the player brings up the possibility that
-        it was a blind man, you slowly accept it, apologize to Jack, and calm down.
-        \n\nKeep your replies short. \n\nExample replies: \n\u201CSomeone must\u2019ve
-        pushed it.\u201D\n\u201CCan someone please put my scooter back up?\u201D\n\u201CJack,
-        you\u2019re always messing around. Was this another joke?\u201D\n\u201CI
-        just want someone to admit what happened.\u201D"
+        a blind person accidentally caused it; only Lily secretly knows the truth.
+        Never mention the blind person yourself. If Lily mentions a blind person,
+        you react uncertainly and do not accept it yet. You only accept it and apologize
+        to Jack after the player brings it up or clearly confirms it. \n\nKeep your
+        replies short. \n\nExample replies: \n\u201CSomeone must\u2019ve pushed it.\u201D\n\u201CCan
+        someone please put my scooter back up?\u201D\n\u201CJack, you\u2019re always
+        messing around. Was this another joke?\u201D\n\u201CI just want someone to
+        admit what happened.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -51317,15 +51320,15 @@ PrefabInstance:
         sound distracted, critical, or irritated. You agree to another real-life
         meeting, but you don\u2019t sound excited about it. Instead of being enthusiastic,
         you respond in a blunt, indifferent way, as if it\u2019s not a big deal.
-        You\u2019re willing to set a concrete plan if the player suggests one, but
-        you react with a \u201Cyeah, sure\u2026 whatever\u201D attitude rather than
-        joy.\n\nKeep your replies short, and allow them to feel abrupt, rushed, or
-        slightly irritated.\n\nExample replies: \n\u201CWow, it\u2019s really quiet
-        here. Kinda\u2026 too quiet.\u201D\n\u201CCan we just talk about something?
-        The silence is weird.\u201D\n\u201COh, hey. You actually made it. I wasn\u2019t
-        sure you\u2019d show up.\u201D\n\u201CYou still play that game? I kind of
-        dropped it.\u201D\n\u201CI thought meeting in person would feel less weird.
-        Guess not.\u201D"
+        You still expect the plan to be concrete, so if the player suggests meeting
+        again, push them to name a specific activity, date, and time. You react with
+        a \u201Cyeah, sure\u2026 whatever\u201D attitude rather than joy.\n\nKeep
+        your replies short, and allow them to feel abrupt, rushed, or slightly irritated.\n\nExample
+        replies: \n\u201CWow, it\u2019s really quiet here. Kinda\u2026 too quiet.\u201D\n\u201CCan
+        we just talk about something? The silence is weird.\u201D\n\u201COh, hey.
+        You actually made it. I wasn\u2019t sure you\u2019d show up.\u201D\n\u201CYou
+        still play that game? I kind of dropped it.\u201D\n\u201CI thought meeting
+        in person would feel less weird. Guess not.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -51339,14 +51342,14 @@ PrefabInstance:
         After the player has put the scooter back up, you shift your focus to who
         is responsible. You strongly suspect Jack and you keep blaming him, dismissing
         weak excuses, and pushing for a confession. You don\u2019t know that a blind
-        man accidentally caused it; only Lily secretly knows the truth. Never mention
-        the blind man yourself. If the player suggests it might have been a blind
-        man, you react with disbelief and irritation. You demand a real explanation
-        and assume they are covering for Jack. Only if the player insists or Lily
-        clearly confirms the blind man story do you reluctantly accept it, give Jack
-        a very short, grudging apology, and calm down slightly, but you remain cold
-        and annoyed. \n\nKeep your replies short, unfriendly, and frustrated. You
-        may sound passive-aggressive or sarcastic.\n\nExample replies:\n\u201CIs
+        person accidentally caused it; only Lily secretly knows the truth. Never
+        mention the blind person yourself. If Lily brings up a blind person, you
+        stay skeptical and do not accept it yet. You only accept this explanation
+        when the player says it. If the player tells you it was a blind person, you
+        accept it, drop the accusations, and apologize to Jack in a short, harsher
+        way (brief and grudging, not warm). You calm down a bit afterward, but you
+        remain cold and annoyed.\n\nKeep your replies short, unfriendly, and frustrated.
+        You may sound passive-aggressive or sarcastic.\n\nExample replies:\n\u201CIs
         it that hard to just put it back up?\u201D\n\u201CStop acting clueless, Jack.
         Just admit you did it.\u201D"
       objectReference: {fileID: 0}
@@ -51462,7 +51465,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].quests.Array.data[2]'
       value: Did the player and Noah agree on a concrete real-life meeting with a
-        specific activity and a clear time or date?
+        specific activity and a clear time and date?
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -51509,7 +51512,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'llmQuestEntries.Array.data[0].questHints.Array.data[2]'
       value: "Meet Noah\n\n1.) Talk to Clara \n2.) Chat with Noah\n3.) Arrange another
-        real-life meetup\n4.) Return to Clara"
+        real-life meetup with a clear date and time\n4.) Return to Clara"
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
@@ -51525,13 +51528,15 @@ PrefabInstance:
         3.) Ask Jack and Lily what
         they saw
 
-        4.) Figure out what actually happened
+        4.) Find out who knocked it over
 
-        5.) If Lukas
-        blamed the wrong person, encourage a quick apology
+        5.) Tell Lukas
+        what you found out
 
-        6.) Return to
-        Clara'
+        6.) Encourage Lukas to apologize
+
+        7.)
+        Return to Clara'
       objectReference: {fileID: 0}
     - target: {fileID: 7919225582230879435, guid: 8fb45d71aee6de046a6e86914b0c12d1,
         type: 3}
